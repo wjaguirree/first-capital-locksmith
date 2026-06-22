@@ -1,0 +1,519 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="1st Capital Locksmith | Mobile Locksmith Services in Dover, DE"
+  description="1st Capital Locksmith provides mobile residential, automotive, commercial, and emergency locksmith services in Dover, Delaware and nearby areas."
+>
+  <section
+  class="relative min-h-[600px] flex items-center text-white"
+  style="background-image: url('/images/hero.png'); background-size: cover; background-position: center;"
+>
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <div class="relative max-w-6xl mx-auto px-6 z-10 w-full grid md:grid-cols-2 gap-12 items-center">
+    <!-- Left Column -->
+    <div>
+      <p class="text-[#9A9D62] font-semibold mb-6 text-sm uppercase tracking-wide">
+        Mobile Locksmith Services
+      </p>
+
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+        Locked Out? Need New Keys? We Come To You.
+      </h1>
+
+      <p class="text-lg mb-8">
+        Fast, professional mobile locksmith services for homes, vehicles, and businesses — emergency lockouts, on-site key replacement, and security upgrades across Dover and nearby Delaware communities.
+      </p>
+
+      <div class="flex flex-wrap gap-4 text-sm font-semibold">
+        <span>✓ Mobile Service</span>
+        <span>✓ Automotive</span>
+        <span>✓ Residential</span>
+        <span>✓ Commercial</span>
+        <span>✓ Emergency Locksmith</span>
+      </div>
+    </div>
+
+    <!-- Right Column - Callback Form -->
+    <div class="bg-gray-900/80 backdrop-blur p-8 rounded-lg border border-gray-700">
+      <p class="text-[#9A9D62] font-semibold uppercase text-xs tracking-wide mb-4">
+        Request A Callback
+      </p>
+      
+      <h2 class="text-2xl font-bold mb-6">
+        Tell us what's locked, broken, or missing
+      </h2>
+
+      <form class="space-y-4" action="https://formspree.io/f/mzzdqzjy" method="POST">
+        <div>
+          <label class="block text-sm font-semibold mb-2">What Do You Need?</label>
+          <select name="service" class="w-full bg-gray-800/50 text-white px-4 py-3 rounded border border-gray-600 focus:outline-none focus:border-[#9A9D62]" required>
+            <option>Choose a service</option>
+            <optgroup label="Automotive Services">
+              <option>Automotive Locksmith</option>
+              <option>Car Key Replacement</option>
+              <option>Car Lockout</option>
+              <option>Emergency Car Lockout</option>
+              <option>Broken Key Extraction</option>
+              <option>Ignition Repair</option>
+              <option>Ignition Replacement</option>
+              <option>Key Fob Programming</option>
+            </optgroup>
+            <optgroup label="Residential Services">
+              <option>Residential Locksmith</option>
+              <option>House Lockout</option>
+              <option>Emergency House Lockout</option>
+              <option>Lock Change</option>
+              <option>Lock Rekeying</option>
+              <option>Lock Repair</option>
+              <option>Deadbolt Installation</option>
+              <option>Mailbox Lock Replacement</option>
+              <option>Master Key Systems</option>
+            </optgroup>
+            <optgroup label="Commercial Services">
+              <option>Commercial Locksmith</option>
+              <option>Commercial Lock Rekeying</option>
+              <option>Office Lockout</option>
+              <option>Panic Bar Installation</option>
+            </optgroup>
+            <optgroup label="Emergency Services">
+              <option>Emergency Locksmith</option>
+              <option>Emergency Lockout</option>
+              <option>Safe Lockout Services</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-semibold mb-2">Name</label>
+            <input type="text" name="name" placeholder="Your name" class="w-full bg-gray-800 text-white px-4 py-3 rounded border border-gray-600 focus:outline-none focus:border-[#9A9D62]" required />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2">Phone</label>
+            <input type="tel" name="phone" placeholder="(302) 555-1234" class="w-full bg-gray-800 text-white px-4 py-3 rounded border border-gray-600 focus:outline-none focus:border-[#9A9D62]" required />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-2">Service Address</label>
+          <input type="text" name="address" placeholder="Street number and name" class="w-full bg-gray-800 text-white px-4 py-3 rounded border border-gray-600 focus:outline-none focus:border-[#9A9D62]" required />
+        </div>
+
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <label class="block text-sm font-semibold mb-2">City</label>
+            <input type="text" name="city" placeholder="City" class="w-full bg-gray-800 text-white px-4 py-3 rounded border border-gray-600 focus:outline-none focus:border-[#9A9D62]" required />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2">State</label>
+            <input type="text" name="state" placeholder="State" class="w-full bg-gray-800 text-white px-4 py-3 rounded border border-gray-600 focus:outline-none focus:border-[#9A9D62]" required />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-2">ZIP</label>
+            <input type="text" name="zip" placeholder="ZIP" class="w-full bg-gray-800 text-white px-4 py-3 rounded border border-gray-600 focus:outline-none focus:border-[#9A9D62]" required />
+          </div>
+        </div>
+
+        <button type="submit" class="w-full bg-[#A61E22] hover:bg-[#8C181B] text-white font-bold py-3 rounded-lg transition">
+          Get Quote
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <section class="bg-[#EDEBE7] py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-[#1A1F22] mb-6">
+          Dover's Trusted Mobile Locksmith Service
+        </h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          1st Capital Locksmith is your go-to mobile locksmith provider serving Dover, Delaware and surrounding communities. With fast response times, upfront pricing, and expert technicians, we handle automotive lockouts, residential lock issues, commercial security solutions, and emergency locksmith services. Whether you're locked out of your car, need a home security upgrade, or require professional commercial lock services, our licensed locksmiths come directly to you with the right tools to solve your problem on the spot.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-[#A61E22] mb-3">Fast</div>
+          <p class="text-gray-700">Mobile locksmith service arrives quickly when you need emergency help with lockouts or urgent lock problems.</p>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-[#A61E22] mb-3">Professional</div>
+          <p class="text-gray-700">Trained, experienced locksmiths provide quality workmanship for all residential, automotive, and commercial jobs.</p>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-[#A61E22] mb-3">Reliable</div>
+          <p class="text-gray-700">Available when you need us for emergency locksmith services, with transparent pricing and guaranteed customer satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#EDEBE7] py-16">
+    <div class="max-w-6xl mx-auto px-6 bg-[#0E1B2F] rounded-[32px] p-10">
+      <div class="text-center mb-12">
+        <p class="text-sm uppercase tracking-[0.3em] text-[#9A9D62] mb-4">Local locksmith solutions</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Professional Locksmith Services in Dover, Delaware</h2>
+        <p class="mx-auto max-w-3xl text-gray-300 leading-relaxed">
+          From vehicle lockouts to residential security upgrades and commercial access control, our mobile locksmith team delivers dependable service across Dover and surrounding Delaware communities. Each service is designed to save you time, secure your property, and restore access quickly.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition">
+          <h3 class="font-bold text-2xl mb-4">Automotive Locksmith</h3>
+        <p class="text-gray-700 mb-4">Mobile car key replacement, key fob programming, ignition repair, and fast vehicle lockout service for Dover drivers.</p>
+        <ul class="space-y-3 text-gray-600">
+          <li>Car key replacement</li>
+          <li>Emergency car lockout</li>
+          <li>Ignition repair & replacement</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition">
+        <h3 class="font-bold text-2xl mb-4">Residential Locksmith</h3>
+        <p class="text-gray-700 mb-4">Secure your home with rekeying, deadbolt installation, lock repair, and house lockout assistance throughout Dover.</p>
+        <ul class="space-y-3 text-gray-600">
+          <li>House lockout help</li>
+          <li>Deadbolt installation</li>
+          <li>Lock rekeying & repair</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition">
+        <h3 class="font-bold text-2xl mb-4">Commercial Locksmith</h3>
+        <p class="text-gray-700 mb-4">Business lock rekeying, panic bar installation, storefront lock service, and access control support for Dover commercial properties.</p>
+        <ul class="space-y-3 text-gray-600">
+          <li>Commercial rekeying</li>
+          <li>Panic bar installation</li>
+          <li>Office lockout service</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-200 hover:shadow-2xl transition">
+        <h3 class="font-bold text-2xl mb-4">Emergency Locksmith</h3>
+        <p class="text-gray-700 mb-4">Quick emergency lockout response for homes, vehicles, and offices, including broken key extraction and safe lockout service.</p>
+        <ul class="space-y-3 text-gray-600">
+          <li>Home & office lockouts</li>
+          <li>Safe lockout service</li>
+          <li>Broken key extraction</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#EDEBE7] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-sm uppercase tracking-[0.3em] text-[#9A9D62] mb-4">Serving Dover and nearby towns</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">Service Areas We Cover in Delaware</h2>
+        <p class="mx-auto max-w-3xl text-gray-700 leading-relaxed mt-4">
+          1st Capital Locksmith brings fast, mobile locksmith service directly to your neighborhood. We are proud to support homes, vehicles, and businesses across Dover, Kent, and Southern Delaware.
+        </p>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-3xl bg-white p-6 shadow-sm border border-gray-200 text-center">
+          <h3 class="font-semibold text-xl mb-2">Dover</h3>
+          <p class="text-gray-600">Central Delaware headquarters for lockouts, key replacement, and security upgrades.</p>
+        </div>
+        <div class="rounded-3xl bg-white p-6 shadow-sm border border-gray-200 text-center">
+          <h3 class="font-semibold text-xl mb-2">Milford</h3>
+          <p class="text-gray-600">Reliable residential and commercial locksmith support throughout the Milford area.</p>
+        </div>
+        <div class="rounded-3xl bg-white p-6 shadow-sm border border-gray-200 text-center">
+          <h3 class="font-semibold text-xl mb-2">Smyrna</h3>
+          <p class="text-gray-600">Fast service for home lockouts, car key replacement, and office security needs.</p>
+        </div>
+        <div class="rounded-3xl bg-white p-6 shadow-sm border border-gray-200 text-center">
+          <h3 class="font-semibold text-xl mb-2">Camden</h3>
+          <p class="text-gray-600">Trusted mobile locksmith coverage for homeowners and businesses in Camden.</p>
+        </div>
+        <div class="rounded-3xl bg-white p-6 shadow-sm border border-gray-200 text-center">
+          <h3 class="font-semibold text-xl mb-2">Harrington</h3>
+          <p class="text-gray-600">Emergency response and planned lock service throughout the Harrington region.</p>
+        </div>
+        <div class="rounded-3xl bg-white p-6 shadow-sm border border-gray-200 text-center">
+          <h3 class="font-semibold text-xl mb-2">Milford</h3>
+          <p class="text-gray-600">Professional locksmith work for kitchens, garages, and vehicles in Milford.</p>
+        </div>
+        <div class="rounded-3xl bg-white p-6 shadow-sm border border-gray-200 text-center">
+          <h3 class="font-semibold text-xl mb-2">Felton</h3>
+          <p class="text-gray-600">Same-day lock repair, key programming, and commercial rekeying in Felton.</p>
+        </div>
+        <div class="rounded-3xl bg-white p-6 shadow-sm border border-gray-200 text-center">
+          <h3 class="font-semibold text-xl mb-2">Leipsic</h3>
+          <p class="text-gray-600">Local locksmith help for urgent lockouts and security upgrades.</p>
+        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <a href="/service-areas" class="inline-flex items-center justify-center gap-2 rounded-full bg-[#A61E22] px-8 py-3 text-white font-semibold shadow-lg shadow-[#A61E2270] hover:bg-[#8C181B] transition">
+          View all service areas
+          <span class="text-xl">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-20">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="text-center mb-12">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide">
+        Why Choose Us
+      </p>
+
+      <h2 class="text-4xl font-bold text-[#1A1F22] mt-3">
+        Why Choose 1st Capital Locksmith?
+      </h2>
+
+      <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+        Dover’s trusted mobile locksmith team delivers fast on-site service for residential, automotive, commercial, and emergency lock needs in Delaware.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+        <h3 class="text-xl font-bold mb-3">Fast Mobile Response</h3>
+        <p class="text-gray-600">
+          Our locksmith van comes to your location quickly in Dover and nearby Delaware towns for lockouts, lost keys, and urgent security issues.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+        <h3 class="text-xl font-bold mb-3">Transparent Pricing</h3>
+        <p class="text-gray-600">
+          Clear locksmith pricing with no surprise charges, so you know the cost before we begin automotive, residential, or commercial work.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+        <h3 class="text-xl font-bold mb-3">Experienced Locksmiths</h3>
+        <p class="text-gray-600">
+          Skilled technicians handle car key replacement, ignition repair, lock rekeying, panic bar installation, and more.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+        <h3 class="text-xl font-bold mb-3">On-Site Service</h3>
+        <p class="text-gray-600">
+          We bring the tools and expertise to your home, business, or vehicle so your locksmith issue is solved immediately.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+        <h3 class="text-xl font-bold mb-3">Residential & Commercial Locks</h3>
+        <p class="text-gray-600">
+          From house rekeys to storefront security and office lock changes, we support Delaware homeowners and businesses.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+        <h3 class="text-xl font-bold mb-3">Emergency Locksmith Help</h3>
+        <p class="text-gray-600">
+          Locked out or dealing with urgent lock problems? We provide dependable emergency locksmith service in Dover and Kent County.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#EDEBE7] py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-8">
+      <p class="text-sm uppercase tracking-[0.3em] text-[#9A9D62] mb-2">Main Service Areas</p>
+      <h2 class="text-3xl font-bold text-[#1A1F22]">Service Areas We Serve</h2>
+      <p class="mx-auto max-w-3xl text-gray-700 mt-3">We proudly provide mobile locksmith services across Kent County and the surrounding Southern Delaware communities. Below are our primary service areas.</p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+      <div class="rounded-2xl bg-white p-6 text-center shadow-sm">
+        <h3 class="font-semibold mb-2">Dover, DE</h3>
+        <p class="text-sm text-gray-600">Lockouts, key replacement, rekeys</p>
+      </div>
+      <div class="rounded-2xl bg-white p-6 text-center shadow-sm">
+        <h3 class="font-semibold mb-2">Milford, DE</h3>
+        <p class="text-sm text-gray-600">Residential & automotive locksmith</p>
+      </div>
+      <div class="rounded-2xl bg-white p-6 text-center shadow-sm">
+        <h3 class="font-semibold mb-2">Smyrna, DE</h3>
+        <p class="text-sm text-gray-600">Emergency lockouts & rekeying</p>
+      </div>
+      <div class="rounded-2xl bg-white p-6 text-center shadow-sm">
+        <h3 class="font-semibold mb-2">Camden, DE</h3>
+        <p class="text-sm text-gray-600">Commercial locksmith services</p>
+      </div>
+      <div class="rounded-2xl bg-white p-6 text-center shadow-sm">
+        <h3 class="font-semibold mb-2">Harrington, DE</h3>
+        <p class="text-sm text-gray-600">On-site locksmith assistance</p>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center">
+      <a href="/service-areas" class="inline-flex items-center gap-2 rounded-full bg-[#A61E22] px-6 py-3 text-white font-semibold shadow hover:bg-[#8C181B] transition">
+        View all service areas
+        <span class="text-xl">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-[#F8F8F5] py-20">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <div class="text-center mb-12">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide">
+        Customer Reviews
+      </p>
+
+      <h2 class="text-4xl font-bold text-[#1A1F22] mt-3">
+        Trusted by Customers Throughout Delaware
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-white p-8 rounded-xl shadow">
+        <p class="mb-4">
+          "Fast response and very professional. Got my car unlocked quickly and without damage."
+        </p>
+        <p class="text-sm text-gray-500 mb-1">Michael R. — Car lockout</p>
+        <p class="text-sm text-gray-500">Dover, DE</p>
+        <strong>★★★★★</strong>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow">
+        <p class="mb-4">
+          "Needed a new key fob programmed. Service was quick and pricing was fair."
+        </p>
+        <p class="text-sm text-gray-500 mb-1">Samantha T. — Key fob programming</p>
+        <p class="text-sm text-gray-500">Milford, DE</p>
+        <strong>★★★★★</strong>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow">
+        <p class="mb-4">
+          "Excellent locksmith service. Arrived on time and rekeyed our locks the same day."
+        </p>
+        <p class="text-sm text-gray-500 mb-1">David H. — Residential rekey</p>
+        <p class="text-sm text-gray-500">Smyrna, DE</p>
+        <strong>★★★★★</strong>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow">
+        <p class="mb-4">
+          "Replaced the deadbolt on our storefront and helped with a panic bar install. Great work."
+        </p>
+        <p class="text-sm text-gray-500 mb-1">Emma L. — Commercial locks</p>
+        <p class="text-sm text-gray-500">Camden, DE</p>
+        <strong>★★★★★</strong>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow">
+        <p class="mb-4">
+          "Locked my keys in the house late at night. They arrived fast and got me back inside without damage."
+        </p>
+        <p class="text-sm text-gray-500 mb-1">Tyler S. — Home lockout</p>
+        <p class="text-sm text-gray-500">Harrington, DE</p>
+        <strong>★★★★★</strong>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow">
+        <p class="mb-4">
+          "Great service for our business lock rekey and new access keys. Dependable and professional."
+        </p>
+        <p class="text-sm text-gray-500 mb-1">Olivia M. — Business rekey</p>
+        <p class="text-sm text-gray-500">Dover, DE</p>
+        <strong>★★★★★</strong>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="bg-gray-900 p-12 rounded-lg border border-gray-700 grid md:grid-cols-2 gap-12 items-center">
+        <!-- Left: CTA Text -->
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase text-sm tracking-wide mb-4">
+            Quick Response
+          </p>
+          <h2 class="text-4xl font-bold text-white mb-6">
+            Locked Out Right Now?
+          </h2>
+          <p class="text-gray-300 text-lg mb-6">
+            Whether you're locked out right now or planning a rekey after moving in, call us or send a quick request. We'll get back to you ASAP.
+          </p>
+          <div class="flex gap-4">
+            <a href="tel:3027350050" class="bg-[#A61E22] hover:bg-[#8C181B] text-white px-8 py-3 rounded-lg font-bold transition">
+              Call (302) 735-0050
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Quick Contact Form -->
+        <div class="bg-black/50 p-8 rounded-lg">
+          <form class="space-y-4" action="https://formspree.io/f/mzzdqzjy" method="POST">
+            <div>
+              <label class="block text-sm font-semibold text-white mb-2">Your Name</label>
+              <input type="text" name="name" placeholder="Your name" class="w-full bg-gray-800 text-white px-4 py-3 rounded border border-gray-700 focus:outline-none focus:border-[#9A9D62]" required />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-white mb-2">Phone</label>
+              <input type="tel" name="phone" placeholder="(302) 555-1234" class="w-full bg-gray-800 text-white px-4 py-3 rounded border border-gray-700 focus:outline-none focus:border-[#9A9D62]" required />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-white mb-2">Service Type</label>
+              <select name="service" class="w-full bg-gray-800/50 text-white px-4 py-3 rounded border border-gray-700 focus:outline-none focus:border-[#9A9D62]" required>
+                <option>Select a service</option>
+                <optgroup label="Automotive Services">
+                  <option>Automotive Locksmith</option>
+                  <option>Car Key Replacement</option>
+                  <option>Car Lockout</option>
+                  <option>Emergency Car Lockout</option>
+                  <option>Broken Key Extraction</option>
+                  <option>Ignition Repair</option>
+                  <option>Ignition Replacement</option>
+                  <option>Key Fob Programming</option>
+                </optgroup>
+                <optgroup label="Residential Services">
+                  <option>Residential Locksmith</option>
+                  <option>House Lockout</option>
+                  <option>Emergency House Lockout</option>
+                  <option>Lock Change</option>
+                  <option>Lock Rekeying</option>
+                  <option>Lock Repair</option>
+                  <option>Deadbolt Installation</option>
+                  <option>Mailbox Lock Replacement</option>
+                  <option>Master Key Systems</option>
+                </optgroup>
+                <optgroup label="Commercial Services">
+                  <option>Commercial Locksmith</option>
+                  <option>Commercial Lock Rekeying</option>
+                  <option>Office Lockout</option>
+                  <option>Panic Bar Installation</option>
+                </optgroup>
+                <optgroup label="Emergency Services">
+                  <option>Emergency Locksmith</option>
+                  <option>Emergency Lockout</option>
+                  <option>Safe Lockout Services</option>
+                </optgroup>
+              </select>
+            </div>
+            <button type="submit" class="w-full bg-[#A61E22] hover:bg-[#8C181B] text-white font-bold py-3 rounded-lg transition">
+              Send Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

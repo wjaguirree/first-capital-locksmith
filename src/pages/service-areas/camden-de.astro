@@ -1,0 +1,585 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Locksmith in Camden, DE | Car, Home & Emergency Locksmith | 1st Capital Locksmith"
+  description="1st Capital Locksmith provides fast, professional locksmith services in Camden, Delaware. Car lockouts, house lockouts, lock rekeying, deadbolt installation, key replacement, and 24/7 emergency locksmith service in Camden, DE and surrounding Kent County communities."
+>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/service-areas" class="hover:text-[#A61E22] transition font-medium">Service Areas</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">Camden, DE</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema: Breadcrumb -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://www.1stcapitallocksmith.com/service-areas/" },
+      { "@type": "ListItem", "position": 3, "name": "Camden, DE", "item": "https://www.1stcapitallocksmith.com/service-areas/camden-de/" }
+    ]
+  })} />
+
+  <!-- Schema: Local Business -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "1st Capital Locksmith",
+    "telephone": "+13027350050",
+    "url": "https://www.1stcapitallocksmith.com",
+    "areaServed": {
+      "@type": "City",
+      "name": "Camden",
+      "containedIn": { "@type": "State", "name": "Delaware" }
+    },
+    "serviceType": [
+      "Automotive Locksmith",
+      "Residential Locksmith",
+      "Commercial Locksmith",
+      "Emergency Locksmith"
+    ]
+  })} />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[520px] flex items-center text-white py-20"
+    style="background-image: url('/images/hero.png'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-6xl mx-auto px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-4">Locksmith Services in Camden, Delaware</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 max-w-3xl leading-tight">
+        Locksmith in Camden, DE — Dependable Service for a Community That Keeps Delaware Moving
+      </h1>
+      <p class="text-gray-300 text-lg max-w-2xl leading-relaxed mb-8">
+        Camden sits right in the heart of Kent County — a growing, active community where people are on the move every day. When a lock or key problem slows you down, 1st Capital Locksmith is ready to respond fast with professional automotive, residential, commercial, and emergency locksmith services throughout Camden, DE.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">24/7</p>
+          <p class="text-gray-300 text-sm mt-1">Emergency Service Available</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Mobile</p>
+          <p class="text-gray-300 text-sm mt-1">We Come Directly to Camden</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">All Services</p>
+          <p class="text-gray-300 text-sm mt-1">Auto, Home, Business & Emergency</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Upfront</p>
+          <p class="text-gray-300 text-sm mt-1">Clear Pricing Before We Start</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro + Map -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: Text + Service List -->
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Your Local Locksmith in Camden</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Professional Locksmith Services Serving Camden, Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Camden, Delaware is one of Kent County's most centrally located and steadily growing communities. Positioned just south of Dover along US-13, Camden is a busy town where families, commuters, and businesses alike depend on reliable day-to-day routines. When a lock or key issue interrupts that routine — whether it's a car lockout in a parking lot on South Governors Avenue, a house lockout near Camden-Wyoming, or a business that needs its locks rekeyed after a staff change — you need a locksmith who can be there quickly and handle the job right.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            1st Capital Locksmith is a fully mobile locksmith service proud to serve Camden, DE and the surrounding Kent County area. We come directly to your location — home, business, parking lot, or roadside — with the tools and expertise to handle automotive, residential, commercial, and emergency locksmith situations on-site. No waiting for parts, no unnecessary trips back and forth.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            We're known for honest pricing, fast response times, and professional work that gets done right the first time. If you need a locksmith in Camden, Delaware, call us at <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> — a real person will answer.
+          </p>
+
+          <!-- Service Checklist -->
+          <div class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200">
+            <h3 class="text-lg font-bold text-[#1A1F22] mb-4">Locksmith Services We Provide in Camden, DE:</h3>
+            <ul class="space-y-2">
+              {[
+                "Car Lockout Service in Camden",
+                "Car Key Replacement & Transponder Programming",
+                "Key Fob Replacement & Programming",
+                "House Lockout Service",
+                "Lock Rekeying for Homes & Rentals",
+                "Deadbolt Installation & Upgrade",
+                "Lock Repair & Replacement",
+                "Commercial Lockout Service",
+                "Master Key Systems",
+                "24/7 Emergency Locksmith Response",
+                "Broken Key Extraction",
+                "Mailbox Lock Replacement",
+              ].map((item) => (
+                <li class="flex items-center gap-3 text-gray-700 text-sm">
+                  <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-5 pt-5 border-t border-gray-200">
+              <a
+                href="tel:3027350050"
+                class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+              >
+                Call (302) 735-0050 Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Map + Contact Card -->
+        <div class="flex flex-col gap-6">
+          <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm w-full" style="height: 480px;">
+            <iframe
+              title="Camden, Delaware Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49541.494754429244!2d-75.59783403831946!3d39.09865086151806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b881e18d2adb73%3A0x5133d60c4ce4f62e!2sCamden%2C%20DE!5e0!3m2!1sen!2sus!4v1782146550365!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <!-- Quick Contact Card -->
+          <div class="bg-[#0E1B2F] rounded-2xl p-6 text-white">
+            <h3 class="text-lg font-bold mb-4">Need a Locksmith in Camden Right Now?</h3>
+            <div class="space-y-3">
+              <a href="tel:3027350050" class="flex items-center gap-3 text-white hover:text-[#A61E22] transition">
+                <span class="w-9 h-9 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-xs text-gray-400">Call Us Anytime — 24/7</p>
+                  <p class="font-bold text-lg">(302) 735-0050</p>
+                </div>
+              </a>
+              <div class="flex items-center gap-3">
+                <span class="w-9 h-9 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-xs text-gray-400">Serving</p>
+                  <p class="font-semibold text-sm">Camden, DE & All of Kent County</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-9 h-9 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-xs text-gray-400">Hours</p>
+                  <p class="font-semibold text-sm">Open 24 Hours — 7 Days a Week</p>
+                </div>
+              </div>
+            </div>
+            <a
+              href="/contact"
+              class="mt-5 w-full inline-flex justify-center items-center rounded-full border border-white px-6 py-3 text-white font-bold hover:bg-white hover:text-[#1A1F22] transition"
+            >
+              Get a Free Quote
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">What We Do in Camden</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Every Locksmith Service We Offer in Camden, DE
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Whether you're locked out of your car on US-13, need new locks on a home near Camden-Wyoming, or run a business that needs a security upgrade, here's a full look at how we can help.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Automotive -->
+        <div id="automotive" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h7l1-2zM13 6h3l3 4v4h-2" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Automotive Locksmith in Camden, DE</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Camden is a busy place — people are commuting to Dover, running errands along South Governors Avenue, stopping at local shops, and heading in and out of the area all day long. With that much activity, car lockouts happen more than you'd think. Whether you locked your keys inside at a parking lot near Camden-Wyoming or lost your key fob somewhere between errands, 1st Capital Locksmith responds fast and gets you back behind the wheel without any damage to your vehicle.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our automotive locksmith services in Camden include car lockout service, car key replacement, transponder key cutting and programming, key fob replacement and programming, ignition repair, and broken key extraction. We work on all makes and models — domestic and foreign, cars, trucks, vans, and SUVs.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Best of all, we handle it all on-site. No tow truck needed, no dealership appointment. We come to wherever you are in Camden and take care of it right there.
+            </p>
+            <div class="mt-4">
+              <a href="/services/automotive-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Automotive Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Residential -->
+        <div id="residential" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Residential Locksmith in Camden, DE</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Camden has grown significantly over the years and is home to a wide range of residential properties — from established neighborhoods near Camden-Wyoming to newer developments throughout the area. Whether you've just moved into a new home, have a rental property, or simply want to upgrade the security on your current house, 1st Capital Locksmith provides complete residential locksmith services throughout Camden, DE.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              We handle house lockouts — including those frustrating moments when you step outside and the door locks behind you — as well as lock rekeying, deadbolt installation, lock repair and replacement, and mailbox lock service. If you're a landlord or property manager in Camden and need locks rekeyed between tenants, we make that process fast, affordable, and stress-free.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We carry the hardware with us and complete jobs on-site. You won't be waiting days for parts or making multiple appointments.
+            </p>
+            <div class="mt-4">
+              <a href="/services/residential-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Residential Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial -->
+        <div id="commercial" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V7a2 2 0 00-2-2H7a2 2 0 00-2 2v14M3 21h18M9 21v-4a1 1 0 011-1h4a1 1 0 011 1v4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Commercial Locksmith in Camden, DE</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Camden's commercial corridor along US-13 and the surrounding areas are home to a variety of businesses — retail shops, service businesses, offices, and more. Keeping your commercial property secure is essential, and 1st Capital Locksmith provides the commercial locksmith services that Camden businesses need to stay protected and operational.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our commercial locksmith services include business lockout response, commercial-grade lock installation and replacement, master key system design and installation, access control solutions, panic bar and exit device installation, and rekeying after employee departures. We understand that time is money — we respond quickly and work efficiently to minimize any disruption to your business.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Whether you manage a small storefront or a larger commercial facility in Camden, we have the experience and equipment to meet your security needs.
+            </p>
+            <div class="mt-4">
+              <a href="/services/commercial-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Commercial Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency -->
+        <div id="emergency" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Emergency Locksmith in Camden, DE — Available 24/7</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Emergencies don't care about business hours. A lockout at midnight, a broken key on a Sunday morning, a damaged lock after an attempted break-in — these things happen, and when they do, you need someone who picks up the phone and shows up. 1st Capital Locksmith provides 24/7 emergency locksmith service throughout Camden, DE, every single day of the year including weekends and holidays.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              When you call our emergency line, a real person answers — not a recording. We'll take your information, give you an honest ETA, and dispatch a technician to your location in Camden as quickly as possible. We arrive fully stocked and ready to handle the situation on-site without delay.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              For any lock or key emergency in Camden, Delaware, call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> right now.
+            </p>
+            <div class="mt-4">
+              <a href="/services/emergency-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Emergency Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Camden + Nearby -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">About the Area</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Proudly Serving Camden and the Heart of Kent County
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Camden, Delaware — often referred to alongside neighboring Wyoming as Camden-Wyoming — is one of Kent County's most recognizable communities. Located just minutes south of Dover on US-13, Camden serves as a hub for local residents, commuters heading to and from the state capital, and families who call this part of Delaware home.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            The town is known for its strong community character, its proximity to Delaware State University, and its mix of residential neighborhoods and commercial activity along the US-13 corridor. Camden has grown steadily over the years while maintaining its community feel — and it's a place we're genuinely proud to serve.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            As a mobile locksmith service based in Kent County, we know the roads here, we know the neighborhoods, and we know how important it is to show up quickly when someone in Camden needs help. Whether you're near the schools, off Camden Avenue, or anywhere else in the Camden-Wyoming area, we're on our way.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> and let us prove it.
+          </p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Areas We Also Serve Near Camden:</h3>
+          <ul class="grid grid-cols-2 gap-3">
+            {[
+              "Dover, DE",
+              "Wyoming, DE",
+              "Smyrna, DE",
+              "Harrington, DE",
+              "Milford, DE",
+              "Felton, DE",
+              "Magnolia, DE",
+              "Frederica, DE",
+              "Clayton, DE",
+              "Bowers, DE",
+            ].map((city) => (
+              <li class="flex items-center gap-2 text-gray-700 text-sm">
+                <span class="w-2 h-2 bg-[#A61E22] rounded-full flex-shrink-0"></span>
+                {city}
+              </li>
+            ))}
+          </ul>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <a
+              href="/service-areas"
+              class="w-full inline-flex justify-center items-center rounded-full border border-[#A61E22] px-6 py-3 text-[#A61E22] font-bold hover:bg-[#A61E22] hover:text-white transition"
+            >
+              View All Service Areas
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Choose Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Why Camden Residents & Businesses Choose 1st Capital Locksmith
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          There's no shortage of options when you search for a locksmith — but here's what sets us apart for customers throughout Camden, DE.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Fast Response to Camden",
+            desc: "We know Kent County well and respond quickly to calls throughout Camden and the surrounding area. When you call, we move.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />`
+          },
+          {
+            title: "24/7 Emergency Availability",
+            desc: "We answer calls and dispatch to Camden around the clock — nights, weekends, and holidays included. A real person always picks up.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />`
+          },
+          {
+            title: "Honest, Upfront Pricing",
+            desc: "You'll always know what you're paying before we start. No hidden service fees, no inflated emergency rates, no surprises.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`
+          },
+          {
+            title: "Fully Mobile — We Come to You",
+            desc: "Our locksmiths come directly to your location anywhere in Camden — home, business, parking lot, or roadside — fully equipped to handle the job on the spot.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />`
+          },
+          {
+            title: "Non-Destructive Techniques",
+            desc: "We open cars and homes using professional non-destructive methods — protecting your locks, your door frames, and your vehicle finish.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`
+          },
+          {
+            title: "Auto, Home & Commercial",
+            desc: "One call handles it all — whether you need a car key programmed, a deadbolt installed, or a business rekeyed after staff turnover. We do it all.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />`
+          },
+        ].map((card) => (
+          <div class="bg-white rounded-2xl p-8 border border-gray-200">
+            <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" set:html={card.icon} />
+            </div>
+            <h3 class="font-bold text-[#1A1F22] text-lg mb-2">{card.title}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
+          What Camden Area Customers Say About 1st Capital Locksmith
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Locked myself out of my car in a parking lot off South Governors Avenue on a really hot afternoon. Called 1st Capital Locksmith and they were there in about 30 minutes. The technician was professional, got my door open quickly, and didn't charge me an arm and a leg. Really saved my day."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Marcus T.</p>
+          <p class="text-gray-500 text-sm">Car Lockout — Camden, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"I just bought a house in the Camden-Wyoming area and wanted all the locks rekeyed before we moved in. 1st Capital came out fast, rekeyed every door, and even suggested a deadbolt upgrade for the back door. Great advice, great price, and the work was done perfectly. Would recommend to anyone."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Danielle R.</p>
+          <p class="text-gray-500 text-sm">Lock Rekeying — Camden-Wyoming, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"We had an issue with our business lock late on a Friday evening and couldn't secure the building. I called 1st Capital Locksmith expecting to leave a voicemail — but someone actually answered. They came out within the hour, replaced the lock, and we were able to close up properly. Outstanding service."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Kevin S.</p>
+          <p class="text-gray-500 text-sm">Commercial Lock Repair — Camden, DE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">FAQ</p>
+        <h2 class="text-3xl font-bold text-[#1A1F22] mb-4">
+          Common Locksmith Questions from Camden, DE Residents
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {[
+          {
+            q: "Do you serve Camden, Delaware?",
+            a: "Yes, absolutely. Camden is one of our primary service areas in Kent County. We serve Camden, Camden-Wyoming, and all surrounding communities. Call us at (302) 735-0050 and we'll come directly to your location."
+          },
+          {
+            q: "How quickly can you respond to a lockout in Camden?",
+            a: "We prioritize lockout calls and work to arrive as fast as possible. Response times vary based on demand and your exact location, but we'll give you an honest ETA the moment you call. Reach us at (302) 735-0050."
+          },
+          {
+            q: "Can you replace a car key in Camden without going to the dealership?",
+            a: "Yes. We cut and program car keys, transponder keys, and key fobs on-site for most makes and models — right there in Camden, at a fraction of dealership prices and without any appointment wait."
+          },
+          {
+            q: "I just moved into a home in Camden. Should I get the locks rekeyed?",
+            a: "Absolutely — it's one of the smartest things a new homeowner can do. You have no way of knowing how many copies of the old keys are out there. Rekeying is fast, affordable, and gives you complete peace of mind. We come to you."
+          },
+          {
+            q: "Do you provide 24/7 emergency locksmith service in Camden?",
+            a: "Yes. We answer calls and dispatch to Camden around the clock — including nights, weekends, and holidays. When you call (302) 735-0050, a real person answers every time."
+          },
+          {
+            q: "How much does a locksmith cost in Camden, DE?",
+            a: "Pricing depends on the service needed and your specific situation. We always give you a clear, upfront quote before starting any work — no hidden fees, no surprise charges. Call (302) 735-0050 for a fast, honest estimate."
+          },
+        ].map((faq) => (
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="font-bold text-[#1A1F22] mb-2">{faq.q}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Need a Locksmith in Camden, DE?
+      </h2>
+      <p class="text-gray-300 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
+        Call 1st Capital Locksmith for fast, professional locksmith service in Camden and throughout Kent County, Delaware. We come to you — 24/7, any service, any situation.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-10 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-bold text-lg hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

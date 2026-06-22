@@ -1,0 +1,592 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Locksmith in Farmington, DE | Car, Home & Emergency Locksmith | 1st Capital Locksmith"
+  description="1st Capital Locksmith provides fast, professional locksmith services in Farmington, Delaware. Car lockouts, house lockouts, lock rekeying, deadbolt installation, key replacement, and 24/7 emergency locksmith service in Farmington, DE and surrounding Kent County communities."
+>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/service-areas" class="hover:text-[#A61E22] transition font-medium">Service Areas</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">Farmington, DE</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema: Breadcrumb -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://www.1stcapitallocksmith.com/service-areas/" },
+      { "@type": "ListItem", "position": 3, "name": "Farmington, DE", "item": "https://www.1stcapitallocksmith.com/service-areas/farmington-de/" }
+    ]
+  })} />
+
+  <!-- Schema: Local Business -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "1st Capital Locksmith",
+    "telephone": "+13027350050",
+    "url": "https://www.1stcapitallocksmith.com",
+    "areaServed": {
+      "@type": "City",
+      "name": "Farmington",
+      "containedIn": { "@type": "State", "name": "Delaware" }
+    },
+    "serviceType": [
+      "Automotive Locksmith",
+      "Residential Locksmith",
+      "Commercial Locksmith",
+      "Emergency Locksmith"
+    ]
+  })} />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[520px] flex items-center text-white py-20"
+    style="background-image: url('/images/hero.png'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-6xl mx-auto px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-4">
+        Locksmith Services in Farmington, Delaware
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 max-w-3xl leading-tight">
+        Locksmith in Farmington, DE — Rural Community Service Done Right
+      </h1>
+      <p class="text-gray-300 text-lg max-w-2xl leading-relaxed mb-8">
+        Farmington is one of Delaware's smaller communities, but the people who live here deserve fast, honest locksmith service just the same. 1st Capital Locksmith comes directly to Farmington, DE for automotive, residential, commercial, and 24/7 emergency locksmith needs — no runaround, no excessive travel fees, just professional service at your door.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">24/7</p>
+          <p class="text-gray-300 text-sm mt-1">Emergency Service Available</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Mobile</p>
+          <p class="text-gray-300 text-sm mt-1">We Come Directly to Farmington</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">All Services</p>
+          <p class="text-gray-300 text-sm mt-1">Auto, Home, Business & Emergency</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Upfront</p>
+          <p class="text-gray-300 text-sm mt-1">Clear Pricing Before We Start</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro + Map -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: Text + Service List -->
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">
+            Your Local Locksmith in Farmington
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Professional Locksmith Services Serving Farmington, Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Farmington, Delaware is a small unincorporated community tucked in the western part of Kent County, surrounded by the kind of open farmland and quiet country roads that define rural Delaware. It's not a place that draws much outside attention — and most of the people who live here prefer it that way. But even in the most peaceful corners of the state, a locked car, a broken house key, or a deadbolt that stops working in the middle of the night can turn a calm day upside down fast.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            That's where 1st Capital Locksmith comes in. We're a fully mobile locksmith service based in Kent County, and we make the drive to Farmington without hesitation. Whether you need a car lockout handled on a rural road, a home's locks rekeyed after a move, a deadbolt installed on a farmhouse door, or emergency locksmith service in the middle of the night, we come equipped and ready to take care of it completely on-site.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            Living in a rural community shouldn't mean waiting forever for basic services. We treat every Farmington call with the same urgency and professionalism as any other location we serve. Call us anytime at <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a>.
+          </p>
+
+          <!-- Service Checklist -->
+          <div class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200">
+            <h3 class="text-lg font-bold text-[#1A1F22] mb-4">
+              Locksmith Services We Provide in Farmington, DE:
+            </h3>
+            <ul class="space-y-2">
+              {[
+                "Car Lockout Service in Farmington",
+                "Car Key Replacement & Transponder Programming",
+                "Key Fob Replacement & Programming",
+                "Ignition Repair & Replacement",
+                "House Lockout Service",
+                "Lock Rekeying for Homes & Farmhouses",
+                "Deadbolt Installation & Upgrade",
+                "Lock Repair & Replacement",
+                "Commercial Lockout Service",
+                "Master Key System Setup",
+                "24/7 Emergency Locksmith Response",
+                "Broken Key Extraction",
+                "Mailbox Lock Replacement",
+              ].map((item) => (
+                <li class="flex items-center gap-3 text-gray-700 text-sm">
+                  <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-5 pt-5 border-t border-gray-200">
+              <a
+                href="tel:3027350050"
+                class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+              >
+                Call (302) 735-0050 Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Map + Contact Card -->
+        <div class="flex flex-col gap-6">
+          <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm w-full" style="height: 480px;">
+            <iframe
+              title="Farmington, Delaware Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.3639111963466!2d-75.58158852401723!3d38.86991509832519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b88ef9508e3cf7%3A0xda914f0e9cd649ca!2sFarmington%2C%20DE!5e0!3m2!1sen!2sus!4v1782149847165!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <!-- Quick Contact Card -->
+          <div class="bg-[#0E1B2F] rounded-2xl p-6 text-white">
+            <h3 class="text-lg font-bold mb-4">Need a Locksmith in Farmington Right Now?</h3>
+            <div class="space-y-3">
+              <a href="tel:3027350050" class="flex items-center gap-3 text-white hover:text-[#A61E22] transition">
+                <span class="w-9 h-9 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-xs text-gray-400">Call Us Anytime — 24/7</p>
+                  <p class="font-bold text-lg">(302) 735-0050</p>
+                </div>
+              </a>
+              <div class="flex items-center gap-3">
+                <span class="w-9 h-9 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-xs text-gray-400">Serving</p>
+                  <p class="font-semibold text-sm">Farmington, DE & Western Kent County</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-9 h-9 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-xs text-gray-400">Hours</p>
+                  <p class="font-semibold text-sm">Open 24 Hours — 7 Days a Week</p>
+                </div>
+              </div>
+            </div>
+            <a
+              href="/contact"
+              class="mt-5 w-full inline-flex justify-center items-center rounded-full border border-white px-6 py-3 text-white font-bold hover:bg-white hover:text-[#1A1F22] transition"
+            >
+              Get a Free Quote
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">What We Do in Farmington</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Every Locksmith Service We Offer in Farmington, DE
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          From a car lockout on a country road to upgrading the locks on a rural farmhouse, here is a complete look at how 1st Capital Locksmith serves the Farmington community.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Automotive -->
+        <div id="automotive" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h7l1-2zM13 6h3l3 4v4h-2" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Automotive Locksmith in Farmington, DE</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Car lockouts in a rural area like Farmington can feel especially stressful. You're away from major services, cell signal might be spotty, and the nearest dealership or auto shop is miles away. When you call 1st Capital Locksmith, you get a mobile automotive locksmith who comes directly to your location — on a country road, in a driveway, or anywhere else in or around Farmington — with the tools to get you back in your vehicle fast and without damage.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our automotive locksmith services in Farmington include car lockout service, car key replacement, transponder key cutting and programming, key fob replacement and programming, ignition repair and replacement, and broken key extraction. We work on all makes and models — cars, trucks, vans, SUVs, and farm vehicles — and handle everything completely on-site. No tow truck needed, no dealership trip required.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Stranded in Farmington or anywhere in western Kent County? Call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> and we'll be on our way.
+            </p>
+            <div class="mt-4">
+              <a href="/services/automotive-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Automotive Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Residential -->
+        <div id="residential" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Residential Locksmith in Farmington, DE</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Farmington's residential properties range from older farmhouses and family homes that have been in the community for generations, to newer builds and country properties that people have moved into more recently. Whatever your home looks like in Farmington, 1st Capital Locksmith provides the residential locksmith services to keep it secure and get you back inside when things don't go as planned.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              We handle house lockouts — including those frustrating situations where you step outside for a moment and the door latches behind you — as well as lock rekeying for new homeowners, deadbolt installation and upgrades for exterior doors that need stronger hardware, full lock repair and replacement, and mailbox lock service. Older homes and farmhouses in rural communities often have outdated or worn lock hardware that's well overdue for an upgrade — we carry quality replacement hardware and install it on the spot.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We come to your Farmington home fully equipped and complete all residential work in a single visit. One call, one trip, job done.
+            </p>
+            <div class="mt-4">
+              <a href="/services/residential-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Residential Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial -->
+        <div id="commercial" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V7a2 2 0 00-2-2H7a2 2 0 00-2 2v14M3 21h18M9 21v-4a1 1 0 011-1h4a1 1 0 011 1v4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Commercial Locksmith in Farmington, DE</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Rural communities like Farmington are home to agricultural operations, small businesses, storage facilities, and commercial properties that require reliable security just as much as any downtown location. If you operate a business or manage a commercial property in or around Farmington, 1st Capital Locksmith provides professional commercial locksmith services tailored to your needs.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our commercial locksmith services include business lockout response, commercial-grade lock installation and replacement, master key system setup for facilities with multiple access points, lock rekeying after employee changes, and hardware upgrades for outbuildings, storage units, and agricultural structures. We understand the specific security challenges that come with rural and agricultural properties and we're equipped to address them.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> to discuss your commercial locksmith needs in Farmington and get a straightforward, honest quote.
+            </p>
+            <div class="mt-4">
+              <a href="/services/commercial-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Commercial Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency -->
+        <div id="emergency" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Emergency Locksmith in Farmington, DE — Available 24/7</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Being locked out in a rural area at night is a completely different experience than being locked out in a city. There's less foot traffic, fewer nearby businesses to duck into, and finding emergency help can feel nearly impossible. 1st Capital Locksmith provides genuine 24/7 emergency locksmith service to Farmington, DE — not just during business hours, and not just when it's convenient. Every night, every weekend, every holiday.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Whether you're locked out of your home late at night, stranded in your car on a dark country road, dealing with a broken key in your front door lock, or facing a damaged lock after a break-in attempt at your property, we dispatch quickly and arrive prepared to resolve the situation completely on-site. We don't make second trips or leave jobs unfinished — we come ready to work.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Don't wait it out alone in the dark. Call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> at any hour — a real person will answer and get help heading your way.
+            </p>
+            <div class="mt-4">
+              <a href="/services/emergency-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Emergency Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Farmington + Nearby -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">About the Area</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Proudly Serving Farmington and the Surrounding Western Kent County Area
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Farmington, Delaware is a quiet unincorporated community in the western portion of Kent County, sitting comfortably among the agricultural fields and country roads that define this part of the state. It's close to Greenwood and Harrington, making it part of a network of small Delaware communities that share the same rural character and tight-knit feel.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            People in Farmington tend to be independent and self-sufficient — but even the most capable homeowner or farmer can find themselves locked out of their house or truck with no obvious solution nearby. The nearest locksmith shop might be a half hour away, and waiting that long in an emergency isn't acceptable.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            That's exactly why 1st Capital Locksmith built a mobile service model — we don't have a shop you need to come to. We come to you, wherever you are in Farmington or the surrounding area. We know these roads and we make the drive. When you call, you get a professional who treats your situation seriously, regardless of how far out you are.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Save our number — <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> — before you ever need it.
+          </p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Areas We Also Serve Near Farmington:</h3>
+          <ul class="grid grid-cols-2 gap-3">
+            {[
+              "Greenwood, DE",
+              "Harrington, DE",
+              "Milford, DE",
+              "Felton, DE",
+              "Dover, DE",
+              "Camden, DE",
+              "Bridgeville, DE",
+              "Georgetown, DE",
+              "Seaford, DE",
+              "Frederica, DE",
+            ].map((city) => (
+              <li class="flex items-center gap-2 text-gray-700 text-sm">
+                <span class="w-2 h-2 bg-[#A61E22] rounded-full flex-shrink-0"></span>
+                {city}
+              </li>
+            ))}
+          </ul>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <a
+              href="/service-areas"
+              class="w-full inline-flex justify-center items-center rounded-full border border-[#A61E22] px-6 py-3 text-[#A61E22] font-bold hover:bg-[#A61E22] hover:text-white transition"
+            >
+              View All Service Areas
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Choose Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Why Farmington Residents Choose 1st Capital Locksmith
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          In a rural community, you need a locksmith who will actually make the trip — and actually know what they're doing when they arrive. Here's why Farmington calls us.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            title: "We Come to Rural Areas",
+            desc: "We don't limit our service to towns with traffic lights. Farmington and rural western Kent County are part of our service area and we make the drive every time — no excuses.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />`
+          },
+          {
+            title: "24/7 — Even in the Country",
+            desc: "Emergencies don't respect business hours, and being rural shouldn't mean being on your own after dark. We answer and dispatch to Farmington at any hour, every single day.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />`
+          },
+          {
+            title: "Honest Pricing, No Rural Markups",
+            desc: "We don't inflate our rates because you're out in the country. You get a clear, upfront quote before we start — the same honest pricing we give every customer.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`
+          },
+          {
+            title: "Fully Equipped on Every Call",
+            desc: "We carry what we need for automotive, residential, and commercial jobs. One trip to Farmington handles the job completely — we don't make second visits for forgotten parts.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`
+          },
+          {
+            title: "Non-Destructive Entry",
+            desc: "We open locked vehicles and homes using professional non-destructive techniques. Your door, frame, and vehicle finish stay intact — every single time.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />`
+          },
+          {
+            title: "Real People Answer the Phone",
+            desc: "When you call us from a rural road in Farmington, a real person answers — not a machine, not a call center. We listen, we respond, and we tell you exactly when to expect us.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />`
+          },
+        ].map((card) => (
+          <div class="bg-white rounded-2xl p-8 border border-gray-200">
+            <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" set:html={card.icon} />
+            </div>
+            <h3 class="font-bold text-[#1A1F22] text-lg mb-2">{card.title}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
+          What Customers Near Farmington Say About 1st Capital Locksmith
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Locked my truck keys inside out on a back road near Farmington — not exactly ideal. I figured I'd be waiting forever but called 1st Capital and they came out without hesitation. Got me in fast, no damage, and charged a fair price. Really appreciated that they didn't treat me like I was out in the middle of nowhere. Great service."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Donnie R.</p>
+          <p class="text-gray-500 text-sm">Car Lockout — Farmington, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"We have an older farmhouse outside Farmington with locks that were original to the house — very worn out. 1st Capital came out, assessed everything, replaced all the exterior deadbolts and knob sets, and rekeyed them to one key. The technician was professional, friendly, and took the time to explain what he was replacing and why. Outstanding job."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Carol and Jim T.</p>
+          <p class="text-gray-500 text-sm">Lock Replacement & Rekeying — Farmington, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Called late on a weeknight after getting locked out of my house in the Farmington area. I honestly expected to get voicemail or a huge emergency surcharge. Instead someone answered right away, quoted me a reasonable price, and the tech showed up in about 40 minutes. Handled everything quickly and professionally. Would absolutely call again."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Kevin M.</p>
+          <p class="text-gray-500 text-sm">Emergency House Lockout — Farmington, DE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">FAQ</p>
+        <h2 class="text-3xl font-bold text-[#1A1F22] mb-4">
+          Common Locksmith Questions from Farmington, DE Residents
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {[
+          {
+            q: "Do you provide locksmith service in Farmington, Delaware?",
+            a: "Yes. Farmington is part of our service area in Kent County, Delaware. We come directly to Farmington for automotive, residential, commercial, and emergency locksmith calls. Call us at (302) 735-0050."
+          },
+          {
+            q: "Will you come to a rural address outside of town in the Farmington area?",
+            a: "Absolutely. We serve rural properties, farms, and country roads throughout the Farmington area in western Kent County. Being off the main road is no problem — just give us your address and we'll find you."
+          },
+          {
+            q: "How long will it take to get a locksmith to Farmington?",
+            a: "Response times depend on your exact location and current demand. We'll give you an honest ETA the moment you call us at (302) 735-0050 — no vague windows, just a straight answer."
+          },
+          {
+            q: "Can you replace a car key in Farmington without a dealership?",
+            a: "Yes. We cut and program replacement car keys, transponder keys, and key fobs on-site for most makes and models right there in Farmington — typically faster and more affordable than any dealership option."
+          },
+          {
+            q: "Do you upgrade locks on older farmhouses and rural properties?",
+            a: "Yes, and it's actually one of the more common requests we get in rural areas. Older homes often have worn or outdated lock hardware. We carry quality replacement deadbolts and lock sets and install them on-site in a single visit."
+          },
+          {
+            q: "Is your emergency locksmith service available at night in Farmington?",
+            a: "Yes — 24 hours a day, 7 days a week, 365 days a year. We don't stop answering calls after dark just because you're in a rural area. Call (302) 735-0050 at any hour and a real person will pick up."
+          },
+        ].map((faq) => (
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="font-bold text-[#1A1F22] mb-2">{faq.q}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Need a Locksmith in Farmington, DE?
+      </h2>
+      <p class="text-gray-300 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
+        Call 1st Capital Locksmith for fast, professional locksmith service in Farmington and throughout western Kent County, Delaware. We come to you — 24/7, any service, any situation, rural or otherwise.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-10 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-bold text-lg hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Ensure the global page background matches the header color */
+html, body {
+	background-color: #EDEBE7;
+}

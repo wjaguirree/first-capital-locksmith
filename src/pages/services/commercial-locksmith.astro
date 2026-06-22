@@ -1,0 +1,564 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Commercial Locksmith in Delaware | Business Lockout & Lock Services | 1st Capital Locksmith"
+  description="1st Capital Locksmith provides professional commercial locksmith services throughout Delaware. Business lockouts, commercial rekeying, master key systems, panic bar installation, and high-security locks for offices, retail, and warehouses."
+>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">Commercial Locksmith</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema Markup for Breadcrumbs -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": "Commercial Locksmith", "item": "https://www.1stcapitallocksmith.com/services/commercial-locksmith/" }
+    ]
+  })} />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[550px] flex items-center text-white py-20"
+    style="background-image: url('/images/hero.png'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-6xl mx-auto px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-4">Commercial Locksmith Services</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 max-w-3xl leading-tight">
+        Commercial Locksmith in Delaware — Protecting Delaware Businesses
+      </h1>
+      <p class="text-gray-300 text-lg max-w-2xl leading-relaxed mb-8">
+        From office lockouts and business rekeying to master key systems and panic bar installation, 1st Capital Locksmith delivers reliable commercial locksmith services to businesses throughout Delaware. We come to your location — fast.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">All Business Types</p>
+          <p class="text-gray-300 text-sm mt-1">Offices, Retail, Warehouses & More</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Mobile</p>
+          <p class="text-gray-300 text-sm mt-1">We Come Directly to Your Business</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Fast</p>
+          <p class="text-gray-300 text-sm mt-1">Quick Response Across Delaware</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Upfront</p>
+          <p class="text-gray-300 text-sm mt-1">Clear Pricing Before We Start</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Delaware's Commercial Locksmith</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Professional Commercial Locksmith Services Throughout Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Running a business means you can't afford security problems to slow you down. Whether you've been locked out of your office, need to rekey your building after a staff change, or want to upgrade your locks to better protect your property, 1st Capital Locksmith is the commercial locksmith Delaware businesses rely on.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            We work with all types of commercial properties — offices, retail storefronts, restaurants, warehouses, medical facilities, property management buildings, and more. Our commercial locksmiths understand that every business has different security needs, and we take the time to provide the right solution for your specific situation.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            We are fully mobile, which means we come directly to your business location throughout Dover, Milford, Smyrna, Camden, Harrington, and all of Kent County. No need to leave your property unattended — we bring everything needed to get the job done on-site.
+          </p>
+        </div>
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Our Commercial Locksmith Services Include:</h3>
+          <ul class="space-y-3">
+            {[
+              "Commercial Lockout Service",
+              "Business Lock Rekeying",
+              "Master Key System Installation",
+              "Panic Bar & Exit Device Installation",
+              "High-Security Lock Upgrades",
+              "Storefront Lock Repair & Replacement",
+              "Commercial Door Hardware Installation",
+              "Access Control Consultation",
+            ].map((item) => (
+              <li class="flex items-center gap-3 text-gray-700">
+                <span class="w-6 h-6 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <a
+              href="tel:3027350050"
+              class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+            >
+              Call (302) 735-0050 Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section id="services" class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">What We Do</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Commercial Locksmith Services in Delaware
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Here is a detailed look at every commercial locksmith service we provide to businesses throughout Delaware. If you don't see exactly what you need, give us a call — chances are we can help.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Commercial Lockout -->
+        <div id="commercial-lockout" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V7a2 2 0 00-2-2H7a2 2 0 00-2 2v14M3 21h18M9 21v-4a1 1 0 011-1h4a1 1 0 011 1v4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Commercial Lockout Service in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Getting locked out of your business is more than just an inconvenience — every minute you're standing outside costs you time and money. Maybe a key snapped off in the lock, a deadbolt malfunctioned, or an employee accidentally left with the only set of keys. Whatever the situation, 1st Capital Locksmith responds quickly to commercial lockouts throughout Delaware.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our commercial locksmiths use professional non-destructive entry methods to get you back inside your business without damaging your door, frame, or lock hardware. We work on all types of commercial entry systems including standard deadbolts, knob locks, lever handle locks, electronic keypads, and storefront glass door locks.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We understand that a business lockout can happen at any time, which is why we make it a priority to dispatch as quickly as possible. Don't let a lockout disrupt your business operations — call us and we'll be there.
+            </p>
+          </div>
+        </div>
+
+        <!-- Business Rekeying -->
+        <div id="business-rekey" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Business Lock Rekeying in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              One of the smartest security decisions any business owner can make is rekeying their locks after a change in staff, a lost key, or a change in tenants. Rekeying reconfigures the internal pins of your existing lock cylinder so that old keys no longer work, giving you complete control over who has access to your property — without the cost of replacing every lock.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              At 1st Capital Locksmith, we rekey commercial locks quickly and professionally throughout Delaware. Whether you need one door rekeyed or an entire building's worth of locks updated, we handle it efficiently on-site. It's a straightforward service that makes a significant difference in your business's day-to-day security.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We recommend commercial rekeying any time an employee leaves the company, keys go missing, or you take over a new commercial space. It's fast, affordable, and gives you complete peace of mind about who can access your business.
+            </p>
+          </div>
+        </div>
+
+        <!-- Master Key Systems -->
+        <div id="master-key" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Master Key System Installation in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              If you manage multiple doors, rooms, or departments within your business, carrying a separate key for every single lock quickly becomes unmanageable. A master key system solves this elegantly — it allows one master key to open every lock in the system, while individual keys only open the specific locks assigned to them.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              This is ideal for property managers, office buildings, hotels, apartment complexes, schools, medical facilities, and any business where different people need access to different areas. A well-designed master key system gives you layered access control without the complexity of electronic systems.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              1st Capital Locksmith designs and installs custom master key systems for businesses throughout Delaware. We assess your property, understand your access needs, and build a system that works efficiently for your specific situation. Call us to discuss a master key solution for your business.
+            </p>
+          </div>
+        </div>
+
+        <!-- Panic Bar -->
+        <div id="panic-bar" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Panic Bar & Exit Device Installation in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Panic bars — also called push bars or exit devices — are required by building codes on most commercial emergency exit doors. They allow people to exit quickly in an emergency by simply pushing the bar, without needing to turn a handle or use a key. Proper panic bar installation is not just a code requirement — it's a critical safety feature for your employees and customers.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              1st Capital Locksmith installs, repairs, and replaces panic bars and exit devices for commercial properties throughout Delaware. We work with all major brands and hardware types, ensuring your exit doors are both compliant and functional. Whether you're setting up a new commercial space or your existing panic hardware is worn out or damaged, we handle it professionally.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We also handle panic bar repairs for devices that have become loose, stiff, or unreliable over time. Don't wait until an emergency to find out your exit hardware isn't working — call us for an inspection and service today.
+            </p>
+          </div>
+        </div>
+
+        <!-- High Security Locks -->
+        <div id="high-security" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">High-Security Lock Installation in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Standard commercial locks offer basic protection, but businesses that handle sensitive data, valuable inventory, or restricted areas need something stronger. High-security locks are engineered to resist picking, drilling, bumping, and unauthorized key duplication — providing a significantly higher level of protection than standard hardware.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Popular high-security lock brands like Medeco, Mul-T-Lock, and ASSA ABLOY offer patented keyways that prevent unauthorized key copies from being made anywhere but through authorized channels. This gives business owners complete control over their key inventory and dramatically reduces the risk of unauthorized access.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              1st Capital Locksmith supplies and installs high-security locks for businesses throughout Delaware. If your current locks aren't giving you the level of protection your business requires, call us to discuss an upgrade that fits your needs and budget.
+            </p>
+          </div>
+        </div>
+
+        <!-- Storefront Lock Repair -->
+        <div id="storefront" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Storefront Lock Repair & Replacement in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Your storefront door is the first line of defense for your business. A lock that sticks, a deadbolt that won't fully extend, or a handle that's loose and rattling are all signs that your storefront security needs attention. Ignoring these problems doesn't make them go away — it usually makes them worse and more expensive to fix.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              1st Capital Locksmith repairs and replaces all types of storefront lock hardware throughout Delaware. We work on aluminum storefront door locks, glass door locking systems, roll-up door locks, and standard commercial entry hardware. Whether it's a quick repair or a full hardware replacement, we get it done efficiently so you can get back to serving your customers.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              If your storefront lock was damaged in a break-in attempt or has simply worn out over years of use, call us for a fast, professional assessment and repair. We'll make sure your storefront is secure before we leave.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Choose Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Why Delaware Businesses Choose 1st Capital Locksmith
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          When your business security is on the line, you need a locksmith you can trust. Here is why business owners throughout Delaware call us first.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Fast Response to Your Location</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We dispatch quickly to business locations throughout Delaware. Whether it's an emergency lockout or a scheduled service call, we arrive ready to work and get the job done right.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V7a2 2 0 00-2-2H7a2 2 0 00-2 2v14M3 21h18M9 21v-4a1 1 0 011-1h4a1 1 0 011 1v4" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">All Commercial Property Types</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We serve offices, retail stores, restaurants, warehouses, medical facilities, apartment complexes, and property management companies throughout Delaware.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Transparent Business Pricing</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We provide clear, honest quotes before any work begins. No surprise invoices, no hidden fees. You know exactly what you're paying for — and why.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Licensed & Professional</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Our locksmiths are trained, professional, and take your business security seriously. We treat every job — big or small — with the same level of care and attention to detail.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Professional Grade Hardware</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We use and install quality commercial-grade lock hardware built to withstand the demands of high-traffic business environments — not the low-grade products you'd find at a big box store.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Serving All of Kent County</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We serve businesses in Dover, Milford, Smyrna, Camden, Harrington, Magnolia, Frederica, and all surrounding communities throughout Kent County, Delaware.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
+          What Delaware Business Owners Say About Us
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"We had an employee leave unexpectedly and I was worried about who still had keys to our office. Called 1st Capital Locksmith and they came out the same day and rekeyed every door in our building. Fast, professional, and the price was very fair. I felt a lot better about our security after they left."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Sandra K.</p>
+          <p class="text-gray-500 text-sm">Business Rekeying — Dover, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"I manage a small apartment complex and needed a master key system installed so I could access all units without carrying fifteen different keys. These guys set the whole thing up perfectly. Every tenant key works on their unit only, and my master key works on everything. Exactly what I needed."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Raymond P.</p>
+          <p class="text-gray-500 text-sm">Master Key System — Smyrna, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Showed up to open my restaurant one morning and the front door lock had completely failed overnight. I could not get in at all. Called 1st Capital Locksmith and they were there within 30 minutes. Got me in without any damage and replaced the lock on the spot. Saved my whole morning shift. Cannot thank them enough."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Maria C.</p>
+          <p class="text-gray-500 text-sm">Commercial Lockout — Dover, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"We needed panic bars installed on our back exit doors to meet building code requirements for our new office space. 1st Capital Locksmith came out, assessed what we needed, ordered the right hardware, and had everything installed quickly. The inspector approved it without any issues. Great work all around."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">James T.</p>
+          <p class="text-gray-500 text-sm">Panic Bar Installation — Milford, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Someone tried to break into our storefront overnight and damaged the lock on our front door. Called 1st Capital Locksmith first thing in the morning. They repaired the damage, installed a new heavy-duty deadbolt, and recommended some additional security upgrades. Very thorough and professional. Highly recommend."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Carla M.</p>
+          <p class="text-gray-500 text-sm">Storefront Lock Repair — Camden, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"We upgraded all our office locks to high-security Medeco locks after a security review recommended it. 1st Capital Locksmith handled the entire installation and explained everything clearly. The quality of the hardware and the installation work was excellent. Our office security is in a completely different league now."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">David H.</p>
+          <p class="text-gray-500 text-sm">High-Security Lock Upgrade — Harrington, DE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Explore More</p>
+        <h2 class="text-3xl font-bold text-[#1A1F22] mb-4">Other Locksmith Services We Offer in Delaware</h2>
+        <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed">
+          Beyond commercial locksmith services, 1st Capital Locksmith provides automotive, residential, and emergency locksmith services throughout Delaware.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="/services/automotive-locksmith" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h7l1-2zM13 6h3l3 4v4h-2" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Automotive Locksmith</h3>
+          <p class="text-gray-500 text-sm">Car lockouts, key replacement, fob programming</p>
+        </a>
+
+        <a href="/services/residential-locksmith" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Residential Locksmith</h3>
+          <p class="text-gray-500 text-sm">House lockouts, rekeying, deadbolt installation</p>
+        </a>
+
+        <a href="/services/emergency-locksmith" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Emergency Locksmith</h3>
+          <p class="text-gray-500 text-sm">Urgent lockouts and after-hours locksmith help</p>
+        </a>
+
+        <a href="/service-areas" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Service Areas</h3>
+          <p class="text-gray-500 text-sm">Dover, Milford, Smyrna & all of Kent County</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">FAQ</p>
+        <h2 class="text-3xl font-bold text-[#1A1F22] mb-4">
+          Commercial Locksmith Questions — Answered
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {[
+          {
+            q: "How quickly can you respond to a commercial lockout in Delaware?",
+            a: "We prioritize commercial lockout calls and dispatch as quickly as possible to your business location. Response times vary based on location and current demand. Call (302) 735-0050 and we'll give you an honest estimate of how long we'll be."
+          },
+          {
+            q: "How often should a business rekey its locks?",
+            a: "We recommend rekeying any time an employee with key access leaves the company, when keys go missing or unaccounted for, when you move into a new commercial space, or after a security incident. It's one of the most cost-effective security measures available."
+          },
+          {
+            q: "What is the difference between rekeying and replacing locks?",
+            a: "Rekeying changes the internal pin configuration of your existing lock cylinder so old keys no longer work. Lock replacement installs an entirely new lock. Rekeying is significantly less expensive and is the right choice in most situations. Lock replacement makes sense when the hardware is damaged, worn out, or you're upgrading to higher-security locks."
+          },
+          {
+            q: "Can you install panic bars on any commercial door?",
+            a: "In most cases, yes. We assess your door type, frame, and existing hardware before recommending the right panic bar or exit device. We handle aluminum storefront doors, hollow metal doors, wood commercial doors, and more."
+          },
+          {
+            q: "Do you work with property management companies?",
+            a: "Absolutely. We work regularly with property managers throughout Delaware who need rekeying services between tenants, master key systems for multiple units, or regular lock maintenance. Call us to discuss a service arrangement that works for your properties."
+          },
+          {
+            q: "Can you make a master key system work with my existing locks?",
+            a: "In many cases we can rekey your existing locks into a master key system without replacing the hardware. This depends on the brand and condition of your current locks. We assess this on-site and give you a clear recommendation before any work begins."
+          },
+        ].map((faq) => (
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="font-bold text-[#1A1F22] mb-2">{faq.q}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Need a Commercial Locksmith in Delaware?
+      </h2>
+      <p class="text-gray-300 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
+        Call 1st Capital Locksmith for fast, professional commercial locksmith service throughout Delaware. We come directly to your business — no waiting, no hassle.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-10 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-bold text-lg hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

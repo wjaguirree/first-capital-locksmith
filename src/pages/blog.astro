@@ -1,0 +1,335 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const posts = [
+  {
+    slug: "what-to-do-when-locked-out-of-car",
+    title: "What to Do When You're Locked Out of Your Car in Dover, DE",
+    excerpt: "Getting locked out of your car is stressful, especially if it happens at night or in an unfamiliar area. Here's exactly what to do if you find yourself locked out in Dover or anywhere in Kent County, Delaware.",
+    category: "Automotive Locksmith",
+    date: "June 10, 2026",
+    readTime: "4 min read",
+    internalLinks: [
+      { label: "Automotive Locksmith Services", href: "/services/automotive-locksmith" },
+      { label: "Emergency Locksmith", href: "/services/emergency-locksmith" },
+    ],
+  },
+  {
+    slug: "how-often-should-you-rekey-your-home",
+    title: "How Often Should You Rekey Your Home Locks? A Dover Locksmith Explains",
+    excerpt: "Most homeowners never think about rekeying their locks until something goes wrong. A professional locksmith in Dover, DE breaks down exactly when and why you should rekey your home locks.",
+    category: "Residential Locksmith",
+    date: "May 28, 2026",
+    readTime: "5 min read",
+    internalLinks: [
+      { label: "Residential Locksmith Services", href: "/services/residential-locksmith" },
+      { label: "Contact Us for a Rekey", href: "/contact" },
+    ],
+  },
+  {
+    slug: "transponder-key-vs-key-fob-whats-the-difference",
+    title: "Transponder Key vs Key Fob — What's the Difference?",
+    excerpt: "Confused about the difference between a transponder key and a key fob? You're not alone. Our Dover automotive locksmith breaks down exactly how each one works and what to do when you lose them.",
+    category: "Automotive Locksmith",
+    date: "May 14, 2026",
+    readTime: "5 min read",
+    internalLinks: [
+      { label: "Automotive Locksmith Services", href: "/services/automotive-locksmith" },
+      { label: "Get a Car Key Replacement", href: "/contact" },
+    ],
+  },
+  {
+    slug: "best-locks-for-your-front-door",
+    title: "Best Door Locks for Your Home in 2026 — Recommended by a Dover Locksmith",
+    excerpt: "Not all door locks are created equal. If you want to protect your home in Dover, Delaware, here are the best deadbolts and door locks our locksmiths recommend for residential security.",
+    category: "Residential Locksmith",
+    date: "April 30, 2026",
+    readTime: "6 min read",
+    internalLinks: [
+      { label: "Residential Locksmith Services", href: "/services/residential-locksmith" },
+      { label: "Deadbolt Installation in Dover", href: "/contact" },
+    ],
+  },
+  {
+    slug: "signs-you-need-to-replace-your-commercial-locks",
+    title: "5 Signs Your Business Needs New Locks — Commercial Locksmith Tips",
+    excerpt: "Worn, outdated, or compromised locks put your business at risk. Here are five clear signs it's time to call a commercial locksmith and upgrade the security on your Dover, DE business property.",
+    category: "Commercial Locksmith",
+    date: "April 15, 2026",
+    readTime: "5 min read",
+    internalLinks: [
+      { label: "Commercial Locksmith Services", href: "/services/commercial-locksmith" },
+      { label: "Get a Free Business Security Quote", href: "/contact" },
+    ],
+  },
+  {
+    slug: "what-is-a-master-key-system",
+    title: "What Is a Master Key System and Does Your Business Need One?",
+    excerpt: "A master key system gives business owners and property managers controlled access to multiple areas with a single key. Our Dover commercial locksmith explains how they work and who benefits most.",
+    category: "Commercial Locksmith",
+    date: "March 28, 2026",
+    readTime: "5 min read",
+    internalLinks: [
+      { label: "Commercial Locksmith Services", href: "/services/commercial-locksmith" },
+      { label: "Contact a Dover Locksmith", href: "/contact" },
+    ],
+  },
+  {
+    slug: "how-to-avoid-locksmith-scams",
+    title: "How to Avoid Locksmith Scams in Delaware — What Every Driver and Homeowner Should Know",
+    excerpt: "Locksmith scams are more common than you think. Fake locksmiths use bait-and-switch pricing and damage your locks on purpose. Here's how to spot a scam and find a legitimate locksmith in Dover, DE.",
+    category: "Locksmith Tips",
+    date: "March 10, 2026",
+    readTime: "6 min read",
+    internalLinks: [
+      { label: "About 1st Capital Locksmith", href: "/about" },
+      { label: "Our Services in Dover, DE", href: "/services" },
+    ],
+  },
+  {
+    slug: "broken-key-extraction-what-to-do",
+    title: "Broken Key Stuck in Your Lock or Ignition? Here's What to Do",
+    excerpt: "A broken key stuck in your door lock or car ignition is a frustrating situation. Before you make it worse, read this guide from a Dover, DE locksmith on exactly what to do — and what NOT to do.",
+    category: "Emergency Locksmith",
+    date: "February 20, 2026",
+    readTime: "4 min read",
+    internalLinks: [
+      { label: "Emergency Locksmith Services", href: "/services/emergency-locksmith" },
+      { label: "Automotive Locksmith Services", href: "/services/automotive-locksmith" },
+    ],
+  },
+  {
+    slug: "moving-into-new-home-rekey-or-replace-locks",
+    title: "Moving Into a New Home? Rekey or Replace Your Locks — Dover Locksmith Advice",
+    excerpt: "When you move into a new home in Dover or anywhere in Kent County, you have no idea how many copies of your key exist. Here's why rekeying or replacing your locks should be your very first step.",
+    category: "Residential Locksmith",
+    date: "February 5, 2026",
+    readTime: "5 min read",
+    internalLinks: [
+      { label: "Residential Locksmith Services", href: "/services/residential-locksmith" },
+      { label: "Locksmith Service Areas in Kent County", href: "/service-areas" },
+    ],
+  },
+];
+
+const categoryColors: Record<string, string> = {
+  "Automotive Locksmith": "bg-blue-100 text-blue-700",
+  "Residential Locksmith": "bg-green-100 text-green-700",
+  "Commercial Locksmith": "bg-purple-100 text-purple-700",
+  "Emergency Locksmith": "bg-red-100 text-red-700",
+  "Locksmith Tips": "bg-yellow-100 text-yellow-700",
+};
+---
+
+<MainLayout
+  title="Locksmith Blog | Tips & Advice from 1st Capital Locksmith in Dover, DE"
+  description="Read the 1st Capital Locksmith blog for expert locksmith tips, home security advice, automotive key guides, and more from your trusted local locksmith in Dover, Delaware."
+>
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[400px] flex items-center text-white py-16"
+    style="background-image: url('/images/hero.png'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-6xl mx-auto px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-4">Locksmith Blog</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 max-w-3xl leading-tight">
+        Locksmith Tips, Guides & Security Advice for Dover, Delaware
+      </h1>
+      <p class="text-gray-300 text-lg max-w-2xl leading-relaxed">
+        Expert advice from the team at 1st Capital Locksmith. Learn how to protect your home, vehicle, and business with tips from your trusted local locksmith in Dover, DE and Kent County.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Latest Articles</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Locksmith Tips & Home Security Guides
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Browse our latest articles covering automotive locksmith tips, residential security advice, commercial lock guides, and emergency lockout help for drivers and homeowners throughout Dover and Kent County, Delaware.
+        </p>
+      </div>
+
+      <!-- Featured Post -->
+      <a
+        href={`/blog/${posts[0].slug}`}
+        class="block bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition overflow-hidden mb-10 group"
+      >
+        <div class="grid md:grid-cols-2">
+          <div class="bg-[#0E1B2F] min-h-[280px] flex items-center justify-center p-10">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h7l1-2zM13 6h3l3 4v4h-2" />
+                </svg>
+              </div>
+              <p class="text-[#9A9D62] font-semibold text-sm uppercase tracking-wide">Featured Article</p>
+            </div>
+          </div>
+          <div class="p-8 flex flex-col justify-center">
+            <span class={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 w-fit ${categoryColors[posts[0].category]}`}>
+              {posts[0].category}
+            </span>
+            <h2 class="text-2xl font-bold text-[#1A1F22] mb-3 group-hover:text-[#A61E22] transition leading-snug">
+              {posts[0].title}
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-4">{posts[0].excerpt}</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              {posts[0].internalLinks.map((link) => (
+                <a
+                  href={link.href}
+                  onclick="event.stopPropagation()"
+                  class="text-xs font-semibold text-[#A61E22] border border-[#A61E22] px-3 py-1 rounded-full hover:bg-[#A61E22] hover:text-white transition"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+            <div class="flex items-center gap-4 text-sm text-gray-400">
+              <span>{posts[0].date}</span>
+              <span>·</span>
+              <span>{posts[0].readTime}</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Rest of Posts -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.slice(1).map((post) => (
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col">
+            <a href={`/blog/${post.slug}`} class="block bg-[#0E1B2F] h-40 flex items-center justify-center group">
+              <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              </div>
+            </a>
+            <div class="p-6 flex flex-col flex-1">
+              <span class={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 w-fit ${categoryColors[post.category]}`}>
+                {post.category}
+              </span>
+              <a href={`/blog/${post.slug}`} class="group">
+                <h2 class="text-lg font-bold text-[#1A1F22] mb-3 group-hover:text-[#A61E22] transition leading-snug">
+                  {post.title}
+                </h2>
+              </a>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">{post.excerpt}</p>
+
+              <!-- Internal Links -->
+              <div class="flex flex-wrap gap-2 mb-4">
+                {post.internalLinks.map((link) => (
+                  <a
+                    href={link.href}
+                    class="text-xs font-semibold text-[#A61E22] border border-[#A61E22] px-3 py-1 rounded-full hover:bg-[#A61E22] hover:text-white transition"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+
+              <div class="flex items-center gap-4 text-xs text-gray-400 mt-auto">
+                <span>{post.date}</span>
+                <span>·</span>
+                <span>{post.readTime}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Browse by Topic -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Browse by Topic</p>
+        <h2 class="text-3xl font-bold text-[#1A1F22] mb-4">Locksmith Topics We Cover</h2>
+        <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed">
+          Find helpful locksmith articles by topic. We cover everything from car lockouts to residential security and commercial access control for customers throughout Dover and Kent County, Delaware.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="/services/automotive-locksmith" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition text-center group">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h7l1-2zM13 6h3l3 4v4h-2" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Automotive</h3>
+          <p class="text-gray-500 text-sm">Car lockouts, key programming, fobs & ignitions</p>
+        </a>
+
+        <a href="/services/residential-locksmith" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition text-center group">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Residential</h3>
+          <p class="text-gray-500 text-sm">Home security, rekeying, deadbolts & lockouts</p>
+        </a>
+
+        <a href="/services/commercial-locksmith" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition text-center group">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V7a2 2 0 00-2-2H7a2 2 0 00-2 2v14M3 21h18M9 21v-4a1 1 0 011-1h4a1 1 0 011 1v4" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Commercial</h3>
+          <p class="text-gray-500 text-sm">Business locks, master keys, panic bars & more</p>
+        </a>
+
+        <a href="/services/emergency-locksmith" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition text-center group">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Emergency</h3>
+          <p class="text-gray-500 text-sm">Urgent lockouts, broken keys & after-hours help</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Need a Locksmith in Dover, DE Right Now?
+      </h2>
+      <p class="text-gray-300 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
+        Don't wait. Call 1st Capital Locksmith for fast, professional mobile locksmith service throughout Dover, Kent County, and surrounding Delaware communities.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-10 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-bold text-lg hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

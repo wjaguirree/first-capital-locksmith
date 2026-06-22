@@ -1,0 +1,587 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Locksmith in Clayton, DE | Car, Home & Emergency Locksmith | 1st Capital Locksmith"
+  description="1st Capital Locksmith provides fast, professional locksmith services in Clayton, Delaware. Car lockouts, house lockouts, lock rekeying, deadbolt installation, key replacement, and 24/7 emergency locksmith service in Clayton, DE and surrounding Kent & New Castle County communities."
+>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/service-areas" class="hover:text-[#A61E22] transition font-medium">Service Areas</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">Clayton, DE</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema: Breadcrumb -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://www.1stcapitallocksmith.com/service-areas/" },
+      { "@type": "ListItem", "position": 3, "name": "Clayton, DE", "item": "https://www.1stcapitallocksmith.com/service-areas/clayton-de/" }
+    ]
+  })} />
+
+  <!-- Schema: Local Business -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "1st Capital Locksmith",
+    "telephone": "+13027350050",
+    "url": "https://www.1stcapitallocksmith.com",
+    "areaServed": {
+      "@type": "City",
+      "name": "Clayton",
+      "containedIn": { "@type": "State", "name": "Delaware" }
+    },
+    "serviceType": [
+      "Automotive Locksmith",
+      "Residential Locksmith",
+      "Commercial Locksmith",
+      "Emergency Locksmith"
+    ]
+  })} />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[520px] flex items-center text-white py-20"
+    style="background-image: url('/images/hero.png'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-6xl mx-auto px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-4">Locksmith Services in Clayton, Delaware</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 max-w-3xl leading-tight">
+        Locksmith in Clayton, DE — Fast, Reliable Service Where Kent & New Castle Counties Meet
+      </h1>
+      <p class="text-gray-300 text-lg max-w-2xl leading-relaxed mb-8">
+        Clayton sits right at the crossroads of two of Delaware's most active counties — and when a lock or key problem comes up, you need a locksmith who knows the area and responds fast. 1st Capital Locksmith provides professional automotive, residential, commercial, and 24/7 emergency locksmith services throughout Clayton, DE and the surrounding communities.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">24/7</p>
+          <p class="text-gray-300 text-sm mt-1">Emergency Service Available</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Mobile</p>
+          <p class="text-gray-300 text-sm mt-1">We Come Directly to Clayton</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">All Services</p>
+          <p class="text-gray-300 text-sm mt-1">Auto, Home, Business & Emergency</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Upfront</p>
+          <p class="text-gray-300 text-sm mt-1">Clear Pricing Before We Start</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro + Map -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: Text + Service List -->
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Your Local Locksmith in Clayton</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Professional Locksmith Services Serving Clayton, Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Clayton, Delaware occupies a unique spot on the map — straddling the line between Kent and New Castle Counties along US-13. It's a community that punches above its size in terms of activity. Between the commuters passing through daily, the families settled in the surrounding neighborhoods, and the agricultural and commercial operations along the main corridor, Clayton is a place that keeps moving. And when a lock or key issue brings that movement to a halt, 1st Capital Locksmith is the team you want on the phone.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            We're a fully mobile locksmith service covering Clayton, DE and the communities around it. Our technicians come directly to your location — whether that's a car lockout in a parking lot on Main Street, a house lockout in one of Clayton's residential neighborhoods, or a business that needs a security upgrade along the US-13 corridor. We carry everything needed to complete the job on-site without unnecessary delays.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            From automotive and residential to commercial and emergency locksmith services, we handle it all in Clayton with honest pricing and work you can count on. Call us at <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> — a real person answers every call.
+          </p>
+
+          <!-- Service Checklist -->
+          <div class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200">
+            <h3 class="text-lg font-bold text-[#1A1F22] mb-4">Locksmith Services We Provide in Clayton, DE:</h3>
+            <ul class="space-y-2">
+              {[
+                "Car Lockout Service in Clayton",
+                "Car Key Replacement & Transponder Programming",
+                "Key Fob Replacement & Programming",
+                "Ignition Repair & Replacement",
+                "House Lockout Service",
+                "Lock Rekeying for Homes & Rentals",
+                "Deadbolt Installation & Upgrade",
+                "Lock Repair & Replacement",
+                "Commercial Lockout Service",
+                "Master Key System Setup",
+                "Access Control Solutions",
+                "24/7 Emergency Locksmith Response",
+                "Broken Key Extraction",
+                "Mailbox Lock Replacement",
+              ].map((item) => (
+                <li class="flex items-center gap-3 text-gray-700 text-sm">
+                  <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-5 pt-5 border-t border-gray-200">
+              <a
+                href="tel:3027350050"
+                class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+              >
+                Call (302) 735-0050 Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Map + Contact Card -->
+        <div class="flex flex-col gap-6">
+          <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm w-full" style="height: 480px;">
+            <iframe
+              title="Clayton, Delaware Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24705.504473187313!2d-75.65951552927325!3d39.283985452750315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c773bdaa88bc0f%3A0x3f4f10887607eb28!2sClayton%2C%20DE!5e0!3m2!1sen!2sus!4v1782148156691!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <!-- Quick Contact Card -->
+          <div class="bg-[#0E1B2F] rounded-2xl p-6 text-white">
+            <h3 class="text-lg font-bold mb-4">Need a Locksmith in Clayton Right Now?</h3>
+            <div class="space-y-3">
+              <a href="tel:3027350050" class="flex items-center gap-3 text-white hover:text-[#A61E22] transition">
+                <span class="w-9 h-9 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-xs text-gray-400">Call Us Anytime — 24/7</p>
+                  <p class="font-bold text-lg">(302) 735-0050</p>
+                </div>
+              </a>
+              <div class="flex items-center gap-3">
+                <span class="w-9 h-9 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-xs text-gray-400">Serving</p>
+                  <p class="font-semibold text-sm">Clayton, DE & Surrounding Counties</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-9 h-9 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-xs text-gray-400">Hours</p>
+                  <p class="font-semibold text-sm">Open 24 Hours — 7 Days a Week</p>
+                </div>
+              </div>
+            </div>
+            <a
+              href="/contact"
+              class="mt-5 w-full inline-flex justify-center items-center rounded-full border border-white px-6 py-3 text-white font-bold hover:bg-white hover:text-[#1A1F22] transition"
+            >
+              Get a Free Quote
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">What We Do in Clayton</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Every Locksmith Service We Offer in Clayton, DE
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          From a car lockout on Main Street to upgrading the deadbolts on a home near Smyrna Road, here is a complete look at how 1st Capital Locksmith serves Clayton residents and businesses.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Automotive -->
+        <div id="automotive" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h7l1-2zM13 6h3l3 4v4h-2" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Automotive Locksmith in Clayton, DE</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Clayton sees a steady flow of traffic every day — commuters heading north toward Smyrna and Wilmington, residents running errands along US-13, and people passing through from both Kent and New Castle Counties. With that kind of daily activity, car lockouts are a regular occurrence. Whether you've locked your keys inside at a local gas station or grocery stop, lost your only key fob, or broken a key off in the ignition, 1st Capital Locksmith responds quickly to automotive locksmith calls throughout Clayton and gets you back on the road without any damage to your vehicle.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our automotive services in Clayton include car lockout service, car key replacement, transponder key cutting and programming, key fob replacement and programming, ignition repair and replacement, and broken key extraction. We work on all makes and models — domestic cars, imports, trucks, vans, and SUVs — and we do it all on-site. No dealership trip, no tow truck, no wasted afternoon.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Wherever you are in Clayton when a car key emergency happens, call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> and we'll come to you.
+            </p>
+            <div class="mt-4">
+              <a href="/services/automotive-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Automotive Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Residential -->
+        <div id="residential" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Residential Locksmith in Clayton, DE</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Clayton's residential landscape has grown considerably over the years, with neighborhoods spreading out from the town center into the surrounding countryside. Whether you live in an established home near downtown Clayton, a newer development off Smyrna-Clayton Road, or a rural property on the outskirts of town, 1st Capital Locksmith provides the residential locksmith services you need to stay secure and get back inside when things go sideways.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              We handle house lockouts — including the frustrating situation where you step outside and the door closes and locks behind you — as well as lock rekeying for new homeowners, deadbolt installation and upgrades, lock repair and full replacement, and mailbox lock service. If you're a landlord or property manager in Clayton, we make the rekeying process between tenants fast and affordable. We carry the hardware with us and complete everything in a single on-site visit.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Moved into a new home in Clayton recently? Getting the locks rekeyed is one of the smartest first steps you can take — and it's one of the most affordable services we offer.
+            </p>
+            <div class="mt-4">
+              <a href="/services/residential-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Residential Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial -->
+        <div id="commercial" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V7a2 2 0 00-2-2H7a2 2 0 00-2 2v14M3 21h18M9 21v-4a1 1 0 011-1h4a1 1 0 011 1v4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Commercial Locksmith in Clayton, DE</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Clayton's position along US-13 makes it a natural home for a range of commercial operations — retail businesses, service shops, light industrial facilities, and agricultural operations that serve both Kent and New Castle Counties. Whatever type of business you run in or near Clayton, 1st Capital Locksmith provides the commercial locksmith services to keep your property secure and your operations running without unnecessary interruption.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our commercial locksmith services in Clayton include business lockout response, commercial-grade lock installation and replacement, master key system design and setup, access control solutions, panic bar and exit device installation, and lock rekeying following employee departures. We understand that time is money when it comes to your business, and we respond with the urgency that commercial situations require.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Whether you manage a small storefront on Main Street or a larger commercial facility off the highway, we have the experience and equipment to handle your security needs in Clayton.
+            </p>
+            <div class="mt-4">
+              <a href="/services/commercial-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Commercial Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency -->
+        <div id="emergency" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Emergency Locksmith in Clayton, DE — Available 24/7</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Lock emergencies have a way of happening at the worst possible times — late at night, early in the morning, on a Sunday, on a holiday. When it happens in Clayton, you need to know there's someone you can actually reach who will show up. 1st Capital Locksmith provides genuine 24/7 emergency locksmith service to Clayton and the surrounding area, every single day of the year with no exceptions.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Whether it's a house lockout after dark, a car lockout along US-13 late at night, a broken key stuck in your door lock, or a damaged lock following a break-in attempt, we dispatch quickly and arrive fully prepared to handle the situation on-site without delays. We don't need to order parts or make a second trip — we come ready to work.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              When you call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a>, a real person answers — not a recording. We'll get a technician heading your way and keep you updated on their arrival.
+            </p>
+            <div class="mt-4">
+              <a href="/services/emergency-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Emergency Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Clayton + Nearby -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">About the Area</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Proudly Serving Clayton and the Communities Around It
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Clayton, Delaware is one of those towns that often gets overlooked in favor of its larger neighbors — but the people who live here know exactly what they've got. Positioned right along US-13 where Kent and New Castle Counties meet, Clayton is a community with deep roots, a strong agricultural heritage, and a growing residential base that continues to attract families looking for a quieter slice of Delaware life.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            The town sits close enough to Smyrna and Dover to give residents access to shopping, dining, and services without sacrificing the small-town character that makes Clayton worth living in. It's a place where people tend to look out for each other — and where having a dependable locksmith in your contacts is just good sense.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            1st Capital Locksmith serves Clayton, DE directly. We know the roads through town, we know the US-13 corridor, and we understand what it means to show up when someone calls for help. Whether you're near the center of town or out on a rural stretch, we'll be there.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Save our number now — <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> — so you're never scrambling to find a locksmith when you actually need one.
+          </p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Areas We Also Serve Near Clayton:</h3>
+          <ul class="grid grid-cols-2 gap-3">
+            {[
+              "Smyrna, DE",
+              "Dover, DE",
+              "Cheswold, DE",
+              "Camden, DE",
+              "Middletown, DE",
+              "Odessa, DE",
+              "Townsend, DE",
+              "Hartly, DE",
+              "Wyoming, DE",
+              "Magnolia, DE",
+            ].map((city) => (
+              <li class="flex items-center gap-2 text-gray-700 text-sm">
+                <span class="w-2 h-2 bg-[#A61E22] rounded-full flex-shrink-0"></span>
+                {city}
+              </li>
+            ))}
+          </ul>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <a
+              href="/service-areas"
+              class="w-full inline-flex justify-center items-center rounded-full border border-[#A61E22] px-6 py-3 text-[#A61E22] font-bold hover:bg-[#A61E22] hover:text-white transition"
+            >
+              View All Service Areas
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Choose Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Why Clayton Residents & Businesses Choose 1st Capital Locksmith
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Here's what sets us apart for customers throughout Clayton, DE — from first-time callers to the people who save our number and call us every time.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Fast Response to Clayton",
+            desc: "We know the US-13 corridor and the roads around Clayton well. When you call, we dispatch quickly and give you a real, honest ETA — not a vague window.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />`
+          },
+          {
+            title: "24/7 — Every Day, No Exceptions",
+            desc: "We answer calls and respond to locksmith emergencies in Clayton around the clock — nights, weekends, and every holiday. A real person picks up every time.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />`
+          },
+          {
+            title: "Honest Pricing Every Time",
+            desc: "You'll always receive a clear, upfront quote before we start. No hidden trip fees, no inflated emergency rates, no surprises when the job is done.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`
+          },
+          {
+            title: "Fully Mobile — We Come to You",
+            desc: "Our locksmiths come to your exact location anywhere in Clayton — home, business, roadside, or parking lot — fully equipped to complete the job on-site.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />`
+          },
+          {
+            title: "Non-Destructive Entry",
+            desc: "We open locked cars and homes using professional non-destructive methods — no prying, no breaking, no unnecessary damage to your property.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`
+          },
+          {
+            title: "Auto, Home & Commercial",
+            desc: "One call handles everything — car keys, home locks, business security. We carry what we need to handle any locksmith job in Clayton on a single visit.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />`
+          },
+        ].map((card) => (
+          <div class="bg-white rounded-2xl p-8 border border-gray-200">
+            <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" set:html={card.icon} />
+            </div>
+            <h3 class="font-bold text-[#1A1F22] text-lg mb-2">{card.title}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
+          What Clayton Area Customers Say About 1st Capital Locksmith
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Locked my keys in the car on US-13 near Clayton during a really cold morning. Called 1st Capital Locksmith and they were out in about 25 minutes — faster than I expected. The technician was great, opened the door without any issues, and the price was totally fair. Saved my whole morning."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Brian H.</p>
+          <p class="text-gray-500 text-sm">Car Lockout — Clayton, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"We just bought a house in Clayton and wanted peace of mind about the locks before we moved our stuff in. 1st Capital came out the next day, rekeyed all the exterior doors, and upgraded one of the deadbolts that was worn out. Super professional, explained everything, and very reasonably priced. Would absolutely recommend."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Stephanie and Tom W.</p>
+          <p class="text-gray-500 text-sm">Lock Rekeying & Deadbolt Upgrade — Clayton, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Needed an emergency locksmith on a Sunday night after getting locked out of my house in Clayton. I was honestly bracing for an outrageous price or a long wait. Instead, someone answered right away, quoted me a fair price, and the tech was there in 30 minutes. Couldn't have asked for better service under the circumstances."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Angela F.</p>
+          <p class="text-gray-500 text-sm">Emergency House Lockout — Clayton, DE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">FAQ</p>
+        <h2 class="text-3xl font-bold text-[#1A1F22] mb-4">
+          Common Locksmith Questions from Clayton, DE Residents
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {[
+          {
+            q: "Do you provide locksmith service in Clayton, Delaware?",
+            a: "Yes, absolutely. Clayton is a regular part of our service area. We serve Clayton and surrounding communities in both Kent and New Castle Counties. Call us at (302) 735-0050 and we'll come directly to you."
+          },
+          {
+            q: "How quickly can you respond to a lockout in Clayton?",
+            a: "We prioritize lockout calls and dispatch as fast as possible. We'll give you a real, honest ETA the moment you call us at (302) 735-0050. Response times vary based on demand and your exact location in Clayton."
+          },
+          {
+            q: "Can you replace a car key in Clayton without a dealership visit?",
+            a: "Yes. We cut and program replacement car keys, transponder keys, and key fobs on-site for most makes and models right there in Clayton — typically faster and at a fraction of what a dealership would charge."
+          },
+          {
+            q: "I just moved into a home in Clayton. Is rekeying the locks worth it?",
+            a: "Absolutely — it's one of the best things a new homeowner can do. Previous owners, contractors, neighbors, or former tenants may have copies of your keys. Rekeying gives you complete control over who has access to your home. It's fast and affordable."
+          },
+          {
+            q: "Do you offer 24/7 emergency locksmith service in Clayton, DE?",
+            a: "Yes. We respond to locksmith emergencies in Clayton around the clock — every night, every weekend, and every holiday. Call (302) 735-0050 at any hour and a real person will answer."
+          },
+          {
+            q: "How much does a locksmith cost in Clayton, DE?",
+            a: "Pricing depends on the service and your specific situation. We always provide a clear, upfront quote before starting any work — no hidden fees, no surprise charges at the end. Call (302) 735-0050 for a fast, honest estimate."
+          },
+        ].map((faq) => (
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="font-bold text-[#1A1F22] mb-2">{faq.q}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Need a Locksmith in Clayton, DE?
+      </h2>
+      <p class="text-gray-300 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
+        Call 1st Capital Locksmith for fast, professional locksmith service in Clayton and the surrounding communities across Kent and New Castle Counties. We come to you — 24/7, any service, any situation.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-10 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-bold text-lg hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

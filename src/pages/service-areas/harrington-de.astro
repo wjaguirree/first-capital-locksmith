@@ -1,0 +1,594 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Locksmith in Harrington, DE | Car, Home & Emergency Locksmith | 1st Capital Locksmith"
+  description="1st Capital Locksmith provides fast, professional locksmith services in Harrington, Delaware. Car lockouts, house lockouts, lock rekeying, deadbolt installation, key replacement, and 24/7 emergency locksmith service in Harrington, DE and surrounding Kent County communities."
+>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/service-areas" class="hover:text-[#A61E22] transition font-medium">Service Areas</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">Harrington, DE</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema: Breadcrumb -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://www.1stcapitallocksmith.com/service-areas/" },
+      { "@type": "ListItem", "position": 3, "name": "Harrington, DE", "item": "https://www.1stcapitallocksmith.com/service-areas/harrington-de/" }
+    ]
+  })} />
+
+  <!-- Schema: Local Business -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "1st Capital Locksmith",
+    "telephone": "+13027350050",
+    "url": "https://www.1stcapitallocksmith.com",
+    "areaServed": {
+      "@type": "City",
+      "name": "Harrington",
+      "containedIn": { "@type": "State", "name": "Delaware" }
+    },
+    "serviceType": [
+      "Automotive Locksmith",
+      "Residential Locksmith",
+      "Commercial Locksmith",
+      "Emergency Locksmith"
+    ]
+  })} />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[520px] flex items-center text-white py-20"
+    style="background-image: url('/images/hero.png'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-6xl mx-auto px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-4">
+        Locksmith Services in Harrington, Delaware
+      </p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 max-w-3xl leading-tight">
+        Locksmith in Harrington, DE — Fast, Honest Service Right in the Heart of Kent County
+      </h1>
+      <p class="text-gray-300 text-lg max-w-2xl leading-relaxed mb-8">
+        Harrington is one of Kent County's most active small cities — a real community hub with a racetrack, a fairgrounds, established neighborhoods, and a busy stretch of Route 13 running right through it. When a lock or key problem disrupts your day here, you need a locksmith who knows the area and shows up fast. 1st Capital Locksmith provides professional automotive, residential, commercial, and 24/7 emergency locksmith services throughout Harrington, DE — mobile, fully equipped, and ready when you call.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">24/7</p>
+          <p class="text-gray-300 text-sm mt-1">Emergency Service Available</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Mobile</p>
+          <p class="text-gray-300 text-sm mt-1">We Come Directly to Harrington</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">All Services</p>
+          <p class="text-gray-300 text-sm mt-1">Auto, Home, Business & Emergency</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Upfront</p>
+          <p class="text-gray-300 text-sm mt-1">Clear Pricing Before We Start</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro + Map -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: Text + Service List -->
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">
+            Your Local Locksmith in Harrington
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Professional Locksmith Services Serving Harrington, Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Harrington, Delaware punches well above its size. For a city of just a few thousand people, it carries a lot of weight in Kent County — home to the Delaware State Fair, Harrington Raceway & Casino, a walkable downtown, and a mix of long-established neighborhoods and newer residential developments that make it one of the more complete small cities in the state. Route 13 keeps Harrington well-connected to Dover to the north and Milford and beyond to the south, which means traffic through town is steady and real — and so are the car lockouts, lost keys, and lock problems that come with an active community.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            1st Capital Locksmith is a fully mobile locksmith service based in Kent County, and Harrington is one of our core service locations. We come to you — whether you're locked out of your car in a Harrington parking lot, locked out of your home in one of the city's residential neighborhoods, need the locks rekeyed on a property you just took ownership of, or are managing a business lockout on a busy morning. We arrive equipped to handle the entire job on-site without a second trip.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            From a quick car lockout to a full residential lock upgrade or commercial security overhaul, 1st Capital Locksmith handles it all in Harrington with professional service and honest pricing. Call us anytime at <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a>.
+          </p>
+
+          <!-- Service Checklist -->
+          <div class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200">
+            <h3 class="text-lg font-bold text-[#1A1F22] mb-4">
+              Locksmith Services We Provide in Harrington, DE:
+            </h3>
+            <ul class="space-y-2">
+              {[
+                "Car Lockout Service in Harrington",
+                "Car Key Replacement & Transponder Programming",
+                "Key Fob Replacement & Programming",
+                "Ignition Repair & Replacement",
+                "House Lockout Service",
+                "Lock Rekeying for Homes & Rentals",
+                "Deadbolt Installation & Upgrade",
+                "Lock Repair & Replacement",
+                "Commercial Lockout Service",
+                "Master Key System Setup",
+                "Access Control Solutions",
+                "High-Security Lock Installation",
+                "24/7 Emergency Locksmith Response",
+                "Broken Key Extraction",
+                "Mailbox Lock Replacement",
+              ].map((item) => (
+                <li class="flex items-center gap-3 text-gray-700 text-sm">
+                  <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-5 pt-5 border-t border-gray-200">
+              <a
+                href="tel:3027350050"
+                class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+              >
+                Call (302) 735-0050 Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Map + Contact Card -->
+        <div class="flex flex-col gap-6">
+          <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm w-full" style="height: 480px;">
+            <iframe
+              title="Harrington, Delaware Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24900.0!2d-75.5774!3d38.9237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c71ef44fe59db1%3A0x4163afc6be660e79!2sHarrington%2C%20DE%2019952!5e0!3m2!1sen!2sus!4v1782200000006!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <!-- Quick Contact Card -->
+          <div class="bg-[#0E1B2F] rounded-2xl p-6 text-white">
+            <h3 class="text-lg font-bold mb-4">Need a Locksmith in Harrington Right Now?</h3>
+            <div class="space-y-3">
+              <a href="tel:3027350050" class="flex items-center gap-3 text-white hover:text-[#A61E22] transition">
+                <span class="w-9 h-9 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-xs text-gray-400">Call Us Anytime — 24/7</p>
+                  <p class="font-bold text-lg">(302) 735-0050</p>
+                </div>
+              </a>
+              <div class="flex items-center gap-3">
+                <span class="w-9 h-9 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-xs text-gray-400">Serving</p>
+                  <p class="font-semibold text-sm">Harrington, DE & South-Central Kent County</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-9 h-9 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                <div>
+                  <p class="text-xs text-gray-400">Hours</p>
+                  <p class="font-semibold text-sm">Open 24 Hours — 7 Days a Week</p>
+                </div>
+              </div>
+            </div>
+            <a
+              href="/contact"
+              class="mt-5 w-full inline-flex justify-center items-center rounded-full border border-white px-6 py-3 text-white font-bold hover:bg-white hover:text-[#1A1F22] transition"
+            >
+              Get a Free Quote
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">What We Do in Harrington</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Every Locksmith Service We Offer in Harrington, DE
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          From a car lockout near Harrington Raceway to a full lock upgrade on a downtown business, here is a complete look at how 1st Capital Locksmith serves the Harrington community.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Automotive -->
+        <div id="automotive" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h7l1-2zM13 6h3l3 4v4h-2" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Automotive Locksmith in Harrington, DE</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Harrington sees a lot of vehicle traffic. Route 13 runs right through town, and between residents commuting daily, visitors coming in for events at Harrington Raceway & Casino and the Delaware State Fairgrounds, and people stopping in at local businesses along the highway, there are a lot of cars in and around Harrington on any given day. Car lockouts, lost keys, dead key fobs, and broken ignitions happen here regularly — and when they do, 1st Capital Locksmith is the mobile automotive locksmith that comes to your exact location and gets you taken care of without requiring a tow or a dealership visit.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our automotive locksmith services in Harrington include car lockout service using non-destructive entry, car key replacement for all makes and models, transponder key cutting and programming, key fob replacement and programming, ignition repair and replacement, and broken key extraction from door locks and ignitions. We work on domestic vehicles, imports, trucks, SUVs, and vans — all of it handled completely on-site in a single visit.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Locked out anywhere in Harrington — in a parking lot, at the fairgrounds, along Route 13, or in a neighborhood? Call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> and we'll be on our way.
+            </p>
+            <div class="mt-4">
+              <a href="/services/automotive-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Automotive Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Residential -->
+        <div id="residential" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Residential Locksmith in Harrington, DE</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Harrington has a well-established residential community — a mix of older homes near the downtown core, mid-century neighborhoods that have been home to Harrington families for generations, and newer developments on the edges of the city. Whether you're a longtime homeowner, a first-time buyer who just got the keys to a Harrington property, or a landlord managing rental turnover, 1st Capital Locksmith provides the residential locksmith services you need delivered directly to your door.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              We handle house lockouts quickly and without damaging your door or lock hardware. We rekey locks for new homeowners and rental turnovers so you have complete control over who has access to your property. We install and upgrade deadbolts on exterior doors that need stronger security hardware. We repair or replace worn, damaged, or malfunctioning locks. And we handle mailbox lock replacement for homeowners and residents throughout Harrington. Everything is done on-site in a single visit — we carry what we need and don't make second trips.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              If you just moved into a home in Harrington, call us to get the locks rekeyed before you get too settled in. It's one of the most important and most overlooked things new homeowners can do, and it typically takes less than an hour.
+            </p>
+            <div class="mt-4">
+              <a href="/services/residential-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Residential Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial -->
+        <div id="commercial" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V7a2 2 0 00-2-2H7a2 2 0 00-2 2v14M3 21h18M9 21v-4a1 1 0 011-1h4a1 1 0 011 1v4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Commercial Locksmith in Harrington, DE</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Harrington has a real commercial and business presence — retail shops, restaurants, service businesses, and industrial operations along and around Route 13, plus the major entertainment venues that draw visitors from across the region. Every one of those businesses depends on secure, functional lock hardware to protect their property, control access for employees, and maintain day-to-day operations. When something goes wrong with that security — a lockout, a broken lock, a need to rekey after an employee departure — 1st Capital Locksmith responds fast and professionally.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our commercial locksmith services in Harrington include business lockout response, commercial-grade lock installation and replacement, master key system design and installation for facilities with multiple entry points, lock rekeying for ownership and personnel changes, access control solutions, high-security lock installation, panic bar and exit device service, and security hardware upgrades for storefronts and commercial properties. We understand that every hour you're locked out or operating with compromised security is a real cost to your business — so we respond with urgency and arrive prepared to resolve it in one trip.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Running a business in Harrington and need commercial locksmith service? Call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> — we'll give you a straight quote and get out there fast.
+            </p>
+            <div class="mt-4">
+              <a href="/services/commercial-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Commercial Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency -->
+        <div id="emergency" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Emergency Locksmith in Harrington, DE — Available 24/7</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Lock emergencies in Harrington don't limit themselves to convenient hours. Whether it's a house lockout at 2 AM, a car lockout in a Harrington parking lot after a late event at the raceway or casino, a broken key stuck in your front door lock, or a damaged lock that needs immediate replacement after a break-in, 1st Capital Locksmith provides genuine 24/7 emergency locksmith service in Harrington, Delaware — every night, every weekend, every holiday, no exceptions.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              When you call us for an emergency in Harrington, a real person answers. We get your location, give you an honest ETA, and dispatch a fully equipped technician who arrives ready to handle the situation completely on-site. No callbacks, no waiting until morning, no second trips for parts. We come prepared because we know that when you're calling us for an emergency, you need it handled now — not eventually.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Emergency in Harrington right now? Call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> immediately. We'll take it from there.
+            </p>
+            <div class="mt-4">
+              <a href="/services/emergency-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Emergency Locksmith Services →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Harrington + Nearby -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">About the Area</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Proudly Serving Harrington and South-Central Kent County, Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Harrington, Delaware is one of those places that earns its reputation as a real community hub. It's the home of the Delaware State Fair — one of the largest annual events in the entire state — and Harrington Raceway & Casino, which keeps a steady stream of visitors coming through year-round. But beyond the big-name attractions, Harrington is a working city with established neighborhoods, a downtown that's been the center of community life for generations, and a population that takes real pride in where they live.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Sitting right on Route 13 in south-central Kent County, Harrington is a natural crossroads. Residents travel north to Dover for work and services and south toward Milford, Bridgeville, and Georgetown regularly. With that level of daily movement — and the added foot and vehicle traffic that comes with major events — the need for a reliable, responsive locksmith in Harrington is real and consistent.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            1st Capital Locksmith is based in Kent County and knows Harrington well. We've served customers throughout this city and the surrounding area and understand the layout — the neighborhoods, the commercial zones, and the properties that need the kind of professional locksmith service we bring to every call.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Save our number before you need it — <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> — and we'll be ready when you do.
+          </p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Areas We Also Serve Near Harrington:</h3>
+          <ul class="grid grid-cols-2 gap-3">
+            {[
+              "Milford, DE",
+              "Felton, DE",
+              "Farmington, DE",
+              "Dover, DE",
+              "Greenwood, DE",
+              "Bridgeville, DE",
+              "Camden, DE",
+              "Viola, DE",
+              "Houston, DE",
+              "Frederica, DE",
+            ].map((city) => (
+              <li class="flex items-center gap-2 text-gray-700 text-sm">
+                <span class="w-2 h-2 bg-[#A61E22] rounded-full flex-shrink-0"></span>
+                {city}
+              </li>
+            ))}
+          </ul>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <a
+              href="/service-areas"
+              class="w-full inline-flex justify-center items-center rounded-full border border-[#A61E22] px-6 py-3 text-[#A61E22] font-bold hover:bg-[#A61E22] hover:text-white transition"
+            >
+              View All Service Areas
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Choose Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Why Harrington Residents & Businesses Choose 1st Capital Locksmith
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Harrington has options when it comes to locksmith service. Here is why residents and business owners throughout the city keep coming back to 1st Capital — and telling their neighbors to do the same.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            title: "We Know Harrington",
+            desc: "We're based in Kent County and serve Harrington as one of our core locations. We know the neighborhoods, the commercial areas, the fairgrounds, the raceway — we know how to find you fast.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />`
+          },
+          {
+            title: "24/7 — Every Day of the Year",
+            desc: "State Fair week, holiday weekend, middle of the night — we answer every call, every day. Harrington never sleeps during fair season, and neither do we.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />`
+          },
+          {
+            title: "Upfront Pricing — No Surprises",
+            desc: "Every job gets a clear quote before we start. No hidden service fees, no surprise charges when the work is done. What we quote is what you pay.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />`
+          },
+          {
+            title: "One Visit, Complete Job",
+            desc: "We come fully stocked for automotive, residential, and commercial work. Whatever you need in Harrington, we handle it start to finish in one trip — no callbacks, no second visits.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />`
+          },
+          {
+            title: "Non-Destructive Entry",
+            desc: "We use professional locksmith techniques that open doors and vehicles without causing damage to your hardware, door frame, or vehicle. Clean, careful work every time.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`
+          },
+          {
+            title: "Auto, Home, Business — All Covered",
+            desc: "One number, every service. Car keys, house locks, commercial security, emergency response — 1st Capital Locksmith handles all of it in Harrington without sending you somewhere else.",
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />`
+          },
+        ].map((card) => (
+          <div class="bg-white rounded-2xl p-8 border border-gray-200">
+            <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" set:html={card.icon} />
+            </div>
+            <h3 class="font-bold text-[#1A1F22] text-lg mb-2">{card.title}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
+          What Harrington Customers Say About 1st Capital Locksmith
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Locked my keys in my car at the Harrington Raceway parking lot during an event. Not ideal timing. Called 1st Capital and they were there in about 30 minutes. The technician was professional, got me in fast, and didn't gouge me on the price just because it was a weekend evening. Really impressive service. Saved my whole night."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Marcus D.</p>
+          <p class="text-gray-500 text-sm">Car Lockout — Harrington, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"I manage several rental properties in Harrington and use 1st Capital every time there's a tenant turnover that requires rekeying. They're always on time, always professional, and the pricing is consistent and fair. Having a reliable locksmith in the area makes a huge difference when you're managing multiple units. Highly recommend."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Sandra K.</p>
+          <p class="text-gray-500 text-sm">Rental Property Rekeying — Harrington, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Our shop on Route 13 had a lock fail on the front door early one morning before we opened. Called 1st Capital at 6:30 AM expecting to leave a message — someone picked up immediately. They came out within the hour, replaced the lock, and we opened on time. Professional, efficient, and very fairly priced. They'll be our go-to from now on."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Brian T.</p>
+          <p class="text-gray-500 text-sm">Commercial Lock Replacement — Harrington, DE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">FAQ</p>
+        <h2 class="text-3xl font-bold text-[#1A1F22] mb-4">
+          Common Locksmith Questions from Harrington, DE Residents
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {[
+          {
+            q: "Do you provide locksmith service in Harrington, Delaware?",
+            a: "Yes — Harrington is one of our core service locations in Kent County. We come directly to Harrington for car lockouts, house lockouts, lock rekeying, key replacement, commercial locksmith needs, and emergency calls. Call (302) 735-0050 anytime."
+          },
+          {
+            q: "How quickly can you respond to a lockout in Harrington?",
+            a: "We dispatch as fast as possible and give you a straight, honest ETA the moment you call us at (302) 735-0050. No vague time windows — just a real answer so you know what to expect."
+          },
+          {
+            q: "Can you make a replacement car key in Harrington without going to a dealership?",
+            a: "Yes. We cut and program replacement car keys, transponder keys, and key fobs on-site for most makes and models right there in Harrington — faster and typically far less expensive than any dealership."
+          },
+          {
+            q: "I just bought a house in Harrington. Should I rekey the locks?",
+            a: "Without question. Previous owners, agents, and contractors may still have copies of your keys from before the sale. Rekeying all exterior locks is fast, affordable, and gives you complete control from day one. Call us at (302) 735-0050 to schedule."
+          },
+          {
+            q: "Do you offer locksmith service during Delaware State Fair week in Harrington?",
+            a: "Absolutely — we operate 24/7 every day of the year, including during fair week and all other major Harrington events. Demand is higher during those periods but we stay available and respond as fast as we can."
+          },
+          {
+            q: "How much does locksmith service cost in Harrington, DE?",
+            a: "Pricing depends on the service and your specific situation. We always provide a clear, upfront quote before starting any work — no hidden fees, no surprise charges at the end. Call (302) 735-0050 for a fast, honest estimate."
+          },
+        ].map((faq) => (
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="font-bold text-[#1A1F22] mb-2">{faq.q}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Need a Locksmith in Harrington, DE?
+      </h2>
+      <p class="text-gray-300 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
+        Call 1st Capital Locksmith for fast, professional locksmith service in Harrington and throughout south-central Kent County, Delaware. We come to you — 24/7, any service, any situation.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-10 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-bold text-lg hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

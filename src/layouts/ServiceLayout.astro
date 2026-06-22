@@ -1,0 +1,32 @@
+---
+import MainLayout from "./MainLayout.astro";
+
+const {
+  title,
+  description,
+  serviceTitle,
+  serviceCategory,
+} = Astro.props;
+---
+
+<MainLayout title={title} description={description}>
+
+  <section class="bg-[#1A1F22] text-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide">
+        {serviceCategory}
+      </p>
+
+      <h1 class="text-5xl font-bold mt-4">
+        {serviceTitle}
+      </h1>
+
+      <p class="mt-6 text-xl text-gray-300 max-w-3xl">
+        {description}
+      </p>
+    </div>
+  </section>
+
+  <slot />
+
+</MainLayout>
