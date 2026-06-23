@@ -8,13 +8,40 @@ const cities = [
   "Magnolia", "Smyrna", "Viola", "Woodside", "Wyoming"
 ];
 
-const slugify = (city) => city.toLowerCase().replaceAll(" ", "-") + "-de";
+const slugify = (city: string) => city.toLowerCase().replaceAll(" ", "-") + "-de";
 ---
 
 <MainLayout
   title="Locksmith Service Areas in Kent County, DE | 1st Capital Locksmith"
   description="1st Capital Locksmith provides fast mobile locksmith services throughout Dover and all of Kent County, Delaware. Automotive, residential, commercial, and emergency locksmith service available in your area now."
 >
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">Service Areas</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema: Breadcrumb -->
+  <Fragment set:html={`<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://www.1stcapitallocksmith.com/service-areas/" }
+    ]
+  })}</script>`} />
 
   <!-- Hero -->
   <section
@@ -85,7 +112,7 @@ const slugify = (city) => city.toLowerCase().replaceAll(" ", "-") + "-de";
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <h2 class="text-lg font-bold text-[#1A1F22] mb-1 group-hover:text-[#A61E22] transition">{city}, DE</h2>
+            <h3 class="text-lg font-bold text-[#1A1F22] mb-1 group-hover:text-[#A61E22] transition">{city}, DE</h3>
             <p class="text-gray-500 text-sm">Locksmith Services</p>
           </a>
         ))}
