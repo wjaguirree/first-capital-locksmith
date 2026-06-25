@@ -1,25 +1,660 @@
 ---
-import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
-<ServicePageLayout
-  title="Ignition Repair | 1st Capital Locksmith"
-  description="Professional ignition repair services for vehicles throughout Kent County, Delaware."
-  category="Automotive Locksmith"
-  service="Ignition Repair"
-  image="/images/ignition-repair.jpg"
+<MainLayout
+  title="Ignition Repair in Delaware | Mobile Ignition Repair Service | 1st Capital Locksmith"
+  description="Ignition problems in Delaware? 1st Capital Locksmith provides mobile ignition repair for stiff, sticky, or jammed ignitions throughout Kent County. We diagnose and repair your ignition on-site — no towing required. Serving Dover, Milford, Smyrna & all surrounding areas. Call (302) 735-0050."
 >
 
-  <h2 class="text-4xl font-bold mb-6">
-    Ignition Repair Services
-  </h2>
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">Ignition Repair</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
 
-  <p class="mb-4">
-    Our skilled technicians can diagnose and repair various ignition issues in your vehicle.
-  </p>
+  <!-- Schema Markup -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": "Ignition Repair", "item": "https://www.1stcapitallocksmith.com/services/ignition-repair/" }
+    ]
+  })} />
 
-  <p class="mb-4">
-    We duplicate and program many types of vehicle keys and remotes.
-  </p>
+  <!-- Hero -->
+  <section
+    class="relative min-h-[340px] md:min-h-[550px] flex items-center text-white py-10 md:py-20"
+    style="background-image: url('/images/ignition-repair.jpg'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-6xl mx-auto px-5 md:px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-xs md:text-sm mb-2 md:mb-4">Ignition Repair — Kent County, Delaware</p>
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-6 max-w-3xl leading-tight">
+        Ignition Repair in Delaware — Mobile, On-Site, All Makes & Models
+      </h1>
+      <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
+        Stiff key? Sticky ignition? Key that won't turn or won't come out? 1st Capital Locksmith provides professional mobile ignition repair throughout Delaware. We diagnose the problem at your vehicle, repair what needs repairing, and get you back on the road — without a tow, without a dealer appointment, and without the dealership markup.
+      </p>
+      <div class="flex flex-wrap gap-3 md:gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-6 py-3 md:px-8 md:py-4 text-white font-bold text-base md:text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
 
-</ServicePageLayout>
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Mobile</p>
+          <p class="text-gray-300 text-sm mt-1">We Come to Your Vehicle</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Diagnose First</p>
+          <p class="text-gray-300 text-sm mt-1">Repair Before Replacing</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">All Makes</p>
+          <p class="text-gray-300 text-sm mt-1">Domestic & Foreign Vehicles</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Upfront</p>
+          <p class="text-gray-300 text-sm mt-1">Clear Pricing Before We Start</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Delaware's Mobile Ignition Repair Specialists</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Professional Ignition Repair Throughout Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Your ignition is one of the most used mechanical components in your vehicle. Every single time you start your car, the ignition cylinder engages — and over years of daily use, the internal tumblers, springs, and wafers inside can wear, stick, or fail. When that starts to happen, you'll notice the symptoms: a key that feels tight or gritty when turning, a key that requires a little jiggle to engage, or in more advanced cases, a key that simply will not turn at all.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Not every ignition issue requires a full cylinder replacement. Many problems can be resolved with a professional repair — cleaning and lubricating a sticky cylinder, adjusting worn tumblers, or addressing the specific mechanical failure causing the issue. At 1st Capital Locksmith, we diagnose first and recommend repair whenever it is the right solution. We only recommend replacement when repair truly is not sufficient.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            We are fully mobile and serve drivers throughout Dover, Milford, Smyrna, Camden, Harrington, Frederica, and all surrounding communities in Kent County, Delaware. If your ignition is giving you trouble, call us before it stops working entirely.
+          </p>
+        </div>
+        <div class="flex flex-col gap-6">
+          <!-- PHOTO SLOT 1: Recommended 800×500px — locksmith inspecting or working on ignition -->
+          <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+            <img
+              src="/images/ignition-repair.jpg"
+              alt="1st Capital Locksmith performing ignition repair on a vehicle in Kent County, Delaware"
+              class="w-full h-70 object-cover"
+              width="800"
+              height="500"
+            />
+          </div>
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Ignition Repair Services We Provide:</h3>
+            <ul class="space-y-3">
+              {[
+                "Stiff or Sticky Ignition Cylinder Repair",
+                "Ignition Cylinder Cleaning & Lubrication",
+                "Worn Tumbler Adjustment & Repair",
+                "Key Won't Turn — Diagnosis & Repair",
+                "Key Won't Come Out — Cylinder Repair",
+                "Broken Key in Ignition Extraction",
+                "Ignition Switch Repair",
+                "Transponder Key & Ignition Communication Issues",
+                "Post-Wear Ignition Tune-Up",
+                "All Makes & Models — Domestic & Foreign",
+              ].map((item) => (
+                <li class="flex items-center gap-3 text-gray-700">
+                  <span class="w-6 h-6 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-6 pt-6 border-t border-gray-200">
+              <a
+                href="tel:3027350050"
+                class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+              >
+                Call (302) 735-0050 Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section id="services" class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">What We Handle</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Ignition Repair Services in Delaware
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Ignition problems present in different ways and for different reasons. Here is a detailed look at every ignition repair scenario we handle and how we approach each one professionally on-site throughout Delaware.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Stiff or Sticky Ignition -->
+        <div id="stiff-ignition" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Stiff, Sticky, or Gritty Ignition Cylinder Repair in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              One of the most common ignition complaints we hear is a key that has started to feel stiff, resistant, or slightly gritty when turning. This is typically an early sign of internal wear inside the ignition cylinder — the tumblers and wafers are losing their smooth action, grime and debris have built up inside the cylinder housing, or the lubricant has dried out after years of use. The good news is that in many cases this is entirely repairable without replacing the whole cylinder.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our technicians will carefully inspect the ignition cylinder, clean out any debris or dried-up lubricant from inside the housing, apply professional-grade locksmith lubricant to restore smooth operation, and test thoroughly before leaving. If the internal wear is too advanced for lubrication alone, we will assess whether tumbler adjustment or cylinder replacement is the right next step — and we will tell you honestly which one applies.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Address a stiff ignition early — before it progresses to a key that won't turn at all. Call 1st Capital Locksmith for on-site ignition repair throughout Delaware.
+            </p>
+            <!-- PHOTO SLOT 2: Recommended 1200×500px — close-up of ignition cylinder or locksmith lubricating ignition -->
+            <div class="mt-6 rounded-xl overflow-hidden border border-gray-200">
+              <img
+                src="/images/ignition-repair-service.jpg"
+                alt="Ignition cylinder being cleaned and repaired by 1st Capital Locksmith in Delaware"
+                class="w-full h-90 object-cover"
+                width="1200"
+                height="500"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Won't Turn -->
+        <div id="key-wont-turn" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Key Won't Turn in the Ignition — Diagnosis & Repair</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              A key that inserts into the ignition but absolutely will not turn is a stressful and disruptive problem. Before assuming the worst, there are a few things to check. First, try gently rocking the steering wheel left and right while simultaneously attempting to turn the key — a locked steering column is a very common cause of this and is easily released by relieving the pressure on the ignition column. If that works, there may be nothing wrong with the ignition itself.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              If the steering column is not the issue, the most likely causes are a worn ignition cylinder where the tumblers are no longer aligning with the key's cuts, or a worn key that is no longer the correct profile to operate the cylinder. Our technicians will assess both the cylinder and the key, and in many cases we can repair or recondition the cylinder so it works correctly again — or cut a fresh key if the original has worn down.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Do not force the key or use excessive pressure — this can snap the key in the ignition and create a much bigger and more expensive problem. Call 1st Capital Locksmith and we will come to you anywhere in Delaware.
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Won't Come Out -->
+        <div id="key-wont-come-out" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Key Won't Come Out of the Ignition in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              A key that goes in, starts the car normally, but then refuses to come back out of the ignition is a surprisingly common problem — and one that people tend to work around for far too long before calling for help. In automatic transmission vehicles, a shift interlock mechanism is designed to prevent the key from being removed unless the transmission is fully in park. If the interlock is not releasing properly, the key will stay stuck even with the transmission in park.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              If the shift interlock is functioning correctly, the cause is usually inside the ignition cylinder itself — a worn or failed release mechanism that is no longer allowing the key to disengage and come free. Our technicians will identify the root cause: if it is an ignition cylinder repair issue, we will repair or replace the affected component. If it is a shift interlock problem, we can diagnose that as well and advise on the appropriate repair.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Do not try to force the key out with pliers or other tools — you risk snapping the key and causing considerably more damage. Call us for safe, professional ignition repair throughout Delaware.
+            </p>
+          </div>
+        </div>
+
+        <!-- Broken Key in Ignition -->
+        <div id="broken-key-ignition" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Broken Key Extraction from the Ignition in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              When a worn or weakened key breaks off inside the ignition, it creates an immediate problem — the vehicle cannot be started, and the broken piece blocks any other key from entering. This situation almost always happens without warning, often during a routine start when the key snaps under the torsional force of turning. It is more common in keys that have developed small stress cracks over years of use, or when someone applies excessive force to a stiff ignition.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our locksmiths have specialized extraction tools designed specifically for removing broken key fragments from ignition cylinders. We work carefully to remove the broken piece without damaging the ignition cylinder itself — which preserves the cylinder and avoids the need for full replacement in most cases. Once the fragment is removed, we assess the cylinder's condition and cut a new key to replace the broken one.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Never attempt to remove a broken key fragment using tweezers, glue, or improvised tools — these approaches usually push the fragment deeper or cause additional damage. Call 1st Capital Locksmith for professional broken key extraction throughout Delaware.
+            </p>
+            <!-- PHOTO SLOT 3: Recommended 1200×500px — broken key extraction or ignition repair in progress -->
+            <div class="mt-6 rounded-xl overflow-hidden border border-gray-200">
+              <img
+                src="/images/broken-key-ignition-extraction.jpg"
+                alt="Broken key being extracted from ignition cylinder by 1st Capital Locksmith in Delaware"
+                class="w-full h-90 object-cover"
+                width="1200"
+                height="500"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Transponder & Ignition Communication Issues -->
+        <div id="transponder-ignition" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Transponder Key & Ignition Communication Issues in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Most vehicles manufactured after the mid-1990s use transponder keys — keys with a small electronic chip embedded in the plastic head that communicates with the vehicle's immobilizer system when you turn the ignition. If this communication fails, the engine may crank but will not start, or the security light on the dashboard may stay on. This is a different kind of ignition problem to a mechanical cylinder issue, but it presents very similarly from the driver's perspective.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Common causes include a damaged or de-programmed transponder chip, a failing ignition reader antenna (the ring around the ignition barrel that reads the chip), or a key that has been copied onto a non-transponder blank. Our technicians can test the transponder chip, the ignition reader, and the key itself to identify which component has failed and what the correct repair is.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              If your car cranks but won't start and the security light is illuminated, a transponder communication issue is a likely cause. Call 1st Capital Locksmith and we will diagnose it on-site throughout Delaware.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Strip -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">On-Site Ignition Repair</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22]">Diagnosed & Repaired at Your Location — Anywhere in Delaware</h2>
+      </div>
+      <!-- PHOTO SLOT 4, 5, 6: Recommended 600×400px each
+           Photo 4 — ignition cylinder close-up or locksmith tools
+           Photo 5 — technician working on vehicle ignition
+           Photo 6 — customer satisfied, key working again -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img
+            src="/images/ignition-repair-tools.jpg"
+            alt="Professional ignition repair tools used by 1st Capital Locksmith in Delaware"
+            class="w-full h-64 object-cover"
+            width="600"
+            height="400"
+          />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Professional Ignition Tools</p>
+            <p class="text-gray-500 text-xs mt-1">Specialized equipment for precise, damage-free repair</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img
+            src="/images/ignition-repair-technician.jpg"
+            alt="1st Capital Locksmith technician repairing an ignition on-site in Delaware"
+            class="w-full h-64 object-cover"
+            width="600"
+            height="400"
+          />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Expert On-Site Service</p>
+            <p class="text-gray-500 text-xs mt-1">We come to your vehicle — no tow required</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img
+            src="/images/ignition-repaired-delaware.jpg"
+            alt="Vehicle ignition successfully repaired by 1st Capital Locksmith in Kent County, Delaware"
+            class="w-full h-64 object-cover"
+            width="600"
+            height="400"
+          />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Tested Before We Leave</p>
+            <p class="text-gray-500 text-xs mt-1">Key turns smoothly and vehicle starts perfectly</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Choose Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Why Delaware Drivers Choose 1st Capital Locksmith for Ignition Repair
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Ignition problems can feel overwhelming, but they don't have to mean an expensive trip to the dealership. Here is why drivers across Kent County call us first.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Fully Mobile — No Towing Required</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We come directly to your vehicle anywhere in Delaware. No need to arrange a costly tow to a shop or dealership — our technicians bring everything needed to repair your ignition on-site.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Diagnose Before We Recommend</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We assess your ignition before recommending any repair or replacement. If cleaning and lubrication will fix the problem, that is what we suggest. We will never push you toward an unnecessary cylinder replacement.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Save vs. the Dealership</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Dealerships charge premium labor rates and often require a tow before they will even look at your vehicle. Our mobile service eliminates the tow and consistently delivers a lower total cost for ignition repair.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">All Makes & Models</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We repair ignitions on domestic and foreign vehicles — Toyota, Honda, Ford, Chevrolet, Dodge, Nissan, Hyundai, Kia, Jeep, RAM, BMW, and many more. If we have seen it, we can repair it.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Specialized Extraction Tools</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">For broken key-in-ignition situations, we carry professional extraction tools designed for the job. We remove broken fragments cleanly and safely without damaging the cylinder housing.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Upfront, Honest Pricing</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We give you a clear quote before any work begins — no hidden charges, no surprise fees after the job is done. What we quote is exactly what you pay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
+          What Delaware Drivers Say About Our Ignition Repair Service
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"My key had been getting harder and harder to turn in the ignition for a few months. One morning it got so bad I couldn't start my car for work. Called 1st Capital Locksmith and they came to my house in Dover within half an hour. The technician cleaned and lubricated the cylinder, adjusted something inside, and the key turned like new. Quick, affordable, and didn't try to sell me something I didn't need."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Marcus T.</p>
+          <p class="text-gray-500 text-sm">Ignition Cylinder Repair — Dover, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"My key snapped off in the ignition while I was trying to start my car. I was panicking — thought I'd need a tow and a whole new ignition. 1st Capital Locksmith came to Milford, removed the broken key fragment with their special tools, checked the cylinder, and it was fine. They cut me a new key on the spot. Whole visit was maybe 40 minutes. Absolutely fantastic service."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Rachel B.</p>
+          <p class="text-gray-500 text-sm">Broken Key Extraction — Milford, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"I had an issue where my key would go in and start the car just fine but wouldn't come back out. I was leaving the car running at the grocery store to avoid getting stuck. Called 1st Capital and they came to Smyrna the same day. They identified the release issue inside the cylinder and repaired it without replacing the whole thing — saved me a lot compared to what the dealer would have charged."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Diana L.</p>
+          <p class="text-gray-500 text-sm">Key Stuck in Ignition Repair — Smyrna, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"My car would crank but not start and the security light was on. I called 1st Capital Locksmith expecting bad news. The technician came to Camden, tested the transponder chip in my key, and found it had failed. He programmed a new transponder key on-site and the car started right up. Much faster and cheaper than I expected — I thought I'd need the dealer to sort out a security issue."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Greg S.</p>
+          <p class="text-gray-500 text-sm">Transponder Key Ignition Issue — Camden, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Very impressed with the professionalism and honesty of this company. I called expecting to need a full ignition replacement — the key was barely turning and I'd been dealing with it for weeks. The technician came to Harrington, took a look, and told me he could repair it rather than replace it. He did the repair in about 30 minutes and charged me a fair price. I'll call them for any locksmith need going forward."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Brenda K.</p>
+          <p class="text-gray-500 text-sm">Ignition Repair — Harrington, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"I had an older pickup truck with a really worn ignition — the key had to be positioned just right and sometimes took three or four attempts to engage. Called 1st Capital Locksmith and they came to Frederica. The technician repaired the cylinder internals and also cut me a fresh key since the original had worn down significantly. Everything works perfectly now. Highly recommend this company."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Allen P.</p>
+          <p class="text-gray-500 text-sm">Worn Ignition & Key Repair — Frederica, DE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="bg-[#F8F8F5] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Related Services</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22]">Other Automotive Locksmith Services We Offer</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <a href="/services/ignition-replacement" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] mb-1">Ignition Replacement</h3>
+          <p class="text-gray-500 text-sm">Full ignition cylinder replacement when repair isn't enough</p>
+        </a>
+        <a href="/services/broken-key-extraction" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] mb-1">Broken Key Extraction</h3>
+          <p class="text-gray-500 text-sm">Professional removal of broken keys from locks & ignitions</p>
+        </a>
+        <a href="/services/car-key-replacement" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] mb-1">Car Key Replacement</h3>
+          <p class="text-gray-500 text-sm">New transponder keys, smart keys & remotes cut and programmed</p>
+        </a>
+        <a href="/services/automotive-locksmith" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] mb-1">Automotive Locksmith</h3>
+          <p class="text-gray-500 text-sm">Full range of mobile automotive locksmith services in Delaware</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Frequently Asked Questions</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
+          Ignition Repair Questions — Answered
+        </h2>
+      </div>
+
+      <div class="space-y-6">
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            How do I know if my ignition needs repair or full replacement?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            In general, if the ignition cylinder is stiff, sticky, or slightly worn but physically intact, repair is often possible — cleaning, lubrication, and minor tumbler adjustment can restore smooth operation. If the cylinder is severely worn, cracked, broken, or has been tampered with or damaged in a theft attempt, replacement is usually the better long-term solution. Our technicians will assess the cylinder on-site and give you an honest recommendation. We only push for replacement when repair genuinely is not the right call.
+          </p>
+        </details>
+
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            Can I use WD-40 to fix a stiff ignition?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            WD-40 is not a recommended lubricant for ignition cylinders. It is a water displacer and light solvent, not a proper lock lubricant. While it may temporarily loosen a stiff cylinder, it tends to attract and trap debris over time and can actually make the problem worse with repeated use. For ignition cylinders, professional locksmiths use graphite-based or PTFE dry lubricants that are specifically designed for precision lock mechanisms. If your ignition is stiff, call us — we use the correct products and can solve the problem properly.
+          </p>
+        </details>
+
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            My key won't turn in the ignition — what should I try first?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Before calling us, try this: with your foot off the brake, gently rock the steering wheel left and right while simultaneously turning the key. A locked steering column is one of the most common causes of a key that won't turn, and this simple technique often releases it immediately. If that doesn't work, check that the transmission is fully in park (for automatics). If neither solves the problem, stop attempting to force the key — excessive force can break the key in the cylinder — and call 1st Capital Locksmith to diagnose the issue properly.
+          </p>
+        </details>
+
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            My car cranks but won't start and the security light is on — is that an ignition problem?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Yes, this is often a transponder or immobilizer issue related to the ignition system. When the security light stays illuminated and the engine cranks but won't fire, it typically means the vehicle's immobilizer system is not recognizing the transponder chip in your key. This can happen due to a failed chip in the key, a damaged ignition reader antenna, or a programming issue. Call us and we can test the transponder and ignition reader on-site throughout Delaware and reprogram or replace the affected component.
+          </p>
+        </details>
+
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            How long does ignition repair take?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            For straightforward ignition cylinder cleaning and lubrication, we are typically done within 20–30 minutes on-site. More involved repairs — tumbler adjustment, broken key extraction, or transponder issue diagnosis and resolution — may take 45 minutes to an hour depending on the vehicle and the specific problem. We work efficiently and will give you a realistic estimate when we arrive and assess the situation.
+          </p>
+        </details>
+
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            Can you repair the ignition on any make or model of vehicle?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            We work on a very wide range of domestic and foreign vehicles including Toyota, Honda, Ford, Chevrolet, Dodge, GMC, Jeep, RAM, Nissan, Hyundai, Kia, Subaru, Volkswagen, BMW, Mercedes-Benz, and many more. If you are unsure whether we can help with your specific vehicle, call us and we will let you know upfront before you book the visit.
+          </p>
+        </details>
+
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            Do you come to me for ignition repair in Delaware?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Yes — we are a fully mobile locksmith service. We come to your vehicle wherever it is parked: your home driveway, a parking lot, your workplace, or on the roadside. We serve Dover, Milford, Smyrna, Camden, Harrington, Frederica, Felton, Magnolia, Woodside, Wyoming, and all surrounding communities throughout Kent County, Delaware. Just call (302) 735-0050 and we will head to your location.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#0E1B2F] py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-4">Mobile Ignition Repair in Delaware</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-snug">
+        Ignition Problems? Call 1st Capital Locksmith — We Come to You.
+      </h2>
+      <p class="text-gray-300 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+        Stiff key, broken key in the ignition, key won't turn, or security light staying on — whatever the ignition issue, we diagnose it on-site and repair it at your vehicle throughout Delaware. No tow, no dealer wait, no surprise fees.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-10 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Request a Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>
