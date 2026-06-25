@@ -1,0 +1,659 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="House Lockout Service in Delaware | Mobile Home Lockout Help | 1st Capital Locksmith"
+  description="Locked out of your house in Delaware? 1st Capital Locksmith provides fast, professional mobile house lockout service throughout Kent County. We unlock your home quickly with no damage. Serving Dover, Milford, Smyrna & all surrounding areas. Call (302) 735-0050."
+>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">House Lockout</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": "House Lockout", "item": "https://www.1stcapitallocksmith.com/services/house-lockout/" }
+    ]
+  })} />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[340px] md:min-h-[550px] flex items-center text-white py-10 md:py-20"
+    style="background-image: url('/images/house-lockout.jpg'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-6xl mx-auto px-5 md:px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-xs md:text-sm mb-2 md:mb-4">House Lockout Service — Kent County, Delaware</p>
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-6 max-w-3xl leading-tight">
+        Locked Out of Your House in Delaware? We'll Get You Back In.
+      </h1>
+      <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
+        Getting locked out of your home is stressful — whether you lost your keys, left them inside, or the lock simply stopped cooperating. 1st Capital Locksmith provides fast, professional house lockout service throughout Delaware. We come directly to your home, unlock it without damage, and have you back inside quickly.
+      </p>
+      <div class="flex flex-wrap gap-3 md:gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-6 py-3 md:px-8 md:py-4 text-white font-bold text-base md:text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Fast</p>
+          <p class="text-gray-300 text-sm mt-1">Quick Response Throughout Delaware</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">No Damage</p>
+          <p class="text-gray-300 text-sm mt-1">Lock-Picking, Not Destruction</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Mobile</p>
+          <p class="text-gray-300 text-sm mt-1">We Come Directly to Your Home</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Upfront</p>
+          <p class="text-gray-300 text-sm mt-1">Clear Pricing Before We Start</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Delaware's House Lockout Specialists</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Professional Home Lockout Service Throughout Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            A house lockout can happen to anyone — and it always seems to happen at the worst time. Whether you stepped outside for a moment and the door locked behind you, your key broke off in the lock, or you simply cannot find your house keys, you need someone you can trust to resolve it quickly without damaging your door or lock hardware.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            1st Capital Locksmith specializes in professional residential lockout service throughout Delaware. Our locksmiths use non-destructive entry techniques — meaning we pick or bypass the lock using professional tools, not force. Your door frame, lock hardware, and door remain completely intact. In the vast majority of lockouts, there is no damage whatsoever to your home.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            We serve homeowners, renters, and families throughout Dover, Milford, Smyrna, Camden, Harrington, Frederica, Felton, Magnolia, Woodside, Wyoming, and all surrounding Kent County communities. Call 1st Capital Locksmith and we will have you back inside your home as quickly as possible.
+          </p>
+        </div>
+        <div class="flex flex-col gap-6">
+          <!-- PHOTO SLOT 1: Recommended 800×500px — locksmith at front door or close-up of residential lock -->
+          <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+            <img
+              src="/images/house-lockout.jpg"
+              alt="1st Capital Locksmith helping a homeowner locked out of their house in Delaware"
+              class="w-full h-70 object-cover"
+              width="800"
+              height="500"
+            />
+          </div>
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-6">House Lockout Services We Provide:</h3>
+            <ul class="space-y-3">
+              {[
+                "Front Door & Back Door Lockouts",
+                "Deadbolt & Knob Lock Entry",
+                "Locked Out — Keys Left Inside",
+                "Lost House Key Lockout",
+                "Broken Key in Door Lock",
+                "Apartment & Condo Lockouts",
+                "Rental Property Lockouts",
+                "Lock No Longer Turning — Entry & Repair",
+                "Key Won't Work in Door Lock",
+                "After-Lockout Lock Rekey Available",
+              ].map((item) => (
+                <li class="flex items-center gap-3 text-gray-700">
+                  <span class="w-6 h-6 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-6 pt-6 border-t border-gray-200">
+              <a
+                href="tel:3027350050"
+                class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+              >
+                Call (302) 735-0050 Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section id="services" class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">What We Handle</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          House Lockout Situations We Resolve in Delaware
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          House lockouts come in many forms. Here is a detailed look at every residential lockout scenario we handle and how we approach each one professionally throughout Delaware.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Keys Left Inside -->
+        <div id="keys-inside" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Keys Left Inside the House in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Leaving your house keys inside is one of the most common residential lockouts we respond to. It happens in a moment of distraction — stepping out to grab the mail, taking the dog for a walk, helping a neighbor — and the door closes behind you. In some cases the door locks automatically via a spring latch; in others, a deadbolt was set and the door closed on habit. Either way, you are outside and your keys are in.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our locksmiths use professional non-destructive entry techniques to unlock your door without any damage to the lock, door, or frame. For spring latch locks we can typically use a technique that takes only a minute or two. For deadbolts, lock picking or bypass tools are used to engage the cylinder and retract the bolt — cleanly and without damage to the hardware.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Once we have you back inside, we also recommend discussing a spare key strategy so this does not become a recurring problem. We can cut spare keys on-site if needed.
+            </p>
+            <!-- PHOTO SLOT 2: Recommended 1200×500px — locksmith working on front door lock -->
+            <div class="mt-6 rounded-xl overflow-hidden border border-gray-200">
+              <img
+                src="/images/house-lockout-service.jpg"
+                alt="Locksmith unlocking a residential front door in Delaware"
+                class="w-full h-64 object-cover"
+                width="1200"
+                height="500"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Lost House Keys -->
+        <div id="lost-keys" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Lost House Keys — Lockout & Lock Rekey in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              When you have lost your house keys entirely — not just left them inside — the situation calls for a two-step approach. First, we get you back into your home. Second, we strongly recommend rekeying your locks so that the lost keys no longer work. If your keys are lost somewhere unknown, there is always the possibility that someone else could find them and use them to access your home, particularly if the address is identifiable.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              After unlocking your door, we can rekey your existing locks on the spot — a quick and affordable process that changes the internal pin configuration of your locks so your old lost keys no longer operate them. You receive new keys cut to the updated lock pattern. This gives you complete peace of mind that your home is secure again, without the expense of replacing the lock hardware itself.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We handle lost key lockouts throughout Dover, Milford, Smyrna, Camden, Harrington, and all Kent County communities. Getting in and securing your home can often be done in a single visit.
+            </p>
+          </div>
+        </div>
+
+        <!-- Broken Key in Door Lock -->
+        <div id="broken-key" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Broken Key in Door Lock in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              A key that snaps off inside a door lock is a frustrating situation — it locks you out and makes the lock appear jammed. This often happens with older, worn keys that have developed small stress cracks from years of use. Applying too much force to a stiff lock can be the breaking point, quite literally. The broken fragment inside the lock prevents any other key from being inserted and engaging the cylinder.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our locksmiths carry specialized key extraction tools designed to remove broken fragments from door lock cylinders cleanly and without damaging the lock. In most cases we can extract the broken piece, inspect the cylinder for any internal damage, and have the lock functioning normally again — then cut you a fresh key. If the lock itself has been damaged by the breakage or was already worn, we can replace or rekey it on the same visit.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Never attempt to remove a broken key fragment with a hairpin, glue, or pliers — these approaches almost always push the fragment deeper or damage the cylinder. Call 1st Capital Locksmith for professional extraction throughout Delaware.
+            </p>
+            <!-- PHOTO SLOT 3: Recommended 1200×500px — close-up of door lock or key extraction -->
+            <div class="mt-6 rounded-xl overflow-hidden border border-gray-200">
+              <img
+                src="/images/broken-key-door-extraction.jpg"
+                alt="Broken key being extracted from a residential door lock in Delaware"
+                class="w-full h-64 object-cover"
+                width="1200"
+                height="500"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Apartment & Condo Lockouts -->
+        <div id="apartment-lockout" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Apartment & Condo Lockouts in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Apartment and condo lockouts are extremely common — especially in properties where the front door locks automatically when it closes. Renters who step into a hallway, take the trash out, or step onto a balcony without their keys can find themselves locked out in an instant. In many apartment buildings, a property manager or maintenance team may not be reachable at odd hours, leaving you with no option but to call a locksmith.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              We work on apartment, condo, and rental unit door locks of all common types — including Kwikset, Schlage, Defiant, and similar residential hardware. We use non-destructive entry methods that preserve the lock and door hardware, so your landlord or property management company will have nothing to be concerned about. We are professional, respectful of the property, and carry proper identification.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We serve renters and property owners throughout Kent County, Delaware. If you are a landlord or property manager dealing with a tenant lockout, we can assist with that as well — call (302) 735-0050.
+            </p>
+          </div>
+        </div>
+
+        <!-- Lock No Longer Working -->
+        <div id="lock-failure" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Key in Hand but Lock Won't Open — Lock Failure in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Sometimes a lockout happens even with the key in hand. You insert your house key into the lock, turn it as usual — and nothing happens. The key turns but the deadbolt won't retract, the latch won't disengage, or the key goes in but will not turn at all. This is a lock failure situation rather than a pure lockout, and it can be caused by a worn or failed cylinder, a misaligned door that is putting stress on the bolt, or a lock mechanism that has seized internally.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our technicians diagnose the problem on-site. In some cases, a worn or faulty cylinder can be repaired. In others, lock replacement is the right call — particularly if the lock is old, was of low quality to begin with, or has been tampered with. We carry replacement deadbolts and knob locks and can install a new lock on the same visit so you are not left waiting for hardware to be sourced.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              A lock that fails once is likely to fail again — it is worth addressing properly rather than forcing it open repeatedly. Call 1st Capital Locksmith for professional lock diagnosis and replacement throughout Delaware.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Strip -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">On-Site House Lockout Service</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22]">Back Inside Your Home — Fast, Professional, No Damage</h2>
+      </div>
+      <!-- PHOTO SLOT 4, 5, 6: Recommended 600×400px each
+           Photo 4 — locksmith tools / lock pick set
+           Photo 5 — technician at front door
+           Photo 6 — homeowner back inside / happy customer -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img
+            src="/images/locksmith-tools-residential.jpg"
+            alt="Professional locksmith tools used for residential lockout service in Delaware"
+            class="w-full h-64 object-cover"
+            width="600"
+            height="400"
+          />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Professional Non-Destructive Entry Tools</p>
+            <p class="text-gray-500 text-xs mt-1">We pick locks — we don't break them</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img
+            src="/images/house-lockout-technician.jpg"
+            alt="1st Capital Locksmith technician unlocking a home in Kent County, Delaware"
+            class="w-full h-64 object-cover"
+            width="600"
+            height="400"
+          />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Fast, On-Site Service</p>
+            <p class="text-gray-500 text-xs mt-1">We come directly to your door anywhere in Delaware</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img
+            src="/images/house-lockout-delaware.jpg"
+            alt="Homeowner back inside after house lockout service by 1st Capital Locksmith in Delaware"
+            class="w-full h-64 object-cover"
+            width="600"
+            height="400"
+          />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Back Inside — No Damage</p>
+            <p class="text-gray-500 text-xs mt-1">Lock and door remain completely intact</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Choose Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Why Delaware Homeowners Choose 1st Capital Locksmith for House Lockouts
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          A house lockout is stressful enough on its own. Here is why homeowners and renters throughout Kent County call us to resolve it.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Fast Response Throughout Delaware</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We are mobile and serve all of Kent County. When you call with a house lockout, we dispatch immediately and aim to arrive as quickly as possible — getting you back inside and back to your day.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Non-Destructive Entry — No Damage</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We use professional lock-picking and bypass techniques, not brute force. Your door frame, lock hardware, and door remain completely undamaged. We take care of your property the same way we would our own.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">All Residential Lock Types</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We work on all common residential lock hardware including Kwikset, Schlage, Defiant, Baldwin, Yale, and others. Deadbolts, knob locks, lever handles, and multi-point locks — we handle them all throughout Delaware.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Rekey Available Same Visit</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">If you have lost your keys or want to improve security after your lockout, we can rekey your existing locks on the same visit. Your locks are updated to a new key pattern and you receive fresh keys — all without replacing the hardware.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Licensed & Professional</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We carry proper identification and are fully licensed locksmiths. We verify your identity and your connection to the property before performing any work — we are committed to handling every lockout responsibly.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Upfront, Honest Pricing</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We quote you clearly before starting any work. No inflated fees after the fact, no surprise charges for being called to a specific area. What we quote is exactly what you pay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
+          What Delaware Homeowners Say About Our House Lockout Service
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"I stepped outside to let the dog out and somehow the door locked behind me. I didn't even have my phone — had to use my neighbor's to call. 1st Capital Locksmith came to my house in Dover in about 25 minutes. The technician was calm and professional, picked the deadbolt without any damage at all, and I was back inside in under five minutes once he arrived. Exactly the kind of service you want in a stressful situation."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Jennifer A.</p>
+          <p class="text-gray-500 text-sm">House Lockout — Dover, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Lost my house keys somewhere and couldn't get back in. Called 1st Capital Locksmith and they came to Milford quickly. They unlocked the door and while they were there, I asked about rekeying since I was worried about whoever might find my lost keys. They rekeyed both locks right there on the spot and cut me new keys. Very efficient — the whole thing was done in about an hour. Great service and very reasonably priced."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Nathan C.</p>
+          <p class="text-gray-500 text-sm">Lost Key Lockout & Rekey — Milford, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"My key broke off in the front door lock and I was completely stuck — couldn't get the key out and couldn't unlock the door. 1st Capital Locksmith came to Smyrna and extracted the broken piece with no damage to the lock. He then cut me a new key right there. The lock works perfectly. Really professional work and a much faster resolution than I expected."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Carolyn M.</p>
+          <p class="text-gray-500 text-sm">Broken Key Extraction — Smyrna, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"I locked myself out of my apartment in Camden on a Saturday afternoon and the property manager wasn't answering. Called 1st Capital Locksmith and they came within 30 minutes. Very professional — asked for my ID and verified I lived there before doing anything, which I actually appreciated. Unlocked the door cleanly and was on his way. Would recommend to any renter in the area."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Derek W.</p>
+          <p class="text-gray-500 text-sm">Apartment Lockout — Camden, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"My key was in my hand but my front door deadbolt completely refused to open — key went in but nothing moved. I'd been struggling with it for 20 minutes. 1st Capital came to Harrington and diagnosed that the deadbolt had a seized internal mechanism. He opened the door and replaced the deadbolt right then. I didn't even know they carried replacement hardware with them. Very glad I called."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Patricia H.</p>
+          <p class="text-gray-500 text-sm">Lock Failure & Replacement — Harrington, DE</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"We moved into a new rental in Frederica and discovered our key didn't actually work well in the back door — it stuck every time. We called 1st Capital Locksmith and they came out, repaired the lock, and rekeyed both the front and back doors so everything was on the same key. Super convenient and now we have proper keys to our home instead of worrying about the previous tenants' keys floating around. Highly recommend."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Chris & Amy B.</p>
+          <p class="text-gray-500 text-sm">Lock Repair & Rekey — Frederica, DE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="bg-[#F8F8F5] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Related Services</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22]">Other Residential Locksmith Services We Offer</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <a href="/services/lock-rekeying" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] mb-1">Lock Rekeying</h3>
+          <p class="text-gray-500 text-sm">Change who can access your home without replacing the hardware</p>
+        </a>
+        <a href="/services/lock-change" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] mb-1">Lock Change</h3>
+          <p class="text-gray-500 text-sm">Full lock replacement with new hardware installed professionally</p>
+        </a>
+        <a href="/services/deadbolt-installation" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] mb-1">Deadbolt Installation</h3>
+          <p class="text-gray-500 text-sm">Add or upgrade deadbolts for improved home security</p>
+        </a>
+        <a href="/services/residential-locksmith" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] mb-1">Residential Locksmith</h3>
+          <p class="text-gray-500 text-sm">Full range of home locksmith services throughout Delaware</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Frequently Asked Questions</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
+          House Lockout Questions — Answered
+        </h2>
+      </div>
+
+      <div class="space-y-6">
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            How fast can you get to me for a house lockout in Delaware?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Response times vary depending on your location and our current workload, but we prioritize residential lockouts and dispatch as quickly as possible. For most locations throughout Kent County — Dover, Milford, Smyrna, Camden, Harrington, Frederica, and surrounding communities — we aim to arrive within a reasonable timeframe. Call us at (302) 735-0050 and we can give you a realistic estimate for your specific location.
+          </p>
+        </details>
+
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            Will you damage my door or lock to get me back in?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            No — we use professional non-destructive entry techniques. This means we pick or bypass the lock using specialized locksmith tools, not force. Your door frame, lock hardware, and door remain completely intact. In the vast majority of house lockouts we handle, there is zero damage to the property. Destructive entry is only ever considered as an absolute last resort in very specific situations, and we always discuss this with the customer first.
+          </p>
+        </details>
+
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            What do I need to show you to prove I live there?
+            <span class="text-[#A61E22] text-2xml group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            We ask for a government-issued photo ID showing the address of the property, or a combination of ID and supporting documentation such as a lease agreement, utility bill, or mail addressed to you at the property. This verification step is standard practice for any reputable locksmith and protects both you and your neighbors. We handle this quickly and professionally — we understand you are already in a stressful situation and we do not make the process unnecessarily burdensome.
+          </p>
+        </details>
+
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            Should I rekey my locks after a lockout?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            It depends on the reason for the lockout. If you simply left your keys inside, rekeying is not necessary since your keys are accounted for. If you lost your keys somewhere unknown, rekeying is strongly recommended — someone who finds your lost keys could potentially identify your address and use them to access your home. Rekeying changes the internal pin configuration of your locks so the old keys no longer work. It is quick, affordable, and can be done on the same visit as your lockout service.
+          </p>
+        </details>
+
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            Can you unlock any type of residential door lock?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            We work on all common residential lock types including Kwikset, Schlage, Defiant, Baldwin, Yale, and similar brands. This includes standard knob locks, deadbolts, lever handle locks, and entry handle sets. If you have a high-security lock such as a Medeco, Mul-T-Lock, or similar pick-resistant cylinder, the process may take longer but we are experienced with these as well. If you are unsure whether we can help with your specific lock, call us and we will let you know upfront.
+          </p>
+        </details>
+
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            What if my lock is broken and won't open even with the key?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            This is a lock failure situation rather than a pure lockout, but we handle it all the same. We will gain entry to your home first, then assess the failed lock — often the cylinder or internal bolt mechanism has worn out or seized. In some cases the lock can be repaired; in others, replacement is the right call. We carry replacement deadbolts and lock sets and can install a new lock on the same visit so you are not left with a broken or insecure door.
+          </p>
+        </details>
+
+        <details class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 group">
+          <summary class="font-bold text-[#1A1F22] text-lg cursor-pointer flex justify-between items-center">
+            Do you help with house lockouts in all of Kent County?
+            <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Yes — we serve the entire Kent County area including Dover, Milford, Smyrna, Camden, Harrington, Frederica, Felton, Magnolia, Woodside, Wyoming, Cheswold, Clayton, Leipsic, Little Creek, Bowers, Viola, Kenton, Hartly, and all surrounding communities. If you are in Kent County, Delaware, call (302) 735-0050 and we will head to your location.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#0E1B2F] py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-4">House Lockout Service in Delaware</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-snug">
+        Locked Out of Your Home? Call 1st Capital Locksmith — We're On Our Way.
+      </h2>
+      <p class="text-gray-300 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+        Whether you left your keys inside, lost them, or your lock has failed — we get you back into your home quickly, professionally, and without any damage. Serving all of Kent County, Delaware.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-10 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Request a Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>
