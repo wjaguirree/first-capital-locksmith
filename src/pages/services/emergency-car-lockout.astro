@@ -1,0 +1,598 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Emergency Car Lockout Service in Delaware | Locked Out of Car | 1st Capital Locksmith"
+  description="Keys locked in your car in Delaware? 1st Capital Locksmith provides fast, damage-free emergency car lockout service across Dover, Smyrna, Milford, and all of Kent County. Available 24/7 — call (302) 735-0050."
+>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">Emergency Car Lockout</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema: Breadcrumbs -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": "Emergency Car Lockout", "item": "https://www.1stcapitallocksmith.com/services/emergency-car-lockout/" }
+    ]
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Emergency Car Lockout Service in Delaware",
+    "description": "Professional emergency car lockout service throughout Delaware. 1st Capital Locksmith opens locked vehicles for all makes and models using damage-free automotive entry tools. Fast 24/7 dispatch across Kent County.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "1st Capital Locksmith",
+      "telephone": "+13027350050",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dover",
+        "addressRegion": "DE",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Delaware"
+    },
+    "serviceType": "Emergency Car Lockout Service"
+  })} />
+
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How fast can you reach me for a car lockout in Delaware?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most locations in Kent County, we arrive within 20–30 minutes of your call. We dispatch immediately and will give you an estimated arrival time when you call. Call (302) 735-0050 and we will head your way."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will you damage my car opening it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We use professional automotive entry tools including slim jim tools, long reach equipment, and air wedge systems specifically designed for damage-free vehicle entry. We take great care with your door seals and weather stripping. In virtually all cases your vehicle is fully unaffected after entry."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you open any type of vehicle?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We can open the vast majority of passenger vehicles including sedans, SUVs, trucks, minivans, and most commercial vans. We carry tools suited for a wide range of makes and models. If you have a specialty or older vehicle, mention it when you call and we will confirm compatibility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if my key broke inside the car door or ignition?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We handle broken key extraction for both door locks and ignition cylinders. Our technicians carry specialized extraction tools to remove key fragments without damaging the lock or ignition. After extraction, if you need a new key cut, we can often do that on the same visit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you make me a new car key on the spot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In many cases, yes. We carry key cutting equipment for standard and transponder keys and can cut and program replacement keys for many popular makes and models. Call us to confirm whether we can handle your specific vehicle on-site."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if there is a child or pet locked in my car?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If a child or pet is locked in a car — especially in hot weather — call 911 immediately, then call us. Emergency services can respond faster in life-safety situations. We support emergency responders and can follow up for vehicle security after the immediate situation is resolved."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is emergency car lockout available at night and on weekends?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We provide 24/7 emergency car lockout service throughout Delaware including nights, weekends, and holidays. Lockouts don't keep business hours and neither do we."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where in Delaware do you provide car lockout service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve all of Kent County and surrounding areas including Dover, Smyrna, Milford, Camden, Harrington, Felton, Wyoming, Frederica, Magnolia, Clayton, and all surrounding communities. Call us wherever you are and we will get there fast."
+        }
+      }
+    ]
+  })} />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[340px] md:min-h-[500px] flex items-center text-white py-10 md:py-20"
+    style="background-image: url('/images/emergency-car-lockout.jpg'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/72"></div>
+    <div class="relative max-w-6xl mx-auto px-5 md:px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-xs md:text-sm mb-2 md:mb-4">Emergency Car Lockout — Delaware</p>
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-6 max-w-3xl leading-tight">
+        Emergency Car Lockout Service in Delaware — Keys Locked In? We Are On the Way.
+      </h1>
+      <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
+        Locked out of your vehicle in Delaware? 1st Capital Locksmith provides fast, damage-free emergency car lockout service for all makes and models across Kent County. Available 24/7 — call now and a technician is dispatched immediately.
+      </p>
+      <div class="flex flex-wrap gap-3 md:gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-6 py-3 md:px-8 md:py-4 text-white font-bold text-base md:text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get Help Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">24/7 Available</p>
+          <p class="text-gray-300 text-sm mt-1">Nights, Weekends & Holidays</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">All Makes & Models</p>
+          <p class="text-gray-300 text-sm mt-1">Sedans, SUVs, Trucks & Vans</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Damage-Free Entry</p>
+          <p class="text-gray-300 text-sm mt-1">Professional Automotive Tools</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Fast Dispatch</p>
+          <p class="text-gray-300 text-sm mt-1">20–30 Min Across Kent County</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Delaware's Car Lockout Specialists</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Professional Emergency Car Lockout Service Across Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Getting locked out of your car is one of the most frustrating and disruptive experiences on the road — especially when it happens far from home, in an unfamiliar area, or in bad weather. 1st Capital Locksmith responds to emergency car lockouts throughout Delaware with fast dispatch and professional, non-damaging entry techniques for all vehicle types.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Our automotive lockout technicians use slim jim tools, long reach equipment, and precision air wedge systems to open modern vehicles without touching the door seals, weather stripping, or locking mechanisms. These tools are specifically designed for the geometry of modern car doors and ensure your vehicle looks and functions exactly as it did before the lockout.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            We serve drivers throughout <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, and all surrounding Kent County communities. Call (302) 735-0050 any time — we are available 24 hours a day, 7 days a week.
+          </p>
+        </div>
+        <div class="space-y-6">
+          <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+            <img
+              src="/images/emergency-car-lockout-service.jpg"
+              alt="Emergency car lockout service in Delaware"
+              class="w-full h-full object-cover"
+              width="600"
+              height="450"
+              loading="lazy"
+            />
+          </div>
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Common Car Lockout Situations We Handle:</h3>
+            <ul class="space-y-3">
+              {[
+                "Keys Left on Seat or in Cupholder",
+                "Keys Locked in Trunk",
+                "Key Left in Ignition (Car Locked)",
+                "Key Fob Battery Dead — Car Won't Open",
+                "Key Broken Off in Door Lock",
+                "Key Broken Off in Ignition",
+                "Power Door Lock Failure",
+                "Child or Pet Locked Inside",
+                "Lockout in Parking Lot or Remote Area",
+                "After-Hours & Holiday Vehicle Lockout",
+              ].map((item) => (
+                <li class="flex items-center gap-3 text-gray-700">
+                  <span class="w-6 h-6 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-6 pt-6 border-t border-gray-200">
+              <a
+                href="tel:3027350050"
+                class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+              >
+                Call (302) 735-0050 Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Types Detail -->
+  <section id="services" class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Automotive Lockout Expertise</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">Emergency Car Lockout Services We Provide</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          From a standard lockout to broken key extraction and replacement key cutting, our automotive locksmiths handle every car lock situation throughout Delaware.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Standard Vehicle Lockout Entry</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            The most common car lockout scenario — keys left on the seat, in the cupholder, or in the trunk while the door locked behind you. This is the situation we handle dozens of times each week across Delaware, and our technicians can open most vehicles quickly and cleanly.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            We use air wedge systems to create a small, controlled gap at the top corner of the door frame, then insert a long reach tool to manipulate the interior unlock button or handle. This method is standard in the industry and does not damage door seals or weather stripping when performed correctly.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            After we open your vehicle, if you have concerns about key security, we offer <a href="/services/car-key-replacement" class="text-[#A61E22] hover:underline font-medium">car key replacement</a> on the same visit for many popular makes and models.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Broken Key in Car Door</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            A key that snaps inside the car door lock creates a lockout that cannot be resolved simply by opening the door — the fragment must be removed before any key will work again. Attempting to pull a broken key out with pliers or tweezers risks pushing it deeper or scratching the cylinder.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Our technicians carry dedicated <a href="/services/broken-key-extraction" class="text-[#A61E22] hover:underline font-medium">broken key extraction</a> tools — hook picks and spiral extractors designed specifically for automotive lock cylinders — that grip the key fragment and draw it out cleanly without cylinder damage.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Once the fragment is removed, the cylinder typically functions normally. We assess the lock's condition on the spot and can cut a new key immediately so you are back on the road without delay.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Trunk Lockout</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Keys in the trunk with the lid shut? This is a surprisingly common situation — especially when loading groceries or luggage — and it requires a different approach than a standard door lockout. Most modern vehicles have a trunk release lever inside the passenger compartment, which is accessible once we open a door.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            We open the car door first using our standard automotive entry tools, then access the interior trunk release to retrieve your keys. For vehicles with a separate trunk cylinder, we can pick the trunk lock directly if needed.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            If the keys inside the trunk are your only set, we recommend getting a <a href="/services/car-key-replacement" class="text-[#A61E22] hover:underline font-medium">spare key made</a> on the same visit — a simple precaution that eliminates this problem in the future.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Key Fob & Remote Entry Failure</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Many drivers rely entirely on their key fob for vehicle entry and forget — or don't know — that their key fob often contains a physical blade key for emergencies. When the fob battery dies, the remote entry stops working, and if you've lost the habit of using the physical key slot, it can feel like a lockout even when it isn't.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            We assess the situation on arrival — whether the fob battery simply needs replacing, whether there is an electronic issue with the fob itself, or whether <a href="/services/key-fob-programming" class="text-[#A61E22] hover:underline font-medium">key fob programming</a> or replacement is needed. We carry fob batteries and can often resolve the problem on the spot.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            For fobs that are damaged, lost, or paired to the wrong vehicle profile, we offer full key fob replacement and programming services for many makes and models at rates significantly below dealership prices.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Keys Locked Inside with Engine Running</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            This situation carries additional urgency — a running engine means fuel is being consumed, and if the vehicle is in a closed space, exhaust fumes become a concern. We treat engine-running lockouts as high priority and dispatch with the same urgency as any other emergency call.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Modern vehicles with push-button starts can sometimes lock with the fob inside even when the engine is running. This creates a lockout where a standard key approach does not apply. Our technicians carry electronic bypass tools and automotive entry equipment that work around push-button ignition setups.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            If you are in an unsafe location while waiting — heavy traffic, extreme heat, or an unfamiliar area — let us know when you call and we will give you safety guidance while we are on the way.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">24/7 After-Hours Car Lockout</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            A lockout at 11 PM in a dark parking lot is a very different experience than one in a busy daytime setting — it can feel genuinely unsafe, especially for someone alone. We understand the urgency and take after-hours calls just as seriously as any other, with the same rapid dispatch and the same professional service.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            There is no inflated after-hours surcharge designed to capitalize on your situation. Our pricing is fair and disclosed before any work begins. We quote what we charge, we arrive when we say, and we open your vehicle cleanly.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            For comprehensive automotive locksmith services beyond emergency entry — including <a href="/services/ignition-repair" class="text-[#A61E22] hover:underline font-medium">ignition repair</a> and replacement, transponder keys, and more — see our full <a href="/services/automotive-locksmith" class="text-[#A61E22] hover:underline font-medium">automotive locksmith service</a> page.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Strip -->
+  <section class="bg-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-3 gap-4">
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F8F8F5]">
+          <img src="/images/car-lockout-1.jpg" alt="Emergency car lockout in Delaware parking lot" class="w-full h-full object-cover" width="400" height="300" loading="lazy" />
+        </div>
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F8F8F5]">
+          <img src="/images/car-lockout-2.jpg" alt="Automotive entry tool used on modern vehicle" class="w-full h-full object-cover" width="400" height="300" loading="lazy" />
+        </div>
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F8F8F5]">
+          <img src="/images/car-lockout-3.jpg" alt="Locksmith opening car door without damage in Delaware" class="w-full h-full object-cover" width="400" height="300" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Delaware Drivers Choose Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose 1st Capital for Your Car Lockout</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">When you are stranded with your keys inside your vehicle, you need a locksmith who shows up fast, uses professional tools, and charges a fair price. Here is what you get with 1st Capital.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Automotive-Specific Entry Tools",
+            body: "We use slim jim tools, air wedges, and long reach equipment designed specifically for modern vehicle doors. These are not improvised or repurposed household tools — they are professional automotive locksmith equipment that opens cars without damage.",
+          },
+          {
+            title: "No Damage Guarantee",
+            body: "Our technicians take pride in opening vehicles cleanly. We will not scratch your paint, crack your window, or tear your door seal to get you in. If our tools will not work on your vehicle without risk of damage, we tell you up front — we do not hide risk.",
+          },
+          {
+            title: "All Makes & Models",
+            body: "We regularly service domestic and foreign vehicles including Ford, Chevrolet, Toyota, Honda, Hyundai, Kia, Nissan, Jeep, RAM, and more. We stay updated on modern vehicle door configurations and carry the tooling to match.",
+          },
+          {
+            title: "Key Cutting On-Site",
+            body: "If you need a new key cut after we open your vehicle, we have key cutting and programming equipment in our van for a wide range of makes and models. No need to wait for a second appointment or pay dealership prices.",
+          },
+          {
+            title: "Upfront Pricing",
+            body: "We tell you the price before we start. No bait-and-switch, no fees that appear after the door is open. What we quote is what you pay — period. Car lockout pricing varies by vehicle type and services needed, so call us for a fast quote.",
+          },
+          {
+            title: "All of Kent County Covered",
+            body: `We serve drivers across all of Kent County including <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/wyoming-de" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, and <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>. Wherever you are stranded, we are on our way.`,
+          },
+        ].map((card) => (
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <h3 class="text-lg font-bold text-white mb-3">{card.title}</h3>
+            <p class="text-gray-400 leading-relaxed text-sm" set:html={card.body} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Real Delaware Drivers</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">What Customers Say About Our Car Lockout Service</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Delaware drivers stuck in lockouts trust 1st Capital to show up fast and handle the job right.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { name: "Kevin R.", location: "Dover, DE", review: "Keys in the seat at a gas station. They were there in 22 minutes. Opened the car in under 5 minutes, no damage at all. Really professional and reasonably priced." },
+          { name: "Sandra T.", location: "Smyrna, DE", review: "Locked myself out at a shopping center parking lot late at night. I was nervous being out there alone. The locksmith arrived fast, was polite and professional, and had me in my car quickly." },
+          { name: "Chris B.", location: "Milford, DE", review: "Great experience. Broke my key in the door lock and couldn't get it out. They came and extracted the fragment cleanly, then cut me a new key right there on the spot. Outstanding." },
+          { name: "Ashley M.", location: "Harrington, DE", review: "My key fob stopped working on a Monday morning and I had no idea what to do. They figured it out quickly, replaced the battery, and got me going. Fast response and fair price." },
+          { name: "Robert J.", location: "Felton, DE", review: "I called around 11 PM with keys in the car. They showed up in about 25 minutes, opened the car in minutes with no scratches or damage. Great service, highly recommend." },
+          { name: "Danielle C.", location: "Camden, DE", review: "First time using them and I was impressed. The technician explained what he was doing and why, got into the car cleanly, and didn't try to upsell me on things I didn't need. Honest and professional." },
+        ].map((r) => (
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+            <div class="flex items-center gap-1 mb-4">
+              {Array(5).fill(0).map(() => (
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A61E22]" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-gray-700 leading-relaxed mb-6 text-sm">"{r.review}"</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-[#A61E22] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                {r.name.charAt(0)}
+              </div>
+              <div>
+                <p class="font-semibold text-[#1A1F22] text-sm">{r.name}</p>
+                <p class="text-gray-500 text-xs">{r.location}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="bg-[#F8F8F5] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-[#1A1F22] mb-8 text-center">Related Automotive Services</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { label: "Car Lockout Service", href: "/services/car-lockout", desc: "Our full car lockout service page" },
+          { label: "Car Key Replacement", href: "/services/car-key-replacement", desc: "New keys cut and programmed" },
+          { label: "Key Fob Programming", href: "/services/key-fob-programming", desc: "Remote entry fob replacement" },
+          { label: "Broken Key Extraction", href: "/services/broken-key-extraction", desc: "Fragment removal from car locks" },
+        ].map((s) => (
+          <a href={s.href} class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md hover:border-[#A61E22] transition group">
+            <p class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">{s.label}</p>
+            <p class="text-gray-500 text-sm">{s.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Common Questions</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">Emergency Car Lockout FAQs</h2>
+        <p class="text-gray-600">Answers to the most common questions about car lockout service in Delaware.</p>
+      </div>
+      <div class="space-y-6">
+        {[
+          { q: "How fast can you reach me for a car lockout in Delaware?", a: "For most locations in Kent County, we arrive within 20–30 minutes of your call. We dispatch immediately and will give you an estimated arrival time when you call." },
+          { q: "Will you damage my car opening it?", a: "No. We use professional automotive entry tools designed for damage-free vehicle entry. We take great care with door seals and weather stripping. In virtually all cases your vehicle is fully unaffected after entry." },
+          { q: "Can you open any type of vehicle?", a: "We can open the vast majority of passenger vehicles including sedans, SUVs, trucks, minivans, and most commercial vans. We carry tools suited for a wide range of makes and models." },
+          { q: "What if my key broke inside the car door or ignition?", a: "We handle broken key extraction for both door locks and ignition cylinders. Our technicians carry specialized extraction tools to remove key fragments without damaging the lock or ignition. After extraction, if you need a new key cut, we can often do that on the same visit." },
+          { q: "Can you make me a new car key on the spot?", a: "In many cases, yes. We carry key cutting equipment for standard and transponder keys and can cut and program replacement keys for many popular makes and models. Call us to confirm your specific vehicle." },
+          { q: "What if there is a child or pet locked in my car?", a: "If a child or pet is locked in a car — especially in hot weather — call 911 immediately, then call us. Emergency services can respond faster in life-safety situations." },
+          { q: "Is emergency car lockout available at night and on weekends?", a: "Yes. We provide 24/7 emergency car lockout service throughout Delaware including nights, weekends, and holidays." },
+          { q: "Where in Delaware do you provide car lockout service?", a: "We serve all of Kent County and surrounding areas including Dover, Smyrna, Milford, Camden, Harrington, Felton, Wyoming, Frederica, Magnolia, Clayton, and all surrounding communities." },
+        ].map((item) => (
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+            <h3 class="text-lg font-bold text-[#1A1F22] mb-3">{item.q}</h3>
+            <p class="text-gray-600 leading-relaxed">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Coverage Area</p>
+          <h2 class="text-3xl font-bold text-[#1A1F22] mb-6">Car Lockout Service Across Kent County, Delaware</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Wherever you are stranded in Delaware, 1st Capital Locksmith can reach you. We provide emergency car lockout service across all of Kent County including <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/wyoming-de" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, <a href="/service-areas/magnolia-de" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/clayton-de" class="text-[#A61E22] hover:underline font-medium">Clayton</a>, <a href="/service-areas/cheswold-de" class="text-[#A61E22] hover:underline font-medium">Cheswold</a>, <a href="/service-areas/kenton-de" class="text-[#A61E22] hover:underline font-medium">Kenton</a>, <a href="/service-areas/houston-de" class="text-[#A61E22] hover:underline font-medium">Houston</a>, <a href="/service-areas/hartly-de" class="text-[#A61E22] hover:underline font-medium">Hartly</a>, <a href="/service-areas/woodside-de" class="text-[#A61E22] hover:underline font-medium">Woodside</a>, <a href="/service-areas/viola-de" class="text-[#A61E22] hover:underline font-medium">Viola</a>, <a href="/service-areas/bowers-de" class="text-[#A61E22] hover:underline font-medium">Bowers</a>, <a href="/service-areas/little-creek-de" class="text-[#A61E22] hover:underline font-medium">Little Creek</a>, <a href="/service-areas/leipsic-de" class="text-[#A61E22] hover:underline font-medium">Leipsic</a>, and <a href="/service-areas/farmington-de" class="text-[#A61E22] hover:underline font-medium">Farmington</a>.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Call (302) 735-0050 now and a technician will be dispatched immediately to your location.
+          </p>
+          <div class="mt-8">
+            <a href="/service-areas" class="inline-flex items-center text-[#A61E22] font-semibold hover:underline">
+              View All Service Areas →
+            </a>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 aspect-[4/3] bg-[#F8F8F5]">
+          <img src="/images/kent-county-delaware.jpg" alt="Kent County Delaware car lockout service area" class="w-full h-full object-cover" width="600" height="450" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-4">Locked Out of Your Car?</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Call 1st Capital Locksmith — Fast Car Lockout Service in Delaware
+      </h2>
+      <p class="text-gray-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+        24/7 emergency car lockout service across Kent County. Damage-free entry, all makes and models, upfront honest pricing.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Send a Message
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

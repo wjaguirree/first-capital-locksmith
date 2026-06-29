@@ -1,29 +1,597 @@
 ---
-import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
-<ServicePageLayout
-  title="Safe Lockout Services | 1st Capital Locksmith"
-  description="Professional safe lockout assistance for commercial and residential properties in Kent County, Delaware."
-  category="Emergency Locksmith"
-  service="Safe Lockout Services"
-  image="/images/safe-lockout-services.jpg"
+<MainLayout
+  title="Safe Lockout Services in Delaware | Safe Opening | 1st Capital Locksmith"
+  description="Professional safe opening and safe lockout services throughout Delaware. 1st Capital Locksmith opens residential and commercial safes using non-destructive techniques — combination recovery, electronic lock override, and dial safe opening across Kent County. Call (302) 735-0050."
 >
 
-  <h2 class="text-4xl font-bold mb-6">
-    Safe Lockout Services
-  </h2>
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">Safe Lockout Services</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
 
-  <p class="mb-4">
-    We specialize exclusively in safe opening and safe lockout services. Our certified technicians deliver fast, emergency safe opening for residential and commercial clients across Kent County, Delaware. Whether you have a jammed dial, lost combination, broken electronic lock, or you are locked out of a gun safe, deposit safe, or fireproof safe, we restore access using non-destructive and minimally invasive entry techniques whenever possible.
-  </p>
+  <!-- Schema: Breadcrumbs -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": "Safe Lockout Services", "item": "https://www.1stcapitallocksmith.com/services/safe-lockout-services/" }
+    ]
+  })} />
 
-  <p class="mb-4">
-    Services include authorized combination recovery, electronic keypad override, safe lock replacement only as part of opening (not full installations), and emergency safe opening available 24/7. We prioritize secure, compliant procedures and documentation to ensure proof of authorization and protect your property. Keywords: safe opening, safe lockout, emergency safe opening, combination recovery, non-destructive safe entry, residential safe opening, commercial safe opening, gun safe lockout.
-  </p>
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Safe Lockout Services in Delaware",
+    "description": "Professional safe opening and safe lockout services for residential and commercial clients throughout Delaware. 1st Capital Locksmith opens dial combination safes, electronic keypad safes, gun safes, fireproof safes, and deposit safes using non-destructive entry techniques whenever possible across Kent County.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "1st Capital Locksmith",
+      "telephone": "+13027350050",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dover",
+        "addressRegion": "DE",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Delaware"
+    },
+    "serviceType": "Safe Lockout Services"
+  })} />
 
-  <p class="mb-4">
-    Fast response, transparent pricing, and professional, licensed technicians mean you get access restored quickly and securely. Contact us now for immediate safe opening and emergency lockout assistance.
-  </p>
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can you open a safe without the combination?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Our safe technicians use dial manipulation, lock bypass techniques, and specialized safe opening methods to open combination safes without the combination. The approach depends on the safe brand, model, and lock type. We always attempt non-destructive entry first."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will opening the safe damage it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We use non-destructive safe opening techniques whenever possible. Methods such as dial manipulation and electronic override leave the safe fully functional and undamaged. Drilling is a last resort used only when non-destructive methods are not viable for the specific safe, and we discuss this with you beforehand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of safes can you open?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We open a wide range of safe types including: combination dial safes, electronic keypad safes, biometric safes, gun safes, fireproof document safes, floor safes, wall safes, deposit safes, and hotel in-room safes. Call us to discuss your specific brand and model."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you recover or change the combination after opening?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. After opening, we can reset the combination to a new code of your choice, service the lock mechanism, or replace a failed electronic lock with a new keypad unit. We restore full function to the safe before we leave whenever possible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My electronic keypad safe is dead or flashing — can you help?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A dead battery is the most common cause of electronic safe lockouts. Try holding a fresh 9V battery against the external terminals and entering your code while maintaining contact. If this does not work, we have electronic override methods for many popular keypad safe brands."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost to open a safe in Delaware?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Safe opening costs depend on the safe type, brand, lock mechanism, and the method required to open it. We provide an honest quote before any work begins. Call (302) 735-0050 for an estimate based on your specific safe."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you need to take the safe with you to open it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We open safes on-site at your location — bolted to the floor, embedded in a wall, or freestanding. There is no need to transport your safe."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you serve all of Kent County, Delaware?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We provide safe lockout services for residential and commercial clients throughout all of Kent County including Dover, Smyrna, Milford, Camden, Harrington, Felton, and all surrounding areas."
+        }
+      }
+    ]
+  })} />
 
-</ServicePageLayout>
+  <!-- Hero -->
+  <section
+    class="relative min-h-[340px] md:min-h-[500px] flex items-center text-white py-10 md:py-20"
+    style="background-image: url('/images/safe-lockout-services.jpg'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/72"></div>
+    <div class="relative max-w-6xl mx-auto px-5 md:px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-xs md:text-sm mb-2 md:mb-4">Safe Lockout Services — Delaware</p>
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-6 max-w-3xl leading-tight">
+        Safe Lockout Services in Delaware — Professional Safe Opening Without the Damage
+      </h1>
+      <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
+        Locked out of your safe? 1st Capital Locksmith opens residential and commercial safes throughout Delaware using non-destructive techniques — forgotten combinations, dead electronic keypads, jammed mechanisms, and gun safe lockouts all handled professionally.
+      </p>
+      <div class="flex flex-wrap gap-3 md:gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-6 py-3 md:px-8 md:py-4 text-white font-bold text-base md:text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Non-Destructive First</p>
+          <p class="text-gray-300 text-sm mt-1">Preserve Your Safe Whenever Possible</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">All Safe Types</p>
+          <p class="text-gray-300 text-sm mt-1">Dial, Electronic, Gun & Fireproof</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Combination Recovery</p>
+          <p class="text-gray-300 text-sm mt-1">Restore Access & Reset Code</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">On-Site Service</p>
+          <p class="text-gray-300 text-sm mt-1">We Come to Your Home or Business</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Delaware's Safe Opening Specialists</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Professional Safe Lockout & Opening Services Across Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Being locked out of a safe — whether it contains important documents, valuables, firearms, cash, or business records — is a genuinely frustrating experience. Unlike door lockouts, safe lockouts often involve more complex mechanisms: combination dials, relocker systems, electronic keypads with override modes, and anti-drill plates that make brute force approaches both damaging and expensive. The right approach requires specialized knowledge and technique.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            1st Capital Locksmith provides professional safe opening services throughout Delaware using non-destructive techniques wherever possible. This means we work to open your safe using dial manipulation, electronic bypass, or lock picking methods that leave the safe, its lock, and its contents fully intact. Drilling is a last resort — discussed with you first — and is only used when no non-destructive path is viable for the specific safe model.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            We serve homeowners and businesses across <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, and all of Kent County. Call (302) 735-0050 to discuss your specific safe and get an honest assessment.
+          </p>
+        </div>
+        <div class="space-y-6">
+          <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+            <img
+              src="/images/safe-opening-service.jpg"
+              alt="Professional safe opening service in Delaware"
+              class="w-full h-full object-cover"
+              width="600"
+              height="450"
+              loading="lazy"
+            />
+          </div>
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Safe Lockout Situations We Handle:</h3>
+            <ul class="space-y-3">
+              {[
+                "Forgotten Combination",
+                "Dead Electronic Keypad Battery",
+                "Malfunctioning or Jammed Lock",
+                "Inherited Safe — Unknown Combination",
+                "Gun Safe Lockout",
+                "Fireproof Document Safe Lockout",
+                "Floor Safe & Wall Safe Lockout",
+                "Hotel Room Safe Lockout",
+                "Deposit Safe & Cash Safe Lockout",
+                "Combination Change After Opening",
+              ].map((item) => (
+                <li class="flex items-center gap-3 text-gray-700">
+                  <span class="w-6 h-6 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-6 pt-6 border-t border-gray-200">
+              <a
+                href="tel:3027350050"
+                class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+              >
+                Call (302) 735-0050 Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Types Detail -->
+  <section id="services" class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Safe Opening Expertise</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">Safe Lockout Services We Provide</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          From forgotten combination recovery to dead electronic keypad bypass and gun safe opening, we handle all residential and commercial safe lockout situations throughout Delaware.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Combination Safe Opening — Dial & Electronic</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Forgotten combinations are the most common cause of residential safe lockouts. For traditional three-wheel dial combination safes, our technicians use dial manipulation — listening for the precise click sequence that reveals each wheel's gate position — to open the safe without any damage.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            For electronic keypad safes with forgotten PIN codes, we first advise on the manufacturer's standard override and reset procedure. If that is unavailable, we have bypass methods for many popular brands including SentrySafe, Liberty, First Alert, Stack-On, and others.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            After opening, we can reset the combination to a new code of your choice and verify the lock mechanism is operating correctly before we leave.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Dead Battery Electronic Safe Lockout</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            The most common electronic safe lockout is simply a dead battery. Most electronic safe keypads stop working when the internal batteries are depleted. Before calling us, try holding a fresh 9V battery against the two external terminals on the outside of the keypad, enter your code while maintaining contact, and the door should open.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            If the 9V battery trick does not work, call us. We carry electronic override tools and bypass methods for many popular safe keypad systems and can restore access without permanent damage.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            After opening, we replace the internal batteries, test the keypad, and advise whether the electronic lock module should be replaced if it shows signs of failure.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.25-8.25-3.286z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Gun Safe Lockout</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Gun safe lockouts require careful handling — these safes include multiple relocker mechanisms that trigger if the primary lock is forced. Attempting to open a gun safe without proper technique often engages these relockers, making the safe significantly harder to open afterward.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            We identify the specific brand and model to understand its lock system before attempting entry. Common gun safe brands we service include Liberty, Stack-On, Winchester, Browning, Fort Knox, Cannon, and Hornady.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            We confirm ownership before opening any firearms safe — please have identification and purchase documentation available if possible. All service is handled professionally and with complete discretion.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Fireproof Document Safe Opening</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Fireproof document safes protect paper records, passports, birth certificates, insurance documents, and similar irreplaceable items. These safes — particularly older or lower-cost models — often have relatively simple lock mechanisms despite their thick fireproof walls, making non-destructive opening more accessible.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Common causes include forgotten combinations in older dial safes, forgotten PIN codes in digital models, and slight warping of the door from the heat-resistant liner materials over time. We handle all of these scenarios and can open most consumer-grade fireproof safes without damage.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            After opening, we advise on combination reset or lock servicing. If the lock has significantly deteriorated, we can replace it with a new mechanism to keep the safe functional for continued document protection.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Commercial Deposit & Cash Safe Lockout</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Commercial deposit safes, cash drawers, and business floor safes require fast resolution when access is lost — particularly for retail businesses and restaurants that process daily cash. These safes typically use high-quality Group II or III combination locks or digital lock systems designed for frequent daily use.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            We have experience with commercial safe brands and configurations used in business environments and can open or service them on-site with minimal disruption to your operations. We also service drop slot safes and through-the-wall deposit boxes where the deposit mechanism has failed.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            For businesses concerned about broader commercial security — <a href="/services/commercial-lock-rekeying" class="text-[#A61E22] hover:underline font-medium">commercial lock rekeying</a> after staff changes, or implementing a <a href="/services/master-key-systems" class="text-[#A61E22] hover:underline font-medium">master key system</a> for access control — our full <a href="/services/commercial-locksmith" class="text-[#A61E22] hover:underline font-medium">commercial locksmith services</a> cover all needs.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Inherited & Estate Safe Opening</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            One of the most common safe lockout scenarios is an inherited safe — a family member or estate has left behind a safe, and the combination was never documented or has been lost. These situations are handled with sensitivity and care, and we may request documentation of inheritance or estate administration before opening.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            The approach depends entirely on the safe model. Older mechanical combination safes can often be opened via dial manipulation. Older electronic safes may have accessible override codes. Some older safes have simple key locks that can be picked or bypassed. We assess each situation individually.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            After opening, if you plan to continue using the safe, we set a new combination of your choice and service the lock. If the lock is no longer reliable, we advise on whether a replacement lock or a new safe is the better path.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Strip -->
+  <section class="bg-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-3 gap-4">
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F8F8F5]">
+          <img src="/images/safe-opening-1.jpg" alt="Dial combination safe opening in Delaware" class="w-full h-full object-cover" width="400" height="300" loading="lazy" />
+        </div>
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F8F8F5]">
+          <img src="/images/safe-opening-2.jpg" alt="Gun safe lockout service in Delaware" class="w-full h-full object-cover" width="400" height="300" loading="lazy" />
+        </div>
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F8F8F5]">
+          <img src="/images/safe-opening-3.jpg" alt="Electronic keypad safe lockout service in Kent County" class="w-full h-full object-cover" width="400" height="300" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Delaware Clients Choose Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose 1st Capital for Safe Lockout Services</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Safe opening requires specialized knowledge, technique, and the right tools — not guesswork and a drill.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Non-Destructive Opening First",
+            body: "We always attempt the least invasive method first. Dial manipulation, electronic bypass, and lock picking leave your safe intact and functional. Drilling is a last resort — discussed with you before we do it, not after.",
+          },
+          {
+            title: "Wide Safe Brand Coverage",
+            body: "We work with all major residential and commercial safe brands including SentrySafe, Liberty, First Alert, Stack-On, Fort Knox, Cannon, Browning, Winchester, Gardall, and others. Different brands have different systems — we know the difference.",
+          },
+          {
+            title: "Combination Reset After Opening",
+            body: "After opening, we can set a new combination, service the lock mechanism, or replace a failed electronic lock module. The goal is to restore your safe to full, reliable function — not just open it today.",
+          },
+          {
+            title: "Ownership Verification",
+            body: "For security and liability purposes, we verify ownership or authorization before opening safes — particularly gun safes and high-security units. Please have identification and purchase or inheritance documentation available.",
+          },
+          {
+            title: "On-Site Service — We Come to You",
+            body: "We work on your safe where it sits — bolted to the floor, embedded in a wall, or freestanding. There is no need to transport your safe and no off-site shop fees. On-site service is our standard.",
+          },
+          {
+            title: "Serving All of Kent County",
+            body: `We provide safe lockout services for clients across all of Kent County including <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, <a href="/service-areas/wyoming-de" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, and <a href="/service-areas/magnolia-de" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>.`,
+          },
+        ].map((card) => (
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <h3 class="text-lg font-bold text-white mb-3">{card.title}</h3>
+            <p class="text-gray-400 leading-relaxed text-sm" set:html={card.body} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Real Delaware Clients</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">What Customers Say About Our Safe Opening Service</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Delaware homeowners and businesses trust 1st Capital Locksmith to regain access to their safes professionally and discreetly.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { name: "Helen T.", location: "Dover, DE", review: "Forgotten combination on my home safe. They came, opened it without any damage in about 20 minutes, and reset the combination for me. Very professional and discreet service." },
+          { name: "Rick B.", location: "Smyrna, DE", review: "Gun safe lockout — the electronic keypad died. They came out, bypassed it cleanly, and replaced the keypad module. Safe works perfectly now. Very knowledgeable technician." },
+          { name: "Joan P.", location: "Milford, DE", review: "Inherited a safe from my father with no combination. 1st Capital was honest about what was involved, opened it non-destructively, and set a new combination. Very satisfied." },
+          { name: "Tom H.", location: "Harrington, DE", review: "Business deposit safe stopped working — electronic lock failure. They diagnosed it and replaced the module on the spot. Back to normal operation same day." },
+          { name: "Susan L.", location: "Camden, DE", review: "Old fireproof safe — hadn't opened it in years and forgot the combination. They used dial manipulation and had it open within an hour without any damage. Impressive skill." },
+          { name: "Gary M.", location: "Felton, DE", review: "Floor safe with a jammed bolt mechanism. They diagnosed it quickly, serviced the lock, and got it working. Saved me from an expensive replacement. Great service." },
+        ].map((r) => (
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+            <div class="flex items-center gap-1 mb-4">
+              {Array(5).fill(0).map(() => (
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A61E22]" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-gray-700 leading-relaxed mb-6 text-sm">"{r.review}"</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-[#A61E22] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                {r.name.charAt(0)}
+              </div>
+              <div>
+                <p class="font-semibold text-[#1A1F22] text-sm">{r.name}</p>
+                <p class="text-gray-500 text-xs">{r.location}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="bg-[#F8F8F5] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-[#1A1F22] mb-8 text-center">Related Services</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { label: "Emergency Locksmith", href: "/services/emergency-locksmith", desc: "24/7 emergency locksmith service" },
+          { label: "Commercial Locksmith", href: "/services/commercial-locksmith", desc: "Full commercial locksmith services" },
+          { label: "Residential Locksmith", href: "/services/residential-locksmith", desc: "Complete home locksmith services" },
+          { label: "Emergency Lockout", href: "/services/emergency-lockout", desc: "All emergency lockout types" },
+        ].map((s) => (
+          <a href={s.href} class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md hover:border-[#A61E22] transition group">
+            <p class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">{s.label}</p>
+            <p class="text-gray-500 text-sm">{s.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Common Questions</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">Safe Lockout Service FAQs</h2>
+        <p class="text-gray-600">Answers to the most common questions about safe opening and lockout services in Delaware.</p>
+      </div>
+      <div class="space-y-6">
+        {[
+          { q: "Can you open a safe without the combination?", a: "Yes. Our technicians use dial manipulation, electronic bypass, and lock picking methods to open safes without the combination. The approach depends on the safe brand, model, and lock type. We always attempt non-destructive entry first." },
+          { q: "Will opening the safe damage it?", a: "We use non-destructive techniques whenever possible — dial manipulation and electronic override leave the safe fully functional. Drilling is a last resort, discussed with you beforehand, and only used when no non-destructive path is viable." },
+          { q: "What types of safes can you open?", a: "We open combination dial safes, electronic keypad safes, biometric safes, gun safes, fireproof document safes, floor safes, wall safes, deposit safes, and hotel in-room safes. Call us to discuss your specific brand and model." },
+          { q: "Can you recover or change the combination after opening?", a: "Yes. After opening, we can reset the combination to a new code of your choice, service the lock mechanism, or replace a failed electronic lock module. We restore full function whenever possible." },
+          { q: "My electronic keypad safe is dead or flashing — can you help?", a: "Yes. First try holding a fresh 9V battery against the external terminals and entering your code — this works for many models. If that fails, we have electronic override methods for many popular keypad safe brands." },
+          { q: "How much does it cost to open a safe in Delaware?", a: "Cost depends on the safe type, brand, lock mechanism, and method required. We provide an honest quote before any work begins. Call (302) 735-0050 for an estimate." },
+          { q: "Do you need to take the safe with you to open it?", a: "No. We open safes on-site at your location — bolted to the floor, embedded in a wall, or freestanding. We do not transport your safe." },
+          { q: "Do you serve all of Kent County, Delaware?", a: "Yes. We provide safe lockout services for residential and commercial clients throughout all of Kent County including Dover, Smyrna, Milford, Camden, Harrington, Felton, and all surrounding areas." },
+        ].map((item) => (
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+            <h3 class="text-lg font-bold text-[#1A1F22] mb-3">{item.q}</h3>
+            <p class="text-gray-600 leading-relaxed">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Coverage Area</p>
+          <h2 class="text-3xl font-bold text-[#1A1F22] mb-6">Safe Lockout Services Across Kent County, Delaware</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            1st Capital Locksmith provides safe opening and lockout services for residential and commercial clients across all of Kent County including <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/wyoming-de" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, <a href="/service-areas/magnolia-de" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/clayton-de" class="text-[#A61E22] hover:underline font-medium">Clayton</a>, <a href="/service-areas/cheswold-de" class="text-[#A61E22] hover:underline font-medium">Cheswold</a>, <a href="/service-areas/kenton-de" class="text-[#A61E22] hover:underline font-medium">Kenton</a>, <a href="/service-areas/houston-de" class="text-[#A61E22] hover:underline font-medium">Houston</a>, <a href="/service-areas/hartly-de" class="text-[#A61E22] hover:underline font-medium">Hartly</a>, <a href="/service-areas/woodside-de" class="text-[#A61E22] hover:underline font-medium">Woodside</a>, <a href="/service-areas/viola-de" class="text-[#A61E22] hover:underline font-medium">Viola</a>, <a href="/service-areas/bowers-de" class="text-[#A61E22] hover:underline font-medium">Bowers</a>, <a href="/service-areas/little-creek-de" class="text-[#A61E22] hover:underline font-medium">Little Creek</a>, <a href="/service-areas/leipsic-de" class="text-[#A61E22] hover:underline font-medium">Leipsic</a>, and <a href="/service-areas/farmington-de" class="text-[#A61E22] hover:underline font-medium">Farmington</a>.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Call (302) 735-0050 to discuss your safe and schedule an on-site opening service.
+          </p>
+          <div class="mt-8">
+            <a href="/service-areas" class="inline-flex items-center text-[#A61E22] font-semibold hover:underline">
+              View All Service Areas →
+            </a>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 aspect-[4/3] bg-[#F8F8F5]">
+          <img src="/images/safe-lockout-area.jpg" alt="Safe lockout service area in Kent County Delaware" class="w-full h-full object-cover" width="600" height="450" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-4">Locked Out of Your Safe?</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Call 1st Capital Locksmith — Professional Safe Opening in Delaware
+      </h2>
+      <p class="text-gray-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+        Non-destructive safe opening for residential and commercial clients throughout Kent County. All safe types, all major brands, combination reset and lock service available after opening.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Send a Message
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

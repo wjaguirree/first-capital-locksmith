@@ -1,0 +1,764 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Deadbolt Installation in Delaware | Deadbolt Upgrade & Replacement | 1st Capital Locksmith"
+  description="Professional deadbolt installation in Delaware. 1st Capital Locksmith installs and upgrades deadbolts for homes and businesses throughout Kent County — single-cylinder, double-cylinder, smart lock deadbolts, and high-security Grade 1 deadbolts. Call (302) 735-0050."
+>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">Deadbolt Installation</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema: Breadcrumbs -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": "Deadbolt Installation", "item": "https://www.1stcapitallocksmith.com/services/deadbolt-installation/" }
+    ]
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Deadbolt Installation in Delaware",
+    "description": "Professional deadbolt installation, upgrade, and replacement services for residential and commercial properties throughout Delaware. 1st Capital Locksmith installs single-cylinder, double-cylinder, smart lock, and high-security Grade 1 deadbolts.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "1st Capital Locksmith",
+      "telephone": "+13027350050",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dover",
+        "addressRegion": "DE",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Delaware"
+    },
+    "serviceType": "Deadbolt Installation"
+  })} />
+
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does deadbolt installation cost in Delaware?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The cost of deadbolt installation depends on the type of deadbolt, the number of doors, and whether any door prep work is needed. We provide a clear upfront quote before any work begins. Call (302) 735-0050 for a fast estimate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best deadbolt for a front door?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For most residential front doors, an ANSI Grade 1 single-cylinder deadbolt from a reputable brand like Schlage or Kwikset is the best choice. Grade 1 is the highest residential security rating and provides strong resistance against forced entry."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you install a deadbolt on any door?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most standard exterior doors can accommodate a deadbolt. If your door does not already have a deadbolt hole, we can drill and prep the door on-site. We'll inspect your door first and advise on the best option."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a single and double cylinder deadbolt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A single-cylinder deadbolt uses a key on the outside and a thumb-turn on the inside — the most common type for exterior doors. A double-cylinder deadbolt requires a key on both sides, which prevents someone from breaking a nearby window and reaching in to unlock the door. Double-cylinder locks require extra care for fire safety since they need a key to exit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you install smart lock deadbolts in Delaware?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We install keypad deadbolts, Z-Wave smart locks, Bluetooth smart locks, and other electronic deadbolt systems throughout Delaware. Call us and we'll confirm compatibility with your door and your preferred brand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does deadbolt installation take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A standard deadbolt installation on a prepared door typically takes 20–30 minutes per lock. If the door requires boring (cutting a new hole), it takes a bit longer. We handle the entire job on-site at your property."
+        }
+      }
+    ]
+  })} />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[340px] md:min-h-[550px] flex items-center text-white py-10 md:py-20"
+    style="background-image: url('/images/deadbolt-installation.jpg'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/72"></div>
+    <div class="relative max-w-6xl mx-auto px-5 md:px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-xs md:text-sm mb-2 md:mb-4">Deadbolt Installation Services — Delaware</p>
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-6 max-w-3xl leading-tight">
+        Professional Deadbolt Installation in Delaware — Stronger Locks, Safer Homes
+      </h1>
+      <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
+        A deadbolt is your front door's most important line of defense against forced entry. 1st Capital Locksmith installs, upgrades, and replaces deadbolts for homeowners and businesses throughout Delaware — with quality hardware, expert installation, and upfront pricing every time.
+      </p>
+      <div class="flex flex-wrap gap-3 md:gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-6 py-3 md:px-8 md:py-4 text-white font-bold text-base md:text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">All Door Types</p>
+          <p class="text-gray-300 text-sm mt-1">Front, Back, Side & Interior Doors</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Grade 1 Hardware</p>
+          <p class="text-gray-300 text-sm mt-1">Highest Residential Security Rating</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Mobile Service</p>
+          <p class="text-gray-300 text-sm mt-1">We Come Directly to Your Property</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Upfront Pricing</p>
+          <p class="text-gray-300 text-sm mt-1">Clear Quote Before We Start</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Delaware's Deadbolt Installation Experts</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Deadbolt Installation & Upgrade Service Throughout Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            If your home or business relies on a spring latch or a worn-out old deadbolt for security, you're more vulnerable than you might think. A quality deadbolt — properly selected and correctly installed — is one of the single most effective steps you can take to harden your doors against break-in attempts. Studies consistently show that most burglars look for quick, easy entry, and a strong deadbolt significantly raises that barrier.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            1st Capital Locksmith provides professional deadbolt installation services for homes, apartments, rental properties, and commercial businesses throughout Delaware. We carry quality hardware from trusted brands and take the time to ensure every deadbolt is correctly fitted, aligned, and functioning smoothly before we leave your property.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Whether you need a basic single-cylinder deadbolt installed on a new door, a double-cylinder deadbolt added to a door with a window nearby, or a keypad or smart lock deadbolt for keyless entry convenience, we handle all types throughout Dover, Milford, Smyrna, Camden, Harrington, and all of Kent County, Delaware.
+          </p>
+        </div>
+        <div class="space-y-6">
+          <!-- Photo Slot 1: Deadbolt installation in progress -->
+          <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+            <img
+              src="/images/deadbolt-installation-service.jpg"
+              alt="Professional deadbolt installation on a residential front door in Delaware"
+              class="w-full h-full object-cover"
+              width="600"
+              height="450"
+              loading="lazy"
+            />
+          </div>
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Our Deadbolt Installation Services Include:</h3>
+          <ul class="space-y-3">
+            {[
+              "New Deadbolt Installation",
+              "Deadbolt Upgrade & Replacement",
+              "Single-Cylinder Deadbolt Installation",
+              "Double-Cylinder Deadbolt Installation",
+              "Keypad Deadbolt Installation",
+              "Smart Lock Deadbolt Installation",
+              "High-Security Grade 1 Deadbolt Installation",
+              "Door Boring & Prep for New Deadbolts",
+              "Deadbolt Strike Plate Reinforcement",
+              "Residential & Commercial Deadbolt Service",
+            ].map((item) => (
+              <li class="flex items-center gap-3 text-gray-700">
+                <span class="w-6 h-6 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <a
+              href="tel:3027350050"
+              class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+            >
+              Call (302) 735-0050 Now
+            </a>
+          </div>
+        </div>        </div>      </div>
+    </div>
+  </section>
+
+  <!-- Service Types Detail -->
+  <section id="services" class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Types of Deadbolts We Install</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Deadbolt Installation Options in Delaware
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Not all deadbolts are created equal. Here's a detailed breakdown of every deadbolt type we install and the situations where each one is the right fit. Not sure what you need? Call us and we'll walk you through it.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Single Cylinder -->
+        <div id="single-cylinder" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Single-Cylinder Deadbolt Installation in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              The single-cylinder deadbolt is the most widely used deadbolt type for residential exterior doors throughout Delaware. It operates with a keyed cylinder on the outside and a simple thumb-turn on the inside, allowing you to lock and unlock quickly from inside without a key — important for emergency exit. This is the correct choice for the vast majority of front doors, back doors, and side entry doors.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              When selecting a single-cylinder deadbolt, quality and grade rating matter enormously. Cheap, builder-grade deadbolts sold at big-box stores are often ANSI Grade 3 — the lowest rating — and can be defeated surprisingly quickly. 1st Capital Locksmith recommends and installs ANSI Grade 1 deadbolts, which are the highest residential security rating and provide dramatically better resistance to picking, drilling, and forced entry.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We carry quality single-cylinder deadbolts in a range of finishes to match your existing hardware. Installation includes proper alignment with your door frame and strike plate reinforcement to ensure the bolt seats fully and the lock performs as designed.
+            </p>
+          </div>
+        </div>
+
+        <!-- Double Cylinder -->
+        <div id="double-cylinder" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zM10 7a2 2 0 114 0v3H10V7z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Double-Cylinder Deadbolt Installation in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              A double-cylinder deadbolt requires a key to operate from both the outside and the inside. This makes it the right choice for doors that have glass panels, sidelights, or windows close enough that a burglar could break the glass, reach through, and turn a standard thumb-turn to unlock the door. With a double-cylinder lock, even getting a hand through the broken glass doesn't help — they still need the key.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Double-cylinder deadbolts come with an important safety consideration: in a fire or emergency, you need a key to exit. If you choose a double-cylinder deadbolt, we strongly recommend keeping a key hung near — but not reachable from — the door at all times, and making sure every household member knows where it is. Many homeowners use a key holder mounted a safe distance from the glass.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              1st Capital Locksmith installs double-cylinder deadbolts throughout Delaware and will walk you through the safety guidelines before completing the installation. Your security and your family's safe exit in an emergency are both priorities we take seriously.
+            </p>
+          </div>
+        </div>
+
+        <!-- Keypad Deadbolt -->
+        <div id="keypad" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Keypad Deadbolt Installation in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Keypad deadbolts combine the security of a traditional deadbolt with the convenience of keyless entry. You unlock your door by entering a PIN code — no key needed. This is a practical solution for families where kids come home from school before parents, for vacation rental properties, for landlords managing tenant access, or for anyone who's tired of fumbling for keys.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Modern keypad deadbolts offer features like auto-locking after a set time, multiple user codes (so you can give different codes to different people and delete them individually when needed), and backup key entry. Many models also have a built-in alarm that triggers after repeated incorrect code attempts — a valuable feature that adds an extra layer of security.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              1st Capital Locksmith installs keypad deadbolts from trusted brands throughout Delaware. We handle everything from hardware selection through full installation and programming, and we make sure you're comfortable operating the lock before we leave.
+            </p>
+          </div>
+        </div>
+
+        <!-- Smart Lock Deadbolt -->
+        <div id="smart-lock" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V7a2 2 0 00-2-2H8a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Smart Lock Deadbolt Installation in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Smart lock deadbolts take keyless entry to the next level. They connect via Bluetooth, Wi-Fi, or Z-Wave to your smartphone and smart home system, allowing you to lock and unlock your door remotely, receive notifications when your door is locked or unlocked, grant temporary access codes to guests or contractors, and check the status of your lock from anywhere.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Popular smart lock deadbolt brands like Schlage Encode, Kwikset Halo, Yale Assure, and August Smart Lock all offer excellent security alongside their smart features. Many also integrate with Amazon Alexa, Google Home, and Apple HomeKit ecosystems. The important thing is making sure the lock is professionally installed so it operates correctly and securely — a misaligned smart lock can fail to engage properly despite showing as "locked" on your phone.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We install smart lock deadbolts throughout Delaware and ensure correct alignment, proper door prep, and full function testing before completing the job. Whether you already have a brand in mind or need a recommendation, call us and we'll help you find the right fit.
+            </p>
+          </div>
+        </div>
+
+        <!-- High Security Deadbolt -->
+        <div id="high-security" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">High-Security Grade 1 Deadbolt Installation in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              For homeowners and property owners who want the highest level of door security available, we install ANSI Grade 1 high-security deadbolts. ANSI Grade 1 is the top residential security classification, tested to withstand at minimum 250,000 open/close cycles and significant impact force. Brands like Schlage B60N, Kwikset 980, and Medeco Maxum are examples of Grade 1 hardware that deliver real, measurable protection.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              High-security deadbolts often feature hardened steel bolts, anti-drill pins, anti-pick security pins, and reinforced housings that make them dramatically more resistant to the most common forms of physical attack. Combined with a properly reinforced strike plate and long screws that anchor into the door frame's structural wood, a Grade 1 deadbolt installation represents the standard we recommend for all primary entry doors.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              If you're upgrading from a builder-grade lock or have concerns about the security of your property, this is the installation we'd recommend. 1st Capital Locksmith carries and installs Grade 1 deadbolts throughout Delaware — call us to discuss the right option for your specific door and situation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Deadbolt Replacement -->
+        <div id="replacement" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Deadbolt Replacement in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              If your existing deadbolt is stiff, difficult to turn, loose in the door, damaged from a break-in attempt, or simply old and worn out, it's time for a replacement. A deadbolt that's struggling to operate reliably isn't providing the protection you're counting on — and a failing lock has a way of completely giving out at the most inconvenient possible moment.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              1st Capital Locksmith handles deadbolt replacements throughout Delaware on the same visit. We remove the old hardware, inspect the door and frame for any damage or alignment issues that need to be addressed, install the new deadbolt correctly, and test the operation before we leave. In most cases a standard deadbolt replacement fits into an existing door prep hole with no additional drilling required.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Replacing an outdated or damaged deadbolt is also a great opportunity to upgrade your security level at the same time. If you're currently running a builder-grade lock, a replacement with a quality Grade 1 deadbolt makes a significant difference for a reasonable cost.
+            </p>
+          </div>
+        </div>
+
+        <!-- Strike Plate Reinforcement -->
+        <div id="strike-plate" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Strike Plate Reinforcement in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Here's a security fact that surprises many homeowners: even the best deadbolt in the world can fail if it's secured with a weak strike plate. The strike plate is the metal piece mounted on the door frame that receives the deadbolt. Most builder-installed strike plates are thin, flimsy, and held in place with short 3/4-inch screws that only go into the door casing — not the structural framing behind it. A strong kick can split the door frame around these small screws in seconds.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Proper deadbolt installation always includes reinforcing the strike plate with heavy-duty hardware and 3-inch screws that penetrate through the door casing and deep into the jack stud behind it. This dramatically increases the kick resistance of your door — some studies suggest it can increase resistance to forced entry by 10x or more compared to a standard installation.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Every deadbolt installation we perform at 1st Capital Locksmith includes strike plate inspection and reinforcement as part of the job. We don't install a lock without ensuring the frame is equally secure — because a chain is only as strong as its weakest link.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Strip -->
+  <section class="bg-white py-14">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <!-- Photo Slot 2: Installed deadbolt close-up -->
+        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+          <img
+            src="/images/deadbolt-installed.jpg"
+            alt="Newly installed Grade 1 deadbolt on a front door in Delaware"
+            class="w-full h-full object-cover"
+            width="480"
+            height="360"
+            loading="lazy"
+          />
+        </div>
+        <!-- Photo Slot 3: Technician at work -->
+        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+          <img
+            src="/images/locksmith-installing-deadbolt.jpg"
+            alt="1st Capital Locksmith technician installing a deadbolt lock in Delaware"
+            class="w-full h-full object-cover"
+            width="480"
+            height="360"
+            loading="lazy"
+          />
+        </div>
+        <!-- Photo Slot 4: Deadbolt hardware / keypad deadbolt -->
+        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+          <img
+            src="/images/keypad-deadbolt-delaware.jpg"
+            alt="Keypad deadbolt lock installed on a residential door in Delaware"
+            class="w-full h-full object-cover"
+            width="480"
+            height="360"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Choose Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Why Delaware Residents Trust 1st Capital Locksmith for Deadbolt Installation
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Choosing a locksmith to work on your home's security is an important decision. Here's why homeowners and property owners throughout Delaware call 1st Capital Locksmith first.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Quality Grade 1 Hardware</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We carry and install quality ANSI Grade 1 deadbolts — the highest residential security rating. We don't cut corners on hardware because your family's security depends on it.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Expert Installation</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">A deadbolt is only as strong as its installation. We ensure every lock is correctly aligned, the bolt seats fully, and the strike plate is properly reinforced — so you get the full protection the hardware is rated for.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Honest, Upfront Pricing</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We give you a clear quote before any work begins. No surprise charges, no hidden fees. You'll know exactly what you're paying and what you're getting before we pick up a single tool.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Fast, Mobile Service</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We come directly to your home or business throughout Delaware. No trips to a locksmith shop — we bring the hardware and tools to you and complete the installation on-site at your convenience.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">All Door & Property Types</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We install deadbolts on all types of residential and commercial doors — front doors, back doors, side entry doors, interior doors, apartment doors, office doors, and more. If it has a door, we can fit it with a proper deadbolt.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Serving All of Kent County</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We serve <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/magnolia-de" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/wyoming-de" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, and all surrounding communities throughout Kent County, Delaware.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
+          What Delaware Customers Say About Our Deadbolt Installation
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"We just moved into our house and wanted quality deadbolts on all three exterior doors. 1st Capital Locksmith came out the next day, installed Grade 1 Schlage deadbolts on every door, and reinforced the strike plates too. The technician explained everything he was doing and why. Great service — we feel so much more secure now."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Karen & Michael T.</p>
+          <p class="text-gray-500 text-sm">Deadbolt Installation — Dover, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"I had a cheap builder-grade deadbolt on my front door for years and finally decided to upgrade. The locksmith from 1st Capital told me about the difference in grades, recommended a Schlage Grade 1, and had it installed within the hour. Night and day difference in how solid it feels. Should have done this years ago."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">James F.</p>
+          <p class="text-gray-500 text-sm">Deadbolt Upgrade — Smyrna, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"I wanted a keypad deadbolt for my back door so my kids could get in without a key after school. 1st Capital installed it perfectly, programmed two codes, and showed my kids how to use it before they left. Everything worked great from day one. Very professional service and a fair price."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Tonya M.</p>
+          <p class="text-gray-500 text-sm">Keypad Deadbolt Installation — Milford, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"My front door has a large glass window right next to the knob and I was always worried about it. The locksmith explained why I needed a double-cylinder deadbolt for that door and went over the fire safety considerations too. He installed it the same day and it gives me so much more peace of mind now."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Patricia N.</p>
+          <p class="text-gray-500 text-sm">Double-Cylinder Deadbolt — Camden, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Had 1st Capital install a smart deadbolt on my front door. They helped me pick the right model that works with my Alexa setup, installed it, and made sure everything was paired before leaving. Fantastic experience — I can lock and unlock my door from anywhere now. Highly recommend them."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Brian C.</p>
+          <p class="text-gray-500 text-sm">Smart Lock Installation — Harrington, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"I own a small rental property and needed new deadbolts installed after a tenant moved out. 1st Capital came out quickly, installed two new deadbolts, and rekeyed them so I have fresh keys for the new tenant. Fast, professional, and reasonably priced. I'll definitely use them again for my other property."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Dale W.</p>
+          <p class="text-gray-500 text-sm">Deadbolt Installation — Wyoming, DE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Explore More</p>
+        <h2 class="text-3xl font-bold text-[#1A1F22] mb-4">Related Locksmith Services in Delaware</h2>
+        <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed">
+          Looking for other ways to strengthen your home's security or need a different locksmith service? We handle it all throughout Delaware.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="/services/lock-rekeying" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Lock Rekeying</h3>
+          <p class="text-gray-500 text-sm">Change your locks without replacing them</p>
+        </a>
+
+        <a href="/services/lock-change" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Lock Change</h3>
+          <p class="text-gray-500 text-sm">Full lock hardware replacement service</p>
+        </a>
+
+        <a href="/services/lock-repair" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Lock Repair</h3>
+          <p class="text-gray-500 text-sm">Fix stiff, damaged, or failing locks</p>
+        </a>
+
+        <a href="/services/residential-locksmith" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Residential Locksmith</h3>
+          <p class="text-gray-500 text-sm">All home locksmith services in Delaware</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">FAQ</p>
+        <h2 class="text-3xl font-bold text-[#1A1F22] mb-4">
+          Deadbolt Installation Questions — Answered
+        </h2>
+        <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed">
+          Common questions about deadbolt installation, types, grades, and costs in Delaware.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        {[
+          {
+            q: "How much does deadbolt installation cost in Delaware?",
+            a: "Cost depends on the deadbolt type (standard, keypad, or smart lock), the number of doors, and whether new door boring is required. We provide a clear upfront quote before any work begins. Call (302) 735-0050 for a fast estimate specific to your situation."
+          },
+          {
+            q: "What is the best deadbolt for a residential front door?",
+            a: "For most homes, an ANSI Grade 1 single-cylinder deadbolt from a brand like Schlage or Kwikset is the best choice. Grade 1 is the highest residential security classification and offers significantly better resistance to picking, drilling, and forced entry compared to the cheaper Grade 3 locks often installed by builders."
+          },
+          {
+            q: "Can you install a deadbolt on a door that doesn't already have one?",
+            a: "Yes. If your door doesn't have an existing deadbolt hole, we can bore a new hole on-site using professional door prep equipment. We'll assess your door first and confirm it can accommodate a standard deadbolt before drilling."
+          },
+          {
+            q: "What is the difference between a single and double cylinder deadbolt?",
+            a: "A single-cylinder deadbolt uses a key outside and a thumb-turn inside — the standard for most exterior doors. A double-cylinder deadbolt requires a key on both sides, which is recommended for doors with glass panels nearby. Double-cylinder locks require extra fire safety precautions since you need a key to exit — we'll go over this during installation."
+          },
+          {
+            q: "Do you install smart lock deadbolts and keypad deadbolts in Delaware?",
+            a: "Yes. We install keypad deadbolts, Bluetooth smart locks, Wi-Fi smart locks, and Z-Wave smart locks throughout Delaware. We handle the full installation and programming on-site and make sure everything is working correctly before we leave."
+          },
+          {
+            q: "How long does deadbolt installation take?",
+            a: "A standard deadbolt installation on a prepared door typically takes 20–30 minutes per lock. If door boring is required, add some time for the prep work. Smart lock installation and programming takes a bit longer depending on the model. We handle everything on-site at your property."
+          },
+          {
+            q: "Should I replace my deadbolt when I move into a new home in Delaware?",
+            a: "At minimum, you should have all locks rekeyed when you move in so previous keys no longer work. If the existing deadbolts are low-quality builder-grade hardware, upgrading to Grade 1 deadbolts at the same time is a smart investment in your family's security. We can rekey your existing locks, replace them, or do both in a single visit."
+          },
+          {
+            q: "Do you service commercial doors and office buildings in Delaware?",
+            a: "Yes. We install commercial-grade deadbolts for offices, retail spaces, warehouses, and other commercial properties throughout Delaware. Commercial applications may require heavier-duty hardware than residential — call us and we'll recommend the right solution."
+          },
+        ].map((faq) => (
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="font-bold text-[#1A1F22] mb-2">{faq.q}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Mention -->
+  <section class="bg-white py-14">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <!-- Photo Slot 5: Service area / van / Delaware -->
+        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-video flex items-center justify-center order-last md:order-first">
+          <img
+            src="/images/deadbolt-service-delaware.jpg"
+            alt="1st Capital Locksmith deadbolt installation service throughout Kent County Delaware"
+            class="w-full h-full object-cover"
+            width="640"
+            height="360"
+            loading="lazy"
+          />
+        </div>
+      <div class="bg-[#F8F8F5] rounded-2xl p-8 md:p-12 border border-gray-200 text-center">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Service Area</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-4">
+          Deadbolt Installation Serving All of Kent County, Delaware
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed mb-6">
+          1st Capital Locksmith provides deadbolt installation and upgrade services throughout Delaware including <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/magnolia-de" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/wyoming-de" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, <a href="/service-areas/clayton-de" class="text-[#A61E22] hover:underline font-medium">Clayton</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, <a href="/service-areas/hartly-de" class="text-[#A61E22] hover:underline font-medium">Hartly</a>, and <a href="/service-areas/woodside-de" class="text-[#A61E22] hover:underline font-medium">Woodside</a>, and all surrounding communities in Kent County. We are a fully mobile locksmith service — we come to your home or business and complete the job on-site.
+        </p>
+        <a
+          href="/service-areas"
+          class="inline-flex items-center rounded-full border border-[#A61E22] text-[#A61E22] px-8 py-3 font-semibold hover:bg-[#A61E22] hover:text-white transition"
+        >
+          View All Service Areas
+        </a>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Ready to Install or Upgrade Your Deadbolts in Delaware?
+      </h2>
+      <p class="text-gray-300 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
+        Call 1st Capital Locksmith for professional deadbolt installation throughout Delaware. We come to you, bring the hardware, and get the job done right the first time — with upfront pricing and zero surprises.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-10 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-bold text-lg hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

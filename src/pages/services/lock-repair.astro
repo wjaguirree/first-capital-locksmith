@@ -1,0 +1,765 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Lock Repair in Delaware | Fix Stiff, Broken & Damaged Locks | 1st Capital Locksmith"
+  description="Professional lock repair service throughout Delaware. 1st Capital Locksmith fixes stiff, broken, jammed, and damaged locks for homes and businesses across Kent County. Fast on-site service with upfront pricing. Call (302) 735-0050."
+>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">Lock Repair</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema: Breadcrumbs -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": "Lock Repair", "item": "https://www.1stcapitallocksmith.com/services/lock-repair/" }
+    ]
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Lock Repair in Delaware",
+    "description": "Professional lock repair services for residential and commercial properties throughout Delaware. 1st Capital Locksmith fixes stiff locks, broken deadbolts, jammed door locks, damaged lock cylinders, and more across Kent County.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "1st Capital Locksmith",
+      "telephone": "+13027350050",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dover",
+        "addressRegion": "DE",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Delaware"
+    },
+    "serviceType": "Lock Repair"
+  })} />
+
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does lock repair cost in Delaware?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lock repair cost depends on the type of lock, the nature of the problem, and whether any parts are needed. In many cases lock repair is significantly less expensive than full replacement. We provide a clear upfront quote before any work begins. Call (302) 735-0050 for a fast estimate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a stiff or hard-to-turn lock be repaired without replacing it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In most cases, yes. A stiff lock is usually caused by internal wear, a misaligned door, or a dried-out mechanism that needs lubrication and adjustment. Our locksmiths diagnose the root cause and repair it on-site whenever possible, saving you the cost of a full replacement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I repair or replace a broken lock?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on the extent of the damage and the quality of the existing hardware. Many locks can be repaired quickly and affordably. If the lock is severely damaged, very old, or low-quality, replacement is often the smarter long-term choice. We'll give you an honest assessment and let you decide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you repair a lock that was damaged in a break-in attempt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We assess locks damaged by forced entry, attempted picking, or drilling. In many cases parts of the lock can be repaired, though a lock that has been compromised in a break-in attempt is often best replaced entirely for your security. We'll advise you honestly on the right call."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you repair commercial locks and office locks in Delaware?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We repair commercial door locks, office locks, storefront locks, mortise locks, and other commercial hardware throughout Delaware. We can work around your business hours to minimize disruption."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can you respond to a lock repair call in Delaware?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We dispatch as quickly as possible to lock repair calls throughout Delaware. For urgent situations where a lock is failing or a door cannot be secured, call (302) 735-0050 and we'll prioritize your call."
+        }
+      }
+    ]
+  })} />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[340px] md:min-h-[550px] flex items-center text-white py-10 md:py-20"
+    style="background-image: url('/images/lock-repair.jpg'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/72"></div>
+    <div class="relative max-w-6xl mx-auto px-5 md:px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-xs md:text-sm mb-2 md:mb-4">Lock Repair Services — Delaware</p>
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-6 max-w-3xl leading-tight">
+        Professional Lock Repair in Delaware — Fix It Right, the First Time
+      </h1>
+      <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
+        Stiff key? Jammed deadbolt? Lock that won't turn or won't latch? Don't wait until it fails completely. 1st Capital Locksmith diagnoses and repairs locks for homes and businesses throughout Delaware — fast, on-site, with honest pricing before we start.
+      </p>
+      <div class="flex flex-wrap gap-3 md:gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-6 py-3 md:px-8 md:py-4 text-white font-bold text-base md:text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">All Lock Types</p>
+          <p class="text-gray-300 text-sm mt-1">Deadbolts, Knobs, Levers & More</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">On-Site Repair</p>
+          <p class="text-gray-300 text-sm mt-1">We Come Directly to Your Property</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Honest Assessment</p>
+          <p class="text-gray-300 text-sm mt-1">Repair vs. Replace — Straight Talk</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Upfront Pricing</p>
+          <p class="text-gray-300 text-sm mt-1">Clear Quote Before We Start</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Delaware's Lock Repair Experts</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Lock Repair Service for Homes & Businesses Throughout Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            A lock that's misbehaving is more than just a minor inconvenience — it's a security liability. Whether your key is getting progressively harder to turn, your deadbolt doesn't fully extend, your lock feels loose in the door, or a break-in attempt has left your hardware compromised, a struggling lock needs professional attention before it fails entirely.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            1st Capital Locksmith provides professional lock repair services for residential and commercial properties throughout Delaware. Our locksmiths carry the tools and parts to diagnose and repair most lock problems on-site in a single visit. We take the time to properly assess what's causing the issue so we can fix the root problem — not just the symptom.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            We repair deadbolts, knob locks, lever handle locks, mortise locks, padlocks, sliding door locks, and more across Dover, Milford, Smyrna, Camden, Harrington, and all of Kent County, Delaware. When repair isn't the right answer, we'll tell you that too — and handle the replacement on the same visit.
+          </p>
+        </div>
+        <div class="space-y-6">
+          <!-- Photo Slot 1 -->
+          <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+            <img
+              src="/images/lock-repair-service.jpg"
+              alt="Professional lock repair service on a residential door in Delaware"
+              class="w-full h-full object-cover"
+              width="600"
+              height="450"
+              loading="lazy"
+            />
+          </div>
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Lock Problems We Repair:</h3>
+            <ul class="space-y-3">
+              {[
+                "Stiff or Hard-to-Turn Locks",
+                "Deadbolt Won't Extend or Retract",
+                "Key Turns But Lock Doesn't Engage",
+                "Loose or Rattling Lock Hardware",
+                "Lock Cylinder Spins Freely",
+                "Misaligned Lock & Strike Plate",
+                "Broken Key Stuck Inside Lock",
+                "Break-In Damage Repair",
+                "Worn-Out Lock Mechanism",
+                "Sliding Door Lock Repair",
+              ].map((item) => (
+                <li class="flex items-center gap-3 text-gray-700">
+                  <span class="w-6 h-6 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-6 pt-6 border-t border-gray-200">
+              <a
+                href="tel:3027350050"
+                class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+              >
+                Call (302) 735-0050 Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Types Detail -->
+  <section id="services" class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Common Lock Repairs</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Lock Repair Services We Provide in Delaware
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Here's a detailed look at the most common lock problems we diagnose and repair for homeowners and businesses throughout Delaware. Don't see your issue listed? Just call — if it involves a lock, we can help.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Stiff / Hard to Turn -->
+        <div id="stiff-lock" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Stiff or Hard-to-Turn Lock Repair in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              A key that's gradually getting harder to turn is one of the most common lock complaints we hear — and one of the most ignored. People tend to put up with a stiff lock for months, forcing the key a little harder each time, until the day it snaps off inside the cylinder or simply stops turning altogether. That's an easily preventable situation.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Stiff locks are usually caused by one of several things: dried-out or gunked-up internal lubrication, worn-down key pins that aren't moving freely, a warped or swollen door that's putting pressure on the lock body, or gradual internal wear from years of use. Our locksmiths diagnose the exact cause, clean and lubricate the mechanism, replace worn pins or springs if needed, and adjust the door alignment if that's contributing to the problem.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              In most cases a stiff lock can be brought back to smooth, reliable operation without replacement. If the internal damage is too extensive to repair cost-effectively, we'll tell you honestly and can handle a replacement on the same visit.
+            </p>
+          </div>
+        </div>
+
+        <!-- Deadbolt Won't Extend -->
+        <div id="deadbolt-wont-extend" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Deadbolt Won't Extend or Retract — Lock Repair in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              A deadbolt that won't fully extend or that gets stuck halfway is a serious security problem — a bolt that doesn't fully seat in the strike plate provides little to no forced entry resistance. This issue is more common than most people realize, particularly in older homes where doors have shifted, settled, or swollen seasonally.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              The most frequent cause is a misalignment between the deadbolt and the strike plate on the door frame. Over time, doors sag or shift, and what was once a perfect alignment drifts. The fix may be as straightforward as repositioning the strike plate, adjusting the door hinges, or planing a small amount of material from the door edge. In other cases the deadbolt mechanism itself has an internal fault — a broken cam, worn tailpiece, or damaged bolt assembly — which we can often repair or replace on-site.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Don't rely on a deadbolt that isn't fully latching. Call us and we'll get it operating correctly so your door is actually secured when you lock it.
+            </p>
+          </div>
+        </div>
+
+        <!-- Lock Cylinder Spins -->
+        <div id="cylinder-spins" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Lock Cylinder Spinning Freely — Lock Repair in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              If your key turns but nothing happens — the cylinder spins all the way around without engaging the bolt or latch — the connection between the cylinder and the lock mechanism has failed. This is typically caused by a broken or worn tailpiece (the small metal component that transfers rotation from the cylinder to the locking cam), a snapped retaining clip, or internal cam damage.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              A freely spinning lock cylinder is an urgent repair — the lock is essentially non-functional and your door cannot be secured until it's fixed. In most cases this is a repairable problem involving replacing the internal tailpiece or cam assembly. If the lock body is severely worn or damaged, a full cylinder replacement is the better option and can often be done while retaining the same key if needed.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              1st Capital Locksmith responds to urgent lock repairs throughout Delaware. If your lock is spinning and your door can't be secured, call (302) 735-0050 and we'll dispatch as quickly as possible.
+            </p>
+          </div>
+        </div>
+
+        <!-- Broken Key in Lock -->
+        <div id="broken-key" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Broken Key in Lock Extraction & Repair in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              A key that snaps off inside a lock is one of those situations that almost always happens at the worst possible time. Attempting to extract it yourself with tweezers, a paperclip, or any improvised tool almost always makes the problem worse — pushing the key fragment deeper into the cylinder or damaging the internal pins in the process.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Our locksmiths use professional <a href="/services/broken-key-extraction" class="text-[#A61E22] hover:underline font-medium">broken key extraction tools</a> to remove key fragments from lock cylinders cleanly without damaging the internal mechanism. In many cases the lock can be preserved and a new key cut once the broken piece is removed. After extraction we assess the condition of the lock — if the cylinder sustained damage during the break, we can repair or replace it on the same visit.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We also address the underlying cause. Keys don't usually break in good locks without reason — a worn key, a stiff lock, or a binding cylinder all increase the risk of breakage. We'll let you know if the lock itself needs attention to prevent a repeat.
+            </p>
+          </div>
+        </div>
+
+        <!-- Break-In Damage -->
+        <div id="break-in-damage" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Break-In Damage Lock Repair in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              If your property has been targeted in a break-in attempt — whether successful or not — your locks need professional assessment immediately. Attempted forced entry, picking, drilling, and bumping can all leave damage that isn't always visible from the outside but compromises the lock's internal security mechanisms. A lock that's been tampered with may appear to function normally while providing significantly reduced protection.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              1st Capital Locksmith assesses break-in damage to locks and door frames throughout Delaware. We examine the lock cylinder for signs of drilling or picking damage, check the bolt and latch mechanism for bending or distortion, and assess the door frame and strike plate for damage from kicking or prying. In most cases we recommend replacing a lock that's been compromised rather than repairing it — your security is the priority, not saving hardware that's been attacked.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We carry replacement hardware and can upgrade your locks to stronger, higher-security options on the same visit. If you've experienced a break-in or a break-in attempt, call us right away — we'll get your property secured as quickly as possible.
+            </p>
+          </div>
+        </div>
+
+        <!-- Misaligned Lock -->
+        <div id="misaligned-lock" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Misaligned Lock & Strike Plate Repair in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Doors expand and contract seasonally, hinges loosen over time, and homes naturally settle on their foundations over the years. All of this gradually shifts the relationship between a lock bolt and the strike plate it needs to seat in. The result is a lock that catches, scrapes, sticks, or requires the door to be lifted or pushed just right in order to latch.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Misalignment is a very common lock complaint in Delaware homes, particularly in older properties and in the humid summer months when wooden doors swell. The fix usually involves adjusting or repositioning the strike plate, tightening or shimming the door hinges, or in some cases trimming the door edge. This is often a quick repair that restores smooth lock operation without needing to replace any hardware.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              If you're fighting with your door every time you try to lock it, don't keep forcing it. That kind of stress on the lock mechanism accelerates wear significantly. Call us and we'll get the alignment corrected properly.
+            </p>
+          </div>
+        </div>
+
+        <!-- Commercial Lock Repair -->
+        <div id="commercial-lock-repair" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V7a2 2 0 00-2-2H7a2 2 0 00-2 2v14M3 21h18M9 21v-4a1 1 0 011-1h4a1 1 0 011 1v4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Commercial Lock Repair in Delaware</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Commercial locks take a lot more punishment than residential hardware — they're operated dozens or hundreds of times per day by employees, customers, and delivery personnel. Heavy use accelerates wear on springs, pins, cams, and bolts. Commercial lock repair is a routine part of keeping a business's physical security infrastructure working reliably.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              1st Capital Locksmith repairs commercial door locks, office lock sets, storefront locks, mortise locks, and exit device hardware throughout Delaware. We understand that a lock failure on a commercial property needs to be addressed quickly — both for security and to keep your business operating normally. We work efficiently and can often schedule service around your business hours to minimize disruption.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              If you're a business owner or property manager in Delaware dealing with a commercial lock issue, call us at (302) 735-0050. We'll assess the problem honestly and get the repair done right on-site.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Strip -->
+  <section class="bg-white py-14">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <!-- Photo Slot 2 -->
+        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+          <img
+            src="/images/lock-repair-close-up.jpg"
+            alt="Close-up of a lock being repaired by a professional locksmith in Delaware"
+            class="w-full h-full object-cover"
+            width="480"
+            height="360"
+            loading="lazy"
+          />
+        </div>
+        <!-- Photo Slot 3 -->
+        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+          <img
+            src="/images/locksmith-repairing-deadbolt.jpg"
+            alt="1st Capital Locksmith technician repairing a deadbolt lock in Delaware"
+            class="w-full h-full object-cover"
+            width="480"
+            height="360"
+            loading="lazy"
+          />
+        </div>
+        <!-- Photo Slot 4 -->
+        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+          <img
+            src="/images/door-lock-repair-delaware.jpg"
+            alt="Residential door lock repair service in Kent County Delaware"
+            class="w-full h-full object-cover"
+            width="480"
+            height="360"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Choose Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Why Delaware Residents Trust 1st Capital Locksmith for Lock Repair
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          A lock repair is only as good as the locksmith doing it. Here's why homeowners and business owners throughout Delaware call us when something goes wrong with their locks.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Honest Repair-or-Replace Advice</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We give you a straight assessment of whether repair or replacement is the right call for your situation — no upselling, no unnecessary work. You get the solution that actually makes sense for your lock and your budget.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Experienced with All Lock Types</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">From basic residential knob locks to commercial mortise sets, we have the experience and tools to diagnose and repair all types of lock hardware correctly on the first visit.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Upfront, Transparent Pricing</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We tell you the cost before we start. No surprise charges on your invoice, no fees that appear out of nowhere. You know exactly what you're paying and why before any work begins.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Fast Response Across Delaware</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">When a lock isn't securing your door properly, waiting isn't an option. We dispatch quickly to lock repair calls throughout Delaware — especially urgent situations where a door cannot be locked.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2v0" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Parts Stocked On Our Van</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Our mobile service vehicles carry common replacement parts — cylinders, tailpieces, strike plates, springs, and more — so most repairs can be completed in a single visit without a return trip.</p>
+        </div>
+
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Serving All of Kent County</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">We serve <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/magnolia-de" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/wyoming-de" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, <a href="/service-areas/clayton-de" class="text-[#A61E22] hover:underline font-medium">Clayton</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, and all surrounding communities throughout Kent County, Delaware.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
+          What Delaware Customers Say About Our Lock Repair Service
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"My front deadbolt was getting really stiff over the winter and I kept putting off calling someone. Finally called 1st Capital and the technician came out, cleaned and adjusted the lock, and now it turns perfectly. Quick, clean, and very affordable. Wish I had called sooner instead of fighting with it every day."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Rachel B.</p>
+          <p class="text-gray-500 text-sm">Stiff Lock Repair — Dover, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Broke my key off in the back door lock — classic. Called 1st Capital and they extracted it without damaging the lock at all. While they were there I had them check the front deadbolt too which had been a bit loose. They fixed that on the same visit. Great service, very professional."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Marcus T.</p>
+          <p class="text-gray-500 text-sm">Broken Key Extraction — Smyrna, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Someone tried to break into my garage and damaged the lock in the process. 1st Capital came out the same day, assessed the damage, and recommended replacing rather than repairing since the mechanism had been compromised. They installed a much better lock and reinforced the strike plate. Feel a lot more secure now."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Diane W.</p>
+          <p class="text-gray-500 text-sm">Break-In Damage Repair — Milford, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"The deadbolt on our side door was only going in halfway — had to lift and push the door just right every time to lock it. The locksmith realigned the strike plate and adjusted the hinges in about 20 minutes. Door latches smoothly now. Great work at a fair price."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Gary & Sue M.</p>
+          <p class="text-gray-500 text-sm">Deadbolt Misalignment Repair — Camden, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"Our office door lock was spinning without catching — employees couldn't lock up at the end of the day. Called 1st Capital and they came within a couple of hours. Fixed the internal mechanism and had everything working before close of business. Fantastic response time and honest pricing."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Christine H.</p>
+          <p class="text-gray-500 text-sm">Commercial Lock Repair — Dover, DE</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <strong class="text-[#1A1F22] block mb-3">★★★★★</strong>
+          <p class="text-gray-700 leading-relaxed mb-4">"I manage several rental properties and 1st Capital is my go-to for any lock issues between tenants or during a lease. They're reliable, show up when they say they will, price fairly, and do good work. I've recommended them to other landlords in the area and will keep using them."</p>
+          <p class="font-semibold text-[#1A1F22] text-sm">Frank O.</p>
+          <p class="text-gray-500 text-sm">Rental Property Lock Repair — Harrington, DE</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Explore More</p>
+        <h2 class="text-3xl font-bold text-[#1A1F22] mb-4">Related Locksmith Services in Delaware</h2>
+        <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed">
+          If repair isn't the right answer, or if you need other locksmith services for your home or business in Delaware, we handle it all.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="/services/lock-change" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Lock Change</h3>
+          <p class="text-gray-500 text-sm">Full lock hardware replacement service</p>
+        </a>
+
+        <a href="/services/deadbolt-installation" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Deadbolt Installation</h3>
+          <p class="text-gray-500 text-sm">Install or upgrade deadbolts on any door</p>
+        </a>
+
+        <a href="/services/lock-rekeying" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Lock Rekeying</h3>
+          <p class="text-gray-500 text-sm">Change your locks without replacing them</p>
+        </a>
+
+        <a href="/services/residential-locksmith" class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Residential Locksmith</h3>
+          <p class="text-gray-500 text-sm">All home locksmith services in Delaware</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">FAQ</p>
+        <h2 class="text-3xl font-bold text-[#1A1F22] mb-4">
+          Lock Repair Questions — Answered
+        </h2>
+        <p class="text-gray-700 max-w-2xl mx-auto leading-relaxed">
+          Common questions about lock repair costs, what's repairable, and how we handle different lock problems throughout Delaware.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        {[
+          {
+            q: "How much does lock repair cost in Delaware?",
+            a: "Lock repair cost depends on the type of lock, the nature of the problem, and whether any parts need to be replaced. Repairs are often significantly less expensive than full lock replacement. We provide a clear upfront quote before any work begins — call (302) 735-0050 for a fast estimate."
+          },
+          {
+            q: "Can a stiff or hard-to-turn lock be repaired without replacing it?",
+            a: "In most cases, yes. Stiff locks are usually caused by internal wear, dried-out lubrication, or door misalignment — all of which can often be corrected on-site. Our locksmiths diagnose the cause and repair it properly rather than just applying lubricant as a temporary fix."
+          },
+          {
+            q: "Should I repair or replace a broken lock?",
+            a: "It depends on the extent of the damage and the quality of the existing hardware. Many locks can be repaired quickly and affordably. If the lock is severely damaged, has been compromised in a break-in attempt, or is a low-quality lock that will keep having problems, replacement is often the smarter long-term choice. We'll give you an honest recommendation either way."
+          },
+          {
+            q: "Can you repair a lock that was damaged in a break-in attempt?",
+            a: "Yes, we assess break-in damage. However, a lock that has been drilled, picked, or subjected to forced entry often has compromised internal security components that aren't visible from outside. In most cases we recommend replacing a lock that's been attacked rather than repairing it. Your security is the priority."
+          },
+          {
+            q: "My deadbolt only goes in halfway — is that a repair or a replacement?",
+            a: "A partially extending deadbolt is usually a misalignment issue between the bolt and the strike plate, which is very often repairable without replacing the lock. We adjust the strike plate, door hinges, or both to get the bolt seating fully. If the bolt mechanism itself is damaged, replacement may be needed — we'll assess it on-site."
+          },
+          {
+            q: "Do you repair commercial locks and office locks in Delaware?",
+            a: "Yes. We repair commercial door locks, mortise locks, office lock sets, storefront locks, and exit device hardware throughout Delaware. We can often work around your business hours to minimize disruption."
+          },
+          {
+            q: "How quickly can you respond to an urgent lock repair in Delaware?",
+            a: "We dispatch as quickly as possible to lock repair calls throughout Delaware. If your lock is non-functional and your door can't be secured, call (302) 735-0050 immediately — we'll prioritize getting to you."
+          },
+          {
+            q: "My key turns but the door doesn't lock — what's causing that?",
+            a: "This usually means the connection between the cylinder and the locking mechanism has failed — typically a broken tailpiece, snapped cam, or failed retaining clip. It's often a repairable problem. Call us and we'll diagnose and fix it on-site."
+          },
+        ].map((faq) => (
+          <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
+            <h3 class="font-bold text-[#1A1F22] mb-2">{faq.q}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Mention -->
+  <section class="bg-white py-14">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <!-- Photo Slot 5 -->
+        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-video flex items-center justify-center order-last md:order-first">
+          <img
+            src="/images/lock-repair-service-delaware.jpg"
+            alt="1st Capital Locksmith lock repair service throughout Kent County Delaware"
+            class="w-full h-full object-cover"
+            width="640"
+            height="360"
+            loading="lazy"
+          />
+        </div>
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 md:p-12 border border-gray-200 text-center">
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Service Area</p>
+          <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-4">
+            Lock Repair Serving All of Kent County, Delaware
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            1st Capital Locksmith provides on-site lock repair services throughout Delaware including <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/magnolia-de" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/wyoming-de" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, <a href="/service-areas/clayton-de" class="text-[#A61E22] hover:underline font-medium">Clayton</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, <a href="/service-areas/hartly-de" class="text-[#A61E22] hover:underline font-medium">Hartly</a>, and <a href="/service-areas/woodside-de" class="text-[#A61E22] hover:underline font-medium">Woodside</a>, and all surrounding communities in Kent County. We are a fully mobile locksmith service — we come to your property with the tools and parts to get the job done in one visit.
+          </p>
+          <a
+            href="/service-areas"
+            class="inline-flex items-center rounded-full border border-[#A61E22] text-[#A61E22] px-8 py-3 font-semibold hover:bg-[#A61E22] hover:text-white transition"
+          >
+            View All Service Areas
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Need a Lock Repaired in Delaware?
+      </h2>
+      <p class="text-gray-300 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
+        Call 1st Capital Locksmith for fast, professional lock repair service throughout Delaware. We come to you, diagnose the problem honestly, and fix it right the first time — with upfront pricing and no surprises.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-10 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-bold text-lg hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

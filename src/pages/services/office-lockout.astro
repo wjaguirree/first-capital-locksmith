@@ -1,0 +1,588 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Office Lockout Service in Delaware | Locked Out of Office | 1st Capital Locksmith"
+  description="Locked out of your office or commercial property in Delaware? 1st Capital Locksmith provides fast professional office lockout service across Dover, Smyrna, Milford, and all of Kent County. Available 24/7 — call (302) 735-0050."
+>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">Office Lockout Service</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema: Breadcrumbs -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": "Office Lockout Service", "item": "https://www.1stcapitallocksmith.com/services/office-lockout/" }
+    ]
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Office Lockout Service in Delaware",
+    "description": "Fast professional office lockout service for businesses throughout Delaware. 1st Capital Locksmith handles commercial entry for offices, retail stores, warehouses, and all commercial properties across Kent County with 24/7 availability and minimal business disruption.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "1st Capital Locksmith",
+      "telephone": "+13027350050",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dover",
+        "addressRegion": "DE",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Delaware"
+    },
+    "serviceType": "Office Lockout Service"
+  })} />
+
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How fast can you respond to an office lockout in Delaware?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We treat commercial lockouts as a high priority and aim to reach most Kent County locations within 20–30 minutes. We dispatch immediately upon your call. Call (302) 735-0050 and we will head to your office right away."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you handle commercial door hardware — not just standard locks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We handle all commercial door hardware including cylindrical locksets, mortise locks, rim cylinders, electronic access control keypads, and panic bar hardware. We are familiar with commercial-grade locks from Schlage, Corbin Russwin, BEST, Medeco, Yale, and other major manufacturers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you open an office without damaging the door?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In most cases, yes. We use professional lock picking and bypass techniques designed for commercial lock hardware. Non-destructive entry is our first approach — we only use destructive methods when all professional alternatives have been exhausted, and always with your consent and knowledge beforehand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if an employee was terminated and we need the locks changed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We handle this frequently. After gaining access to your property, we can rekey or replace all affected locks on the same visit to ensure terminated employees can no longer enter. This is one of the most important security steps following a termination where keys were not returned."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you available for after-hours office lockouts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We provide 24/7 office lockout service throughout Delaware. Early morning openings, late night situations, weekends, and holidays — we respond any time your business needs us."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help if we're locked out of a specific room inside the office?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Interior office lockouts — server rooms, private offices, storage rooms, or file cabinets — are a common service call. We handle interior office doors including standard cylindrical locks, mortise locks, and keyed interior knob and lever sets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you serve offices and businesses across all of Kent County?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We provide office lockout service for businesses throughout all of Kent County including Dover, Smyrna, Milford, Harrington, Camden, Felton, and surrounding areas. Call (302) 735-0050 for immediate dispatch."
+        }
+      }
+    ]
+  })} />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[340px] md:min-h-[500px] flex items-center text-white py-10 md:py-20"
+    style="background-image: url('/images/office-lockout.jpg'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/72"></div>
+    <div class="relative max-w-6xl mx-auto px-5 md:px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-xs md:text-sm mb-2 md:mb-4">Office Lockout Service — Delaware</p>
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-6 max-w-3xl leading-tight">
+        Office Lockout Service in Delaware — Fast Commercial Entry, Minimal Downtime
+      </h1>
+      <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
+        Locked out of your office, storefront, or commercial property? Every minute of downtime costs your business. 1st Capital Locksmith provides fast, professional office lockout service throughout Delaware — 24/7, all commercial door hardware, no unnecessary disruption.
+      </p>
+      <div class="flex flex-wrap gap-3 md:gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-6 py-3 md:px-8 md:py-4 text-white font-bold text-base md:text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get Help Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">24/7 Available</p>
+          <p class="text-gray-300 text-sm mt-1">Early Morning to After Midnight</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">All Commercial Locks</p>
+          <p class="text-gray-300 text-sm mt-1">Mortise, Cylindrical & Electronic</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Fast Priority Dispatch</p>
+          <p class="text-gray-300 text-sm mt-1">Commercial Calls Prioritized</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Same-Visit Rekey</p>
+          <p class="text-gray-300 text-sm mt-1">Secure After Terminated Employees</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Delaware's Commercial Lockout Specialists</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Professional Office Lockout Service for Delaware Businesses
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            A business lockout is a different situation from a residential one — the stakes are immediate and financial. A retail store that cannot open at 9 AM loses customers. An office that cannot access its space before a client meeting loses credibility. A warehouse that cannot unlock its doors delays an entire day's operations. 1st Capital Locksmith treats commercial lockouts with the urgency they deserve.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Our technicians are experienced with the full range of commercial door hardware — not just residential pin tumbler locks. Commercial buildings use mortise locksets, rim cylinders, cylindrical locksets with restricted cores, electronic keypad entry systems, and panic bar hardware. We carry the tools and knowledge to open them professionally.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            We serve businesses across <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, and all of Kent County. Call (302) 735-0050 and we are on the way immediately.
+          </p>
+        </div>
+        <div class="space-y-6">
+          <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+            <img
+              src="/images/office-lockout-service.jpg"
+              alt="Professional office lockout service in Delaware"
+              class="w-full h-full object-cover"
+              width="600"
+              height="450"
+              loading="lazy"
+            />
+          </div>
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Commercial Lockout Situations We Handle:</h3>
+            <ul class="space-y-3">
+              {[
+                "Keys Locked Inside Office or Storefront",
+                "Lost or Missing Commercial Keys",
+                "Employee or Manager Lockout",
+                "After-Hours Business Lockout",
+                "Broken Key in Commercial Door Lock",
+                "Malfunctioning Electronic Keypad",
+                "Jammed or Stuck Commercial Lock",
+                "Interior Office or Server Room Lockout",
+                "Terminated Employee — Lock Security",
+                "New Tenancy or Business Takeover",
+              ].map((item) => (
+                <li class="flex items-center gap-3 text-gray-700">
+                  <span class="w-6 h-6 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div class="mt-6 pt-6 border-t border-gray-200">
+              <a
+                href="tel:3027350050"
+                class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+              >
+                Call (302) 735-0050 Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Types Detail -->
+  <section id="services" class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Commercial Entry Expertise</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">Office Lockout Services We Provide</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          From standard office entry to high-security commercial hardware and electronic access bypass, our commercial locksmiths handle every business lockout situation throughout Delaware.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Standard Office & Storefront Lockout</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Office doors and storefront entries most commonly use cylindrical locksets or mortise locks — commercial-grade hardware that requires more specific tools and technique than standard residential locks. Our technicians carry commercial-specific pick sets and bypass tools for these lock types.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            We open Schlage, Kwikset Commercial, Corbin Russwin, Yale, BEST, and other common commercial lock brands without damage to the door, frame, or hardware. Our goal is to have you operational as quickly as possible with no repair work needed afterward.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            If the lockout involves a lost key or security concern, we recommend a <a href="/services/commercial-lock-rekeying" class="text-[#A61E22] hover:underline font-medium">commercial lock rekey</a> on the same visit so you are not left wondering who else may have access.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Electronic Keypad & Access Control Lockout</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Businesses with electronic keypad entry or access control systems face a different kind of lockout — forgotten codes, dead batteries, card reader failures, or system malfunctions. These situations require a different approach than mechanical lock picking.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            We assess the specific access control system and determine the fastest and least disruptive path to entry. In many cases, we can bypass or override the electronic system to regain access. If the hardware requires replacement or reprogramming, we document and advise before any work begins.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            For ongoing electronic access control needs — installing, upgrading, or adding <a href="/services/deadbolt-installation" class="text-[#A61E22] hover:underline font-medium">additional deadbolt hardware</a> as a backup — we provide full commercial locksmith consultation.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Post-Termination Security Lockout</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            When an employee is terminated — especially one who had key access to your facility — the security priority is immediate. If keys were not returned, or if there is any reason to believe they might have been copied, your business is at risk until the locks are changed.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            We respond to these situations quickly, arriving to rekey or replace all affected locks before the business day is done. Rekeying is usually the fastest and most cost-effective solution — it invalidates the old key and issues new ones without replacing any hardware.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            For businesses that want a comprehensive security review after a personnel change — including assessing whether a <a href="/services/master-key-systems" class="text-[#A61E22] hover:underline font-medium">master key system</a> would improve access control — we offer on-site security consultations with our commercial service.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Interior Office & Server Room Lockout</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Not all office lockouts are at the front door. Businesses frequently find themselves locked out of interior spaces — private offices, server rooms, storage closets, executive suites, or file rooms. These interior doors often use smaller cylindrical locksets or privacy knobs that require specific pick tools.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            We handle interior commercial door locks for all common hardware types. In many cases, interior doors can be opened quickly without any damage — the same professional pick-and-bypass approach we use at exterior entry doors. We always attempt non-destructive entry first.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            If you find yourself locked out of a filing cabinet or storage vault rather than a door, we also handle commercial storage lockouts and can assess whether the lock needs replacement or can be repaired after entry.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Broken Key in Commercial Lock</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            A key that breaks off in a commercial door lock is especially disruptive — particularly at the front door of a business that needs to open for customers. The broken fragment must be removed before any key, including a spare, will work, and attempting removal with improvised tools is almost always counterproductive.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Our technicians carry dedicated <a href="/services/broken-key-extraction" class="text-[#A61E22] hover:underline font-medium">broken key extraction</a> tools for both residential and commercial cylinders. We remove the fragment cleanly, assess the cylinder condition, and get you operational immediately — in most cases without any need for lock replacement.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            If the cylinder was damaged during the break or by prior attempts at extraction, we can install a replacement cylinder in the existing lock hardware so you are back in business without a full door hardware replacement.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Early Morning & After-Hours Office Lockout</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Business lockouts do not limit themselves to 9-to-5. A restaurant needs to open at 6 AM. A retail store has staff arriving before the manager. A warehouse runs second and third shifts. We maintain 24/7 availability precisely because business operations run around the clock.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Whether you need entry at 5 AM before the morning rush, or midnight after locking up, we dispatch immediately. We do not charge inflated after-hours rates — our pricing is fair and disclosed before we begin work, regardless of when you call.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            For a comprehensive look at what we offer Delaware businesses beyond emergency entry — including <a href="/services/commercial-locksmith" class="text-[#A61E22] hover:underline font-medium">commercial locksmith services</a>, access control, and lock upgrades — visit our commercial locksmith page.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Strip -->
+  <section class="bg-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-3 gap-4">
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F8F8F5]">
+          <img src="/images/office-lockout-1.jpg" alt="Commercial office lockout service in Delaware" class="w-full h-full object-cover" width="400" height="300" loading="lazy" />
+        </div>
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F8F8F5]">
+          <img src="/images/office-lockout-2.jpg" alt="Locksmith opening commercial door in Delaware" class="w-full h-full object-cover" width="400" height="300" loading="lazy" />
+        </div>
+        <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F8F8F5]">
+          <img src="/images/office-lockout-3.jpg" alt="Business lockout service in Kent County Delaware" class="w-full h-full object-cover" width="400" height="300" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Delaware Businesses Choose Us</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose 1st Capital for Office Lockouts</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Business lockouts require a technician who understands commercial hardware, responds fast, and gets your doors open without creating a secondary repair job.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Commercial Hardware Expertise",
+            body: "We are experienced with the full range of commercial door hardware — mortise locks, cylindrical locksets, rim cylinders, and electronic access systems. We carry tools specifically for commercial lock brands, not just residential pin tumbler sets.",
+          },
+          {
+            title: "Business-Priority Dispatch",
+            body: "We understand that a business lockout is a financial event. We treat commercial calls as high priority and dispatch immediately. Our goal is to have your doors open before your staff and customers are significantly impacted.",
+          },
+          {
+            title: "Non-Destructive Entry First",
+            body: "We always attempt professional, non-destructive lock entry before any invasive methods. This means your lock hardware is preserved, your door is undamaged, and you do not have a second repair bill after we open your office.",
+          },
+          {
+            title: "Same-Visit Security Response",
+            body: "After entry, if the lockout was caused by a lost or missing key, we can rekey or replace affected locks on the same visit. We also advise on whether a master key system or access control upgrade would prevent similar issues in the future.",
+          },
+          {
+            title: "Fair, Upfront Pricing",
+            body: "We quote the cost before we begin. No surprise fees, no inflated emergency rates designed to capitalize on business urgency. What we tell you on the phone is what you pay when the job is done.",
+          },
+          {
+            title: "All of Kent County Covered",
+            body: `We respond to office lockouts across all of Kent County including <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, <a href="/service-areas/wyoming-de" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, and <a href="/service-areas/clayton-de" class="text-[#A61E22] hover:underline font-medium">Clayton</a>.`,
+          },
+        ].map((card) => (
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <h3 class="text-lg font-bold text-white mb-3">{card.title}</h3>
+            <p class="text-gray-400 leading-relaxed text-sm" set:html={card.body} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Delaware Business Owners</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">What Businesses Say About Our Office Lockout Service</h2>
+        <p class="text-gray-600 max-w-xl mx-auto">Delaware business owners count on 1st Capital Locksmith when their office or commercial property is inaccessible.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { name: "Carl M.", location: "Dover, DE", review: "Locked out of our retail store at 7 AM before opening. Called 1st Capital and they were there by 7:30 with zero drama. Professional, fast, and the lock was undamaged. Highly recommend." },
+          { name: "Janet R.", location: "Smyrna, DE", review: "Had a terminated employee situation and needed the locks changed immediately. They rekeyed our entire office in under two hours. Very organized and professional service." },
+          { name: "Paul T.", location: "Milford, DE", review: "Our server room had a broken key in the lock. They extracted it and had us back in without any damage to the lock or door. Saved us from a much bigger problem. Great job." },
+          { name: "Rebecca S.", location: "Harrington, DE", review: "Locked out before an important client meeting. Called them and they were there in 25 minutes. Had the door open fast, meeting happened on time. Will absolutely use again." },
+          { name: "Ben A.", location: "Camden, DE", review: "Used them twice now for office lockouts. Both times fast, professional, no damage. They are now our go-to for all commercial lock needs. Reliable and honest pricing every time." },
+          { name: "Carla J.", location: "Felton, DE", review: "Our electronic keypad died and nobody had a backup key. They assessed the problem quickly, bypassed the system, and got us in. Also installed a mechanical backup deadbolt. Very thorough." },
+        ].map((r) => (
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+            <div class="flex items-center gap-1 mb-4">
+              {Array(5).fill(0).map(() => (
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A61E22]" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-gray-700 leading-relaxed mb-6 text-sm">"{r.review}"</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-[#A61E22] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                {r.name.charAt(0)}
+              </div>
+              <div>
+                <p class="font-semibold text-[#1A1F22] text-sm">{r.name}</p>
+                <p class="text-gray-500 text-xs">{r.location}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="bg-[#F8F8F5] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-[#1A1F22] mb-8 text-center">Related Commercial Services</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          { label: "Commercial Locksmith", href: "/services/commercial-locksmith", desc: "Full range of commercial services" },
+          { label: "Commercial Lock Rekeying", href: "/services/commercial-lock-rekeying", desc: "Rekey after staff changes" },
+          { label: "Master Key Systems", href: "/services/master-key-systems", desc: "Structured access control" },
+          { label: "Deadbolt Installation", href: "/services/deadbolt-installation", desc: "Grade 1 commercial deadbolts" },
+        ].map((s) => (
+          <a href={s.href} class="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md hover:border-[#A61E22] transition group">
+            <p class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">{s.label}</p>
+            <p class="text-gray-500 text-sm">{s.desc}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Common Questions</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">Office Lockout FAQs</h2>
+        <p class="text-gray-600">Answers to the most common questions about office and commercial lockout service in Delaware.</p>
+      </div>
+      <div class="space-y-6">
+        {[
+          { q: "How fast can you respond to an office lockout in Delaware?", a: "We treat commercial lockouts as high priority and aim to reach most Kent County locations within 20–30 minutes. We dispatch immediately upon your call." },
+          { q: "Do you handle commercial door hardware — not just standard locks?", a: "Yes. We handle all commercial door hardware including cylindrical locksets, mortise locks, rim cylinders, electronic access control keypads, and panic bar hardware from brands like Schlage, Corbin Russwin, BEST, Medeco, and Yale." },
+          { q: "Can you open an office without damaging the door?", a: "In most cases, yes. We use professional lock picking and bypass techniques designed for commercial lock hardware. Non-destructive entry is always our first approach." },
+          { q: "What if an employee was terminated and we need the locks changed?", a: "We respond quickly to these situations. After gaining access, we can rekey or replace all affected locks on the same visit to ensure the terminated employee can no longer enter." },
+          { q: "Are you available for after-hours office lockouts?", a: "Yes. We provide 24/7 office lockout service throughout Delaware. Early morning openings, late night situations, weekends, and holidays — we respond any time." },
+          { q: "Can you help if we're locked out of a specific room inside the office?", a: "Yes. Interior office lockouts — server rooms, private offices, storage rooms — are a common service call. We handle interior commercial door locks including standard cylindrical locks, mortise locks, and keyed knob and lever sets." },
+          { q: "Do you serve offices and businesses across all of Kent County?", a: "Yes. We provide office lockout service for businesses throughout all of Kent County including Dover, Smyrna, Milford, Harrington, Camden, Felton, and surrounding areas." },
+        ].map((item) => (
+          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+            <h3 class="text-lg font-bold text-[#1A1F22] mb-3">{item.q}</h3>
+            <p class="text-gray-600 leading-relaxed">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Coverage Area</p>
+          <h2 class="text-3xl font-bold text-[#1A1F22] mb-6">Office Lockout Service Across Kent County, Delaware</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            1st Capital Locksmith responds to office and commercial lockouts across all of Kent County including <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/wyoming-de" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, <a href="/service-areas/magnolia-de" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/clayton-de" class="text-[#A61E22] hover:underline font-medium">Clayton</a>, <a href="/service-areas/cheswold-de" class="text-[#A61E22] hover:underline font-medium">Cheswold</a>, <a href="/service-areas/kenton-de" class="text-[#A61E22] hover:underline font-medium">Kenton</a>, <a href="/service-areas/houston-de" class="text-[#A61E22] hover:underline font-medium">Houston</a>, <a href="/service-areas/hartly-de" class="text-[#A61E22] hover:underline font-medium">Hartly</a>, <a href="/service-areas/woodside-de" class="text-[#A61E22] hover:underline font-medium">Woodside</a>, <a href="/service-areas/viola-de" class="text-[#A61E22] hover:underline font-medium">Viola</a>, <a href="/service-areas/bowers-de" class="text-[#A61E22] hover:underline font-medium">Bowers</a>, <a href="/service-areas/little-creek-de" class="text-[#A61E22] hover:underline font-medium">Little Creek</a>, <a href="/service-areas/leipsic-de" class="text-[#A61E22] hover:underline font-medium">Leipsic</a>, and <a href="/service-areas/farmington-de" class="text-[#A61E22] hover:underline font-medium">Farmington</a>.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Call (302) 735-0050 for immediate commercial lockout dispatch — any time, any day.
+          </p>
+          <div class="mt-8">
+            <a href="/service-areas" class="inline-flex items-center text-[#A61E22] font-semibold hover:underline">
+              View All Service Areas →
+            </a>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-gray-200 aspect-[4/3] bg-[#F8F8F5]">
+          <img src="/images/office-lockout-area.jpg" alt="Commercial lockout service area in Kent County Delaware" class="w-full h-full object-cover" width="600" height="450" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#1A1F22] py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-4">Locked Out of Your Office?</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Call 1st Capital Locksmith — Fast Office Lockout Service in Delaware
+      </h2>
+      <p class="text-gray-400 leading-relaxed mb-10 max-w-2xl mx-auto">
+        24/7 commercial lockout service across Kent County. Fast dispatch, all commercial hardware, no damage, upfront pricing. Get your business open and operating.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Send a Message
+        </a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>
