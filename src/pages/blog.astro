@@ -9,6 +9,7 @@ const posts = [
     category: "Automotive Locksmith",
     date: "June 10, 2026",
     readTime: "4 min read",
+    image: "/images/car-lockout-service.jpg",
     internalLinks: [
       { label: "Automotive Locksmith Services", href: "/services/automotive-locksmith" },
       { label: "Emergency Locksmith", href: "/services/emergency-locksmith" },
@@ -21,6 +22,7 @@ const posts = [
     category: "Residential Locksmith",
     date: "May 28, 2026",
     readTime: "5 min read",
+    image: "/images/residential-locksmith.jpg",
     internalLinks: [
       { label: "Residential Locksmith Services", href: "/services/residential-locksmith" },
       { label: "Contact Us for a Rekey", href: "/contact" },
@@ -33,6 +35,7 @@ const posts = [
     category: "Automotive Locksmith",
     date: "May 14, 2026",
     readTime: "5 min read",
+    image: "/images/transponder-key-programming.jpg",
     internalLinks: [
       { label: "Automotive Locksmith Services", href: "/services/automotive-locksmith" },
       { label: "Get a Car Key Replacement", href: "/contact" },
@@ -45,6 +48,7 @@ const posts = [
     category: "Residential Locksmith",
     date: "April 30, 2026",
     readTime: "6 min read",
+    image: "/images/locksmith-tools-residential.jpg",
     internalLinks: [
       { label: "Residential Locksmith Services", href: "/services/residential-locksmith" },
       { label: "Deadbolt Installation in Dover", href: "/contact" },
@@ -57,6 +61,7 @@ const posts = [
     category: "Commercial Locksmith",
     date: "April 15, 2026",
     readTime: "5 min read",
+    image: "/images/commercial-locksmith.png",
     internalLinks: [
       { label: "Commercial Locksmith Services", href: "/services/commercial-locksmith" },
       { label: "Get a Free Business Security Quote", href: "/contact" },
@@ -69,6 +74,7 @@ const posts = [
     category: "Commercial Locksmith",
     date: "March 28, 2026",
     readTime: "5 min read",
+    image: "/images/mobile-key-cutting.jpg",
     internalLinks: [
       { label: "Commercial Locksmith Services", href: "/services/commercial-locksmith" },
       { label: "Contact a Dover Locksmith", href: "/contact" },
@@ -81,6 +87,7 @@ const posts = [
     category: "Locksmith Tips",
     date: "March 10, 2026",
     readTime: "6 min read",
+    image: "/images/emergency-locksmith.jpg",
     internalLinks: [
       { label: "About 1st Capital Locksmith", href: "/about" },
       { label: "Our Services in Dover, DE", href: "/services" },
@@ -93,6 +100,7 @@ const posts = [
     category: "Emergency Locksmith",
     date: "February 20, 2026",
     readTime: "4 min read",
+    image: "/images/broken-key-door-extraction.jpg",
     internalLinks: [
       { label: "Emergency Locksmith Services", href: "/services/emergency-locksmith" },
       { label: "Automotive Locksmith Services", href: "/services/automotive-locksmith" },
@@ -105,6 +113,7 @@ const posts = [
     category: "Residential Locksmith",
     date: "February 5, 2026",
     readTime: "5 min read",
+    image: "/images/house-lockout-delaware.jpg",
     internalLinks: [
       { label: "Residential Locksmith Services", href: "/services/residential-locksmith" },
       { label: "Locksmith Service Areas in Kent County", href: "/service-areas" },
@@ -190,15 +199,11 @@ const categoryColors: Record<string, string> = {
         class="block bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition overflow-hidden mb-10 group"
       >
         <div class="grid md:grid-cols-2">
-          <div class="bg-[#0E1B2F] min-h-[280px] flex items-center justify-center p-10">
-            <div class="text-center">
-              <div class="w-16 h-16 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h7l1-2zM13 6h3l3 4v4h-2" />
-                </svg>
-              </div>
-              <p class="text-[#9A9D62] font-semibold text-sm uppercase tracking-wide">Featured Article</p>
+          <div class="relative min-h-[280px] overflow-hidden">
+            <img src={posts[0].image} alt={posts[0].title} class="absolute inset-0 w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="relative z-10 h-full flex items-end p-6">
+              <span class="bg-[#A61E22] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Featured Article</span>
             </div>
           </div>
           <div class="p-8 flex flex-col justify-center">
@@ -233,12 +238,9 @@ const categoryColors: Record<string, string> = {
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.slice(1).map((post) => (
           <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col">
-            <a href={`/blog/${post.slug}`} class="block bg-[#0E1B2F] h-40 flex items-center justify-center group">
-              <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
-              </div>
+            <a href={`/blog/${post.slug}`} class="block relative h-48 overflow-hidden group">
+              <img src={post.image} alt={post.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
             </a>
             <div class="p-6 flex flex-col flex-1">
               <span class={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 w-fit ${categoryColors[post.category]}`}>
