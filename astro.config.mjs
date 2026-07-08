@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.1stcapitallocksmith.com',
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()]
