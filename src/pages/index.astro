@@ -6,6 +6,25 @@ import MainLayout from "../layouts/MainLayout.astro";
   title="1st Capital Locksmith | Mobile Locksmith Services in Dover, DE"
   description="1st Capital Locksmith provides mobile residential, automotive, commercial, and emergency locksmith services in Dover, Delaware and nearby areas."
 >
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "1st Capital Locksmith",
+    "url": "https://www.1stcapitallocksmith.com",
+    "telephone": "+13027350050",
+    "description": "Mobile locksmith services in Dover, Delaware — automotive, residential, commercial, and emergency locksmith. Serving Kent County and surrounding areas.",
+    "areaServed": { "@type": "State", "name": "Delaware" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dover",
+      "addressRegion": "DE",
+      "addressCountry": "US"
+    },
+    "openingHours": "Mo-Su 00:00-23:59",
+    "priceRange": "$$",
+    "image": "https://www.1stcapitallocksmith.com/images/logo.png",
+    "sameAs": ["https://www.1stcapitallocksmith.com"]
+  })} />
   <section
   class="relative min-h-[600px] flex items-center text-white"
   style="background-image: url('/images/hero.png'); background-size: cover; background-position: center;"
