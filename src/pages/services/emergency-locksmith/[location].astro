@@ -1,0 +1,389 @@
+﻿---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import { locations } from "../../../data/locations";
+import type { Location } from "../../../data/locations";
+
+export function getStaticPaths() {
+  return locations.map((loc) => ({
+    params: { location: loc.slug },
+    props: { location: loc },
+  }));
+}
+
+interface Props {
+  location: Location;
+}
+
+const { location } = Astro.props;
+const { city, state, slug, county, description } = location;
+---
+
+<MainLayout
+  title={`Emergency Locksmith in ${city}, ${state} | Fast Response | 1st Capital Locksmith`}
+  description={`1st Capital Locksmith provides emergency locksmith services in ${city}, ${state}. House lockouts, car lockouts, business lockouts, broken key extraction, and urgent lock replacement in ${city}, DE — available 6 days a week.`}
+>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/services/emergency-locksmith" class="hover:text-[#A61E22] transition font-medium">Emergency Locksmith</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">{city}, {state}</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema: Breadcrumb -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": "Emergency Locksmith", "item": "https://www.1stcapitallocksmith.com/services/emergency-locksmith/" },
+      { "@type": "ListItem", "position": 4, "name": `${city}, ${state}`, "item": `https://www.1stcapitallocksmith.com/services/emergency-locksmith/${slug}/` }
+    ]
+  })} />
+
+  <!-- Schema: Local Business -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "1st Capital Locksmith",
+    "telephone": "+13027350050",
+    "url": "https://www.1stcapitallocksmith.com",
+    "areaServed": { "@type": "City", "name": city, "containedIn": { "@type": "State", "name": "Delaware" } },
+    "serviceType": ["Emergency Locksmith", "Emergency House Lockout", "Emergency Car Lockout", "Emergency Business Lockout", "Broken Key Extraction"]
+  })} />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[340px] md:min-h-[550px] flex items-center text-white py-10 md:py-20"
+    style="background-image: url('/images/hero.png'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-6xl mx-auto px-5 md:px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-xs md:text-sm mb-2 md:mb-4">Emergency Locksmith in {city}, Delaware</p>
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-6 max-w-3xl leading-tight">
+        Emergency Locksmith in {city}, {state} — Fast Response When You Need It Most
+      </h1>
+      <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
+        Locked out of your home, car, or business in {city}? Key broken off in a lock? 1st Capital Locksmith responds fast to locksmith emergencies throughout {city}, Delaware — 6 days a week. Call now and a technician will be dispatched to your location.
+      </p>
+      <div class="flex flex-wrap gap-3 md:gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-6 py-3 md:px-8 md:py-4 text-white font-bold text-base md:text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050 Now
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">6 Days</p>
+          <p class="text-gray-300 text-sm mt-1">Open 6 Days a Week</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Fast</p>
+          <p class="text-gray-300 text-sm mt-1">Quick Dispatch to {city}</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Mobile</p>
+          <p class="text-gray-300 text-sm mt-1">We Come Directly to You</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">On-Site</p>
+          <p class="text-gray-300 text-sm mt-1">Every Job Completed On Location</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Emergency Locksmith Response in {city}</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Fast Emergency Locksmith Service Throughout {city}, {state}
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            {city} is {description}, and lock and key emergencies can happen to anyone, at any time. When you're locked out of your home, vehicle, or business in {city}, or facing any urgent lock situation, 1st Capital Locksmith responds quickly with the tools and expertise needed to resolve it completely on-site.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            We don't send call center dispatchers — when you call, you speak with a real person and get a real response. A mobile locksmith is dispatched to your {city} location right away, arrives fully equipped, and handles the entire job without callbacks or delays.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            For any lock or key emergency in {city}, {state}, call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> right now.
+          </p>
+        </div>
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Emergency Services We Handle in {city}:</h3>
+          <ul class="space-y-3">
+            {[
+              { label: "Emergency House Lockout", href: `/services/emergency-locksmith/${slug}/emergency-house-lockout` },
+              { label: "Emergency Car Lockout", href: `/services/emergency-locksmith/${slug}/emergency-car-lockout` },
+              { label: "Emergency Business Lockout", href: `/services/emergency-locksmith/${slug}/emergency-lockout` },
+              { label: "Broken Key Extraction", href: `/services/emergency-locksmith/${slug}/broken-key-extraction` },
+              { label: "Damaged or Malfunctioning Lock", href: `/services/residential-locksmith/${slug}/lock-repair` },
+              { label: "Post-Break-In Lock Replacement", href: "/services/emergency-locksmith" },
+              { label: "Safe Lockout", href: `/services/emergency-locksmith/${slug}/safe-lockout-services` },
+              { label: "Any Urgent Lock or Key Situation", href: "/services/emergency-locksmith" },
+            ].map(({ label, href }) => (
+              <li class="flex items-center gap-3 text-gray-700">
+                <span class="w-6 h-6 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <a href={href} class="hover:text-[#A61E22] hover:underline transition">{label}</a>
+              </li>
+            ))}
+          </ul>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <a
+              href="tel:3027350050"
+              class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+            >
+              Call (302) 735-0050 Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Emergency Services in {city}</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Emergency Locksmith Services in {city}, {state}
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Here is a complete look at every emergency locksmith situation we handle throughout {city}, Delaware — all handled completely on-site, on the same call.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Emergency House Lockout -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Emergency House Lockout in {city}, {state}</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Being locked out of your home in {city} — whether it's your own house, an apartment, or a rental — is one of those situations where you need help fast. 1st Capital Locksmith dispatches a mobile locksmith to your {city} address quickly after your call. We unlock your door using professional techniques that don't damage your lock hardware.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We service all residential door hardware — knob locks, lever handles, deadbolts, and combination lock sets on all types of residential doors. We don't drill unless it is absolutely the last resort, protecting your existing hardware so you don't face a replacement cost on top of everything else.
+            </p>
+            <div class="mt-4">
+              <a href={`/services/emergency-locksmith/${slug}/emergency-house-lockout`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency House Lockout Service →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency Car Lockout -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h7l1-2zM13 6h3l3 4v4h-2" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Emergency Car Lockout in {city}, {state}</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Getting locked out of your vehicle anywhere in {city} is stressful — particularly when you're stranded in a parking lot, on the side of the road, or somewhere you don't feel safe waiting. 1st Capital Locksmith provides fast emergency car lockout service throughout {city} and gets you back in your vehicle using non-destructive professional entry techniques.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We work on all types of vehicles — sedans, trucks, SUVs, minivans, and commercial vehicles. Don't attempt to break in yourself, as DIY attempts routinely cause expensive damage to door frames and lock mechanisms. Call us and we'll have you back inside quickly.
+            </p>
+            <div class="mt-4">
+              <a href={`/services/emergency-locksmith/${slug}/emergency-car-lockout`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Car Lockout Service →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Emergency Business Lockout -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V7a2 2 0 00-2-2H7a2 2 0 00-2 2v14M3 21h18M9 21v-4a1 1 0 011-1h4a1 1 0 011 1v4" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Emergency Business Lockout in {city}, {state}</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              When you or your employees are locked out of your {city} business, every minute counts. 1st Capital Locksmith responds to emergency business lockout calls throughout {city} with urgency — we understand that being unable to enter your business has direct financial consequences.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We work with all commercial door hardware and gain entry professionally without damage so your locks remain functional after we leave. Once you're back inside, we can also assess and address any hardware issues that contributed to the lockout if needed.
+            </p>
+            <div class="mt-4">
+              <a href={`/services/emergency-locksmith/${slug}/emergency-lockout`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Lockout Service →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Broken Key Extraction -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Broken Key Extraction in {city}, {state}</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              A key broken off in a lock — whether it's a door lock at your {city} home, business, or your car's ignition — is an urgent situation. Do not try to remove it yourself with pliers, tweezers, or other tools. Doing so almost always pushes the broken piece deeper into the cylinder, making extraction more difficult and potentially damaging the lock.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              1st Capital Locksmith uses specialized extraction tools to safely remove broken key fragments from any lock cylinder. After extraction, we can cut a new key on-site and repair or replace the lock cylinder if it was damaged in the process.
+            </p>
+            <div class="mt-4">
+              <a href={`/services/emergency-locksmith/${slug}/broken-key-extraction`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Broken Key Extraction in Delaware →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post-Break-In -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Post-Break-In Lock Replacement in {city}, {state}</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              After a break-in at your {city} home or business, your door security must be restored immediately. Damaged locks, broken door frames, and compromised entry points need to be addressed the same day — both for your security and for your peace of mind.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              1st Capital Locksmith responds to post-break-in calls throughout {city} and provides emergency lock replacement and door hardware repair on-site. We carry replacement hardware in our mobile vehicles and can restore your door security in a single visit.
+            </p>
+            <div class="mt-4">
+              <a href="/services/emergency-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Locksmith Services in Delaware →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services in {city} -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">More Services in {city}</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">
+          More Locksmith Services in {city}, {state}
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-sm">
+          1st Capital Locksmith provides automotive, residential, commercial, and emergency locksmith services throughout {city}, Delaware.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href={`/services/automotive-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Automotive Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Car lockouts, key replacement, and ignition repair in {city}.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Residential Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">House lockouts, lock rekeying, and deadbolt installation in {city}.</p>
+        </a>
+        <a href={`/services/commercial-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Commercial Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Master key systems, commercial rekeying, and business security in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/emergency-house-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency House Lockout</h3>
+          <p class="text-gray-600 text-sm">Fast emergency house lockout service for homeowners and renters throughout Delaware.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/emergency-car-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Car Lockout</h3>
+          <p class="text-gray-600 text-sm">Fast emergency car lockout service for all vehicle makes and models throughout Delaware.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/broken-key-extraction`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Broken Key Extraction</h3>
+          <p class="text-gray-600 text-sm">Safe removal of broken key fragments from door locks and ignition cylinders throughout Delaware.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/safe-lockout-services`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Safe Lockout Services</h3>
+          <p class="text-gray-600 text-sm">Professional safe lockout service for residential and commercial safes throughout Delaware.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/emergency-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Lockout Service</h3>
+          <p class="text-gray-600 text-sm">General emergency lockout service for homes, vehicles, and businesses throughout Delaware.</p>
+        </a>
+        <a href={`/service-areas/${slug}`} class="bg-[#A61E22] rounded-2xl p-6 border border-[#A61E22] hover:bg-[#8C181B] transition">
+          <h3 class="font-bold text-white text-base mb-2">All Locksmith Services in {city}, {state}</h3>
+          <p class="text-white/80 text-sm">View our complete list of automotive, residential, commercial, and emergency locksmith services in {city}, {state}.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#A61E22] py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Locksmith Emergency in {city}, {state}?
+      </h2>
+      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">
+        Don't wait. Call 1st Capital Locksmith right now. A real person will answer and a mobile locksmith will be dispatched to your {city} location immediately.
+      </p>
+      <a
+        href="tel:3027350050"
+        class="inline-flex items-center rounded-full bg-white px-10 py-5 text-[#A61E22] font-bold text-xl hover:bg-gray-100 transition"
+      >
+        Call (302) 735-0050 Now
+      </a>
+      <p class="text-white/70 text-sm mt-6">
+        <a href={`/service-areas/${slug}`} class="text-white/80 hover:text-white">View all locksmith services in {city}, {state}</a> &nbsp;|&nbsp;
+        <a href="/services/emergency-locksmith" class="text-white/80 hover:text-white">Emergency Locksmith Services Throughout Delaware</a>
+      </p>
+    </div>
+  </section>
+
+</MainLayout>

@@ -1,0 +1,210 @@
+﻿---
+import MainLayout from "../../../../layouts/MainLayout.astro";
+import { locations } from "../../../../data/locations";
+import type { Location } from "../../../../data/locations";
+
+export function getStaticPaths() {
+  return locations.map((loc) => ({
+    params: { location: loc.slug },
+    props: { location: loc },
+  }));
+}
+
+interface Props { location: Location; }
+const { location } = Astro.props;
+const { city, state, slug, county } = location;
+---
+
+<MainLayout
+  title={`Car Key Replacement in ${city}, ${state} | Transponder & Smart Keys | 1st Capital Locksmith`}
+  description={`Need a car key replacement in ${city}, ${state}? 1st Capital Locksmith cuts and programs transponder keys, smart keys, and key fobs on-site throughout ${city} and ${county}. Call (302) 735-0050.`}
+>
+
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li><a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href={`/services/automotive-locksmith/${slug}`} class="hover:text-[#A61E22] transition font-medium">Automotive Locksmith in {city}</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><span class="text-[#A61E22] font-semibold">Car Key Replacement — {city}, {state}</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": `Automotive Locksmith in ${city}`, "item": `https://www.1stcapitallocksmith.com/services/automotive-locksmith/${slug}/` },
+      { "@type": "ListItem", "position": 4, "name": `Car Key Replacement in ${city}, ${state}`, "item": `https://www.1stcapitallocksmith.com/services/automotive-locksmith/${slug}/car-key-replacement/` }
+    ]
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "LocalBusiness",
+    "@id": "https://www.1stcapitallocksmith.com",
+    "name": "1st Capital Locksmith", "telephone": "+13027350050",
+    "url": `https://www.1stcapitallocksmith.com/services/automotive-locksmith/${slug}/car-key-replacement/`,
+    "description": `On-site car key replacement and transponder programming in ${city}, ${state}. 1st Capital Locksmith cuts and programs all key types for all vehicle makes and models throughout ${county}.`,
+    "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } },
+    "priceRange": "$$"
+  })} />
+
+  <section class="relative min-h-[420px] flex items-center py-12 md:py-20" style="background-image: url('/images/car-key-replacement-locksmith.jpg'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-[#0E1B2F]/85"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 w-full">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Automotive Locksmith · {city}, {state}</p>
+          <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Car Key Replacement in {city}, {state}</h1>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            1st Capital Locksmith provides on-site car key replacement throughout {city} and {county}. We cut and program transponder keys, smart keys, laser-cut keys, and key fobs directly at your location — no tow to a dealership required.
+          </p>
+          <ul class="space-y-3">
+            {[
+              { label: "Transponder Key Cutting & Programming", href: "/services/car-key-replacement" },
+              { label: "Smart Key & Proximity Key Replacement", href: "/services/car-key-replacement" },
+              { label: "Laser-Cut High-Security Keys", href: "/services/car-key-replacement" },
+              { label: "Duplicate & Spare Key Cutting", href: "/services/car-key-replacement" },
+              { label: "Key-Only Replacement (No Programming)", href: "/services/car-key-replacement" },
+              { label: "Key Fob Programming", href: "/services/key-fob-programming" },
+              { label: "Emergency Key Replacement After Lockout", href: "/services/emergency-car-lockout" },
+            ].map(({ label, href }) => (
+              <li class="flex items-center gap-3 text-gray-300">
+                <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                </span>
+                <a href={href} class="hover:text-white hover:underline transition">{label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="bg-[#1A2B45] rounded-2xl p-8 border border-[#2A3B55]">
+          <h2 class="text-xl font-bold text-white mb-5">On-Site Service in {city}</h2>
+          <div class="space-y-4">
+            {[
+              { title: "No Dealership Needed", desc: "We come to your location in " + city + " and program your new key on-site — often at a fraction of dealership cost." },
+              { title: "All Key Types", desc: "Transponder keys, smart keys, laser-cut keys, standard keys, and key fobs for all major vehicle makes." },
+              { title: "All Makes & Models", desc: `Domestic and import vehicles throughout ${city} and ${county}, Delaware.` },
+              { title: "Fast & Affordable", desc: "Most car key replacements are completed in 30–60 minutes at your location." },
+            ].map((item) => (
+              <div class="flex gap-3 items-start">
+                <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                </span>
+                <div>
+                  <p class="font-semibold text-white text-sm">{item.title}</p>
+                  <p class="text-gray-400 text-sm">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div class="mt-6 pt-6 border-t border-[#2A3B55]">
+            <a href="tel:3027350050" class="block text-center bg-[#A61E22] text-white font-bold rounded-full py-3 px-6 hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div><p class="text-2xl font-bold text-[#A61E22]">All Makes</p><p class="text-gray-300 text-sm mt-1">Domestic & Import Vehicles</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Mobile</p><p class="text-gray-300 text-sm mt-1">We Come to {city}</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Fast</p><p class="text-gray-300 text-sm mt-1">Quick Response in {city}</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">No Damage</p><p class="text-gray-300 text-sm mt-1">Professional Entry Tools</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#F8F8F5] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Key Replacement Services in {city}</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">Car Key Replacement Services in {city}, {state}</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-sm">We handle all car key types for all vehicle makes and models throughout {city}, Delaware.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Transponder Key Replacement</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Modern vehicle keys contain a transponder chip that must be programmed to match your car's immobilizer system. Without correct programming, the key will turn the ignition but the car won't start. We cut and program transponder keys on-site in {city} for all major vehicle makes and model years. Most vehicles from 1997 onward require transponder programming.</p>
+          <div class="mt-4"><a href="/services/car-key-replacement" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Car Key Replacement →</a></div>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Smart Key & Proximity Key Replacement</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Smart keys and proximity keys (push-button start vehicles) require specialized programming equipment that reads and writes to your vehicle's security system. We program smart keys for all major brands including Toyota, Honda, Ford, Nissan, Hyundai, Kia, BMW, Mercedes, Volkswagen, and more throughout {city}. Same-day service available.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Duplicate & Spare Key Cutting</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Having a spare key is one of the simplest ways to avoid a car lockout situation. We cut duplicate keys on-site in {city} for standard keys, transponder keys, and high-security laser-cut keys. If your vehicle requires programming, we handle that on-site as well. We recommend having at least one spare for every vehicle you own.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Lost Key Replacement</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Lost all your car keys? We can create a new working key from scratch using your VIN number and ownership documentation — no existing key required. We decode your vehicle's lock to cut the key, then program it to your car's immobilizer system. This service is available for all vehicle types throughout {city} and {county}.</p>
+          <div class="mt-4"><a href="/services/car-key-replacement" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lost Car Key Replacement →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">More Services in {city}</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">More Locksmith Services in {city}, {state}</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-sm">1st Capital Locksmith provides automotive, residential, commercial, and emergency locksmith services throughout {city}, Delaware.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href={`/services/automotive-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Automotive Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Full automotive locksmith services in {city} — car lockouts, key replacement, fob programming, and ignition repair.</p>
+        </a>
+        <a href={`/services/automotive-locksmith/${slug}/car-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Car Lockout Service in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast, non-destructive car lockout service for all makes and models in {city}.</p>
+        </a>
+        <a href={`/services/automotive-locksmith/${slug}/key-fob-programming`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Key Fob Programming in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Key fob replacement and programming for all major vehicle brands in {city}.</p>
+        </a>
+        <a href={`/services/automotive-locksmith/${slug}/ignition-repair`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Ignition Repair in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Ignition cylinder diagnosis and repair for vehicles throughout {city}.</p>
+        </a>
+        <a href={`/services/automotive-locksmith/${slug}/ignition-replacement`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Ignition Replacement in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Full ignition cylinder replacement for vehicles in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/emergency-car-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Car Lockout in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast emergency car lockout response throughout {city} and {county}.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Residential Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">House lockouts, lock rekeying, and deadbolt installation for homeowners in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast emergency locksmith response for any urgent situation in {city}.</p>
+        </a>
+        <a href={`/service-areas/${slug}`} class="bg-[#A61E22] rounded-2xl p-6 border border-[#A61E22] hover:bg-[#8C181B] transition">
+          <h3 class="font-bold text-white text-base mb-2">All Locksmith Services in {city}, {state}</h3>
+          <p class="text-white/80 text-sm">View our complete list of locksmith services available in {city}, {state}.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#0E1B2F] py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need a Car Key Replacement in {city}, {state}?</h2>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for on-site car key cutting and programming in {city}. We come to you — no tow to a dealership needed.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
+        <a href="/contact" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

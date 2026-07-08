@@ -1,0 +1,397 @@
+﻿---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import { locations } from "../../../data/locations";
+import type { Location } from "../../../data/locations";
+
+export function getStaticPaths() {
+  return locations.map((loc) => ({
+    params: { location: loc.slug },
+    props: { location: loc },
+  }));
+}
+
+interface Props {
+  location: Location;
+}
+
+const { location } = Astro.props;
+const { city, state, slug, county, description } = location;
+---
+
+<MainLayout
+  title={`Residential Locksmith in ${city}, ${state} | House Lockout & Lock Rekeying | 1st Capital Locksmith`}
+  description={`1st Capital Locksmith provides professional residential locksmith services in ${city}, ${state}. House lockouts, lock rekeying, deadbolt installation, lock repair, and mailbox lock replacement in ${city}, DE.`}
+>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li>
+          <a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <a href="/services/residential-locksmith" class="hover:text-[#A61E22] transition font-medium">Residential Locksmith</a>
+        </li>
+        <li class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <span class="text-[#A61E22] font-semibold">{city}, {state}</span>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Schema: Breadcrumb -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": "Residential Locksmith", "item": "https://www.1stcapitallocksmith.com/services/residential-locksmith/" },
+      { "@type": "ListItem", "position": 4, "name": `${city}, ${state}`, "item": `https://www.1stcapitallocksmith.com/services/residential-locksmith/${slug}/` }
+    ]
+  })} />
+
+  <!-- Schema: Local Business -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "1st Capital Locksmith",
+    "telephone": "+13027350050",
+    "url": "https://www.1stcapitallocksmith.com",
+    "areaServed": { "@type": "City", "name": city, "containedIn": { "@type": "State", "name": "Delaware" } },
+    "serviceType": ["Residential Locksmith", "House Lockout", "Lock Rekeying", "Deadbolt Installation", "Lock Repair", "Mailbox Lock Replacement"]
+  })} />
+
+  <!-- Hero -->
+  <section
+    class="relative min-h-[340px] md:min-h-[550px] flex items-center text-white py-10 md:py-20"
+    style="background-image: url('/images/hero.png'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-6xl mx-auto px-5 md:px-6 z-10">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-xs md:text-sm mb-2 md:mb-4">Residential Locksmith in {city}, Delaware</p>
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 md:mb-6 max-w-3xl leading-tight">
+        Residential Locksmith in {city}, {state} — House Lockouts, Rekeying & More
+      </h1>
+      <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
+        Locked out of your house in {city}? Need your locks rekeyed after moving in? Looking to upgrade your deadbolts? 1st Capital Locksmith provides professional residential locksmith services throughout {city}, Delaware — we come directly to your home.
+      </p>
+      <div class="flex flex-wrap gap-3 md:gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-6 py-3 md:px-8 md:py-4 text-white font-bold text-base md:text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">6 Days</p>
+          <p class="text-gray-300 text-sm mt-1">Open 6 Days a Week</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Mobile</p>
+          <p class="text-gray-300 text-sm mt-1">We Come to Your {city} Home</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">All Homes</p>
+          <p class="text-gray-300 text-sm mt-1">Houses, Apartments & Rentals</p>
+        </div>
+        <div>
+          <p class="text-2xl font-bold text-[#A61E22]">Upfront</p>
+          <p class="text-gray-300 text-sm mt-1">Clear Pricing Before We Start</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Your Local Residential Locksmith in {city}</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6 leading-snug">
+            Professional Residential Locksmith Services in {city}, {state}
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            {city} is {description}, and 1st Capital Locksmith provides complete residential locksmith services to homeowners and renters throughout {city}. Whether you're locked out of your home, moving into a new place and need the locks rekeyed, or want to upgrade your deadbolts for better security, we come directly to your {city} home fully equipped to handle the job on-site in a single visit.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            From single-family homes to apartments and rental properties, we handle all types of residential lock and key situations in {city} and throughout {county}. Landlords and property managers rely on us for efficient, affordable rekeying between tenants.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            Call us at <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> for residential locksmith service in {city}, {state}.
+          </p>
+        </div>
+        <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Residential Services We Provide in {city}:</h3>
+          <ul class="space-y-3">
+            {[
+              { label: "House Lockout Service", href: `/services/residential-locksmith/${slug}/house-lockout` },
+              { label: "Lock Rekeying", href: `/services/residential-locksmith/${slug}/lock-rekeying` },
+              { label: "Deadbolt Installation & Upgrade", href: `/services/residential-locksmith/${slug}/deadbolt-installation` },
+              { label: "Lock Repair & Replacement", href: `/services/residential-locksmith/${slug}/lock-repair` },
+              { label: "Mailbox Lock Replacement", href: `/services/residential-locksmith/${slug}/mailbox-lock-replacement` },
+              { label: "New Homeowner Lock Service", href: `/services/residential-locksmith/${slug}/lock-rekeying` },
+              { label: "Rental Property Rekeying", href: `/services/residential-locksmith/${slug}/lock-rekeying` },
+              { label: "High-Security Lock Upgrades", href: `/services/residential-locksmith/${slug}/lock-change` },
+            ].map(({ label, href }) => (
+              <li class="flex items-center gap-3 text-gray-700">
+                <span class="w-6 h-6 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <a href={href} class="hover:text-[#A61E22] hover:underline transition">{label}</a>
+              </li>
+            ))}
+          </ul>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <a
+              href="tel:3027350050"
+              class="w-full inline-flex justify-center items-center rounded-full bg-[#A61E22] px-6 py-3 text-white font-bold hover:bg-[#8C181B] transition"
+            >
+              Call (302) 735-0050 Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Detail -->
+  <section class="bg-[#F8F8F5] py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">What We Do in {city}</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+          Residential Locksmith Services in {city}, {state}
+        </h2>
+        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          From house lockouts to deadbolt upgrades, here is a complete look at every residential locksmith service we provide to homeowners and renters in {city}, Delaware.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- House Lockout -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">House Lockout Service in {city}, {state}</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Getting locked out of your home in {city} is frustrating, but 1st Capital Locksmith responds quickly to house lockout calls throughout {city}. Whether you've left your keys inside, lost them, or had a lock malfunction that's preventing entry, we'll have a mobile locksmith at your door quickly.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We use professional techniques to unlock your door without damaging your lock hardware, so you don't face a costly replacement on top of a stressful situation. We service all types of door locks — knob locks, lever handles, deadbolts, and more.
+            </p>
+            <div class="mt-4">
+              <a href={`/services/residential-locksmith/${slug}/house-lockout`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about House Lockout Service in Delaware →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lock Rekeying -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Lock Rekeying in {city}, {state}</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Rekeying is one of the most important — and most overlooked — security steps for homeowners in {city}. When you move into a new home, rekey. When a tenant moves out, rekey. When keys are lost or unaccounted for, rekey. Rekeying changes the internal pins of your existing lock so old keys no longer work, without the cost of full lock replacement.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              1st Capital Locksmith rekeyes all types of residential locks throughout {city} on-site in a single visit. We can also rekey multiple locks to all operate on one key, eliminating the need for a different key for every door in your home.
+            </p>
+            <div class="mt-4">
+              <a href={`/services/residential-locksmith/${slug}/lock-rekeying`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lock Rekeying in Delaware →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deadbolt Installation -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Deadbolt Installation in {city}, {state}</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              A properly installed deadbolt is one of the most effective security upgrades for any home in {city}. If your doors don't have deadbolts, or if your existing deadbolts are outdated or low-quality, 1st Capital Locksmith installs Grade 1 and Grade 2 residential deadbolts at your {city} home — the same day you call.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              We carry quality hardware from trusted manufacturers and install each deadbolt correctly so it provides the full security rating it's designed for. We also upgrade existing deadbolts to higher-security options when you're ready for better protection.
+            </p>
+            <div class="mt-4">
+              <a href={`/services/residential-locksmith/${slug}/deadbolt-installation`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Deadbolt Installation in Delaware →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lock Repair & Replacement -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Lock Repair & Replacement in {city}, {state}</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Locks wear out over time. If your door lock sticks, feels loose, turns too hard, or simply won't work properly, don't wait until it fails completely and leaves you locked out in {city}. 1st Capital Locksmith diagnoses and repairs worn or damaged door locks on-site.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              When a lock is beyond repair — due to age, damage, or a break-in attempt — we replace it on the same visit using quality hardware. We carry a selection of residential lock hardware in our mobile vehicles so there's no need to order parts and schedule a second appointment.
+            </p>
+            <div class="mt-4">
+              <a href={`/services/residential-locksmith/${slug}/lock-repair`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lock Repair & Replacement in Delaware →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mailbox Lock -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
+          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Mailbox Lock Replacement in {city}, {state}</h3>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              A broken or compromised mailbox lock in {city} is a mail security issue that should be addressed promptly. 1st Capital Locksmith replaces mailbox locks for homeowners and property managers throughout {city} quickly and affordably.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Whether your mailbox lock has worn out, the key was lost, or the lock was damaged, we can replace it on the same visit. We handle standard USPS-style cluster mailboxes, individual residential mailboxes, and apartment complex mailbox systems.
+            </p>
+            <div class="mt-4">
+              <a href={`/services/residential-locksmith/${slug}/mailbox-lock-replacement`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Mailbox Lock Replacement in Delaware →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services in {city} -->
+  <section class="bg-[#F8F8F5] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">More Services in {city}</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">
+          More Locksmith Services in {city}, {state}
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-sm">
+          1st Capital Locksmith provides automotive, residential, commercial, and emergency locksmith services throughout {city}, Delaware.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href={`/services/automotive-locksmith/${slug}`} class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Automotive Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Car lockouts, car key replacement, key fob programming, and ignition repair in {city}.</p>
+        </a>
+        <a href={`/services/commercial-locksmith/${slug}`} class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Commercial Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Master key systems, panic bar installation, and commercial security in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}`} class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast emergency locksmith response for any lockout or urgent lock situation in {city}.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}/house-lockout`} class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">House Lockout Service</h3>
+          <p class="text-gray-600 text-sm">Professional house lockout service for homeowners and renters throughout Delaware including {city}.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}/lock-rekeying`} class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Lock Rekeying</h3>
+          <p class="text-gray-600 text-sm">Affordable lock rekeying for new homeowners, landlords, and rental properties throughout Delaware.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}/deadbolt-installation`} class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Deadbolt Installation</h3>
+          <p class="text-gray-600 text-sm">Grade 1 and Grade 2 deadbolt installation and upgrades for residential doors throughout Delaware.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}/lock-repair`} class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Lock Repair & Replacement</h3>
+          <p class="text-gray-600 text-sm">On-site residential lock repair and lock change service for worn or damaged door locks.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}/mailbox-lock-replacement`} class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Mailbox Lock Replacement</h3>
+          <p class="text-gray-600 text-sm">Mailbox lock replacement for residential and apartment mailboxes throughout Delaware including {city}.</p>
+        </a>
+        <a href={`/service-areas/${slug}`} class="bg-[#A61E22] rounded-2xl p-6 border border-[#A61E22] hover:bg-[#8C181B] transition">
+          <h3 class="font-bold text-white text-base mb-2">All Locksmith Services in {city}, {state}</h3>
+          <p class="text-white/80 text-sm">View our complete list of automotive, residential, commercial, and emergency locksmith services in {city}, {state}.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-[#0E1B2F] py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Need a Residential Locksmith in {city}, {state}?
+      </h2>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+        Call 1st Capital Locksmith now for fast, professional residential locksmith service at your {city} home. We come to you — same-day service available.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="tel:3027350050"
+          class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition"
+        >
+          Call (302) 735-0050
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+      <p class="text-gray-400 text-sm mt-6">
+        <a href={`/service-areas/${slug}`} class="text-gray-300 hover:text-white">View all locksmith services in {city}, {state}</a> &nbsp;|&nbsp;
+        <a href="/services/residential-locksmith" class="text-gray-300 hover:text-white">Residential Locksmith Services Throughout Delaware</a>
+      </p>
+    </div>
+  </section>
+
+</MainLayout>

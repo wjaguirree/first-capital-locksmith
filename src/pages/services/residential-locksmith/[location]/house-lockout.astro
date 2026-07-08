@@ -1,0 +1,205 @@
+﻿---
+import MainLayout from "../../../../layouts/MainLayout.astro";
+import { locations } from "../../../../data/locations";
+import type { Location } from "../../../../data/locations";
+
+export function getStaticPaths() {
+  return locations.map((loc) => ({
+    params: { location: loc.slug },
+    props: { location: loc },
+  }));
+}
+
+interface Props { location: Location; }
+const { location } = Astro.props;
+const { city, state, slug, county } = location;
+---
+
+<MainLayout
+  title={`House Lockout Service in ${city}, ${state} | Mobile Home Lockout | 1st Capital Locksmith`}
+  description={`Locked out of your house in ${city}, ${state}? 1st Capital Locksmith provides fast mobile house lockout service throughout ${city} and ${county}, Delaware. Non-destructive entry for all door types. Call (302) 735-0050.`}
+>
+
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li><a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href={`/services/residential-locksmith/${slug}`} class="hover:text-[#A61E22] transition font-medium">Residential Locksmith in {city}</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><span class="text-[#A61E22] font-semibold">House Lockout — {city}, {state}</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": `Residential Locksmith in ${city}`, "item": `https://www.1stcapitallocksmith.com/services/residential-locksmith/${slug}/` },
+      { "@type": "ListItem", "position": 4, "name": `House Lockout Service in ${city}, ${state}`, "item": `https://www.1stcapitallocksmith.com/services/residential-locksmith/${slug}/house-lockout/` }
+    ]
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "LocalBusiness",
+    "@id": "https://www.1stcapitallocksmith.com",
+    "name": "1st Capital Locksmith", "telephone": "+13027350050",
+    "url": `https://www.1stcapitallocksmith.com/services/residential-locksmith/${slug}/house-lockout/`,
+    "description": `House lockout service in ${city}, ${state}. Fast, non-destructive residential lockout service for homes, apartments, and rental properties throughout ${county}, Delaware.`,
+    "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } },
+    "priceRange": "$$"
+  })} />
+
+  <section class="relative min-h-[420px] flex items-center py-12 md:py-20" style="background-image: url('/images/house-lockout-technician.jpg'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-[#0E1B2F]/85"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 w-full">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Residential Locksmith · {city}, {state}</p>
+          <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">House Lockout Service in {city}, {state}</h1>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            Locked out of your home in {city}? 1st Capital Locksmith responds throughout {city} and {county} to get you back inside quickly and without damage to your door hardware. We serve homeowners, renters, and landlords across all neighborhoods in {city}.
+          </p>
+          <ul class="space-y-3">
+            {[
+              { label: "Front Door Lockout — All Lock Types", href: "/services/house-lockout" },
+              { label: "Back & Side Door Lockout", href: "/services/house-lockout" },
+              { label: "Apartment & Condo Lockout", href: "/services/house-lockout" },
+              { label: "Rental Property Lockout", href: "/services/house-lockout" },
+              { label: "Garage Entry Door Lockout", href: "/services/house-lockout" },
+              { label: "Emergency House Lockout", href: "/services/emergency-house-lockout" },
+              { label: "Lock Rekeying After Lockout", href: "/services/lock-rekeying" },
+            ].map(({ label, href }) => (
+              <li class="flex items-center gap-3 text-gray-300">
+                <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                </span>
+                <a href={href} class="hover:text-white hover:underline transition">{label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="bg-[#1A2B45] rounded-2xl p-8 border border-[#2A3B55]">
+          <h2 class="text-xl font-bold text-white mb-5">Why 1st Capital Locksmith in {city}?</h2>
+          <div class="space-y-4">
+            {[
+              { title: "Non-Destructive Entry", desc: "We use professional lock picks and bypass tools — no drilling, no damage to your door or hardware." },
+              { title: "All Lock Types", desc: "Knob locks, lever handles, deadbolts, and multi-point locks on all residential door types." },
+              { title: "Mobile Service in " + city, desc: `We come directly to your home anywhere in ${city} and surrounding ${county}.` },
+              { title: "Verified & Licensed", desc: "Licensed Delaware locksmith — not a call center dispatching unknown contractors." },
+            ].map((item) => (
+              <div class="flex gap-3 items-start">
+                <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                </span>
+                <div><p class="font-semibold text-white text-sm">{item.title}</p><p class="text-gray-400 text-sm">{item.desc}</p></div>
+              </div>
+            ))}
+          </div>
+          <div class="mt-6 pt-6 border-t border-[#2A3B55]">
+            <a href="tel:3027350050" class="block text-center bg-[#A61E22] text-white font-bold rounded-full py-3 px-6 hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div><p class="text-2xl font-bold text-[#A61E22]">Licensed</p><p class="text-gray-300 text-sm mt-1">Professional Locksmith</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Mobile</p><p class="text-gray-300 text-sm mt-1">We Come to {city}</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Fast</p><p class="text-gray-300 text-sm mt-1">Quick Response in {city}</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Upfront</p><p class="text-gray-300 text-sm mt-1">Clear Pricing Every Time</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#F8F8F5] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">House Lockout Services in {city}</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">House Lockout Services in {city}, {state}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Residential Door Lockout</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">We service all residential door hardware — knob locks, lever handles, single and double-cylinder deadbolts, and combination knob-deadbolt sets on front, back, and side doors. Our approach is non-destructive: we use professional picking and bypass tools to open your lock without drilling. In {city}, we serve both homeowners and renters in houses, townhomes, and condominiums.</p>
+          <div class="mt-4"><a href="/services/house-lockout" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about House Lockout Service →</a></div>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Apartment & Rental Lockout</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Apartment lockouts are one of the most common residential locksmith calls in {city}. We work quickly and professionally, and we always verify that the person requesting entry is the authorized tenant before proceeding. If you're a landlord in {city} responding to a tenant lockout, we can assist you as well — with a focus on protecting both the hardware and the tenant relationship.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Garage Entry Door Lockout</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">The door connecting your garage to your home is often overlooked — until you're locked out of it. Garage entry doors frequently have different hardware than front doors, including privacy locks or passage knobs that can be accidentally locked. We handle all garage entry door lockouts in {city} using the same non-destructive approach as for all our lockout services.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Emergency House Lockout</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">When weather, a child's safety, or time-sensitive circumstances make your lockout urgent, call us immediately at <a href="tel:3027350050" class="text-[#A61E22] font-semibold">(302) 735-0050</a>. We prioritize emergency calls throughout {city} and {county}. After gaining entry, we can also rekey your locks or cut a spare key so you're not in this situation again.</p>
+          <div class="mt-4"><a href="/services/emergency-house-lockout" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency House Lockout →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">More Services in {city}</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">More Locksmith Services in {city}, {state}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href={`/services/residential-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Residential Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Full residential locksmith services in {city}.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}/lock-rekeying`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Lock Rekeying in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Rekey your locks so old keys no longer work — fast service in {city}.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}/deadbolt-installation`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Deadbolt Installation in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Grade 1 and Grade 2 deadbolt installation for residential doors in {city}.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}/lock-repair`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Lock Repair in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Residential lock repair for stuck, worn, and damaged locks in {city}.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}/lock-change`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Lock Change in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Full lock replacement and security upgrades for homes in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/emergency-house-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency House Lockout in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast emergency house lockout response for urgent situations in {city}.</p>
+        </a>
+        <a href={`/services/automotive-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Automotive Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Car lockouts, key replacement, and ignition repair in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast emergency locksmith response in {city}.</p>
+        </a>
+        <a href={`/service-areas/${slug}`} class="bg-[#A61E22] rounded-2xl p-6 border border-[#A61E22] hover:bg-[#8C181B] transition">
+          <h3 class="font-bold text-white text-base mb-2">All Services in {city}, {state}</h3>
+          <p class="text-white/80 text-sm">View all locksmith services in {city}, {state}.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#0E1B2F] py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Locked Out of Your House in {city}, {state}?</h2>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith now for fast, professional house lockout service in {city}. We come to you — non-destructive entry, all lock types.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
+        <a href="/contact" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

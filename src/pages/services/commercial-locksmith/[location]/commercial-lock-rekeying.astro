@@ -1,0 +1,204 @@
+﻿---
+import MainLayout from "../../../../layouts/MainLayout.astro";
+import { locations } from "../../../../data/locations";
+import type { Location } from "../../../../data/locations";
+
+export function getStaticPaths() {
+  return locations.map((loc) => ({
+    params: { location: loc.slug },
+    props: { location: loc },
+  }));
+}
+
+interface Props { location: Location; }
+const { location } = Astro.props;
+const { city, state, slug, county } = location;
+---
+
+<MainLayout
+  title={`Commercial Lock Rekeying in ${city}, ${state} | Business Lock Rekey | 1st Capital Locksmith`}
+  description={`Commercial lock rekeying in ${city}, ${state}. 1st Capital Locksmith rekeyes business, office, and retail locks throughout ${city} and ${county}, Delaware. Fast service after employee departure. Call (302) 735-0050.`}
+>
+
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li><a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href={`/services/commercial-locksmith/${slug}`} class="hover:text-[#A61E22] transition font-medium">Commercial Locksmith in {city}</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><span class="text-[#A61E22] font-semibold">Commercial Lock Rekeying — {city}, {state}</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": `Commercial Locksmith in ${city}`, "item": `https://www.1stcapitallocksmith.com/services/commercial-locksmith/${slug}/` },
+      { "@type": "ListItem", "position": 4, "name": `Commercial Lock Rekeying in ${city}, ${state}`, "item": `https://www.1stcapitallocksmith.com/services/commercial-locksmith/${slug}/commercial-lock-rekeying/` }
+    ]
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "LocalBusiness",
+    "@id": "https://www.1stcapitallocksmith.com",
+    "name": "1st Capital Locksmith", "telephone": "+13027350050",
+    "url": `https://www.1stcapitallocksmith.com/services/commercial-locksmith/${slug}/commercial-lock-rekeying/`,
+    "description": `Commercial lock rekeying in ${city}, ${state}. Business, office, and retail lock rekeying throughout ${county}, Delaware. Fast service after employee departure or security incidents.`,
+    "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } },
+    "priceRange": "$$"
+  })} />
+
+  <section class="relative min-h-[420px] flex items-center py-12 md:py-20" style="background-image: url('/images/commercial-locksmith.png'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-[#0E1B2F]/85"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 w-full">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Commercial Locksmith · {city}, {state}</p>
+          <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Commercial Lock Rekeying in {city}, {state}</h1>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            When an employee leaves, keys go unaccounted for, or a security incident occurs at your business in {city}, rekeying your commercial locks is the fastest and most cost-effective way to restore access control. 1st Capital Locksmith rekeyes office, retail, and commercial property locks throughout {city} and {county}.
+          </p>
+          <ul class="space-y-3">
+            {[
+              { label: "After Employee Departure or Termination", href: "/services/commercial-lock-rekeying" },
+              { label: "After Lost or Unaccounted-For Keys", href: "/services/commercial-lock-rekeying" },
+              { label: "After a Security Incident", href: "/services/commercial-lock-rekeying" },
+              { label: "Office & Professional Suite Rekeying", href: "/services/commercial-lock-rekeying" },
+              { label: "Retail Storefront Rekeying", href: "/services/commercial-lock-rekeying" },
+              { label: "Master Key System Rekeying", href: "/services/master-key-systems" },
+              { label: "Multi-Location Business Rekeying", href: "/services/commercial-lock-rekeying" },
+            ].map(({ label, href }) => (
+              <li class="flex items-center gap-3 text-gray-300">
+                <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                </span>
+                <a href={href} class="hover:text-white hover:underline transition">{label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="bg-[#1A2B45] rounded-2xl p-8 border border-[#2A3B55]">
+          <h2 class="text-xl font-bold text-white mb-5">Commercial Rekeying in {city}</h2>
+          <div class="space-y-4">
+            {[
+              { title: "No New Hardware Needed", desc: "Rekeying changes only the internal pins of the lock cylinder — your existing commercial hardware is retained." },
+              { title: "All Commercial Lock Types", desc: "Cylindrical, mortise, deadbolt, and rim lock cylinders throughout " + city + " and " + county + "." },
+              { title: "Master Key Compatible", desc: "We rekey within your existing master key system structure — all hierarchy levels are maintained." },
+              { title: "Fast Turnaround", desc: "Commercial rekeying is completed on-site in " + city + " during a single scheduled visit." },
+            ].map((item) => (
+              <div class="flex gap-3 items-start">
+                <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                </span>
+                <div><p class="font-semibold text-white text-sm">{item.title}</p><p class="text-gray-400 text-sm">{item.desc}</p></div>
+              </div>
+            ))}
+          </div>
+          <div class="mt-6 pt-6 border-t border-[#2A3B55]">
+            <a href="tel:3027350050" class="block text-center bg-[#A61E22] text-white font-bold rounded-full py-3 px-6 hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div><p class="text-2xl font-bold text-[#A61E22]">Commercial</p><p class="text-gray-300 text-sm mt-1">Business Locksmith</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Mobile</p><p class="text-gray-300 text-sm mt-1">We Come to {city}</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Fast</p><p class="text-gray-300 text-sm mt-1">Minimize Downtime in {city}</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Insured</p><p class="text-gray-300 text-sm mt-1">Verified Professional</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#F8F8F5] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Commercial Rekeying in {city}</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">Commercial Lock Rekeying Services in {city}, {state}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Employee Departure</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">When an employee with building access leaves your business — voluntarily or otherwise — rekeying is the responsible next step. Even if keys were returned, you cannot verify that copies weren't made. Rekeying your business locks in {city} ensures that only current authorized staff can access your premises. We can rekey all affected cylinders in a single visit.</p>
+          <div class="mt-4"><a href="/services/commercial-lock-rekeying" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Commercial Lock Rekeying →</a></div>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Lost or Unaccounted-For Keys</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Keys that go missing — whether misplaced by an employee, lost, or stolen — create an access control risk for your business. Unlike residential keys, commercial keys are often duplicated and distributed across multiple staff members. Rekeying restores your security immediately and is far more cost-effective than replacing the hardware across your entire {city} location.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Multi-Cylinder Rekeying</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Commercial properties in {city} often have multiple door cylinders across multiple entry points — front door, back door, individual office doors, storage, and more. We can rekey all cylinders in a single scheduled visit and key them to a common key so that one master key works everywhere while individual keys only access designated areas. This is often combined with a master key system setup.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Rekeying vs Lock Replacement</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">For most commercial rekeying situations, there's no need to replace your existing hardware — rekeying costs significantly less and achieves the same access control result. We recommend lock replacement only if the hardware is damaged, worn, or a security downgrade is evident. We'll assess your locks in {city} and give you an honest recommendation before proceeding.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">More Services in {city}</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">More Locksmith Services in {city}, {state}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href={`/services/commercial-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Commercial Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Full commercial locksmith services in {city}.</p>
+        </a>
+        <a href={`/services/commercial-locksmith/${slug}/master-key-systems`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Master Key Systems in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Custom master key system design and installation in {city}.</p>
+        </a>
+        <a href={`/services/commercial-locksmith/${slug}/panic-bar-installation`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Panic Bar Installation in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Panic bar and exit device installation in {city}.</p>
+        </a>
+        <a href={`/services/commercial-locksmith/${slug}/office-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Office Lockout Service in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast commercial lockout response in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/emergency-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Lockout Service in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Emergency lockout response for businesses in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast emergency locksmith response in {city}.</p>
+        </a>
+        <a href={`/services/automotive-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Automotive Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Car lockouts and key services for company vehicles in {city}.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Residential Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">House lockouts, rekeying, and deadbolts in {city}.</p>
+        </a>
+        <a href={`/service-areas/${slug}`} class="bg-[#A61E22] rounded-2xl p-6 border border-[#A61E22] hover:bg-[#8C181B] transition">
+          <h3 class="font-bold text-white text-base mb-2">All Services in {city}, {state}</h3>
+          <p class="text-white/80 text-sm">View all locksmith services in {city}, {state}.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#0E1B2F] py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need Commercial Lock Rekeying in {city}, {state}?</h2>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for business lock rekeying in {city}. Fast, affordable service after employee departure or security incidents throughout {county}.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
+        <a href="/contact" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

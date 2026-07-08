@@ -1,0 +1,204 @@
+﻿---
+import MainLayout from "../../../../layouts/MainLayout.astro";
+import { locations } from "../../../../data/locations";
+import type { Location } from "../../../../data/locations";
+
+export function getStaticPaths() {
+  return locations.map((loc) => ({
+    params: { location: loc.slug },
+    props: { location: loc },
+  }));
+}
+
+interface Props { location: Location; }
+const { location } = Astro.props;
+const { city, state, slug, county } = location;
+---
+
+<MainLayout
+  title={`Safe Lockout Services in ${city}, ${state} | Safe Opening | 1st Capital Locksmith`}
+  description={`Safe lockout service in ${city}, ${state}. Locked out of your safe or vault? 1st Capital Locksmith provides professional safe opening throughout ${city} and ${county}, Delaware. Call (302) 735-0050.`}
+>
+
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li><a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href={`/services/emergency-locksmith/${slug}`} class="hover:text-[#A61E22] transition font-medium">Emergency Locksmith in {city}</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><span class="text-[#A61E22] font-semibold">Safe Lockout Services — {city}, {state}</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": `Emergency Locksmith in ${city}`, "item": `https://www.1stcapitallocksmith.com/services/emergency-locksmith/${slug}/` },
+      { "@type": "ListItem", "position": 4, "name": `Safe Lockout Services in ${city}, ${state}`, "item": `https://www.1stcapitallocksmith.com/services/emergency-locksmith/${slug}/safe-lockout-services/` }
+    ]
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "LocalBusiness",
+    "@id": "https://www.1stcapitallocksmith.com",
+    "name": "1st Capital Locksmith", "telephone": "+13027350050",
+    "url": `https://www.1stcapitallocksmith.com/services/emergency-locksmith/${slug}/safe-lockout-services/`,
+    "description": `Safe lockout service in ${city}, ${state}. Professional safe opening for residential and commercial safes throughout ${county}, Delaware.`,
+    "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } },
+    "priceRange": "$$"
+  })} />
+
+  <section class="relative min-h-[420px] flex items-center py-12 md:py-20" style="background-image: url('/images/emergency-locksmith.jpg'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-[#A61E22]/85"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 w-full">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-white/80 font-semibold uppercase tracking-wide text-sm mb-3">Emergency Locksmith · {city}, {state}</p>
+          <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Safe Lockout Services in {city}, {state}</h1>
+          <p class="text-white/90 mb-6 leading-relaxed">
+            Locked out of your safe in {city}? Whether you've forgotten your combination, lost your key, or the locking mechanism has malfunctioned, 1st Capital Locksmith provides professional safe opening service throughout {city} and {county}. We work on residential and commercial safes without causing unnecessary damage.
+          </p>
+          <ul class="space-y-3">
+            {[
+              { label: "Forgotten Combination Safe Opening", href: "/services/safe-lockout-services" },
+              { label: "Lost Key Safe Opening", href: "/services/safe-lockout-services" },
+              { label: "Electronic Safe Lockout", href: "/services/safe-lockout-services" },
+              { label: "Mechanical / Dial Combination Safe", href: "/services/safe-lockout-services" },
+              { label: "Home Safe & Gun Safe Lockout", href: "/services/safe-lockout-services" },
+              { label: "Commercial & Office Safe", href: "/services/safe-lockout-services" },
+              { label: "Safe Lock Repair & Combination Change", href: "/services/safe-lockout-services" },
+            ].map(({ label, href }) => (
+              <li class="flex items-center gap-3 text-white/90">
+                <span class="w-5 h-5 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                </span>
+                <a href={href} class="hover:text-white hover:underline transition">{label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl p-8">
+          <h2 class="text-xl font-bold text-[#1A1F22] mb-5">Safe Lockout Service in {city}</h2>
+          <div class="space-y-4">
+            {[
+              { title: "Residential & Commercial Safes", desc: "We work on home safes, gun safes, fire safes, floor safes, and commercial office safes in " + city + "." },
+              { title: "Non-Destructive When Possible", desc: "We attempt non-destructive opening first — drilling is a last resort and only used when necessary." },
+              { title: "Electronic & Mechanical Locks", desc: "Keypad/electronic, dial combination, and key-lock safes throughout " + city + " and " + county + "." },
+              { title: "Combination Change Available", desc: "After opening your safe, we can set a new combination so you can get back to using it normally." },
+            ].map((item) => (
+              <div class="flex gap-3 items-start">
+                <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                </span>
+                <div><p class="font-semibold text-[#1A1F22] text-sm">{item.title}</p><p class="text-gray-500 text-sm">{item.desc}</p></div>
+              </div>
+            ))}
+          </div>
+          <div class="mt-6 pt-6 border-t border-gray-200">
+            <a href="tel:3027350050" class="block text-center bg-[#A61E22] text-white font-bold rounded-full py-3 px-6 hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#1A1F22] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div><p class="text-2xl font-bold text-[#A61E22]">Fast</p><p class="text-gray-300 text-sm mt-1">Emergency Response in {city}</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Mobile</p><p class="text-gray-300 text-sm mt-1">We Come to You</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">No Damage</p><p class="text-gray-300 text-sm mt-1">Professional Entry Tools</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Any Situation</p><p class="text-gray-300 text-sm mt-1">Home Â· Car Â· Business</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#F8F8F5] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Safe Opening Services in {city}</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">Safe Lockout Services in {city}, {state}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Electronic Safe Lockout</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Electronic safes with keypad entry are among the most common safes in homes and offices throughout {city}. They can lock out from forgotten codes, dead batteries, an electronic malfunction, or too many incorrect entry attempts. We diagnose the cause of the lockout and use the appropriate opening method — often non-destructively. After opening, we can reset the electronic lock to a new code.</p>
+          <div class="mt-4"><a href="/services/safe-lockout-services" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Safe Lockout Services →</a></div>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Mechanical & Dial Combination Safe</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Mechanical dial combination safes are built to higher standards and are more difficult to open without the combination — which is by design. If you've forgotten the combination, we use safe manipulation techniques that take longer but preserve the safe's integrity. We also service Sargent & Greenleaf, La Gard, and other combination locks used on residential and commercial safes in {city}.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Gun Safe & Fire Safe Opening</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Gun safes present unique challenges because they are built to resist forced entry. We use safe-specific opening techniques that allow us to open your gun safe without destroying the locking bolts or door. Fire safes are similarly built to resist opening — we work carefully to preserve the safe's fire-resistance integrity. We serve homeowners and collectors throughout {city} and {county}.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Safe Opening in {city}</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Once we've opened your safe, we can service the lock — replacing or resetting the combination on mechanical locks, or reprogramming electronic keypad locks. If the lock mechanism was faulty or damaged, we can replace it with new safe lock hardware. We want your safe to be fully functional after our visit so you can immediately resume using it to protect your valuables in {city}.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">More Services in {city}</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">More Locksmith Services in {city}, {state}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href={`/services/emergency-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Full emergency locksmith services in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/emergency-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Lockout Service in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Emergency lockout for homes, cars, and businesses in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/broken-key-extraction`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Broken Key Extraction in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Professional broken key extraction in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/emergency-house-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency House Lockout in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast emergency house lockout in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/emergency-car-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Car Lockout in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast car lockout response in {city}.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}/lock-repair`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Lock Repair in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Residential and commercial lock repair in {city}.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Residential Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Full residential locksmith services in {city}.</p>
+        </a>
+        <a href={`/services/automotive-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Automotive Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Car lockouts and key replacement in {city}.</p>
+        </a>
+        <a href={`/service-areas/${slug}`} class="bg-[#A61E22] rounded-2xl p-6 border border-[#A61E22] hover:bg-[#8C181B] transition">
+          <h3 class="font-bold text-white text-base mb-2">All Services in {city}, {state}</h3>
+          <p class="text-white/80 text-sm">View all locksmith services in {city}, {state}.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#A61E22] py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Locked Out of Your Safe in {city}, {state}?</h2>
+      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for professional safe opening in {city}. Residential and commercial safe lockout service throughout {county}, Delaware.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-white text-[#A61E22] px-8 py-4 font-bold text-lg hover:bg-gray-100 transition">Call (302) 735-0050</a>
+        <a href="/contact" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#A61E22] transition">Get Help Now</a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

@@ -1,4 +1,4 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
@@ -63,7 +63,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 
   <!-- Hero -->
   <section
-    class="relative min-h-[520px] flex items-center text-white py-20"
+    class="relative min-h-[280px] md:min-h-[520px] flex items-center text-white py-10 md:py-20"
     style="background-image: url('/images/hero.png'); background-size: cover; background-position: center;"
   >
     <div class="absolute inset-0 bg-black/70"></div>
@@ -280,7 +280,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
               Wherever you are in Clayton when a car key emergency happens, call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> and we'll come to you.
             </p>
             <div class="mt-4">
-              <a href="/services/automotive-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Automotive Locksmith Services →</a>
+              <a href="/services/automotive-locksmith/clayton-de" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Automotive Locksmith Services in Clayton →</a>
             </div>
           </div>
         </div>
@@ -305,7 +305,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
               Moved into a new home in Clayton recently? Getting the locks rekeyed is one of the smartest first steps you can take — and it's one of the most affordable services we offer.
             </p>
             <div class="mt-4">
-              <a href="/services/residential-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Residential Locksmith Services →</a>
+              <a href="/services/residential-locksmith/clayton-de" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Residential Locksmith Services in Clayton →</a>
             </div>
           </div>
         </div>
@@ -329,7 +329,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
               Whether you manage a small storefront on Main Street or a larger commercial facility off the highway, we have the experience and equipment to handle your security needs in Clayton.
             </p>
             <div class="mt-4">
-              <a href="/services/commercial-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Commercial Locksmith Services →</a>
+              <a href="/services/commercial-locksmith/clayton-de" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Commercial Locksmith Services in Clayton →</a>
             </div>
           </div>
         </div>
@@ -353,7 +353,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
               When you call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a>, a real person answers — not a recording. We'll get a technician heading your way and keep you updated on their arrival.
             </p>
             <div class="mt-4">
-              <a href="/services/emergency-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about our Emergency Locksmith Services →</a>
+              <a href="/services/emergency-locksmith/clayton-de" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Locksmith Services in Clayton →</a>
             </div>
           </div>
         </div>
@@ -554,6 +554,56 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 text-sm leading-relaxed">{faq.a}</p>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- All Services in Clayton -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Complete Service Directory</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-4">All Locksmith Services in Clayton, DE</h2>
+        <p class="text-gray-700 max-w-2xl mx-auto">Every service we provide in Clayton â€” click any service for detailed information and local pricing.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-sm font-bold text-[#A61E22] uppercase tracking-wide mb-3 pb-2 border-b border-gray-200">Automotive</h3>
+          <ul class="space-y-2">
+            <li><a href="/services/automotive-locksmith/clayton-de/car-lockout/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Car Lockout</a></li>
+            <li><a href="/services/automotive-locksmith/clayton-de/car-key-replacement/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Car Key Replacement</a></li>
+            <li><a href="/services/automotive-locksmith/clayton-de/key-fob-programming/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Key Fob Programming</a></li>
+            <li><a href="/services/automotive-locksmith/clayton-de/ignition-repair/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Ignition Repair</a></li>
+            <li><a href="/services/automotive-locksmith/clayton-de/ignition-replacement/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Ignition Replacement</a></li>
+          </ul>
+        </div>        <div>
+          <h3 class="text-sm font-bold text-[#A61E22] uppercase tracking-wide mb-3 pb-2 border-b border-gray-200">Residential</h3>
+          <ul class="space-y-2">
+            <li><a href="/services/residential-locksmith/clayton-de/house-lockout/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">House Lockout</a></li>
+            <li><a href="/services/residential-locksmith/clayton-de/lock-rekeying/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Lock Rekeying</a></li>
+            <li><a href="/services/residential-locksmith/clayton-de/deadbolt-installation/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Deadbolt Installation</a></li>
+            <li><a href="/services/residential-locksmith/clayton-de/lock-repair/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Lock Repair</a></li>
+            <li><a href="/services/residential-locksmith/clayton-de/lock-change/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Lock Change</a></li>
+            <li><a href="/services/residential-locksmith/clayton-de/mailbox-lock-replacement/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Mailbox Lock Replacement</a></li>
+          </ul>
+        </div>        <div>
+          <h3 class="text-sm font-bold text-[#A61E22] uppercase tracking-wide mb-3 pb-2 border-b border-gray-200">Commercial</h3>
+          <ul class="space-y-2">
+            <li><a href="/services/commercial-locksmith/clayton-de/office-lockout/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Office Lockout</a></li>
+            <li><a href="/services/commercial-locksmith/clayton-de/commercial-lock-rekeying/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Commercial Lock Rekeying</a></li>
+            <li><a href="/services/commercial-locksmith/clayton-de/master-key-systems/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Master Key Systems</a></li>
+            <li><a href="/services/commercial-locksmith/clayton-de/panic-bar-installation/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Panic Bar Installation</a></li>
+          </ul>
+        </div>        <div>
+          <h3 class="text-sm font-bold text-[#A61E22] uppercase tracking-wide mb-3 pb-2 border-b border-gray-200">Emergency</h3>
+          <ul class="space-y-2">
+            <li><a href="/services/emergency-locksmith/clayton-de/emergency-lockout/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Emergency Lockout</a></li>
+            <li><a href="/services/emergency-locksmith/clayton-de/emergency-house-lockout/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Emergency House Lockout</a></li>
+            <li><a href="/services/emergency-locksmith/clayton-de/emergency-car-lockout/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Emergency Car Lockout</a></li>
+            <li><a href="/services/emergency-locksmith/clayton-de/safe-lockout-services/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Safe Lockout Services</a></li>
+            <li><a href="/services/emergency-locksmith/clayton-de/broken-key-extraction/" class="text-gray-700 text-sm hover:text-[#A61E22] hover:underline transition">Broken Key Extraction</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

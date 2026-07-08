@@ -1,0 +1,204 @@
+﻿---
+import MainLayout from "../../../../layouts/MainLayout.astro";
+import { locations } from "../../../../data/locations";
+import type { Location } from "../../../../data/locations";
+
+export function getStaticPaths() {
+  return locations.map((loc) => ({
+    params: { location: loc.slug },
+    props: { location: loc },
+  }));
+}
+
+interface Props { location: Location; }
+const { location } = Astro.props;
+const { city, state, slug, county } = location;
+---
+
+<MainLayout
+  title={`Master Key Systems in ${city}, ${state} | Business Master Key | 1st Capital Locksmith`}
+  description={`Master key system design and installation in ${city}, ${state}. 1st Capital Locksmith designs and installs custom master key systems for businesses throughout ${city} and ${county}, Delaware. Call (302) 735-0050.`}
+>
+
+  <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-3">
+      <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+        <li><a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href={`/services/commercial-locksmith/${slug}`} class="hover:text-[#A61E22] transition font-medium">Commercial Locksmith in {city}</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><span class="text-[#A61E22] font-semibold">Master Key Systems — {city}, {state}</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": `Commercial Locksmith in ${city}`, "item": `https://www.1stcapitallocksmith.com/services/commercial-locksmith/${slug}/` },
+      { "@type": "ListItem", "position": 4, "name": `Master Key Systems in ${city}, ${state}`, "item": `https://www.1stcapitallocksmith.com/services/commercial-locksmith/${slug}/master-key-systems/` }
+    ]
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "LocalBusiness",
+    "@id": "https://www.1stcapitallocksmith.com",
+    "name": "1st Capital Locksmith", "telephone": "+13027350050",
+    "url": `https://www.1stcapitallocksmith.com/services/commercial-locksmith/${slug}/master-key-systems/`,
+    "description": `Master key system design and installation in ${city}, ${state}. Custom commercial master key systems for businesses throughout ${county}, Delaware.`,
+    "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } },
+    "priceRange": "$$"
+  })} />
+
+  <section class="relative min-h-[420px] flex items-center py-12 md:py-20" style="background-image: url('/images/commercial-locksmith.png'); background-size: cover; background-position: center;">
+  <div class="absolute inset-0 bg-[#0E1B2F]/85"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 w-full">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Commercial Locksmith · {city}, {state}</p>
+          <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Master Key Systems in {city}, {state}</h1>
+          <p class="text-gray-300 mb-6 leading-relaxed">
+            A well-designed master key system gives your business in {city} precisely layered access control — each employee accesses only what they need, while management holds a master key that opens everything. 1st Capital Locksmith designs, installs, and services custom master key systems for businesses throughout {city} and {county}.
+          </p>
+          <ul class="space-y-3">
+            {[
+              { label: "Master Key System Design & Planning", href: "/services/master-key-systems" },
+              { label: "Grand Master & Sub-Master Levels", href: "/services/master-key-systems" },
+              { label: "New System Installation", href: "/services/master-key-systems" },
+              { label: "Expansion of Existing Master Key System", href: "/services/master-key-systems" },
+              { label: "Rekeying Existing Master Key System", href: "/services/commercial-lock-rekeying" },
+              { label: "Multi-Building Master Key Systems", href: "/services/master-key-systems" },
+              { label: "Key Control & Restricted Key Systems", href: "/services/master-key-systems" },
+            ].map(({ label, href }) => (
+              <li class="flex items-center gap-3 text-gray-300">
+                <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                </span>
+                <a href={href} class="hover:text-white hover:underline transition">{label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="bg-[#1A2B45] rounded-2xl p-8 border border-[#2A3B55]">
+          <h2 class="text-xl font-bold text-white mb-5">Master Key Service in {city}</h2>
+          <div class="space-y-4">
+            {[
+              { title: "Custom Designed for Your Business", desc: "We plan the entire key hierarchy around your specific access control requirements in " + city + "." },
+              { title: "All Commercial Lock Brands", desc: "We work with Schlage, Medeco, BEST, Corbin-Russwin, Yale, and other commercial lock brands." },
+              { title: "Restricted Key Control", desc: "Optional restricted-key cylinders prevent unauthorized key duplication — protecting your system long-term." },
+              { title: "Ongoing Support", desc: "We maintain records of your key system so we can expand, rekey, or service it as your business grows in " + city + "." },
+            ].map((item) => (
+              <div class="flex gap-3 items-start">
+                <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                </span>
+                <div><p class="font-semibold text-white text-sm">{item.title}</p><p class="text-gray-400 text-sm">{item.desc}</p></div>
+              </div>
+            ))}
+          </div>
+          <div class="mt-6 pt-6 border-t border-[#2A3B55]">
+            <a href="tel:3027350050" class="block text-center bg-[#A61E22] text-white font-bold rounded-full py-3 px-6 hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#0E1B2F] py-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div><p class="text-2xl font-bold text-[#A61E22]">Commercial</p><p class="text-gray-300 text-sm mt-1">Business Locksmith</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Mobile</p><p class="text-gray-300 text-sm mt-1">We Come to {city}</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Fast</p><p class="text-gray-300 text-sm mt-1">Minimize Downtime in {city}</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Insured</p><p class="text-gray-300 text-sm mt-1">Verified Professional</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#F8F8F5] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Master Key Services in {city}</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">Master Key System Services in {city}, {state}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">New Master Key System Design</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Designing a master key system starts with mapping your access control requirements: which areas need to be accessible to all staff, which to management only, and which are restricted to specific roles. We work with you to understand your {city} business's layout and create a key hierarchy that gives the right people the right access — nothing more, nothing less. We handle both the planning and the installation.</p>
+          <div class="mt-4"><a href="/services/master-key-systems" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Master Key Systems →</a></div>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Grand Master & Sub-Master Levels</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">A complete master key system can have multiple layers: individual change keys (for specific locks), sub-master keys (for a zone or department), master keys (for the building), and a grand master key (for multiple buildings or the entire organization). We build each level of hierarchy precisely so that access control is maintained across your {city} property, no matter how complex the structure.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Expanding an Existing System</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">As your business in {city} grows, your master key system needs to grow with it. We can add new cylinders, new key levels, or additional sub-master zones to an existing system — as long as the original system has remaining key change combinations available. We analyze your current system and advise you on the best expansion path for your property in {county}.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-7 border border-gray-200">
+          <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Restricted Key Control</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Standard commercial keys can be duplicated at hardware stores, which is a serious concern for high-security master key systems. Restricted key cylinders use proprietary keyways and patented key profiles that cannot be legally duplicated without authorization. We can install restricted key systems in {city} that give you genuine key control — no unauthorized duplication, ever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">More Services in {city}</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">More Locksmith Services in {city}, {state}</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href={`/services/commercial-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Commercial Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Full commercial locksmith services in {city}.</p>
+        </a>
+        <a href={`/services/commercial-locksmith/${slug}/commercial-lock-rekeying`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Commercial Lock Rekeying in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Business lock rekeying after security incidents in {city}.</p>
+        </a>
+        <a href={`/services/commercial-locksmith/${slug}/panic-bar-installation`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Panic Bar Installation in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Panic bar and exit device installation in {city}.</p>
+        </a>
+        <a href={`/services/commercial-locksmith/${slug}/office-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Office Lockout Service in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast commercial lockout response in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}/emergency-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Lockout Service in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast emergency lockout response in {city}.</p>
+        </a>
+        <a href={`/services/emergency-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Fast emergency locksmith response in {city}.</p>
+        </a>
+        <a href={`/services/automotive-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Automotive Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">Car lockouts and key services for company vehicles in {city}.</p>
+        </a>
+        <a href={`/services/residential-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+          <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Residential Locksmith in {city}, {state}</h3>
+          <p class="text-gray-600 text-sm">House lockouts, rekeying, and deadbolts in {city}.</p>
+        </a>
+        <a href={`/service-areas/${slug}`} class="bg-[#A61E22] rounded-2xl p-6 border border-[#A61E22] hover:bg-[#8C181B] transition">
+          <h3 class="font-bold text-white text-base mb-2">All Services in {city}, {state}</h3>
+          <p class="text-white/80 text-sm">View all locksmith services in {city}, {state}.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-[#0E1B2F] py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Master Key System for Your Business in {city}, {state}?</h2>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith to discuss a custom master key system for your {city} business. We design, install, and maintain commercial key systems throughout {county}, Delaware.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
+        <a href="/contact" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>
