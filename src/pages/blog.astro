@@ -199,14 +199,14 @@ const categoryColors: Record<string, string> = {
         class="block bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition overflow-hidden mb-10 group"
       >
         <div class="grid md:grid-cols-2">
-          <div class="relative min-h-[280px] overflow-hidden">
+          <div class="relative h-52 md:min-h-[280px] overflow-hidden">
             <img src={posts[0].image} alt={posts[0].title} class="absolute inset-0 w-full h-full object-cover" />
             <div class="absolute inset-0 bg-black/40"></div>
             <div class="relative z-10 h-full flex items-end p-6">
               <span class="bg-[#A61E22] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Featured Article</span>
             </div>
           </div>
-          <div class="p-8 flex flex-col justify-center">
+          <div class="p-6 md:p-8 flex flex-col justify-center">
             <span class={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 w-fit ${categoryColors[posts[0].category]}`}>
               {posts[0].category}
             </span>
