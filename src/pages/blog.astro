@@ -194,45 +194,41 @@ const categoryColors: Record<string, string> = {
       </div>
 
       <!-- Featured Post -->
-      <a
-        href={`/blog/${posts[0].slug}`}
-        class="block bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition overflow-hidden mb-10 group"
-      >
-        <div class="grid md:grid-cols-2">
-          <div class="relative h-52 md:min-h-[280px] overflow-hidden">
-            <img src={posts[0].image} alt={posts[0].title} class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black/40"></div>
-            <div class="relative z-10 h-full flex items-end p-6">
-              <span class="bg-[#A61E22] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Featured Article</span>
-            </div>
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition overflow-hidden flex flex-col md:flex-row mb-10">
+        <a href={`/blog/${posts[0].slug}`} class="block relative h-48 md:h-auto md:min-h-[280px] md:w-1/2 overflow-hidden group flex-shrink-0">
+          <img src={posts[0].image} alt={posts[0].title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+          <div class="absolute bottom-3 left-3">
+            <span class="bg-[#A61E22] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Featured Article</span>
           </div>
-          <div class="p-6 md:p-8 flex flex-col justify-center">
-            <span class={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 w-fit ${categoryColors[posts[0].category]}`}>
-              {posts[0].category}
-            </span>
+        </a>
+        <div class="p-6 flex flex-col flex-1">
+          <span class={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 w-fit ${categoryColors[posts[0].category]}`}>
+            {posts[0].category}
+          </span>
+          <a href={`/blog/${posts[0].slug}`} class="group">
             <h2 class="text-lg md:text-2xl font-bold text-[#1A1F22] mb-3 group-hover:text-[#A61E22] transition leading-snug">
               {posts[0].title}
             </h2>
-            <p class="text-gray-600 leading-relaxed mb-4 line-clamp-3 md:line-clamp-none">{posts[0].excerpt}</p>
-            <div class="hidden md:flex flex-wrap gap-2 mb-4">
-              {posts[0].internalLinks.map((link) => (
-                <a
-                  href={link.href}
-                  onclick="event.stopPropagation()"
-                  class="text-xs font-semibold text-[#A61E22] border border-[#A61E22] px-3 py-1 rounded-full hover:bg-[#A61E22] hover:text-white transition"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-            <div class="flex items-center gap-4 text-sm text-gray-400">
-              <span>{posts[0].date}</span>
-              <span>·</span>
-              <span>{posts[0].readTime}</span>
-            </div>
+          </a>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3 md:line-clamp-none">{posts[0].excerpt}</p>
+          <div class="hidden md:flex flex-wrap gap-2 mb-4">
+            {posts[0].internalLinks.map((link) => (
+              <a
+                href={link.href}
+                class="text-xs font-semibold text-[#A61E22] border border-[#A61E22] px-3 py-1 rounded-full hover:bg-[#A61E22] hover:text-white transition"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+          <div class="flex items-center gap-4 text-xs text-gray-400 mt-auto">
+            <span>{posts[0].date}</span>
+            <span>·</span>
+            <span>{posts[0].readTime}</span>
           </div>
         </div>
-      </a>
+      </div>
 
       <!-- Rest of Posts -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
