@@ -4,3 +4,10 @@
 html, body {
 	background-color: #EDEBE7;
 }
+
+/* Reserve space for mobile sticky call button */
+@media (max-width: 767px) {
+	body {
+		padding-bottom: 4rem;
+	}
+}
