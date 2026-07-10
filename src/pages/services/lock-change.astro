@@ -416,39 +416,48 @@ import MainLayout from "../../layouts/MainLayout.astro";
   <!-- Photo Gallery Strip -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <!-- Photo Slot 2 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/lock-change-close-upp.jpg"
             alt="New lock being installed on a residential door in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">New Lock Installation</p>
+            <p class="text-gray-500 text-xs mt-1">Upgraded hardware installed and tested on-site</p>
+          </div>
         </div>
-        <!-- Photo Slot 3 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/locksmith-changing-lock.jpg"
             alt="1st Capital Locksmith technician changing a door lock in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Expert Technician On-Site</p>
+            <p class="text-gray-500 text-xs mt-1">We come directly to your home or business</p>
+          </div>
         </div>
-        <!-- Photo Slot 4 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/new-door-lock-delaware.jpg"
             alt="Newly installed door lock hardware on a Delaware home"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Matched To Your Specs</p>
+            <p class="text-gray-500 text-xs mt-1">New lock keyed and tested same day</p>
+          </div>
         </div>
       </div>
     </div>

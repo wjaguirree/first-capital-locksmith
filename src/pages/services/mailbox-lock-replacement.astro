@@ -396,39 +396,48 @@ import MainLayout from "../../layouts/MainLayout.astro";
   <!-- Photo Gallery Strip -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <!-- Photo Slot 2 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/mailbox-lock-close-up.jpg"
             alt="Close-up of a mailbox lock being replaced in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Mailbox Lock Replacement</p>
+            <p class="text-gray-500 text-xs mt-1">All types — residential, cluster & CBU mailboxes</p>
+          </div>
         </div>
-        <!-- Photo Slot 3 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/cluster-mailbox-unit-delaware.jpg"
             alt="Cluster mailbox unit CBU lock replacement service in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Cluster & CBU Units</p>
+            <p class="text-gray-500 text-xs mt-1">Multi-unit replacements for buildings & HOAs</p>
+          </div>
         </div>
-        <!-- Photo Slot 4 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/mailbox-new-keys.jpg"
             alt="New mailbox keys provided after lock replacement in Kent County Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">New Keys Provided On-Site</p>
+            <p class="text-gray-500 text-xs mt-1">Two keys cut and tested before we leave</p>
+          </div>
         </div>
       </div>
     </div>

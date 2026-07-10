@@ -415,39 +415,48 @@ import MainLayout from "../../layouts/MainLayout.astro";
   <!-- Photo Gallery Strip -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <!-- Photo Slot 2 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/commercial-lock-rekeying-close-up.jpg"
             alt="Close-up of commercial lock being rekeyed in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Commercial Lock Rekeying</p>
+            <p class="text-gray-500 text-xs mt-1">Pin-by-pin precision on all commercial lock types</p>
+          </div>
         </div>
-        <!-- Photo Slot 3 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/locksmith-rekeying-office-door.jpg"
             alt="Locksmith rekeying office door lock in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">On-Site at Your Business</p>
+            <p class="text-gray-500 text-xs mt-1">No need to remove locks or visit a shop</p>
+          </div>
         </div>
-        <!-- Photo Slot 4 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/commercial-master-keys-delaware.jpg"
             alt="Commercial master key system new keys provided in Kent County Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">New Keys Cut & Issued</p>
+            <p class="text-gray-500 text-xs mt-1">Fresh keys for all authorized personnel</p>
+          </div>
         </div>
       </div>
     </div>

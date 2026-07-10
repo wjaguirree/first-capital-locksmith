@@ -416,39 +416,48 @@ import MainLayout from "../../layouts/MainLayout.astro";
   <!-- Photo Gallery Strip -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <!-- Photo Slot 2 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/lock-repair-close-up.jpg"
             alt="Close-up of a lock being repaired by a professional locksmith in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Precision Lock Repair</p>
+            <p class="text-gray-500 text-xs mt-1">Worn parts replaced without removing the door</p>
+          </div>
         </div>
-        <!-- Photo Slot 3 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/locksmith-repairing-deadbolt.jpg"
             alt="1st Capital Locksmith technician repairing a deadbolt lock in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Expert On-Site Technician</p>
+            <p class="text-gray-500 text-xs mt-1">We diagnose and repair at your location</p>
+          </div>
         </div>
-        <!-- Photo Slot 4 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/door-lock-repair-delaware.jpg"
             alt="Residential door lock repair service in Kent County Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Fully Restored Function</p>
+            <p class="text-gray-500 text-xs mt-1">Lock tested before we leave your property</p>
+          </div>
         </div>
       </div>
     </div>

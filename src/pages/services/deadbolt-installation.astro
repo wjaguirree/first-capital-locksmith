@@ -413,39 +413,48 @@ import MainLayout from "../../layouts/MainLayout.astro";
   <!-- Photo Gallery Strip -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <!-- Photo Slot 2: Installed deadbolt close-up -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/deadbolt-installed.jpg"
             alt="Newly installed Grade 1 deadbolt on a front door in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Grade 1 Deadbolt Installed</p>
+            <p class="text-gray-500 text-xs mt-1">Drill and pick resistant — maximum residential security</p>
+          </div>
         </div>
-        <!-- Photo Slot 3: Technician at work -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/locksmith-installing-deadbolt.jpg"
             alt="1st Capital Locksmith technician installing a deadbolt lock in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Professional Installation</p>
+            <p class="text-gray-500 text-xs mt-1">Proper alignment, boring & strike plate reinforcement</p>
+          </div>
         </div>
-        <!-- Photo Slot 4: Deadbolt hardware / keypad deadbolt -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/keypad-deadbolt-delaware.jpg"
             alt="Keypad deadbolt lock installed on a residential door in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Keypad & Smart Lock Options</p>
+            <p class="text-gray-500 text-xs mt-1">Keyless entry installed throughout Delaware</p>
+          </div>
         </div>
       </div>
     </div>

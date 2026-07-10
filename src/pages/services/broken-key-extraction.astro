@@ -396,39 +396,48 @@ import MainLayout from "../../layouts/MainLayout.astro";
   <!-- Photo Gallery Strip -->
   <section class="bg-white py-14">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <!-- Photo Slot 2 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/broken-key-in-lock.jpg"
             alt="Broken key fragment lodged in a door lock cylinder in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Broken Key In The Lock</p>
+            <p class="text-gray-500 text-xs mt-1">Don't force it — our tools extract fragments cleanly</p>
+          </div>
         </div>
-        <!-- Photo Slot 3 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/key-extraction-tools.jpg"
             alt="Professional broken key extraction tools used by 1st Capital Locksmith in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Professional Extraction Tools</p>
+            <p class="text-gray-500 text-xs mt-1">Designed to remove fragments without damaging the lock</p>
+          </div>
         </div>
-        <!-- Photo Slot 4 -->
-        <div class="rounded-2xl overflow-hidden border border-gray-200 bg-[#F8F8F5] aspect-[4/3] flex items-center justify-center">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
           <img
             src="/images/broken-car-key-ignition.jpg"
             alt="Broken car key extraction from an ignition cylinder in Delaware"
-            class="w-full h-full object-cover"
+            class="w-full h-64 object-cover"
             width="480"
             height="360"
             loading="lazy"
           />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Broken Key In Ignition</p>
+            <p class="text-gray-500 text-xs mt-1">Extracted on-site — no tow required</p>
+          </div>
         </div>
       </div>
     </div>
