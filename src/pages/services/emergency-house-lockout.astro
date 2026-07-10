@@ -395,15 +395,27 @@ import MainLayout from "../../layouts/MainLayout.astro";
   <!-- Photo Gallery Strip -->
   <section class="bg-white py-12">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="grid grid-cols-3 gap-4">
-        <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F8F8F5]">
-          <img src="/images/house-lockout-1.jpg" alt="Emergency house lockout service in Delaware" class="w-full h-full object-cover" width="400" height="300" loading="lazy" />
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/house-lockout-1.jpg" alt="Emergency house lockout service in Delaware" class="w-full h-64 object-cover" width="400" height="300" loading="lazy" />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Emergency House Lockout</p>
+            <p class="text-gray-500 text-xs mt-1">Fast response throughout Kent County, Delaware</p>
+          </div>
         </div>
-        <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F8F8F5]">
-          <img src="/images/house-lockout-2.jpg" alt="Residential lock picking by professional locksmith" class="w-full h-full object-cover" width="400" height="300" loading="lazy" />
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/house-lockout-2.jpg" alt="Residential lock picking by professional locksmith" class="w-full h-64 object-cover" width="400" height="300" loading="lazy" />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Professional Lock Picking</p>
+            <p class="text-gray-500 text-xs mt-1">Non-destructive entry — lock stays fully intact</p>
+          </div>
         </div>
-        <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-[#F8F8F5]">
-          <img src="/images/house-lockout-3.jpg" alt="Delaware locksmith unlocking residential front door" class="w-full h-full object-cover" width="400" height="300" loading="lazy" />
+        <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+          <img src="/images/house-lockout-3.jpg" alt="Delaware locksmith unlocking residential front door" class="w-full h-64 object-cover" width="400" height="300" loading="lazy" />
+          <div class="p-4 bg-[#F8F8F5]">
+            <p class="font-semibold text-[#1A1F22] text-sm">Back Inside Safely</p>
+            <p class="text-gray-500 text-xs mt-1">Door and lock completely undamaged</p>
+          </div>
         </div>
       </div>
     </div>
