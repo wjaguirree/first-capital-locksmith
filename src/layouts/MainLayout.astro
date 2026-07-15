@@ -7,6 +7,11 @@ const {
   title = "1st Capital Locksmith | Mobile Locksmith in Dover, DE",
   description = "Mobile locksmith services in Delaware.",
   image = "/images/hero.png",
+  type = "website",
+  publishedTime,
+  modifiedTime,
+  authorName = "1st Capital Locksmith",
+  articleSection,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -28,14 +33,28 @@ const ogImage = new URL(image, Astro.site);
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
 
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+    <link rel="preconnect" href="https://maps.googleapis.com" />
+    <link rel="dns-prefetch" href="https://maps.googleapis.com" />
+
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="1st Capital Locksmith" />
     <meta property="og:locale" content="en_US" />
+
+    <!-- Article-specific Open Graph (blog posts) -->
+    {type === "article" && publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {type === "article" && modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {type === "article" && <meta property="article:author" content={authorName} />}
+    {type === "article" && articleSection && <meta property="article:section" content={articleSection} />}
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />

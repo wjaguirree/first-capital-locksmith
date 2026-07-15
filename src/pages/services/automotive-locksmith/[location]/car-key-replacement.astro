@@ -1,4 +1,4 @@
-﻿---
+---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
@@ -24,7 +24,7 @@ const { city, state, slug, county } = location;
     <div class="max-w-6xl mx-auto px-6 py-3">
       <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
         <li><a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a></li>
-        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services/" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
         <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href={`/services/automotive-locksmith/${slug}`} class="hover:text-[#A61E22] transition font-medium">Automotive Locksmith in {city}</a></li>
         <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><span class="text-[#A61E22] font-semibold">Car Key Replacement — {city}, {state}</span></li>
       </ol>
@@ -129,7 +129,7 @@ const { city, state, slug, county } = location;
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Transponder Key Replacement</h3>
           <p class="text-gray-600 text-sm leading-relaxed">Modern vehicle keys contain a transponder chip that must be programmed to match your car's immobilizer system. Without correct programming, the key will turn the ignition but the car won't start. We cut and program transponder keys on-site in {city} for all major vehicle makes and model years. Most vehicles from 1997 onward require transponder programming.</p>
-          <div class="mt-4"><a href="/services/car-key-replacement" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Car Key Replacement →</a></div>
+          <div class="mt-4"><a href="/services/car-key-replacement/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Car Key Replacement →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Smart Key & Proximity Key Replacement</h3>
@@ -142,7 +142,7 @@ const { city, state, slug, county } = location;
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Lost Key Replacement</h3>
           <p class="text-gray-600 text-sm leading-relaxed">Lost all your car keys? We can create a new working key from scratch using your VIN number and ownership documentation — no existing key required. We decode your vehicle's lock to cut the key, then program it to your car's immobilizer system. This service is available for all vehicle types throughout {city} and {county}.</p>
-          <div class="mt-4"><a href="/services/car-key-replacement" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lost Car Key Replacement →</a></div>
+          <div class="mt-4"><a href="/services/car-key-replacement/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lost Car Key Replacement →</a></div>
         </div>
       </div>
     </div>
@@ -202,7 +202,7 @@ const { city, state, slug, county } = location;
       <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for on-site car key cutting and programming in {city}. We come to you — no tow to a dealership needed.</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
-        <a href="/contact" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
+        <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
       </div>
     </div>
   </section>

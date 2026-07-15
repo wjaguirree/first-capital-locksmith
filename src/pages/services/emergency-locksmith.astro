@@ -1,4 +1,4 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
@@ -18,7 +18,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
           </svg>
-          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+          <a href="/services/" class="hover:text-[#A61E22] transition font-medium">Services</a>
         </li>
         <li class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -40,7 +40,35 @@ import MainLayout from "../../layouts/MainLayout.astro";
       { "@type": "ListItem", "position": 3, "name": "Emergency Locksmith", "item": "https://www.1stcapitallocksmith.com/services/emergency-locksmith/" }
     ]
   })} />
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Emergency Locksmith in Delaware",
+    "description": "Fast emergency locksmith service throughout Delaware — available 6 days a week for car lockouts, house lockouts, office lockouts, and broken key extraction. 1st Capital Locksmith dispatches immediately to your location anywhere in Kent County.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "1st Capital Locksmith",
+      "telephone": "+13027350050",
+      "address": { "@type": "PostalAddress", "addressLocality": "Dover", "addressRegion": "DE", "addressCountry": "US" }
+    },
+    "areaServed": { "@type": "State", "name": "Delaware" },
+    "serviceType": "Emergency Locksmith"
+  })} />
 
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Are you really available 24 hours a day in Delaware?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We answer calls and dispatch technicians 6 days a week. When you call (302) 735-0050, a real person will answer and get help on the way." } },
+      { "@type": "Question", "name": "How quickly can you respond to an emergency lockout in Delaware?", "acceptedAnswer": { "@type": "Answer", "text": "Response times vary based on your location and current demand, but we prioritize emergency calls and dispatch as fast as possible. Call us at (302) 735-0050 and we'll give you an honest estimate of how long we'll be." } },
+      { "@type": "Question", "name": "Will you damage my door or lock getting me back inside?", "acceptedAnswer": { "@type": "Answer", "text": "Our locksmiths are trained in professional non-destructive entry techniques. In the vast majority of lockout situations we can gain entry without any damage to your door, frame, or lock hardware. Destructive entry is only used as a last resort when no other option is available." } },
+      { "@type": "Question", "name": "Do you charge extra for after-hours or overnight emergency calls?", "acceptedAnswer": { "@type": "Answer", "text": "We provide upfront, transparent pricing before any work begins. We believe in honest pricing regardless of the time of day — call us at (302) 735-0050 and we'll give you a clear quote before we start." } },
+      { "@type": "Question", "name": "Can you extract a broken key and make a new one on the same visit?", "acceptedAnswer": { "@type": "Answer", "text": "In most cases, yes. Our mobile locksmiths carry key cutting equipment and extraction tools, so we can remove the broken fragment and cut you a new key on the spot. Call us to confirm based on your specific key type." } },
+      { "@type": "Question", "name": "What should I do while waiting for an emergency locksmith?", "acceptedAnswer": { "@type": "Answer", "text": "Stay in a safe, well-lit location if possible. Do not attempt to force the lock or door yourself — this almost always causes expensive damage and can make the locksmith's job harder. If you feel unsafe, stay on the phone with us or call 911." } }
+    ]
+  })} />
   <!-- Hero -->
   <section
     class="relative min-h-[340px] md:min-h-[550px] flex items-center text-white py-10 md:py-20"
@@ -63,7 +91,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           Call (302) 735-0050 Now
         </a>
         <a
-          href="/contact"
+          href="/contact/"
           class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
         >
           Get a Free Quote
@@ -180,7 +208,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
               Being locked out of your own home is one of those situations that immediately puts you on edge — especially late at night, in the cold or rain, or when you have children or pets inside waiting for you. It's stressful, it feels urgent, and the last thing you need is to wait hours for help to arrive.
             </p>
             <p class="text-gray-700 leading-relaxed mb-3">
-              1st Capital Locksmith responds to emergency house lockouts throughout Delaware 6 days a week. Our locksmiths use professional non-destructive entry methods to get you back inside without damaging your door, frame, or lock hardware. We work on all types of residential locks including standard <a href="/services/deadbolt-installation" class="text-[#A61E22] hover:underline font-medium">deadbolts</a>, knob locks, lever handles, and electronic keypad entry systems.
+              1st Capital Locksmith responds to emergency house lockouts throughout Delaware 6 days a week. Our locksmiths use professional non-destructive entry methods to get you back inside without damaging your door, frame, or lock hardware. We work on all types of residential locks including standard <a href="/services/deadbolt-installation/" class="text-[#A61E22] hover:underline font-medium">deadbolts</a>, knob locks, lever handles, and electronic keypad entry systems.
             </p>
             <p class="text-gray-700 leading-relaxed">
               No matter what time it is or what brought you to this situation, just call us. We'll dispatch as quickly as possible and get you back inside your home safely.
@@ -199,7 +227,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Emergency Car Lockout Service in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Locking your keys inside your car is one of the most common roadside emergencies — and it always seems to happen at the most inconvenient time. Whether your keys are sitting on the seat in plain sight, you've lost them entirely, or your <a href="/services/key-fob-programming" class="text-[#A61E22] hover:underline font-medium">key fob has stopped working</a>, 1st Capital Locksmith responds quickly to car lockouts throughout Delaware.
+              Locking your keys inside your car is one of the most common roadside emergencies — and it always seems to happen at the most inconvenient time. Whether your keys are sitting on the seat in plain sight, you've lost them entirely, or your <a href="/services/key-fob-programming/" class="text-[#A61E22] hover:underline font-medium">key fob has stopped working</a>, 1st Capital Locksmith responds quickly to car lockouts throughout Delaware.
             </p>
             <p class="text-gray-700 leading-relaxed mb-3">
               Our mobile locksmiths carry the professional tools needed to open vehicles without causing any damage to your door, window, or lock mechanism. We work on all makes and models including cars, trucks, vans, and SUVs. If you're in a parking lot, on the side of the road, at home, or anywhere else in Delaware, we'll come to your location.
@@ -286,7 +314,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
               Discovering that your home or business has been broken into is an unsettling experience. Beyond the emotional impact, you're also left with a very practical and urgent problem — damaged locks, a compromised door, and a property that isn't secure until the hardware is repaired or replaced. This is exactly the kind of situation where a fast emergency locksmith response matters most.
             </p>
             <p class="text-gray-700 leading-relaxed mb-3">
-              1st Capital Locksmith provides emergency post break-in service throughout Delaware. We respond quickly to repair or <a href="/services/lock-change" class="text-[#A61E22] hover:underline font-medium">replace damaged locks</a>, reinforce compromised entry points, and get your property secured as fast as possible. We work on residential and commercial properties and carry quality lock hardware on our vehicles so repairs can happen on the same visit.
+              1st Capital Locksmith provides emergency post break-in service throughout Delaware. We respond quickly to repair or <a href="/services/lock-change/" class="text-[#A61E22] hover:underline font-medium">replace damaged locks</a>, reinforce compromised entry points, and get your property secured as fast as possible. We work on residential and commercial properties and carry quality lock hardware on our vehicles so repairs can happen on the same visit.
             </p>
             <p class="text-gray-700 leading-relaxed">
               After a break-in, we can also walk through your property with you and make security recommendations to help reduce the risk of it happening again. Your safety is the priority — call us and we'll be there quickly.
@@ -371,7 +399,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
             </svg>
           </div>
           <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Serving All of Kent County</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We respond to emergency locksmith calls in <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/magnolia-de" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, and all surrounding communities throughout Kent County, Delaware.</p>
+          <p class="text-gray-700 text-sm leading-relaxed">We respond to emergency locksmith calls in <a href="/service-areas/dover-de/" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de/" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de/" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de/" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de/" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/magnolia-de/" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/frederica-de/" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, and all surrounding communities throughout Kent County, Delaware.</p>
         </div>
       </div>
     </div>
@@ -442,42 +470,42 @@ import MainLayout from "../../layouts/MainLayout.astro";
         <p class="text-gray-600 max-w-2xl mx-auto">Every emergency locksmith service — lockouts, broken key extraction, safe opening, and after-hours response — available 6 days a week throughout Delaware.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-        <a href="/services/emergency-lockout" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/emergency-lockout/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-3">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
           </div>
           <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Emergency Lockout</h3>
           <p class="text-gray-500 text-sm">Home, car & business lockouts 6 days a week</p>
         </a>
-        <a href="/services/emergency-car-lockout" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/emergency-car-lockout/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-3">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h7l1-2zM13 6h3l3 4v4h-2" /></svg>
           </div>
           <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Emergency Car Lockout</h3>
           <p class="text-gray-500 text-sm">Car lockout during business hours</p>
         </a>
-        <a href="/services/emergency-house-lockout" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/emergency-house-lockout/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-3">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9.75L12 3l9 6.75V21a1 1 0 01-1 1H4a1 1 0 01-1-1V9.75z" /><path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" /></svg>
           </div>
           <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Emergency House Lockout</h3>
           <p class="text-gray-500 text-sm">Residential lockout response 6 days a week</p>
         </a>
-        <a href="/services/broken-key-extraction" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/broken-key-extraction/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-3">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" /></svg>
           </div>
           <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Broken Key Extraction</h3>
           <p class="text-gray-500 text-sm">Key broken in lock or ignition</p>
         </a>
-        <a href="/services/safe-lockout-services" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/safe-lockout-services/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-3">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
           </div>
           <h3 class="font-bold text-[#1A1F22] group-hover:text-[#A61E22] transition mb-1">Safe Lockout Services</h3>
           <p class="text-gray-500 text-sm">Professional safe opening and access</p>
         </a>
-        <a href="/services/office-lockout" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/office-lockout/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-3">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V7a2 2 0 00-2-2H7a2 2 0 00-2 2v14M3 21h18M9 21v-4a1 1 0 011-1h4a1 1 0 011 1v4" /></svg>
           </div>
@@ -488,11 +516,11 @@ import MainLayout from "../../layouts/MainLayout.astro";
       <div class="border-t border-gray-200 pt-6 text-center">
         <p class="text-gray-500 text-sm mb-3">Also see our other locksmith services:</p>
         <div class="flex flex-wrap justify-center gap-4">
-          <a href="/services/residential-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Residential Locksmith</a>
+          <a href="/services/residential-locksmith/" class="text-[#A61E22] font-semibold hover:underline text-sm">Residential Locksmith</a>
           <span class="text-gray-300">|</span>
-          <a href="/services/automotive-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Automotive Locksmith</a>
+          <a href="/services/automotive-locksmith/" class="text-[#A61E22] font-semibold hover:underline text-sm">Automotive Locksmith</a>
           <span class="text-gray-300">|</span>
-          <a href="/services/commercial-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Commercial Locksmith</a>
+          <a href="/services/commercial-locksmith/" class="text-[#A61E22] font-semibold hover:underline text-sm">Commercial Locksmith</a>
           <span class="text-gray-300">|</span>
           <a href="/service-areas" class="text-[#A61E22] font-semibold hover:underline text-sm">Service Areas</a>
         </div>
@@ -563,7 +591,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           Call (302) 735-0050 Now
         </a>
         <a
-          href="/contact"
+          href="/contact/"
           class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-bold text-lg hover:bg-white hover:text-[#1A1F22] transition"
         >
           Get a Free Quote

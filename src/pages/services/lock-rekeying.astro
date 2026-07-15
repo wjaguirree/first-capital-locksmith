@@ -18,7 +18,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
           </svg>
-          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+          <a href="/services/" class="hover:text-[#A61E22] transition font-medium">Services</a>
         </li>
         <li class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -38,6 +38,36 @@ import MainLayout from "../../layouts/MainLayout.astro";
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
       { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
       { "@type": "ListItem", "position": 3, "name": "Lock Rekeying", "item": "https://www.1stcapitallocksmith.com/services/lock-rekeying/" }
+    ]
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Lock Rekeying in Delaware",
+    "description": "Professional mobile lock rekeying throughout Delaware. 1st Capital Locksmith rekeys deadbolts and knob locks on-site — old keys stop working, new keys provided on the spot. Serving Dover, Milford, Smyrna, Camden, Harrington and all of Kent County.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "1st Capital Locksmith",
+      "telephone": "+13027350050",
+      "address": { "@type": "PostalAddress", "addressLocality": "Dover", "addressRegion": "DE", "addressCountry": "US" }
+    },
+    "areaServed": { "@type": "State", "name": "Delaware" },
+    "serviceType": "Lock Rekeying"
+  })} />
+
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the difference between rekeying and replacing a lock?", "acceptedAnswer": { "@type": "Answer", "text": "Rekeying changes the internal pin configuration of an existing lock cylinder so that only a new key works — the lock hardware stays in place. Lock replacement involves removing the entire lock and installing brand-new hardware. Rekeying is significantly less expensive and achieves the same security result when the lock hardware is in good condition." } },
+      { "@type": "Question", "name": "Will my old keys definitely not work after rekeying?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — 100%. When a lock is rekeyed, the internal pins are physically replaced with a new set configured to a different key cut pattern. The old key's profile no longer matches the new pin heights, so it cannot operate the lock. Every old key, including any copies that were made, is immediately and permanently deactivated." } },
+      { "@type": "Question", "name": "Can you rekey my locks if I don't have a working key?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. If you don't have a working key, we first need to pick or bypass the lock to open it, and then rekey the cylinder. This adds a small amount of time to the service but is a very common scenario — particularly after a lockout, a lost key situation, or when someone moves into a home where no working key was provided." } },
+      { "@type": "Question", "name": "Can you rekey my locks so they all use one key?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — this is called 'keyed alike' service. We rekey every lock in your home to the same pin configuration so one key operates all of them. This works even if your existing locks are different brands or models." } },
+      { "@type": "Question", "name": "How many locks can you rekey in one visit?", "acceptedAnswer": { "@type": "Answer", "text": "We can rekey as many locks as you need in a single visit. Most homes have two to four exterior lock cylinders, which we can complete in well under an hour. Larger properties or rental units with more entry points take a bit longer but are still typically handled in one efficient visit." } },
+      { "@type": "Question", "name": "What brands of locks can you rekey?", "acceptedAnswer": { "@type": "Answer", "text": "We rekey all major residential lock brands including Kwikset, Schlage, Defiant, Baldwin, Yale, and others. If you have a high-security lock such as Medeco, Mul-T-Lock, or Abloy, these can also be rekeyed — call us and we will confirm based on the specific model." } }
     ]
   })} />
 
@@ -63,7 +93,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           Call (302) 735-0050
         </a>
         <a
-          href="/contact"
+          href="/contact/"
           class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
         >
           Get a Free Quote
@@ -112,7 +142,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
             The lock hardware itself — the deadbolt, knob, or lever — stays exactly where it is. You are not replacing the lock, just changing what key opens it. This makes rekeying significantly more cost-effective than a full lock change while providing exactly the same security outcome: complete control over who has access to your home.
           </p>
           <p class="text-gray-700 leading-relaxed">
-            1st Capital Locksmith provides fully mobile rekeying throughout <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, and all Kent County communities. We come to your home, rekey every lock you need done in a single visit, and leave you with new keys and peace of mind.
+            1st Capital Locksmith provides fully mobile rekeying throughout <a href="/service-areas/dover-de/" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de/" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de/" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de/" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de/" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/frederica-de/" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/felton-de/" class="text-[#A61E22] hover:underline font-medium">Felton</a>, and all Kent County communities. We come to your home, rekey every lock you need done in a single visit, and leave you with new keys and peace of mind.
           </p>
         </div>
         <div class="flex flex-col gap-6">
@@ -224,7 +254,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
               If you have lost your house keys — or had them stolen — rekeying is the right response. Lost keys can turn up anywhere, and if they are found by someone who knows or can determine your address, they have a key to your home. Stolen keys in particular represent a direct and immediate security threat that should be addressed as soon as possible.
             </p>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Rekeying after a lost or stolen key situation is faster and less expensive than <a href="/services/lock-change" class="text-[#A61E22] hover:underline font-medium">replacing the entire lock set</a>. We come to your home, remove the cylinder from each affected lock, replace the internal pins with a new configuration, cut you fresh keys, and test everything thoroughly before leaving. The whole process per lock takes only a matter of minutes once we are on-site.
+              Rekeying after a lost or stolen key situation is faster and less expensive than <a href="/services/lock-change/" class="text-[#A61E22] hover:underline font-medium">replacing the entire lock set</a>. We come to your home, remove the cylinder from each affected lock, replace the internal pins with a new configuration, cut you fresh keys, and test everything thoroughly before leaving. The whole process per lock takes only a matter of minutes once we are on-site.
             </p>
             <p class="text-gray-700 leading-relaxed">
               If your keys were stolen as part of a break-in or theft attempt, consider rekeying all exterior locks at once for complete security. Call 1st Capital Locksmith and we will assess your situation and advise on the best approach throughout Delaware.
@@ -242,7 +272,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Keyed Alike — One Key for Every Lock in Your Home</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Many homes accumulate locks over time — a <a href="/services/deadbolt-installation" class="text-[#A61E22] hover:underline font-medium">deadbolt</a> on the front door, a knob lock on the back door, a separate lock on the garage entry, and perhaps locks on side gates or outbuildings — all requiring different keys. This creates a bulky and confusing keyring that is frustrating to deal with every day. The solution is a "keyed alike" rekeying job, where we configure all of your locks to operate on the same single key.
+              Many homes accumulate locks over time — a <a href="/services/deadbolt-installation/" class="text-[#A61E22] hover:underline font-medium">deadbolt</a> on the front door, a knob lock on the back door, a separate lock on the garage entry, and perhaps locks on side gates or outbuildings — all requiring different keys. This creates a bulky and confusing keyring that is frustrating to deal with every day. The solution is a "keyed alike" rekeying job, where we configure all of your locks to operate on the same single key.
             </p>
             <p class="text-gray-700 leading-relaxed mb-3">
               We can rekey your entire home — regardless of whether the existing locks are the same brand or model — so that every door opens with one key. This requires us to rekey each cylinder to the same pin configuration that matches a single key blank. The result is a clean, convenient setup where you carry one house key that opens everything.
@@ -505,7 +535,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
         <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22]">Other Residential Locksmith Services We Offer</h2>
       </div>
       <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-        <a href="/services/lock-change" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/lock-change/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -514,7 +544,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <h3 class="font-bold text-[#1A1F22] mb-1">Lock Change</h3>
           <p class="text-gray-500 text-sm">Full lock replacement when upgrading or replacing damaged hardware</p>
         </a>
-        <a href="/services/deadbolt-installation" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/deadbolt-installation/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -523,7 +553,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <h3 class="font-bold text-[#1A1F22] mb-1">Deadbolt Installation</h3>
           <p class="text-gray-500 text-sm">New deadbolt installation for upgraded home security</p>
         </a>
-        <a href="/services/house-lockout" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/house-lockout/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -532,7 +562,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <h3 class="font-bold text-[#1A1F22] mb-1">House Lockout</h3>
           <p class="text-gray-500 text-sm">Locked out of your home? We get you back in fast</p>
         </a>
-        <a href="/services/residential-locksmith" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/residential-locksmith/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -622,7 +652,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
           </summary>
           <p class="mt-4 text-gray-700 leading-relaxed">
-            Yes — we serve the entire Kent County area including <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, <a href="/service-areas/magnolia-de" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/woodside-de" class="text-[#A61E22] hover:underline font-medium">Woodside</a>, <a href="/service-areas/wyoming-de" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, <a href="/service-areas/cheswold-de" class="text-[#A61E22] hover:underline font-medium">Cheswold</a>, <a href="/service-areas/clayton-de" class="text-[#A61E22] hover:underline font-medium">Clayton</a>, <a href="/service-areas/leipsic-de" class="text-[#A61E22] hover:underline font-medium">Leipsic</a>, <a href="/service-areas/little-creek-de" class="text-[#A61E22] hover:underline font-medium">Little Creek</a>, <a href="/service-areas/bowers-de" class="text-[#A61E22] hover:underline font-medium">Bowers</a>, <a href="/service-areas/viola-de" class="text-[#A61E22] hover:underline font-medium">Viola</a>, <a href="/service-areas/kenton-de" class="text-[#A61E22] hover:underline font-medium">Kenton</a>, <a href="/service-areas/hartly-de" class="text-[#A61E22] hover:underline font-medium">Hartly</a>, and all surrounding communities. Call (302) 735-0050 to schedule your rekeying service anywhere in Delaware.
+            Yes — we serve the entire Kent County area including <a href="/service-areas/dover-de/" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de/" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de/" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de/" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de/" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/frederica-de/" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/felton-de/" class="text-[#A61E22] hover:underline font-medium">Felton</a>, <a href="/service-areas/magnolia-de/" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/woodside-de/" class="text-[#A61E22] hover:underline font-medium">Woodside</a>, <a href="/service-areas/wyoming-de/" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, <a href="/service-areas/cheswold-de/" class="text-[#A61E22] hover:underline font-medium">Cheswold</a>, <a href="/service-areas/clayton-de/" class="text-[#A61E22] hover:underline font-medium">Clayton</a>, <a href="/service-areas/leipsic-de/" class="text-[#A61E22] hover:underline font-medium">Leipsic</a>, <a href="/service-areas/little-creek-de/" class="text-[#A61E22] hover:underline font-medium">Little Creek</a>, <a href="/service-areas/bowers-de/" class="text-[#A61E22] hover:underline font-medium">Bowers</a>, <a href="/service-areas/viola-de/" class="text-[#A61E22] hover:underline font-medium">Viola</a>, <a href="/service-areas/kenton-de/" class="text-[#A61E22] hover:underline font-medium">Kenton</a>, <a href="/service-areas/hartly-de/" class="text-[#A61E22] hover:underline font-medium">Hartly</a>, and all surrounding communities. Call (302) 735-0050 to schedule your rekeying service anywhere in Delaware.
           </p>
         </details>
       </div>
@@ -680,7 +710,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           Call (302) 735-0050
         </a>
         <a
-          href="/contact"
+          href="/contact/"
           class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
         >
           Request a Quote

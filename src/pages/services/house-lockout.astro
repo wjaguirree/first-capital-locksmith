@@ -1,4 +1,4 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
@@ -18,7 +18,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
           </svg>
-          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+          <a href="/services/" class="hover:text-[#A61E22] transition font-medium">Services</a>
         </li>
         <li class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -40,7 +40,35 @@ import MainLayout from "../../layouts/MainLayout.astro";
       { "@type": "ListItem", "position": 3, "name": "House Lockout", "item": "https://www.1stcapitallocksmith.com/services/house-lockout/" }
     ]
   })} />
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "House Lockout Service in Delaware",
+    "description": "Professional residential lockout service throughout Delaware. 1st Capital Locksmith uses non-destructive entry techniques to get you back inside your home fast — serving Dover, Milford, Smyrna, Camden, Harrington and all of Kent County.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "1st Capital Locksmith",
+      "telephone": "+13027350050",
+      "address": { "@type": "PostalAddress", "addressLocality": "Dover", "addressRegion": "DE", "addressCountry": "US" }
+    },
+    "areaServed": { "@type": "State", "name": "Delaware" },
+    "serviceType": "House Lockout Service"
+  })} />
 
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How fast can you get to me for a house lockout in Delaware?", "acceptedAnswer": { "@type": "Answer", "text": "Response times vary depending on your location and our current workload, but we prioritize residential lockouts and dispatch as quickly as possible. For most locations throughout Kent County, we aim to arrive within a reasonable timeframe. Call us at (302) 735-0050 and we can give you a realistic estimate for your specific location." } },
+      { "@type": "Question", "name": "Will you damage my door or lock to get me back in?", "acceptedAnswer": { "@type": "Answer", "text": "No — we use professional non-destructive entry techniques. This means we pick or bypass the lock using specialized locksmith tools, not force. Your door frame, lock hardware, and door remain completely intact in the vast majority of house lockouts we handle." } },
+      { "@type": "Question", "name": "What do I need to show you to prove I live there?", "acceptedAnswer": { "@type": "Answer", "text": "We ask for a government-issued photo ID showing the address of the property, or a combination of ID and supporting documentation such as a lease agreement, utility bill, or mail addressed to you at the property. This verification step is standard practice for any reputable locksmith." } },
+      { "@type": "Question", "name": "Should I rekey my locks after a lockout?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the reason for the lockout. If you simply left your keys inside, rekeying is not necessary. If you lost your keys somewhere unknown, rekeying is strongly recommended so that anyone who finds them cannot access your home. Rekeying can be done on the same visit as your lockout service." } },
+      { "@type": "Question", "name": "Can you unlock any type of residential door lock?", "acceptedAnswer": { "@type": "Answer", "text": "We work on all common residential lock types including Kwikset, Schlage, Defiant, Baldwin, Yale, and similar brands — standard knob locks, deadbolts, lever handle locks, and entry handle sets. If you have a high-security lock such as Medeco or Mul-T-Lock, the process may take longer but we are experienced with these as well." } },
+      { "@type": "Question", "name": "Do you help with house lockouts in all of Kent County?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we serve the entire Kent County area including Dover, Milford, Smyrna, Camden, Harrington, Frederica, Felton, Magnolia, Woodside, Wyoming, Cheswold, Clayton, Leipsic, Little Creek, Bowers, Viola, Kenton, Hartly, and all surrounding communities. Call (302) 735-0050 and we will head to your location." } }
+    ]
+  })} />
   <!-- Hero -->
   <section
     class="relative min-h-[340px] md:min-h-[550px] flex items-center text-white py-10 md:py-20"
@@ -63,7 +91,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           Call (302) 735-0050
         </a>
         <a
-          href="/contact"
+          href="/contact/"
           class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
         >
           Get a Free Quote
@@ -221,7 +249,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Lost House Keys — Lockout & Lock Rekey in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              When you have lost your house keys entirely — not just left them inside — the situation calls for a two-step approach. First, we get you back into your home. Second, we strongly recommend <a href="/services/lock-rekeying" class="text-[#A61E22] hover:underline font-medium">rekeying your locks</a> so that the lost keys no longer work. If your keys are lost somewhere unknown, there is always the possibility that someone else could find them and use them to access your home, particularly if the address is identifiable.
+              When you have lost your house keys entirely — not just left them inside — the situation calls for a two-step approach. First, we get you back into your home. Second, we strongly recommend <a href="/services/lock-rekeying/" class="text-[#A61E22] hover:underline font-medium">rekeying your locks</a> so that the lost keys no longer work. If your keys are lost somewhere unknown, there is always the possibility that someone else could find them and use them to access your home, particularly if the address is identifiable.
             </p>
             <p class="text-gray-700 leading-relaxed mb-3">
               After unlocking your door, we can rekey your existing locks on the spot — a quick and affordable process that changes the internal pin configuration of your locks so your old lost keys no longer operate them. You receive new keys cut to the updated lock pattern. This gives you complete peace of mind that your home is secure again, without the expense of replacing the lock hardware itself.
@@ -297,7 +325,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
               Sometimes a lockout happens even with the key in hand. You insert your house key into the lock, turn it as usual — and nothing happens. The key turns but the deadbolt won't retract, the latch won't disengage, or the key goes in but will not turn at all. This is a lock failure situation rather than a pure lockout, and it can be caused by a worn or failed cylinder, a misaligned door that is putting stress on the bolt, or a lock mechanism that has seized internally.
             </p>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Our technicians diagnose the problem on-site. In some cases, a worn or faulty cylinder can be repaired. In others, <a href="/services/lock-change" class="text-[#A61E22] hover:underline font-medium">lock replacement</a> is the right call — particularly if the lock is old, was of low quality to begin with, or has been tampered with. We carry replacement <a href="/services/deadbolt-installation" class="text-[#A61E22] hover:underline font-medium">deadbolts</a> and knob locks and can install a new lock on the same visit so you are not left waiting for hardware to be sourced.
+              Our technicians diagnose the problem on-site. In some cases, a worn or faulty cylinder can be repaired. In others, <a href="/services/lock-change/" class="text-[#A61E22] hover:underline font-medium">lock replacement</a> is the right call — particularly if the lock is old, was of low quality to begin with, or has been tampered with. We carry replacement <a href="/services/deadbolt-installation/" class="text-[#A61E22] hover:underline font-medium">deadbolts</a> and knob locks and can install a new lock on the same visit so you are not left waiting for hardware to be sourced.
             </p>
             <p class="text-gray-700 leading-relaxed">
               A lock that fails once is likely to fail again — it is worth addressing properly rather than forcing it open repeatedly. Call 1st Capital Locksmith for professional lock diagnosis and replacement throughout Delaware.
@@ -505,7 +533,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
         <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22]">Other Residential Locksmith Services We Offer</h2>
       </div>
       <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-        <a href="/services/lock-rekeying" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/lock-rekeying/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
@@ -514,7 +542,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <h3 class="font-bold text-[#1A1F22] mb-1">Lock Rekeying</h3>
           <p class="text-gray-500 text-sm">Change who can access your home without replacing the hardware</p>
         </a>
-        <a href="/services/lock-change" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/lock-change/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -523,7 +551,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <h3 class="font-bold text-[#1A1F22] mb-1">Lock Change</h3>
           <p class="text-gray-500 text-sm">Full lock replacement with new hardware installed professionally</p>
         </a>
-        <a href="/services/deadbolt-installation" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/deadbolt-installation/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -532,7 +560,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <h3 class="font-bold text-[#1A1F22] mb-1">Deadbolt Installation</h3>
           <p class="text-gray-500 text-sm">Add or upgrade deadbolts for improved home security</p>
         </a>
-        <a href="/services/residential-locksmith" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/residential-locksmith/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#F8F8F5] group-hover:bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#A61E22] group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -622,7 +650,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <span class="text-[#A61E22] text-2xl group-open:rotate-45 transition-transform">+</span>
           </summary>
           <p class="mt-4 text-gray-700 leading-relaxed">
-            Yes — we serve the entire Kent County area including <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/felton-de" class="text-[#A61E22] hover:underline font-medium">Felton</a>, <a href="/service-areas/magnolia-de" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/woodside-de" class="text-[#A61E22] hover:underline font-medium">Woodside</a>, <a href="/service-areas/wyoming-de" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, <a href="/service-areas/cheswold-de" class="text-[#A61E22] hover:underline font-medium">Cheswold</a>, <a href="/service-areas/clayton-de" class="text-[#A61E22] hover:underline font-medium">Clayton</a>, <a href="/service-areas/leipsic-de" class="text-[#A61E22] hover:underline font-medium">Leipsic</a>, <a href="/service-areas/little-creek-de" class="text-[#A61E22] hover:underline font-medium">Little Creek</a>, <a href="/service-areas/bowers-de" class="text-[#A61E22] hover:underline font-medium">Bowers</a>, <a href="/service-areas/viola-de" class="text-[#A61E22] hover:underline font-medium">Viola</a>, <a href="/service-areas/kenton-de" class="text-[#A61E22] hover:underline font-medium">Kenton</a>, <a href="/service-areas/hartly-de" class="text-[#A61E22] hover:underline font-medium">Hartly</a>, and all surrounding communities. If you are in Kent County, Delaware, call (302) 735-0050 and we will head to your location.
+            Yes — we serve the entire Kent County area including <a href="/service-areas/dover-de/" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de/" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de/" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de/" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de/" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/frederica-de/" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/felton-de/" class="text-[#A61E22] hover:underline font-medium">Felton</a>, <a href="/service-areas/magnolia-de/" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/woodside-de/" class="text-[#A61E22] hover:underline font-medium">Woodside</a>, <a href="/service-areas/wyoming-de/" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, <a href="/service-areas/cheswold-de/" class="text-[#A61E22] hover:underline font-medium">Cheswold</a>, <a href="/service-areas/clayton-de/" class="text-[#A61E22] hover:underline font-medium">Clayton</a>, <a href="/service-areas/leipsic-de/" class="text-[#A61E22] hover:underline font-medium">Leipsic</a>, <a href="/service-areas/little-creek-de/" class="text-[#A61E22] hover:underline font-medium">Little Creek</a>, <a href="/service-areas/bowers-de/" class="text-[#A61E22] hover:underline font-medium">Bowers</a>, <a href="/service-areas/viola-de/" class="text-[#A61E22] hover:underline font-medium">Viola</a>, <a href="/service-areas/kenton-de/" class="text-[#A61E22] hover:underline font-medium">Kenton</a>, <a href="/service-areas/hartly-de/" class="text-[#A61E22] hover:underline font-medium">Hartly</a>, and all surrounding communities. If you are in Kent County, Delaware, call (302) 735-0050 and we will head to your location.
           </p>
         </details>
       </div>
@@ -680,7 +708,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           Call (302) 735-0050
         </a>
         <a
-          href="/contact"
+          href="/contact/"
           class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
         >
           Request a Quote

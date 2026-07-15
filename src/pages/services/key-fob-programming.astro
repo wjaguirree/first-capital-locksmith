@@ -18,7 +18,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
           </svg>
-          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+          <a href="/services/" class="hover:text-[#A61E22] transition font-medium">Services</a>
         </li>
         <li class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -38,6 +38,36 @@ import MainLayout from "../../layouts/MainLayout.astro";
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
       { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
       { "@type": "ListItem", "position": 3, "name": "Key Fob Programming", "item": "https://www.1stcapitallocksmith.com/services/key-fob-programming/" }
+    ]
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Key Fob Programming in Delaware",
+    "description": "Professional mobile key fob programming and replacement throughout Delaware. 1st Capital Locksmith programs remote key fobs and smart keys for all major vehicle makes and models on-site — no dealership required.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "1st Capital Locksmith",
+      "telephone": "+13027350050",
+      "address": { "@type": "PostalAddress", "addressLocality": "Dover", "addressRegion": "DE", "addressCountry": "US" }
+    },
+    "areaServed": { "@type": "State", "name": "Delaware" },
+    "serviceType": "Key Fob Programming"
+  })} />
+
+  <!-- Schema: FAQ -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How much does key fob programming cost in Delaware?", "acceptedAnswer": { "@type": "Answer", "text": "Cost varies based on your vehicle's year, make, and model, and the type of fob required. We provide a clear upfront quote before any work begins. Call us at (302) 735-0050 with your vehicle details for a fast, accurate estimate." } },
+      { "@type": "Question", "name": "Can I just buy a fob online and have you program it?", "acceptedAnswer": { "@type": "Answer", "text": "In some cases, yes — if you can confirm the fob you've purchased is the correct part number for your exact vehicle. However, we recommend calling us first so we can source the right fob and guarantee compatibility. Using an incorrect or incompatible fob can result in failed programming and wasted money." } },
+      { "@type": "Question", "name": "Why won't my key fob work after I changed the battery?", "acceptedAnswer": { "@type": "Answer", "text": "If a fresh battery doesn't restore your fob's function, the fob itself has likely failed internally, or in some cases the fob may have lost its programming and needs to be re-paired to the vehicle. Call us and we can diagnose whether a reprogramming will fix it or whether a replacement is needed." } },
+      { "@type": "Question", "name": "Do you program key fobs for all car brands?", "acceptedAnswer": { "@type": "Answer", "text": "We program fobs for the vast majority of vehicle makes and models including Toyota, Honda, Ford, Chevrolet, Dodge, Nissan, Hyundai, Kia, BMW, Mercedes-Benz, Jeep, RAM, Subaru, Lexus, Infiniti, and many others. Call us with your year, make, and model to confirm we can service your vehicle." } },
+      { "@type": "Question", "name": "Can you program a push-to-start smart key?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Smart keys and proximity fobs for push-to-start vehicles are a service we handle regularly throughout Delaware. We carry the appropriate diagnostic programming tools to pair smart keys to your vehicle's immobilizer and keyless entry system on-site." } },
+      { "@type": "Question", "name": "How long does key fob programming take?", "acceptedAnswer": { "@type": "Answer", "text": "Most key fob programming visits take 20-40 minutes on-site. The time varies slightly based on the vehicle and fob type. Smart keys and more complex systems may take a little longer, but the job is typically completed in a single visit." } }
     ]
   })} />
 
@@ -63,7 +93,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           Call (302) 735-0050
         </a>
         <a
-          href="/contact"
+          href="/contact/"
           class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
         >
           Get a Free Quote
@@ -112,7 +142,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
             The programming process requires specialized diagnostic equipment that communicates directly with your vehicle's security system. Simply buying a replacement fob and swapping the battery won't work — every fob must be electronically paired to your specific vehicle. That's exactly what 1st Capital Locksmith does on-site throughout Delaware. We source quality replacement fobs for your vehicle, program them to your car's system, and have everything working correctly in a single visit.
           </p>
           <p class="text-gray-700 leading-relaxed">
-            We serve drivers throughout <a href="/service-areas/dover-de" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/frederica-de" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, and all surrounding communities in Kent County. Whether you've lost your only fob or just want a spare, call us and we'll take care of it at your location.
+            We serve drivers throughout <a href="/service-areas/dover-de/" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de/" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de/" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de/" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de/" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/frederica-de/" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, and all surrounding communities in Kent County. Whether you've lost your only fob or just want a spare, call us and we'll take care of it at your location.
           </p>
         </div>
         <div class="flex flex-col gap-6">
@@ -264,7 +294,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
               Many vehicles — particularly trucks, SUVs, and newer models — come factory-equipped with remote start functionality built into the key fob. Being able to start your car from inside your home or office before you head out is a genuine convenience, especially during Delaware's hot summers and cold winters. When a remote start fob is lost or fails, that convenience disappears along with it.
             </p>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Factory remote start fobs are integrated into the vehicle's security and <a href="/services/ignition-repair" class="text-[#A61E22] hover:underline font-medium">ignition system</a> and require the same professional programming equipment as any other fob. 1st Capital Locksmith can source and program replacement remote start fobs for factory-installed systems on a wide range of vehicles, all on-site at your location throughout Delaware.
+              Factory remote start fobs are integrated into the vehicle's security and <a href="/services/ignition-repair/" class="text-[#A61E22] hover:underline font-medium">ignition system</a> and require the same professional programming equipment as any other fob. 1st Capital Locksmith can source and program replacement remote start fobs for factory-installed systems on a wide range of vehicles, all on-site at your location throughout Delaware.
             </p>
             <p class="text-gray-700 leading-relaxed">
               Note: We program factory-installed remote start systems. Aftermarket remote start systems vary widely by brand and installer, so call us with your vehicle details and system information and we will let you know if we can assist.
@@ -295,7 +325,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
               Sometimes a fob doesn't get lost — it just stops working. The buttons stop responding, the casing cracks from being dropped, or the internal circuit board fails. Before assuming you need a full replacement, there are a couple of things worth checking: first, try a fresh battery (many fob failures are simply a dead battery). If a new battery doesn't solve it, the fob itself has likely failed internally and needs to be replaced.
             </p>
             <p class="text-gray-700 leading-relaxed mb-3">
-              A broken or non-responsive fob that still has the physical key blade inside it means you can still get into the vehicle and start it manually — but you lose all the remote functions until the fob is replaced. Don't let a broken fob go unaddressed; driving without a working fob means you also have no backup if the <a href="/services/car-key-replacement" class="text-[#A61E22] hover:underline font-medium">ignition key itself is ever lost</a>.
+              A broken or non-responsive fob that still has the physical key blade inside it means you can still get into the vehicle and start it manually — but you lose all the remote functions until the fob is replaced. Don't let a broken fob go unaddressed; driving without a working fob means you also have no backup if the <a href="/services/car-key-replacement/" class="text-[#A61E22] hover:underline font-medium">ignition key itself is ever lost</a>.
             </p>
             <p class="text-gray-700 leading-relaxed">
               Call 1st Capital Locksmith and we will bring a replacement fob to your location throughout Delaware, program it to your vehicle on-site, and make sure every function works correctly before we leave.
@@ -508,7 +538,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <a href="/services/car-key-replacement" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/car-key-replacement/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
@@ -518,7 +548,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <p class="text-gray-500 text-sm">Lost keys replaced & programmed on-site</p>
         </a>
 
-        <a href="/services/automotive-locksmith" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/automotive-locksmith/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -529,7 +559,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <p class="text-gray-500 text-sm">All automotive locksmith services in Delaware</p>
         </a>
 
-        <a href="/services/ignition-repair" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/ignition-repair/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -540,7 +570,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <p class="text-gray-500 text-sm">Key won't turn? Ignition repair & replacement</p>
         </a>
 
-        <a href="/services/car-lockout" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
+        <a href="/services/car-lockout/" class="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group text-center">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -653,7 +683,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           Call (302) 735-0050
         </a>
         <a
-          href="/contact"
+          href="/contact/"
           class="inline-flex items-center rounded-full border border-white px-10 py-4 text-white font-bold text-lg hover:bg-white hover:text-[#1A1F22] transition"
         >
           Get a Free Quote

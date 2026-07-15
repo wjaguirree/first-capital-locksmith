@@ -1,4 +1,4 @@
-﻿---
+---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
@@ -24,7 +24,7 @@ const { city, state, slug, county } = location;
     <div class="max-w-6xl mx-auto px-6 py-3">
       <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
         <li><a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a></li>
-        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services/" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
         <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href={`/services/residential-locksmith/${slug}`} class="hover:text-[#A61E22] transition font-medium">Residential Locksmith in {city}</a></li>
         <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><span class="text-[#A61E22] font-semibold">Lock Rekeying — {city}, {state}</span></li>
       </ol>
@@ -125,7 +125,7 @@ const { city, state, slug, county } = location;
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">New Homeowner Rekeying</h3>
           <p class="text-gray-600 text-sm leading-relaxed">Moving into a new home in {city} — whether it's a new build or a resale — means you don't know how many copies of the existing keys are out there. Previous owners, contractors, real estate agents, and neighbors may all have copies. Rekeying immediately after closing is the single most important security step a new homeowner can take. We can rekey every lock in your home in a single visit.</p>
-          <div class="mt-4"><a href="/services/lock-rekeying" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lock Rekeying →</a></div>
+          <div class="mt-4"><a href="/services/lock-rekeying/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lock Rekeying →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Rental Property Rekeying</h3>
@@ -137,7 +137,7 @@ const { city, state, slug, county } = location;
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">When Rekeying Isn't Enough</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Some situations call for a full <a href="/services/lock-change" class="text-[#A61E22] font-semibold">lock change</a> rather than rekeying — for example, if your existing locks are worn, damaged, low-quality, or have been physically compromised. We assess your hardware honestly and tell you whether rekeying is the right call or if a <a href="/services/deadbolt-installation" class="text-[#A61E22] font-semibold">deadbolt installation</a> or full replacement would serve you better.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Some situations call for a full <a href="/services/lock-change/" class="text-[#A61E22] font-semibold">lock change</a> rather than rekeying — for example, if your existing locks are worn, damaged, low-quality, or have been physically compromised. We assess your hardware honestly and tell you whether rekeying is the right call or if a <a href="/services/deadbolt-installation/" class="text-[#A61E22] font-semibold">deadbolt installation</a> or full replacement would serve you better.</p>
         </div>
       </div>
     </div>
@@ -196,7 +196,7 @@ const { city, state, slug, county } = location;
       <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for fast, affordable lock rekeying in {city}. We come to your home — same-day service available.</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
-        <a href="/contact" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
+        <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
       </div>
     </div>
   </section>

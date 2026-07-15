@@ -1,4 +1,4 @@
-﻿---
+---
 import MainLayout from "../../../layouts/MainLayout.astro";
 import { locations } from "../../../data/locations";
 import type { Location } from "../../../data/locations";
@@ -34,13 +34,13 @@ const { city, state, slug, county, description } = location;
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
           </svg>
-          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+          <a href="/services/" class="hover:text-[#A61E22] transition font-medium">Services</a>
         </li>
         <li class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
           </svg>
-          <a href="/services/emergency-locksmith" class="hover:text-[#A61E22] transition font-medium">Emergency Locksmith</a>
+          <a href="/services/emergency-locksmith/" class="hover:text-[#A61E22] transition font-medium">Emergency Locksmith</a>
         </li>
         <li class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -97,7 +97,7 @@ const { city, state, slug, county, description } = location;
           Call (302) 735-0050 Now
         </a>
         <a
-          href="/contact"
+          href="/contact/"
           class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
         >
           Get a Free Quote
@@ -302,7 +302,7 @@ const { city, state, slug, county, description } = location;
               1st Capital Locksmith responds to post-break-in calls throughout {city} and provides emergency lock replacement and door hardware repair on-site. We carry replacement hardware in our mobile vehicles and can restore your door security in a single visit.
             </p>
             <div class="mt-4">
-              <a href="/services/emergency-locksmith" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Locksmith Services in Delaware →</a>
+              <a href="/services/emergency-locksmith/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Locksmith Services in Delaware →</a>
             </div>
           </div>
         </div>
@@ -381,7 +381,7 @@ const { city, state, slug, county, description } = location;
       </a>
       <p class="text-white/70 text-sm mt-6">
         <a href={`/service-areas/${slug}`} class="text-white/80 hover:text-white">View all locksmith services in {city}, {state}</a> &nbsp;|&nbsp;
-        <a href="/services/emergency-locksmith" class="text-white/80 hover:text-white">Emergency Locksmith Services Throughout Delaware</a>
+        <a href="/services/emergency-locksmith/" class="text-white/80 hover:text-white">Emergency Locksmith Services Throughout Delaware</a>
       </p>
     </div>
   </section>

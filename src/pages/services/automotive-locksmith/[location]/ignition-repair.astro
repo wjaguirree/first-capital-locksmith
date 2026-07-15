@@ -1,4 +1,4 @@
-﻿---
+---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
@@ -24,7 +24,7 @@ const { city, state, slug, county } = location;
     <div class="max-w-6xl mx-auto px-6 py-3">
       <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
         <li><a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a></li>
-        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services/" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
         <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href={`/services/automotive-locksmith/${slug}`} class="hover:text-[#A61E22] transition font-medium">Automotive Locksmith in {city}</a></li>
         <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><span class="text-[#A61E22] font-semibold">Ignition Repair — {city}, {state}</span></li>
       </ol>
@@ -126,12 +126,12 @@ const { city, state, slug, county } = location;
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Stuck or Stiff Ignition Repair</h3>
           <p class="text-gray-600 text-sm leading-relaxed">A key that won't turn in the ignition is one of the most common automotive locksmith calls we receive in {city}. The cause is often worn tumblers inside the cylinder, a bent key, debris inside the cylinder, or the steering column lock engaging. We diagnose the root cause and repair the cylinder on-site whenever possible, without requiring replacement.</p>
-          <div class="mt-4"><a href="/services/ignition-repair" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Ignition Repair →</a></div>
+          <div class="mt-4"><a href="/services/ignition-repair/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Ignition Repair →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Broken Key Extraction from Ignition</h3>
           <p class="text-gray-600 text-sm leading-relaxed">A key broken off inside the ignition is a stressful situation — and attempting to remove it with tweezers, glue, or improvised tools almost always makes it worse. We use dedicated extraction tools to safely remove the broken fragment without damaging the cylinder internals. After extraction, we can cut a new key and assess the cylinder for damage.</p>
-          <div class="mt-4"><a href="/services/broken-key-extraction" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Broken Key Extraction →</a></div>
+          <div class="mt-4"><a href="/services/broken-key-extraction/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Broken Key Extraction →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Ignition Rekeying</h3>
@@ -139,7 +139,7 @@ const { city, state, slug, county } = location;
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">When Repair Becomes Replacement</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Some ignition cylinders are too worn, cracked, or damaged to repair — in those cases, replacement is the correct solution. We assess the cylinder honestly and only recommend replacement when repair is not a viable option. When replacement is needed, we handle the <a href="/services/ignition-replacement" class="text-[#A61E22] font-semibold">ignition replacement</a> and new key programming on the same visit in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Some ignition cylinders are too worn, cracked, or damaged to repair — in those cases, replacement is the correct solution. We assess the cylinder honestly and only recommend replacement when repair is not a viable option. When replacement is needed, we handle the <a href="/services/ignition-replacement/" class="text-[#A61E22] font-semibold">ignition replacement</a> and new key programming on the same visit in {city}.</p>
         </div>
       </div>
     </div>
@@ -198,7 +198,7 @@ const { city, state, slug, county } = location;
       <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for on-site ignition diagnosis and repair in {city}. We come to your vehicle — no tow required.</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
-        <a href="/contact" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
+        <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
       </div>
     </div>
   </section>

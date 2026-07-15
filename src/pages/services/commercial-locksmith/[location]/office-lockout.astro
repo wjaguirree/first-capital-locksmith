@@ -1,4 +1,4 @@
-﻿---
+---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
@@ -24,7 +24,7 @@ const { city, state, slug, county } = location;
     <div class="max-w-6xl mx-auto px-6 py-3">
       <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
         <li><a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a></li>
-        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services/" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
         <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href={`/services/commercial-locksmith/${slug}`} class="hover:text-[#A61E22] transition font-medium">Commercial Locksmith in {city}</a></li>
         <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><span class="text-[#A61E22] font-semibold">Office Lockout — {city}, {state}</span></li>
       </ol>
@@ -125,7 +125,7 @@ const { city, state, slug, county } = location;
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Office & Professional Suite Lockout</h3>
           <p class="text-gray-600 text-sm leading-relaxed">Getting locked out of your office in {city} can disrupt your entire workday. We respond quickly and work non-destructively on all commercial door hardware — cylindrical lock sets, mortise locks, lever handles, and electronic access control systems. We gain entry without damage so your lock hardware remains intact and functional after we leave.</p>
-          <div class="mt-4"><a href="/services/office-lockout" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Office Lockout Service →</a></div>
+          <div class="mt-4"><a href="/services/office-lockout/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Office Lockout Service →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Retail & Storefront Lockout</h3>
@@ -138,7 +138,7 @@ const { city, state, slug, county } = location;
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After-Hours Emergency Lockout</h3>
           <p class="text-gray-600 text-sm leading-relaxed">An after-hours commercial lockout can have real financial consequences — especially if you have staff waiting outside, deliveries to receive, or time-sensitive operations underway. Call us at <a href="tel:3027350050" class="text-[#A61E22] font-semibold">(302) 735-0050</a> for emergency commercial lockout service throughout {city}. We can also assess the lock after entry and address any hardware issues on the spot.</p>
-          <div class="mt-4"><a href="/services/emergency-lockout" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Lockout Service →</a></div>
+          <div class="mt-4"><a href="/services/emergency-lockout/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Lockout Service →</a></div>
         </div>
       </div>
     </div>
@@ -197,7 +197,7 @@ const { city, state, slug, county } = location;
       <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for fast commercial lockout service in {city}. We come to your business — professional, non-destructive entry for all commercial door hardware.</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
-        <a href="/contact" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
+        <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
       </div>
     </div>
   </section>

@@ -1,4 +1,4 @@
-﻿---
+---
 import MainLayout from "../../../layouts/MainLayout.astro";
 import { locations } from "../../../data/locations";
 import type { Location } from "../../../data/locations";
@@ -34,13 +34,13 @@ const { city, state, slug, county, description } = location;
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
           </svg>
-          <a href="/services" class="hover:text-[#A61E22] transition font-medium">Services</a>
+          <a href="/services/" class="hover:text-[#A61E22] transition font-medium">Services</a>
         </li>
         <li class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
           </svg>
-          <a href="/services/automotive-locksmith" class="hover:text-[#A61E22] transition font-medium">Automotive Locksmith</a>
+          <a href="/services/automotive-locksmith/" class="hover:text-[#A61E22] transition font-medium">Automotive Locksmith</a>
         </li>
         <li class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -97,7 +97,7 @@ const { city, state, slug, county, description } = location;
           Call (302) 735-0050
         </a>
         <a
-          href="/contact"
+          href="/contact/"
           class="inline-flex items-center rounded-full border border-white px-6 py-3 md:px-8 md:py-4 text-white font-semibold text-sm md:text-base hover:bg-white hover:text-[#1A1F22] transition"
         >
           Get a Free Quote
@@ -478,7 +478,7 @@ const { city, state, slug, county, description } = location;
           Call (302) 735-0050
         </a>
         <a
-          href="/contact"
+          href="/contact/"
           class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition"
         >
           Get a Free Quote
@@ -486,7 +486,7 @@ const { city, state, slug, county, description } = location;
       </div>
       <p class="text-gray-400 text-sm mt-6">
         <a href={`/service-areas/${slug}`} class="text-gray-300 hover:text-white">View all locksmith services in {city}, {state}</a> &nbsp;|&nbsp;
-        <a href="/services/automotive-locksmith" class="text-gray-300 hover:text-white">Automotive Locksmith Services Throughout Delaware</a>
+        <a href="/services/automotive-locksmith/" class="text-gray-300 hover:text-white">Automotive Locksmith Services Throughout Delaware</a>
       </p>
     </div>
   </section>
