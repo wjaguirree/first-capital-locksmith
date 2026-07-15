@@ -208,17 +208,16 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </p>
       </div>
 
-      <div class="space-y-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Stiff or Sticky Ignition -->
-        <div id="stiff-ignition" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div id="stiff-ignition" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
-          <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Stiff, Sticky, or Gritty Ignition Cylinder Repair in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
               One of the most common ignition complaints we hear is a key that has started to feel stiff, resistant, or slightly gritty when turning. This is typically an early sign of internal wear inside the ignition cylinder — the tumblers and wafers are losing their smooth action, grime and debris have built up inside the cylinder housing, or the lubricant has dried out after years of use. The good news is that in many cases this is entirely repairable without replacing the whole cylinder.
@@ -229,27 +228,16 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               Address a stiff ignition early — before it progresses to a key that won't turn at all. Call 1st Capital Locksmith for on-site ignition repair throughout Delaware.
             </p>
-            <!-- PHOTO SLOT 2: Recommended 1200×500px — close-up of ignition cylinder or locksmith lubricating ignition -->
-            <div class="mt-6 rounded-xl overflow-hidden border border-gray-200">
-              <img
-                src="/images/ignition-repair-service.jpg"
-                alt="Ignition cylinder being cleaned and repaired by 1st Capital Locksmith in Delaware"
-                class="w-full h-90 object-cover"
-                width="1200"
-                height="500"
-              />
-            </div>
           </div>
         </div>
 
         <!-- Key Won't Turn -->
-        <div id="key-wont-turn" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div id="key-wont-turn" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
             </svg>
           </div>
-          <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Key Won't Turn in the Ignition — Diagnosis & Repair</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
               A key that inserts into the ignition but absolutely will not turn is a stressful and disruptive problem. Before assuming the worst, there are a few things to check. First, try gently rocking the steering wheel left and right while simultaneously attempting to turn the key — a locked steering column is a very common cause of this and is easily released by relieving the pressure on the ignition column. If that works, there may be nothing wrong with the ignition itself.
@@ -264,13 +252,12 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </div>
 
         <!-- Key Won't Come Out -->
-        <div id="key-wont-come-out" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div id="key-wont-come-out" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
           </div>
-          <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Key Won't Come Out of the Ignition in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
               A key that goes in, starts the car normally, but then refuses to come back out of the ignition is a surprisingly common problem — and one that people tend to work around for far too long before calling for help. In automatic transmission vehicles, a shift interlock mechanism is designed to prevent the key from being removed unless the transmission is fully in park. If the interlock is not releasing properly, the key will stay stuck even with the transmission in park.
@@ -285,13 +272,12 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </div>
 
         <!-- Broken Key in Ignition -->
-        <div id="broken-key-ignition" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div id="broken-key-ignition" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
             </svg>
           </div>
-          <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Broken Key Extraction from the Ignition in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
               When a worn or weakened key breaks off inside the ignition, it creates an immediate problem — the vehicle cannot be started, and the broken piece blocks any other key from entering. This situation almost always happens without warning, often during a routine start when the key snaps under the torsional force of turning. It is more common in keys that have developed small stress cracks over years of use, or when someone applies excessive force to a stiff ignition.
@@ -302,27 +288,16 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               Never attempt to remove a broken key fragment using tweezers, glue, or improvised tools — these approaches usually push the fragment deeper or cause additional damage. Call 1st Capital Locksmith for professional <a href="/services/broken-key-extraction/" class="text-[#A61E22] hover:underline font-medium">broken key extraction</a> throughout Delaware.
             </p>
-            <!-- PHOTO SLOT 3: Recommended 1200×500px — broken key extraction or ignition repair in progress -->
-            <div class="mt-6 rounded-xl overflow-hidden border border-gray-200">
-              <img
-                src="/images/broken-key-ignition-extraction.jpg"
-                alt="Broken key being extracted from ignition cylinder by 1st Capital Locksmith in Delaware"
-                class="w-full h-90 object-cover"
-                width="1200"
-                height="500"
-              />
-            </div>
           </div>
         </div>
 
         <!-- Transponder & Ignition Communication Issues -->
-        <div id="transponder-ignition" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div id="transponder-ignition" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
             </svg>
           </div>
-          <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Transponder Key & Ignition Communication Issues in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
               Most vehicles manufactured after the mid-1990s use transponder keys — keys with a small electronic chip embedded in the plastic head that communicates with the vehicle's immobilizer system when you turn the ignition. If this communication fails, the engine may crank but will not start, or the security light on the dashboard may stay on. This is a different kind of ignition problem to a mechanical cylinder issue, but it presents very similarly from the driver's perspective.
@@ -395,12 +370,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section class="bg-[#F8F8F5] py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Choose Us</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+  
+        $args[0].Value -replace 'text-\[#1A1F22\] mb-4">', 'text-white mb-4">'
+    
           Why Delaware Drivers Choose 1st Capital Locksmith for Ignition Repair
         </h2>
         <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -409,64 +381,64 @@ import MainLayout from "../../layouts/MainLayout.astro";
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Fully Mobile — No Towing Required</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We come directly to your vehicle anywhere in Delaware. No need to arrange a costly tow to a shop or dealership — our technicians bring everything needed to repair your ignition on-site.</p>
+          <h3 class="font-bold text-white text-lg mb-3">Fully Mobile — No Towing Required</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">We come directly to your vehicle anywhere in Delaware. No need to arrange a costly tow to a shop or dealership — our technicians bring everything needed to repair your ignition on-site.</p>
         </div>
 
-        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
             </svg>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Diagnose Before We Recommend</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We assess your ignition before recommending any repair or replacement. If cleaning and lubrication will fix the problem, that is what we suggest. We will never push you toward an unnecessary cylinder replacement.</p>
+          <h3 class="font-bold text-white text-lg mb-3">Diagnose Before We Recommend</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">We assess your ignition before recommending any repair or replacement. If cleaning and lubrication will fix the problem, that is what we suggest. We will never push you toward an unnecessary cylinder replacement.</p>
         </div>
 
-        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Save vs. the Dealership</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">Dealerships charge premium labor rates and often require a tow before they will even look at your vehicle. Our mobile service eliminates the tow and consistently delivers a lower total cost for ignition repair.</p>
+          <h3 class="font-bold text-white text-lg mb-3">Save vs. the Dealership</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Dealerships charge premium labor rates and often require a tow before they will even look at your vehicle. Our mobile service eliminates the tow and consistently delivers a lower total cost for ignition repair.</p>
         </div>
 
-        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">All Makes & Models</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We repair ignitions on domestic and foreign vehicles — Toyota, Honda, Ford, Chevrolet, Dodge, Nissan, Hyundai, Kia, Jeep, RAM, BMW, and many more. If we have seen it, we can repair it.</p>
+          <h3 class="font-bold text-white text-lg mb-3">All Makes & Models</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">We repair ignitions on domestic and foreign vehicles — Toyota, Honda, Ford, Chevrolet, Dodge, Nissan, Hyundai, Kia, Jeep, RAM, BMW, and many more. If we have seen it, we can repair it.</p>
         </div>
 
-        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
             </svg>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Specialized Extraction Tools</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">For broken key-in-ignition situations, we carry professional extraction tools designed for the job. We remove broken fragments cleanly and safely without damaging the cylinder housing.</p>
+          <h3 class="font-bold text-white text-lg mb-3">Specialized Extraction Tools</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">For broken key-in-ignition situations, we carry professional extraction tools designed for the job. We remove broken fragments cleanly and safely without damaging the cylinder housing.</p>
         </div>
 
-        <div class="bg-white rounded-2xl p-8 border border-gray-200">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
           <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Upfront, Honest Pricing</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We give you a clear quote before any work begins — no hidden charges, no surprise fees after the job is done. What we quote is exactly what you pay.</p>
+          <h3 class="font-bold text-white text-lg mb-3">Upfront, Honest Pricing</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">We give you a clear quote before any work begins — no hidden charges, no surprise fees after the job is done. What we quote is exactly what you pay.</p>
         </div>
       </div>
     </div>

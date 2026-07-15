@@ -257,16 +257,15 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </p>
       </div>
 
-      <div class="space-y-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Single Cylinder -->
-        <div id="single-cylinder" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div id="single-cylinder" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
             </svg>
           </div>
-          <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Single-Cylinder Deadbolt Installation in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
               The single-cylinder deadbolt is the most widely used deadbolt type for residential exterior doors throughout Delaware. It operates with a keyed cylinder on the outside and a simple thumb-turn on the inside, allowing you to lock and unlock quickly from inside without a key — important for emergency exit. This is the correct choice for the vast majority of front doors, back doors, and side entry doors.
@@ -281,13 +280,12 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </div>
 
         <!-- Double Cylinder -->
-        <div id="double-cylinder" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div id="double-cylinder" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zM10 7a2 2 0 114 0v3H10V7z" />
             </svg>
           </div>
-          <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Double-Cylinder Deadbolt Installation in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
               A double-cylinder deadbolt requires a key to operate from both the outside and the inside. This makes it the right choice for doors that have glass panels, sidelights, or windows close enough that a burglar could break the glass, reach through, and turn a standard thumb-turn to unlock the door. With a double-cylinder lock, even getting a hand through the broken glass doesn't help — they still need the key.
@@ -302,13 +300,12 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </div>
 
         <!-- Keypad Deadbolt -->
-        <div id="keypad" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div id="keypad" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" />
             </svg>
           </div>
-          <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Keypad Deadbolt Installation in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
               Keypad deadbolts combine the security of a traditional deadbolt with the convenience of keyless entry. You unlock your door by entering a PIN code — no key needed. This is a practical solution for families where kids come home from school before parents, for vacation rental properties, for landlords managing tenant access, or for anyone who's tired of fumbling for keys.
@@ -323,13 +320,12 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </div>
 
         <!-- Smart Lock Deadbolt -->
-        <div id="smart-lock" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div id="smart-lock" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V7a2 2 0 00-2-2H8a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
           </div>
-          <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Smart Lock Deadbolt Installation in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
               Smart lock deadbolts take keyless entry to the next level. They connect via Bluetooth, Wi-Fi, or Z-Wave to your smartphone and smart home system, allowing you to lock and unlock your door remotely, receive notifications when your door is locked or unlocked, grant temporary access codes to guests or contractors, and check the status of your lock from anywhere.
@@ -344,13 +340,12 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </div>
 
         <!-- High Security Deadbolt -->
-        <div id="high-security" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div id="high-security" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
-          <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">High-Security Grade 1 Deadbolt Installation in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
               For homeowners and property owners who want the highest level of door security available, we install ANSI Grade 1 high-security deadbolts. ANSI Grade 1 is the top residential security classification, tested to withstand at minimum 250,000 open/close cycles and significant impact force. Brands like Schlage B60N, Kwikset 980, and Medeco Maxum are examples of Grade 1 hardware that deliver real, measurable protection.
@@ -365,13 +360,12 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </div>
 
         <!-- Deadbolt Replacement -->
-        <div id="replacement" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div id="replacement" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
             </svg>
           </div>
-          <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Deadbolt Replacement in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
               If your existing deadbolt is stiff, difficult to turn, loose in the door, damaged from a break-in attempt, or simply old and worn out, it's time for a replacement. A deadbolt that's struggling to operate reliably isn't providing the protection you're counting on — and a failing lock has a way of completely giving out at the most inconvenient possible moment.
@@ -386,13 +380,12 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </div>
 
         <!-- Strike Plate Reinforcement -->
-        <div id="strike-plate" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div id="strike-plate" class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
             </svg>
           </div>
-          <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Strike Plate Reinforcement in Delaware</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
               Here's a security fact that surprises many homeowners: even the best deadbolt in the world can fail if it's secured with a weak strike plate. The strike plate is the metal piece mounted on the door frame that receives the deadbolt. Most builder-installed strike plates are thin, flimsy, and held in place with short 3/4-inch screws that only go into the door casing — not the structural framing behind it. A strong kick can split the door frame around these small screws in seconds.
@@ -460,12 +453,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section class="bg-white py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Choose Us</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+  
+        $args[0].Value -replace 'text-\[#1A1F22\] mb-4">', 'text-white mb-4">'
+    
           Why Delaware Residents Trust 1st Capital Locksmith for Deadbolt Installation
         </h2>
         <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -480,8 +470,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Quality Grade 1 Hardware</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We carry and install quality ANSI Grade 1 deadbolts — the highest residential security rating. We don't cut corners on hardware because your family's security depends on it.</p>
+          <h3 class="font-bold text-white text-lg mb-3">Quality Grade 1 Hardware</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">We carry and install quality ANSI Grade 1 deadbolts — the highest residential security rating. We don't cut corners on hardware because your family's security depends on it.</p>
         </div>
 
         <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
@@ -491,8 +481,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Expert Installation</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">A deadbolt is only as strong as its installation. We ensure every lock is correctly aligned, the bolt seats fully, and the strike plate is properly reinforced — so you get the full protection the hardware is rated for.</p>
+          <h3 class="font-bold text-white text-lg mb-3">Expert Installation</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">A deadbolt is only as strong as its installation. We ensure every lock is correctly aligned, the bolt seats fully, and the strike plate is properly reinforced — so you get the full protection the hardware is rated for.</p>
         </div>
 
         <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
@@ -501,8 +491,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Honest, Upfront Pricing</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We give you a clear quote before any work begins. No surprise charges, no hidden fees. You'll know exactly what you're paying and what you're getting before we pick up a single tool.</p>
+          <h3 class="font-bold text-white text-lg mb-3">Honest, Upfront Pricing</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">We give you a clear quote before any work begins. No surprise charges, no hidden fees. You'll know exactly what you're paying and what you're getting before we pick up a single tool.</p>
         </div>
 
         <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
@@ -511,8 +501,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
               <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Fast, Mobile Service</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We come directly to your home or business throughout Delaware. No trips to a locksmith shop — we bring the hardware and tools to you and complete the installation on-site at your convenience.</p>
+          <h3 class="font-bold text-white text-lg mb-3">Fast, Mobile Service</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">We come directly to your home or business throughout Delaware. No trips to a locksmith shop — we bring the hardware and tools to you and complete the installation on-site at your convenience.</p>
         </div>
 
         <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
@@ -522,8 +512,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 22V12h6v10" />
             </svg>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">All Door & Property Types</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We install deadbolts on all types of residential and commercial doors — front doors, back doors, side entry doors, interior doors, apartment doors, office doors, and more. If it has a door, we can fit it with a proper deadbolt.</p>
+          <h3 class="font-bold text-white text-lg mb-3">All Door & Property Types</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">We install deadbolts on all types of residential and commercial doors — front doors, back doors, side entry doors, interior doors, apartment doors, office doors, and more. If it has a door, we can fit it with a proper deadbolt.</p>
         </div>
 
         <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
@@ -533,8 +523,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Serving All of Kent County</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We serve <a href="/service-areas/dover-de/" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de/" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de/" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de/" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de/" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/magnolia-de/" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/frederica-de/" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/wyoming-de/" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, and all surrounding communities throughout Kent County, Delaware.</p>
+          <h3 class="font-bold text-white text-lg mb-3">Serving All of Kent County</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">We serve <a href="/service-areas/dover-de/" class="text-[#A61E22] hover:underline font-medium">Dover</a>, <a href="/service-areas/milford-de/" class="text-[#A61E22] hover:underline font-medium">Milford</a>, <a href="/service-areas/smyrna-de/" class="text-[#A61E22] hover:underline font-medium">Smyrna</a>, <a href="/service-areas/camden-de/" class="text-[#A61E22] hover:underline font-medium">Camden</a>, <a href="/service-areas/harrington-de/" class="text-[#A61E22] hover:underline font-medium">Harrington</a>, <a href="/service-areas/magnolia-de/" class="text-[#A61E22] hover:underline font-medium">Magnolia</a>, <a href="/service-areas/frederica-de/" class="text-[#A61E22] hover:underline font-medium">Frederica</a>, <a href="/service-areas/wyoming-de/" class="text-[#A61E22] hover:underline font-medium">Wyoming</a>, and all surrounding communities throughout Kent County, Delaware.</p>
         </div>
       </div>
     </div>
@@ -703,7 +693,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
         ].map((faq) => (
           <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
             <h3 class="font-bold text-[#1A1F22] mb-2">{faq.q}</h3>
-            <p class="text-gray-700 text-sm leading-relaxed">{faq.a}</p>
+            <p class="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
           </div>
         ))}
       </div>

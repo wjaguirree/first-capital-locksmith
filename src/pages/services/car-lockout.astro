@@ -206,133 +206,97 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </p>
       </div>
 
-      <div class="space-y-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- Keys Locked Inside -->
-        <div id="keys-locked-in-car" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
             </svg>
           </div>
-          <div>
-            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Keys Locked Inside the Car in Delaware</h3>
-            <p class="text-gray-700 leading-relaxed mb-3">
-              The classic lockout — you step out for just a moment, the door swings shut, and your keys are sitting right there on the seat or in the cupholder. It's maddening, but it's also one of the most common calls we receive, and it's one we can resolve very quickly. Our mobile locksmiths use professional long-reach tools and air wedge entry systems to unlock your vehicle door without causing any damage.
-            </p>
-            <p class="text-gray-700 leading-relaxed mb-3">
-              We work on virtually every vehicle make and model — domestic cars, foreign vehicles, trucks, SUVs, minivans, and crossovers. Modern vehicles with electronic locks are no problem; we have the right tools for the job regardless of whether your car has a traditional lock or a fully electronic entry system.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-              If your keys are locked inside your car anywhere in Delaware, call 1st Capital Locksmith at (302) 735-0050. We will dispatch immediately and get you back inside your vehicle as quickly as possible — no damage, no drama.
-            </p>
-            <!-- PHOTO SLOT 2: Recommended 1200×500px — locksmith using entry tools on car door -->
-            <div class="mt-6 rounded-xl overflow-hidden border border-gray-200">
-              <img
-                src="/images/car-lockout-service.jpg"
-                alt="1st Capital Locksmith using professional tools to unlock a car door in Delaware"
-                class="w-full h-90 object-cover"
-                width="1200"
-                height="500"
-              />
-            </div>
-          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Keys Locked Inside the Car in Delaware</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            The classic lockout — you step out for just a moment, the door swings shut, and your keys are sitting right there on the seat or in the cupholder. Our mobile locksmiths use professional long-reach tools and air wedge entry systems to unlock your vehicle door without causing any damage.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            We work on virtually every vehicle make and model — domestic cars, foreign vehicles, trucks, SUVs, minivans, and crossovers. Modern vehicles with electronic locks are no problem; we have the right tools regardless of lock type.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Call 1st Capital Locksmith at (302) 735-0050. We will dispatch immediately and get you back inside your vehicle as quickly as possible — no damage, no drama.
+          </p>
         </div>
 
-        <!-- Keys Locked in Trunk -->
-        <div id="keys-locked-in-trunk" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h7l1-2zM13 6h3l3 4v4h-2" />
             </svg>
           </div>
-          <div>
-            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Keys Locked in the Trunk in Delaware</h3>
-            <p class="text-gray-700 leading-relaxed mb-3">
-              Locking your keys in the trunk is surprisingly easy to do, especially when you're loading or unloading groceries, luggage, or sports equipment. The keys go in, the trunk closes, and suddenly you're unable to get into the car at all. Depending on your vehicle, accessing the trunk from inside the car may not be possible if the car itself is locked.
-            </p>
-            <p class="text-gray-700 leading-relaxed mb-3">
-              Our locksmiths can gain non-destructive access through the vehicle's door first and then release the trunk, or in some cases access the trunk directly depending on the vehicle's design. Either way, we have the tools and the training to handle this scenario cleanly and safely without bending your door frame or damaging the trunk lock mechanism.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-              Don't risk damaging your vehicle trying to access the trunk through the backseat or prying at the lock. Call 1st Capital Locksmith and we'll be at your location throughout Delaware to sort it out the right way.
-            </p>
-          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Keys Locked in the Trunk in Delaware</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Locking your keys in the trunk is surprisingly easy to do when loading or unloading groceries, luggage, or sports equipment. Depending on your vehicle, accessing the trunk from inside may not be possible if the car itself is locked.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Our locksmiths gain non-destructive access through the vehicle door first and then release the trunk, or access the trunk directly depending on the vehicle's design — clean and safe, without damaging the door frame or trunk lock mechanism.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Don't risk damaging your vehicle. Call 1st Capital Locksmith and we'll be at your location throughout Delaware to sort it out the right way.
+          </p>
         </div>
 
-        <!-- Emergency Car Lockout -->
-        <div id="emergency-lockout" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
             </svg>
           </div>
-          <div>
-            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Emergency Car Lockout Response in Delaware</h3>
-            <p class="text-gray-700 leading-relaxed mb-3">
-              Some car lockouts are more urgent than others. If you're stranded somewhere unfamiliar, it's late at night, the weather is severe, or there is a child or pet left inside the vehicle, these situations require the fastest possible response. 1st Capital Locksmith prioritizes urgent lockout calls and dispatches immediately to your location throughout Delaware.
-            </p>
-            <p class="text-gray-700 leading-relaxed mb-3">
-              If a child or pet is locked inside a vehicle, especially in warm weather, call 911 immediately — this is a life-safety emergency and first responders should be notified at once. Once the immediate safety concern is resolved, we can assist with getting your vehicle properly secured or your keys retrieved.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-              For all other urgent lockout situations throughout Delaware — late-night lockouts, stranded motorists, unsafe locations — call 1st Capital Locksmith at (302) 735-0050. We move fast and we come to you.
-            </p>
-          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Emergency Car Lockout Response in Delaware</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Some car lockouts are more urgent than others — stranded somewhere unfamiliar, late at night, in severe weather, or with a child or pet inside the vehicle. 1st Capital Locksmith prioritizes urgent lockout calls and dispatches immediately throughout Delaware.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            If a child or pet is locked inside a vehicle in warm weather, call 911 immediately — this is a life-safety emergency. Once the safety concern is resolved, we can assist with vehicle access.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            For all urgent lockout situations — late-night, stranded motorists, unsafe locations — call 1st Capital Locksmith at (302) 735-0050. We move fast and we come to you.
+          </p>
         </div>
 
-        <!-- Jammed or Damaged Lock -->
-        <div id="jammed-lock" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
             </svg>
           </div>
-          <div>
-            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Jammed, Frozen, or Damaged Car Door Locks in Delaware</h3>
-            <p class="text-gray-700 leading-relaxed mb-3">
-              Not every lockout is caused by keys being left inside. Sometimes the lock itself is the problem — a jammed door lock that won't turn, a frozen lock cylinder in cold weather, or a damaged lock that was forced or tampered with. These situations require a slightly different approach than a standard lockout, but they are absolutely within what our mobile locksmiths handle every day.
-            </p>
-            <p class="text-gray-700 leading-relaxed mb-3">
-              For frozen locks, we carry de-icing solutions and appropriate tools to work the lock free without causing damage. For jammed or mechanically failed locks, we assess the cause and use the most appropriate entry method to get you inside safely. If the lock itself needs repair or replacement after entry, we can handle that on-site as well.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-              Never force a key into a jammed or frozen lock — the risk of snapping the key inside the cylinder is real, and that turns a simple lockout into a more complex and expensive <a href="/services/broken-key-extraction/" class="text-[#A61E22] hover:underline font-medium">broken key extraction</a>. Call 1st Capital Locksmith first and let us handle it correctly.
-            </p>
-          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Jammed, Frozen, or Damaged Car Door Locks</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            Not every lockout is caused by keys being left inside. Sometimes the lock itself is the problem — a jammed door lock that won't turn, a frozen cylinder in cold weather, or a lock damaged by forced entry. These require a different approach but are within what our locksmiths handle every day.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            For frozen locks, we carry de-icing solutions and appropriate tools. For jammed or mechanically failed locks, we assess the cause and use the most appropriate entry method. If the lock needs repair or replacement, we can handle that on-site.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Never force a key into a jammed lock — the risk of snapping it inside the cylinder turns a simple lockout into a more expensive <a href="/services/broken-key-extraction/" class="text-[#A61E22] hover:underline font-medium">broken key extraction</a>. Call us first.
+          </p>
         </div>
 
-        <!-- Commercial & Fleet Vehicles -->
-        <div id="commercial-vehicle-lockout" class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm grid md:grid-cols-[auto_1fr] gap-6">
-          <div class="w-14 h-14 bg-[#A61E22] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition">
+          <div class="w-14 h-14 bg-[#A61E22]/10 rounded-2xl flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#A61E22]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V7a2 2 0 00-2-2H7a2 2 0 00-2 2v14M3 21h18M9 21v-4a1 1 0 011-1h4a1 1 0 011 1v4" />
             </svg>
           </div>
-          <div>
-            <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Commercial & Fleet Vehicle Lockout Service in Delaware</h3>
-            <p class="text-gray-700 leading-relaxed mb-3">
-              A lockout involving a work vehicle, delivery truck, or fleet van doesn't just inconvenience one person — it can bring a job site to a halt, delay deliveries, and cost your business real money. 1st Capital Locksmith understands the urgency of commercial vehicle lockouts and responds quickly to get your driver back on the road and your business moving again.
-            </p>
-            <p class="text-gray-700 leading-relaxed mb-3">
-              We work on commercial vans, work trucks, box trucks, and passenger vehicles used for business purposes. Whether it's a single vehicle lockout at a job site or an ongoing service agreement for fleet vehicles throughout Delaware, we are equipped to help.
-            </p>
-            <p class="text-gray-700 leading-relaxed">
-              Business owners and fleet managers throughout Kent County — call us at (302) 735-0050 and we will dispatch immediately. No job is too large or too small.
-            </p>
-            <!-- PHOTO SLOT 3: Recommended 1200×500px — locksmith at a commercial/work vehicle -->
-            <div class="mt-6 rounded-xl overflow-hidden border border-gray-200">
-              <img
-                src="/images/commercial-vehicle-lockout.jpg"
-                alt="1st Capital Locksmith responding to a commercial vehicle lockout in Delaware"
-                class="w-full h-100 object-cover
-              "
-                width="1200"
-                height="500"
-              />
-            </div>
-          </div>
+          <h3 class="text-xl font-bold text-[#1A1F22] mb-4">Commercial & Fleet Vehicle Lockout Service</h3>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            A lockout involving a work vehicle, delivery truck, or fleet van doesn't just inconvenience one person — it can bring a job site to a halt, delay deliveries, and cost your business real money. We understand the urgency and respond quickly to get drivers back on the road.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            We work on commercial vans, work trucks, box trucks, and passenger vehicles used for business purposes. Single vehicle lockout at a job site or an ongoing fleet service arrangement — we're equipped to help.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Fleet managers throughout Kent County — call us at (302) 735-0050 and we will dispatch immediately. No job is too large or too small.
+          </p>
         </div>
 
       </div>
@@ -395,80 +359,50 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <!-- Why Choose Us -->
-  <section class="bg-[#F8F8F5] py-20">
+  <section class="bg-[#1A1F22] py-20">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
+      <div class="text-center mb-14">
         <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Why Choose Us</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
           Why Delaware Drivers Call 1st Capital Locksmith for Car Lockouts
         </h2>
-        <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed">
           When you're locked out of your car, you need someone who responds fast, treats your vehicle with care, and charges a fair price. Here is why drivers throughout Delaware choose us.
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl p-8 border border-gray-200">
-          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+        {[
+          {
+            title: "Fast Dispatch Throughout Delaware",
+            body: "We answer the phone and dispatch immediately. Our mobile locksmiths are stationed throughout the area so we can respond quickly to car lockout calls across Kent County and beyond.",
+          },
+          {
+            title: "Non-Destructive Entry",
+            body: "We use professional-grade long-reach tools and air wedge systems to open your vehicle without breaking windows or damaging your door, weather stripping, or lock mechanism. Your car will look exactly as it did before we arrived.",
+          },
+          {
+            title: "All Makes & Models",
+            body: "Cars, trucks, SUVs, minivans, commercial vans — we handle them all. Domestic or foreign, old or brand new, our locksmiths have experience with virtually every vehicle on the road today.",
+          },
+          {
+            title: "We Come to You",
+            body: "No towing required. Our mobile locksmiths come directly to your vehicle wherever it is in Delaware — a parking lot, a gas station, your workplace, your home, or the side of the road.",
+          },
+          {
+            title: "Upfront, Honest Pricing",
+            body: "We quote you a price before any work begins. No surprise charges, no bait-and-switch fees when we arrive. What we tell you on the phone is what you pay.",
+          },
+          {
+            title: "Skip the Roadside Assistance Wait",
+            body: "Roadside assistance plans can take an hour or more. Calling a local mobile locksmith is almost always faster — we're based right here in Delaware and can get to you quicker than a national dispatch service.",
+          },
+        ].map((card) => (
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <h3 class="text-lg font-bold text-white mb-3">{card.title}</h3>
+            <p class="text-gray-400 leading-relaxed text-sm">{card.body}</p>
           </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Fast Dispatch Throughout Delaware</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We answer the phone and dispatch immediately. Our mobile locksmiths are stationed throughout the area so we can respond quickly to car lockout calls across Kent County and beyond.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-8 border border-gray-200">
-          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Non-Destructive Entry</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We use professional-grade long-reach tools and air wedge systems to open your vehicle without breaking windows or damaging your door, weather stripping, or lock mechanism. Your car will look exactly as it did before we arrived.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-8 border border-gray-200">
-          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h7l1-2zM13 6h3l3 4v4h-2" />
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">All Makes & Models</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">Cars, trucks, SUVs, minivans, commercial vans — we handle them all. Domestic or foreign, old or brand new, our locksmiths have experience with virtually every vehicle on the road today.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-8 border border-gray-200">
-          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">We Come to You</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">No towing required. Our mobile locksmiths come directly to your vehicle wherever it is in Delaware — a parking lot, a gas station, your workplace, your home, or the side of the road.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-8 border border-gray-200">
-          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Upfront, Honest Pricing</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">We quote you a price before any work begins. No surprise charges, no bait-and-switch fees when we arrive. What we tell you on the phone is what you pay.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-8 border border-gray-200">
-          <div class="w-12 h-12 bg-[#A61E22] rounded-full flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="font-bold text-[#1A1F22] text-lg mb-2">Skip the Roadside Assistance Wait</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">Roadside assistance plans can take an hour or more. Calling a local mobile locksmith is almost always faster — we're based right here in Delaware and can get to you quicker than a national dispatch service.</p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
