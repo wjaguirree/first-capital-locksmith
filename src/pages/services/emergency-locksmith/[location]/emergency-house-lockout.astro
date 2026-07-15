@@ -25,7 +25,7 @@ const { city, state, slug, county } = location;
       <ol class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
         <li><a href="/" class="hover:text-[#A61E22] transition font-medium">Home</a></li>
         <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href="/services/" class="hover:text-[#A61E22] transition font-medium">Services</a></li>
-        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href={`/services/emergency-locksmith/${slug}`} class="hover:text-[#A61E22] transition font-medium">Emergency Locksmith in {city}</a></li>
+        <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><a href={`/services/emergency-locksmith/${slug}/`} class="hover:text-[#A61E22] transition font-medium">Emergency Locksmith in {city}</a></li>
         <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg><span class="text-[#A61E22] font-semibold">Emergency House Lockout — {city}, {state}</span></li>
       </ol>
     </div>
@@ -134,12 +134,12 @@ const { city, state, slug, county } = location;
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Broken Key in Lock</h3>
           <p class="text-gray-600 text-sm leading-relaxed">If your key broke off inside the lock, the door won't open — and attempting to remove the key fragment yourself with improvised tools often makes it worse. We use professional broken key extraction tools to remove the fragment from the lock cylinder cleanly, then either restore the lock to working order or replace it if necessary. We also cut you a new key from the lock on the spot in {city}.</p>
-          <div class="mt-4"><a href={`/services/emergency-locksmith/${slug}/broken-key-extraction`} class="text-[#A61E22] font-semibold hover:underline text-sm">Broken Key Extraction in {city} →</a></div>
+          <div class="mt-4"><a href={`/services/emergency-locksmith/${slug}/broken-key-extraction/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Broken Key Extraction in {city} →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Getting In</h3>
           <p class="text-gray-600 text-sm leading-relaxed">Once we get you back inside, we can rekey your locks on the spot so your missing or lost key no longer works. If the lock was damaged or worn before the lockout, we can replace it immediately. If you've recently moved into your {city} home, we strongly recommend rekeying — previous owners, contractors, or real estate agents may have copies of your current key that you don't know about.</p>
-          <div class="mt-4"><a href={`/services/residential-locksmith/${slug}/lock-rekeying`} class="text-[#A61E22] font-semibold hover:underline text-sm">Lock Rekeying in {city} →</a></div>
+          <div class="mt-4"><a href={`/services/residential-locksmith/${slug}/lock-rekeying/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Lock Rekeying in {city} →</a></div>
         </div>
       </div>
     </div>
@@ -152,39 +152,39 @@ const { city, state, slug, county } = location;
         <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">More Locksmith Services in {city}, {state}</h2>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <a href={`/services/emergency-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+        <a href={`/services/emergency-locksmith/${slug}/`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
           <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Locksmith in {city}, {state}</h3>
           <p class="text-gray-600 text-sm">Full emergency locksmith services in {city}.</p>
         </a>
-        <a href={`/services/emergency-locksmith/${slug}/emergency-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+        <a href={`/services/emergency-locksmith/${slug}/emergency-lockout/`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
           <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Lockout Service in {city}, {state}</h3>
           <p class="text-gray-600 text-sm">Home, car, and business lockouts in {city}.</p>
         </a>
-        <a href={`/services/emergency-locksmith/${slug}/emergency-car-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+        <a href={`/services/emergency-locksmith/${slug}/emergency-car-lockout/`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
           <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Emergency Car Lockout in {city}, {state}</h3>
           <p class="text-gray-600 text-sm">Fast car lockout response in {city}.</p>
         </a>
-        <a href={`/services/residential-locksmith/${slug}/house-lockout`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+        <a href={`/services/residential-locksmith/${slug}/house-lockout/`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
           <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">House Lockout Service in {city}, {state}</h3>
           <p class="text-gray-600 text-sm">Residential house lockout service in {city}.</p>
         </a>
-        <a href={`/services/residential-locksmith/${slug}/lock-rekeying`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+        <a href={`/services/residential-locksmith/${slug}/lock-rekeying/`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
           <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Lock Rekeying in {city}, {state}</h3>
           <p class="text-gray-600 text-sm">Lock rekeying after a lockout or key loss in {city}.</p>
         </a>
-        <a href={`/services/emergency-locksmith/${slug}/broken-key-extraction`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+        <a href={`/services/emergency-locksmith/${slug}/broken-key-extraction/`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
           <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Broken Key Extraction in {city}, {state}</h3>
           <p class="text-gray-600 text-sm">Professional broken key extraction in {city}.</p>
         </a>
-        <a href={`/services/residential-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+        <a href={`/services/residential-locksmith/${slug}/`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
           <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Residential Locksmith in {city}, {state}</h3>
           <p class="text-gray-600 text-sm">Full residential locksmith services in {city}.</p>
         </a>
-        <a href={`/services/automotive-locksmith/${slug}`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
+        <a href={`/services/automotive-locksmith/${slug}/`} class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200 hover:border-[#A61E22] hover:shadow-md transition group">
           <h3 class="font-bold text-[#1A1F22] text-base mb-2 group-hover:text-[#A61E22] transition">Automotive Locksmith in {city}, {state}</h3>
           <p class="text-gray-600 text-sm">Car lockouts and key replacement in {city}.</p>
         </a>
-        <a href={`/service-areas/${slug}`} class="bg-[#A61E22] rounded-2xl p-6 border border-[#A61E22] hover:bg-[#8C181B] transition">
+        <a href={`/service-areas/${slug}/`} class="bg-[#A61E22] rounded-2xl p-6 border border-[#A61E22] hover:bg-[#8C181B] transition">
           <h3 class="font-bold text-white text-base mb-2">All Services in {city}, {state}</h3>
           <p class="text-white/80 text-sm">View all locksmith services in {city}, {state}.</p>
         </a>

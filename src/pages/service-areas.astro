@@ -103,7 +103,7 @@ const slugify = (city: string) => city.toLowerCase().replaceAll(" ", "-") + "-de
       <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
         {cities.map((city) => (
           <a
-            href={`/service-areas/${slugify(city)}/`}
+            href={`/service-areas/${slugify(city)}//`}
             class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md hover:border-[#A61E22] transition text-center group"
           >
             <div class="w-10 h-10 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-3">
