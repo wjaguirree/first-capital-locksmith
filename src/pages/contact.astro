@@ -128,12 +128,12 @@ import MainLayout from "../layouts/MainLayout.astro";
         <h2 class="text-2xl font-bold text-[#1A1F22] mb-2">Send Us a Message</h2>
         <p class="text-gray-600 mb-6 text-sm">Fill out the form below and we will follow up as soon as possible.</p>
 
-        <form class="space-y-5" action="https://formsubmit.co/locksmithjobs01@gmail.com" method="POST">
+        <form class="space-y-5" action="https://api.web3forms.com/submit" method="POST">
 
-          <!-- FormSubmit configuration -->
-          <input type="hidden" name="_subject" value="New Contact Form Submission – 1st Capital Locksmith" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="text" name="_honey" style="display:none" />
+          <!-- Web3Forms configuration -->
+          <input type="hidden" name="access_key" value="093dbea7-e786-412b-b725-4380abee056b" />
+          <input type="hidden" name="subject" value="New Contact Form Submission – 1st Capital Locksmith" />
+          <input type="checkbox" name="botcheck" style="display:none" />
 
           <div>
             <label class="block text-sm font-semibold text-[#1A1F22] mb-2">Full Name <span class="text-[#A61E22]">*</span></label>

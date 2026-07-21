@@ -177,8 +177,46 @@ const ogImage = new URL(image, Astro.site);
       })();
     </script>
 
+    <!-- Web3Forms AJAX handler — shows inline success, no page redirect -->
+    <script>
+      document.addEventListener('submit', async function (e) {
+        var form = e.target;
+        if (!form.action || form.action.indexOf('api.web3forms.com') === -1) return;
+        e.preventDefault();
+
+        var btn = form.querySelector('[type="submit"]');
+        var originalText = btn ? btn.textContent : '';
+        if (btn) { btn.textContent = 'Sending\u2026'; btn.disabled = true; }
+
+        try {
+          var data = new FormData(form);
+          var resp = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+          var result = await resp.json();
+
+          if (result.success) {
+            var msg = document.createElement('div');
+            msg.style.cssText = 'text-align:center;padding:2.5rem 1rem;';
+            msg.innerHTML =
+              '<div style="width:64px;height:64px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;">' +
+              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width:32px;height:32px;"><polyline points="20 6 9 17 4 12"></polyline></svg>' +
+              '</div>' +
+              '<h3 style="font-size:1.4rem;font-weight:700;color:#1A1F22;margin-bottom:.5rem;">Message Sent!</h3>' +
+              '<p style="color:#4B5563;font-size:.95rem;">Thank you! We\u2019ll get back to you as soon as possible.</p>';
+            form.parentNode.insertBefore(msg, form);
+            form.style.display = 'none';
+          } else {
+            if (btn) { btn.textContent = originalText; btn.disabled = false; }
+            alert('Something went wrong. Please try again or call us at (302) 735-0050.');
+          }
+        } catch (err) {
+          if (btn) { btn.textContent = originalText; btn.disabled = false; }
+          alert('Something went wrong. Please try again or call us at (302) 735-0050.');
+        }
+      });
+    </script>
+
     <!-- Mobile sticky call button -->
-    <a
+    <
       href="tel:3027350050"
       class="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-center gap-2 bg-[#A61E22] text-white font-bold text-lg py-4 shadow-lg md:hidden"
       aria-label="Call 1st Capital Locksmith"
