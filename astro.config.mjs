@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.1stcapitallocksmith.com',
+  site: 'https://www.1stcapitallocksmithde.com',
   trailingSlash: 'always',
   integrations: [sitemap()],
   vite: {
