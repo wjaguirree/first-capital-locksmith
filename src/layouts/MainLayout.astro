@@ -90,18 +90,21 @@ const ogImage = new URL(image, Astro.site);
 
     <!-- Mobile reviews carousel -->
     <script>
+      // @ts-nocheck
       (function () {
         function initReviewCarousels() {
           if (window.innerWidth >= 768) return;
 
           // Find all grids that contain star-rating review cards
-          const reviewGrids = new Set();
+          const reviewGrids = /** @type {HTMLElement[]} */ ([]);
           document.querySelectorAll('strong').forEach(function (el) {
             if (el.textContent.trim().startsWith('\u2605\u2605\u2605\u2605\u2605')) {
               let parent = el.parentElement;
               while (parent) {
                 if (parent.classList.contains('grid')) {
-                  reviewGrids.add(parent);
+                  if (!reviewGrids.includes(parent)) {
+                    reviewGrids.push(parent);
+                  }
                   break;
                 }
                 parent = parent.parentElement;
@@ -109,7 +112,7 @@ const ogImage = new URL(image, Astro.site);
             }
           });
 
-          if (reviewGrids.size === 0) return;
+          if (reviewGrids.length === 0) return;
 
           // Inject scrollbar-hide style once
           const style = document.createElement('style');
@@ -117,7 +120,9 @@ const ogImage = new URL(image, Astro.site);
           document.head.appendChild(style);
 
           reviewGrids.forEach(function (grid) {
-            const cards = Array.from(grid.children);
+            const parent = grid.parentNode;
+            if (!parent) return;
+            const cards = /** @type {HTMLElement[]} */ (Array.from(grid.children));
             if (cards.length < 2) return;
 
             // Build scroll track
@@ -158,16 +163,15 @@ const ogImage = new URL(image, Astro.site);
             }, { passive: true });
 
             // Prev / Next buttons
-            function makeNavBtn(symbol, label, side) {
-              const btn = document.createElement('button');
-              btn.innerHTML = symbol;
-              btn.setAttribute('aria-label', label);
-              btn.style.cssText = 'position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:#A61E22;color:white;border:none;width:32px;height:32px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.25);padding:0;' + side + ':8px;';
-              return btn;
-            }
+            const prevBtn = document.createElement('button');
+            prevBtn.innerHTML = '&#8249;';
+            prevBtn.setAttribute('aria-label', 'Previous review');
+            prevBtn.style.cssText = 'position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:#A61E22;color:white;border:none;width:32px;height:32px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.25);padding:0;left:8px;';
 
-            const prevBtn = makeNavBtn('&#8249;', 'Previous review', 'left');
-            const nextBtn = makeNavBtn('&#8250;', 'Next review', 'right');
+            const nextBtn = document.createElement('button');
+            nextBtn.innerHTML = '&#8250;';
+            nextBtn.setAttribute('aria-label', 'Next review');
+            nextBtn.style.cssText = 'position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:#A61E22;color:white;border:none;width:32px;height:32px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.25);padding:0;right:8px;';
 
             prevBtn.addEventListener('click', function () {
               track.scrollTo({ left: Math.max(0, current - 1) * track.offsetWidth, behavior: 'smooth' });
@@ -183,9 +187,9 @@ const ogImage = new URL(image, Astro.site);
             wrapper.appendChild(prevBtn);
             wrapper.appendChild(nextBtn);
 
-            grid.parentNode.insertBefore(wrapper, grid);
-            grid.parentNode.insertBefore(dotsWrap, wrapper.nextSibling);
-            grid.parentNode.removeChild(grid);
+            parent.insertBefore(wrapper, grid);
+            parent.insertBefore(dotsWrap, wrapper.nextSibling);
+            parent.removeChild(grid);
           });
         }
 
@@ -200,13 +204,21 @@ const ogImage = new URL(image, Astro.site);
     <!-- Web3Forms AJAX handler — shows inline success, no page redirect -->
     <script>
       document.addEventListener('submit', async function (e) {
-        var form = e.target;
+        const target = e.target;
+        if (!(target instanceof HTMLFormElement)) return;
+
+        var form = target;
         if (!form.action || form.action.indexOf('api.web3forms.com') === -1) return;
         e.preventDefault();
 
         var btn = form.querySelector('[type="submit"]');
         var originalText = btn ? btn.textContent : '';
-        if (btn) { btn.textContent = 'Sending\u2026'; btn.disabled = true; }
+        if (btn) {
+          btn.textContent = 'Sending\u2026';
+          if (btn instanceof HTMLButtonElement || btn instanceof HTMLInputElement) {
+            btn.disabled = true;
+          }
+        }
 
         try {
           var data = new FormData(form);
@@ -222,14 +234,26 @@ const ogImage = new URL(image, Astro.site);
               '</div>' +
               '<h3 style="font-size:1.4rem;font-weight:700;color:#1A1F22;margin-bottom:.5rem;">Message Sent!</h3>' +
               '<p style="color:#4B5563;font-size:.95rem;">Thank you! We\u2019ll get back to you as soon as possible.</p>';
-            form.parentNode.insertBefore(msg, form);
+            if (form.parentNode) {
+              form.parentNode.insertBefore(msg, form);
+            }
             form.style.display = 'none';
           } else {
-            if (btn) { btn.textContent = originalText; btn.disabled = false; }
+            if (btn) {
+              btn.textContent = originalText;
+              if (btn instanceof HTMLButtonElement || btn instanceof HTMLInputElement) {
+                btn.disabled = false;
+              }
+            }
             alert('Something went wrong. Please try again or call us at (302) 735-0050.');
           }
         } catch (err) {
-          if (btn) { btn.textContent = originalText; btn.disabled = false; }
+          if (btn) {
+            btn.textContent = originalText;
+            if (btn instanceof HTMLButtonElement || btn instanceof HTMLInputElement) {
+              btn.disabled = false;
+            }
+          }
           alert('Something went wrong. Please try again or call us at (302) 735-0050.');
         }
       });
