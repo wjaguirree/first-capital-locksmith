@@ -34,17 +34,17 @@ const { city, state, slug, county } = location;
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.1stcapitallocksmith.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.1stcapitallocksmith.com/services/" },
-      { "@type": "ListItem", "position": 3, "name": `Emergency Locksmith in ${city}`, "item": `https://www.1stcapitallocksmith.com/services/emergency-locksmith/${slug}/` },
-      { "@type": "ListItem", "position": 4, "name": `Emergency Car Lockout in ${city}, ${state}`, "item": `https://www.1stcapitallocksmith.com/services/emergency-locksmith/${slug}/emergency-car-lockout/` }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://1stcapitallocksmithde.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://1stcapitallocksmithde.com/services/" },
+      { "@type": "ListItem", "position": 3, "name": `Emergency Locksmith in ${city}`, "item": `https://1stcapitallocksmithde.com/services/emergency-locksmith/${slug}/` },
+      { "@type": "ListItem", "position": 4, "name": `Emergency Car Lockout in ${city}, ${state}`, "item": `https://1stcapitallocksmithde.com/services/emergency-locksmith/${slug}/emergency-car-lockout/` }
     ]
   })} />
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org", "@type": "LocalBusiness",
-    "@id": "https://www.1stcapitallocksmith.com",
+    "@id": "https://1stcapitallocksmithde.com",
     "name": "1st Capital Locksmith", "telephone": "+13027350050",
-    "url": `https://www.1stcapitallocksmith.com/services/emergency-locksmith/${slug}/emergency-car-lockout/`,
+    "url": `https://1stcapitallocksmithde.com/services/emergency-locksmith/${slug}/emergency-car-lockout/`,
     "description": `Emergency car lockout service in ${city}, ${state}. Fast automotive lockout response for all makes and models throughout ${county}, Delaware.`,
     "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } },
     "priceRange": "$$"
