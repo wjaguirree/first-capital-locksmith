@@ -147,22 +147,22 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Our Commercial Locksmith Services Include:</h3>
           <ul class="space-y-3">
             {[
-              "Commercial Lockout Service",
-              "Business Lock Rekeying",
-              "Master Key System Installation",
-              "Panic Bar & Exit Device Installation",
-              "High-Security Lock Upgrades",
-              "Storefront Lock Repair & Replacement",
-              "Commercial Door Hardware Installation",
-              "Access Control Consultation",
-            ].map((item) => (
+              { label: "Commercial Lockout Service", href: "/services/office-lockout/" },
+              { label: "Business Lock Rekeying", href: "/services/commercial-lock-rekeying/" },
+              { label: "Master Key System Installation", href: "/services/master-key-systems/" },
+              { label: "Panic Bar & Exit Device Installation", href: "/services/panic-bar-installation/" },
+              { label: "High-Security Lock Upgrades", href: "/services/commercial-locksmith/" },
+              { label: "Storefront Lock Repair & Replacement", href: "/services/commercial-locksmith/" },
+              { label: "Commercial Door Hardware Installation", href: "/services/commercial-locksmith/" },
+              { label: "Access Control Consultation", href: "/services/commercial-locksmith/" },
+            ].map(({ label, href }) => (
               <li class="flex items-center gap-3 text-gray-700">
                 <span class="w-6 h-6 bg-[#A61E22] rounded-full flex items-center justify-center shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </span>
-                {item}
+                <a href={href} class="hover:text-[#A61E22] hover:underline transition">{label}</a>
               </li>
             ))}
           </ul>
@@ -212,6 +212,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               We understand that a business lockout can happen at any time, which is why we make it a priority to dispatch as quickly as possible. Don't let a lockout disrupt your business operations — call us and we'll be there.
             </p>
+            <div class="mt-4">
+              <a href="/services/office-lockout/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Commercial Lockout Service in Delaware →</a>
+            </div>
           </div>
         </div>
 
@@ -233,6 +236,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               We recommend commercial rekeying any time an employee leaves the company, keys go missing, or you take over a new commercial space. It's fast, affordable, and gives you complete peace of mind about who can access your business.
             </p>
+            <div class="mt-4">
+              <a href="/services/commercial-lock-rekeying/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Business Lock Rekeying in Delaware →</a>
+            </div>
           </div>
         </div>
 
@@ -254,6 +260,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               1st Capital Locksmith designs and installs custom master key systems for businesses throughout Delaware. We assess your property, understand your access needs, and build a system that works efficiently for your specific situation. Call us to discuss a master key solution for your business.
             </p>
+            <div class="mt-4">
+              <a href="/services/master-key-systems/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Master Key Systems in Delaware →</a>
+            </div>
           </div>
         </div>
 
@@ -275,6 +284,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               We also handle panic bar repairs for devices that have become loose, stiff, or unreliable over time. Don't wait until an emergency to find out your exit hardware isn't working — call us for an inspection and service today.
             </p>
+            <div class="mt-4">
+              <a href="/services/panic-bar-installation/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Panic Bar Installation in Delaware →</a>
+            </div>
           </div>
         </div>
 
@@ -296,6 +308,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               1st Capital Locksmith supplies and installs high-security locks for businesses throughout Delaware. If your current locks aren't giving you the level of protection your business requires, call us to discuss an upgrade that fits your needs and budget.
             </p>
+            <div class="mt-4">
+              <a href="/services/commercial-locksmith/" class="text-[#A61E22] font-semibold hover:underline text-sm">See all Commercial Locksmith Services →</a>
+            </div>
           </div>
         </div>
 
@@ -317,6 +332,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               If your storefront lock was damaged in a break-in attempt or has simply worn out over years of use, call us for a fast, professional assessment and repair. We'll make sure your storefront is secure before we leave.
             </p>
+            <div class="mt-4">
+              <a href="/services/commercial-locksmith/" class="text-[#A61E22] font-semibold hover:underline text-sm">See all Storefront and Commercial Lock Services →</a>
+            </div>
           </div>
         </div>
 

@@ -147,22 +147,22 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <h3 class="text-xl font-bold text-[#1A1F22] mb-6">Our Residential Locksmith Services Include:</h3>
           <ul class="space-y-3">
             {[
-              "House Lockout Service",
-              "Lock Rekeying",
-              "Deadbolt Installation & Upgrade",
-              "Lock Repair",
-              "Lock Replacement",
-              "Mailbox Lock Replacement",
-              "Sliding Door Lock Service",
-              "Duplicate House Key Made On-Site",
-            ].map((item) => (
+              { label: "House Lockout Service", href: "/services/house-lockout/" },
+              { label: "Lock Rekeying", href: "/services/lock-rekeying/" },
+              { label: "Deadbolt Installation & Upgrade", href: "/services/deadbolt-installation/" },
+              { label: "Lock Repair", href: "/services/lock-repair/" },
+              { label: "Lock Replacement", href: "/services/lock-change/" },
+              { label: "Mailbox Lock Replacement", href: "/services/mailbox-lock-replacement/" },
+              { label: "Sliding Door Lock Service", href: "/services/lock-repair/" },
+              { label: "Duplicate House Key Made On-Site", href: "/services/lock-rekeying/" },
+            ].map(({ label, href }) => (
               <li class="flex items-center gap-3 text-gray-700">
                 <span class="w-6 h-6 bg-[#A61E22] rounded-full flex items-center justify-center shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </span>
-                {item}
+                <a href={href} class="hover:text-[#A61E22] hover:underline transition">{label}</a>
               </li>
             ))}
           </ul>
@@ -213,6 +213,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               Whether you're locked out of your front door, a back door, a bedroom, or a bathroom, we can help. Give us a call and we'll get to you as quickly as possible so you can get back inside and get on with your day.
             </p>
+            <div class="mt-4">
+              <a href="/services/house-lockout/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about House Lockout Service in Delaware →</a>
+            </div>
           </div>
         </div>
 
@@ -234,6 +237,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               Beyond new home move-ins, we also recommend rekeying when keys go missing, after a roommate moves out, or after any situation where you're uncertain about who might have access to your home. It's a small investment that pays for itself in peace of mind.
             </p>
+            <div class="mt-4">
+              <a href="/services/lock-rekeying/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lock Rekeying in Delaware →</a>
+            </div>
           </div>
         </div>
 
@@ -255,6 +261,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               Whether you need a new deadbolt added to a door that doesn't have one, or you want to replace an older lock with something more robust, we handle the entire job on-site. We also install double-cylinder deadbolts, keypad deadbolts, and smart lock deadbolts depending on your preference.
             </p>
+            <div class="mt-4">
+              <a href="/services/deadbolt-installation/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Deadbolt Installation in Delaware →</a>
+            </div>
           </div>
         </div>
 
@@ -277,6 +286,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               If your lock was damaged during a break-in attempt, exposed to weather damage, or has simply worn down from years of use, call us and we'll get it working properly again. A well-maintained lock is a reliable lock.
             </p>
+            <div class="mt-4">
+              <a href="/services/lock-repair/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lock Repair in Delaware →</a>
+            </div>
           </div>
         </div>
 
@@ -298,6 +310,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               If you're not sure whether your lock needs repair or replacement, just call us. We'll take an honest look and give you a straightforward recommendation — no unnecessary upselling.
             </p>
+            <div class="mt-4">
+              <a href="/services/lock-change/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lock Change in Delaware →</a>
+            </div>
           </div>
         </div>
 
@@ -319,6 +334,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <p class="text-gray-700 leading-relaxed">
               Don't overlook your mailbox security. It's a small lock, but what it protects can have a big impact on your personal and financial privacy. Call us to get it sorted quickly and affordably.
             </p>
+            <div class="mt-4">
+              <a href="/services/mailbox-lock-replacement/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Mailbox Lock Replacement in Delaware →</a>
+            </div>
           </div>
         </div>
 
