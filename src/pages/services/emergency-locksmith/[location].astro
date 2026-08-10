@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../layouts/MainLayout.astro";
 import { locations } from "../../../data/locations";
+import { getLocationContentProfile } from "../../../data/locations";
 import type { Location } from "../../../data/locations";
 
 export function getStaticPaths() {
@@ -16,11 +17,12 @@ interface Props {
 
 const { location } = Astro.props;
 const { city, state, slug, county, description } = location;
+const profile = getLocationContentProfile(slug);
 ---
 
 <MainLayout
   title={`Emergency Locksmith in ${city}, ${state} | Fast Response | 1st Capital Locksmith`}
-  description={`1st Capital Locksmith provides emergency locksmith services in ${city}, ${state}. House lockouts, car lockouts, business lockouts, broken key extraction, and urgent lock replacement in ${city}, DE — available 6 days a week.`}
+  description={`1st Capital Locksmith provides emergency locksmith services in ${city}, ${state}. Fast response for ${profile.emergencyScenario} across ${profile.routeFocus} in ${city} — available 6 days a week.`}
 >
 
   <!-- Breadcrumbs -->
@@ -87,7 +89,7 @@ const { city, state, slug, county, description } = location;
         Emergency Locksmith in {city}, {state} — Fast Response When You Need It Most
       </h1>
       <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
-        Locked out of your home, car, or business in {city}? Key broken off in a lock? 1st Capital Locksmith responds fast to locksmith emergencies throughout {city}, Delaware — 6 days a week. Call now and a technician will be dispatched to your location.
+        Locked out in {city}? Key broken in a lock? We handle {profile.emergencyScenario} across {profile.routeFocus}. 1st Capital Locksmith dispatches quickly with {profile.dispatchNote}.
       </p>
       <div class="flex flex-wrap gap-3 md:gap-4">
         <a
@@ -116,7 +118,7 @@ const { city, state, slug, county, description } = location;
         </div>
         <div>
           <p class="text-2xl font-bold text-[#A61E22]">Fast</p>
-          <p class="text-gray-300 text-sm mt-1">Quick Dispatch to {city}</p>
+          <p class="text-gray-300 text-sm mt-1">Quick Dispatch via {profile.routeFocus}</p>
         </div>
         <div>
           <p class="text-2xl font-bold text-[#A61E22]">Mobile</p>
@@ -140,10 +142,10 @@ const { city, state, slug, county, description } = location;
             Fast Emergency Locksmith Service Throughout {city}, {state}
           </h2>
           <p class="text-gray-700 leading-relaxed mb-4">
-            {city} is {description}, and lock and key emergencies can happen to anyone, at any time. When you're locked out of your home, vehicle, or business in {city}, or facing any urgent lock situation, 1st Capital Locksmith responds quickly with the tools and expertise needed to resolve it completely on-site.
+            {city} is {description}, and the local mix of {profile.propertyMix} means emergency calls vary throughout the day. Whether you are dealing with a lockout, damaged hardware, or a broken key, we arrive equipped to solve it on-site.
           </p>
           <p class="text-gray-700 leading-relaxed mb-4">
-            We don't send call center dispatchers — when you call, you speak with a real person and get a real response. A mobile locksmith is dispatched to your {city} location right away, arrives fully equipped, and handles the entire job without callbacks or delays.
+            We do not route you through a call center. You talk to a real dispatcher and get real timing based on {profile.routeFocus}. Your technician arrives prepared to complete the job in one visit.
           </p>
           <p class="text-gray-700 leading-relaxed">
             For any lock or key emergency in {city}, {state}, call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> right now.
@@ -194,7 +196,7 @@ const { city, state, slug, county, description } = location;
           Emergency Locksmith Services in {city}, {state}
         </h2>
         <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          Here is a complete look at every emergency locksmith situation we handle throughout {city}, Delaware — all handled completely on-site, on the same call.
+          Here is a complete look at the emergency locksmith situations we handle in {city}. Service plans are adapted for {profile.propertyMix} and completed on-site whenever possible.
         </p>
       </div>
 

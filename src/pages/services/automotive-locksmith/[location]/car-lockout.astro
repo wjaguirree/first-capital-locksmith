@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import { locations } from "../../../../data/locations";
+import { getLocationContentProfile } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
 export function getStaticPaths() {
@@ -16,11 +17,12 @@ interface Props {
 
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+const profile = getLocationContentProfile(slug);
 ---
 
 <MainLayout
   title={`Car Lockout Service in ${city}, ${state} | Mobile Car Lockout | 1st Capital Locksmith`}
-  description={`Locked out of your car in ${city}, ${state}? 1st Capital Locksmith provides fast mobile car lockout service throughout ${city} and ${county}. Non-destructive entry for all makes and models. Call (302) 735-0050.`}
+  description={`Locked out of your car in ${city}, ${state}? 1st Capital Locksmith provides fast mobile car lockout service across ${profile.routeFocus} in ${city}. Non-destructive entry for all makes and models. Call (302) 735-0050.`}
 >
 
   <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
@@ -73,7 +75,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Automotive Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Car Lockout Service in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            1st Capital Locksmith provides fast mobile car lockout service throughout {city} and {county}. We respond promptly, use professional non-destructive entry tools, and get you back in your vehicle quickly — without damage to your car or its finish.
+            1st Capital Locksmith provides fast mobile car lockout service throughout {city}. We handle {profile.autoScenario} and dispatch based on {profile.routeFocus}, using non-destructive entry tools to get you back in safely.
           </p>
           <ul class="space-y-3">
             {[
@@ -100,7 +102,7 @@ const { city, state, slug, county } = location;
             {[
               { title: "Non-Destructive Entry", desc: "Professional automotive opening tools — no drilling, no damage to your vehicle." },
               { title: "All Vehicle Types", desc: `Cars, trucks, SUVs, vans, and commercial vehicles — all makes and models served in ${city}.` },
-              { title: "Mobile Service", desc: `We come directly to your location anywhere in ${city} and surrounding ${county}.` },
+              { title: "Mobile Service", desc: `We come directly to your location anywhere in ${city}, with routing based on ${profile.routeFocus}.` },
               { title: "Fast Response", desc: "Call us and we dispatch immediately — we aim to get to you as quickly as possible." },
             ].map((item) => (
               <div class="flex gap-3 items-start">
@@ -127,7 +129,7 @@ const { city, state, slug, county } = location;
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div><p class="text-2xl font-bold text-[#A61E22]">All Makes</p><p class="text-gray-300 text-sm mt-1">Domestic & Import Vehicles</p></div>
         <div><p class="text-2xl font-bold text-[#A61E22]">Mobile</p><p class="text-gray-300 text-sm mt-1">We Come to {city}</p></div>
-        <div><p class="text-2xl font-bold text-[#A61E22]">Fast</p><p class="text-gray-300 text-sm mt-1">Quick Response in {city}</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Fast</p><p class="text-gray-300 text-sm mt-1">Quick Response via {profile.routeFocus}</p></div>
         <div><p class="text-2xl font-bold text-[#A61E22]">No Damage</p><p class="text-gray-300 text-sm mt-1">Professional Entry Tools</p></div>
       </div>
     </div>
@@ -138,7 +140,7 @@ const { city, state, slug, county } = location;
       <div class="text-center mb-10">
         <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">What We Do in {city}</p>
         <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-3">Car Lockout Services in {city}, {state}</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto text-sm">We handle all types of vehicle lockout situations throughout {city} using professional automotive entry tools.</p>
+        <p class="text-gray-600 max-w-2xl mx-auto text-sm">We handle all types of vehicle lockout situations throughout {city}, with coverage for {profile.autoScenario} and surrounding corridors in {county}.</p>
       </div>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">

@@ -1,0 +1,269 @@
+---
+const zipBySlug: Record<string, { city: string; zip: string; note: string; relatedLinks: { label: string; href: string }[] }> = {
+  "bowers-de": {
+    city: "Bowers",
+    zip: "19946",
+    note: "Bowers Beach uses ZIP code 19946 for local mail and service calls along the bayfront.",
+    relatedLinks: [
+      { label: "car lockout service", href: "/services/car-lockout/" },
+      { label: "house lockout service", href: "/services/house-lockout/" },
+      { label: "emergency locksmith service", href: "/services/emergency-locksmith/" },
+    ],
+  },
+  "camden-de": {
+    city: "Camden",
+    zip: "19934",
+    note: "Camden shares ZIP code 19934 with Wyoming, so we use the Camden-Wyoming ZIP for local coverage.",
+    relatedLinks: [
+      { label: "car key replacement", href: "/services/car-key-replacement/" },
+      { label: "lock rekeying", href: "/services/lock-rekeying/" },
+      { label: "commercial locksmith service", href: "/services/commercial-locksmith/" },
+    ],
+  },
+  "cheswold-de": {
+    city: "Cheswold",
+    zip: "19936",
+    note: "Cheswold uses ZIP code 19936 for P.O. boxes, with some delivery addresses routed through Dover 19904.",
+    relatedLinks: [
+      { label: "emergency lockout service", href: "/services/emergency-lockout/" },
+      { label: "deadbolt installation", href: "/services/deadbolt-installation/" },
+      { label: "broken key extraction", href: "/services/broken-key-extraction/" },
+    ],
+  },
+  "clayton-de": {
+    city: "Clayton",
+    zip: "19938",
+    note: "Clayton sits on the Kent and New Castle County border at ZIP code 19938.",
+    relatedLinks: [
+      { label: "residential locksmith service", href: "/services/residential-locksmith/" },
+      { label: "lock repair", href: "/services/lock-repair/" },
+      { label: "master key systems", href: "/services/master-key-systems/" },
+    ],
+  },
+  "dover-de": {
+    city: "Dover",
+    zip: "19901-19906",
+    note: "Dover spans ZIP codes 19901 through 19906 across the city and surrounding neighborhoods.",
+    relatedLinks: [
+      { label: "automotive locksmith service", href: "/services/automotive-locksmith/" },
+      { label: "commercial lock rekeying", href: "/services/commercial-lock-rekeying/" },
+      { label: "emergency house lockout", href: "/services/emergency-house-lockout/" },
+    ],
+  },
+  "farmington-de": {
+    city: "Farmington",
+    zip: "19950",
+    note: "Farmington is currently served by the Greenwood post office using ZIP code 19950.",
+    relatedLinks: [
+      { label: "car key replacement", href: "/services/car-key-replacement/" },
+      { label: "lock change", href: "/services/lock-change/" },
+      { label: "office lockout service", href: "/services/office-lockout/" },
+    ],
+  },
+  "felton-de": {
+    city: "Felton",
+    zip: "19943",
+    note: "Felton uses ZIP code 19943 for local addresses in central Kent County.",
+    relatedLinks: [
+      { label: "house lockout service", href: "/services/house-lockout/" },
+      { label: "lock rekeying", href: "/services/lock-rekeying/" },
+      { label: "ignition repair", href: "/services/ignition-repair/" },
+    ],
+  },
+  "frederica-de": {
+    city: "Frederica",
+    zip: "19946",
+    note: "Frederica uses ZIP code 19946 for riverfront homes and nearby routes.",
+    relatedLinks: [
+      { label: "broken key extraction", href: "/services/broken-key-extraction/" },
+      { label: "deadbolt installation", href: "/services/deadbolt-installation/" },
+      { label: "emergency locksmith service", href: "/services/emergency-locksmith/" },
+    ],
+  },
+  "harrington-de": {
+    city: "Harrington",
+    zip: "19952",
+    note: "Harrington uses ZIP code 19952 for the town and fairgrounds area.",
+    relatedLinks: [
+      { label: "commercial locksmith service", href: "/services/commercial-locksmith/" },
+      { label: "panic bar installation", href: "/services/panic-bar-installation/" },
+      { label: "safe lockout services", href: "/services/safe-lockout-services/" },
+    ],
+  },
+  "hartly-de": {
+    city: "Hartly",
+    zip: "19953",
+    note: "Hartly uses ZIP code 19953 for its small north Kent County community.",
+    relatedLinks: [
+      { label: "house lockout service", href: "/services/house-lockout/" },
+      { label: "lock repair", href: "/services/lock-repair/" },
+      { label: "emergency lockout service", href: "/services/emergency-lockout/" },
+    ],
+  },
+  "houston-de": {
+    city: "Houston",
+    zip: "19954",
+    note: "Houston uses ZIP code 19954 for the town and nearby southern Kent County roads.",
+    relatedLinks: [
+      { label: "car lockout service", href: "/services/car-lockout/" },
+      { label: "ignition replacement", href: "/services/ignition-replacement/" },
+      { label: "residential locksmith service", href: "/services/residential-locksmith/" },
+    ],
+  },
+  "kenton-de": {
+    city: "Kenton",
+    zip: "19955",
+    note: "Kenton uses ZIP code 19955 for the crossroads community near Route 42 and Route 300.",
+    relatedLinks: [
+      { label: "office lockout service", href: "/services/office-lockout/" },
+      { label: "master key systems", href: "/services/master-key-systems/" },
+      { label: "commercial lock rekeying", href: "/services/commercial-lock-rekeying/" },
+    ],
+  },
+  "leipsic-de": {
+    city: "Leipsic",
+    zip: "19901",
+    note: "Leipsic uses ZIP code 19901 for the riverfront town and nearby bay routes.",
+    relatedLinks: [
+      { label: "emergency lockout service", href: "/services/emergency-lockout/" },
+      { label: "broken key extraction", href: "/services/broken-key-extraction/" },
+      { label: "lock repair", href: "/services/lock-repair/" },
+    ],
+  },
+  "little-creek-de": {
+    city: "Little Creek",
+    zip: "19961",
+    note: "Little Creek uses ZIP code 19961 for the bay-side town and nearby access roads.",
+    relatedLinks: [
+      { label: "car key replacement", href: "/services/car-key-replacement/" },
+      { label: "house lockout service", href: "/services/house-lockout/" },
+      { label: "emergency locksmith service", href: "/services/emergency-locksmith/" },
+    ],
+  },
+  "magnolia-de": {
+    city: "Magnolia",
+    zip: "19962",
+    note: "Magnolia uses ZIP code 19962 for the town center and nearby Kent County roads.",
+    relatedLinks: [
+      { label: "car lockout service", href: "/services/car-lockout/" },
+      { label: "deadbolt installation", href: "/services/deadbolt-installation/" },
+      { label: "lock rekeying", href: "/services/lock-rekeying/" },
+    ],
+  },
+  "milford-de": {
+    city: "Milford",
+    zip: "19963",
+    note: "Milford uses ZIP code 19963 across the city and its cross-county service area.",
+    relatedLinks: [
+      { label: "commercial locksmith service", href: "/services/commercial-locksmith/" },
+      { label: "emergency house lockout", href: "/services/emergency-house-lockout/" },
+      { label: "car key replacement", href: "/services/car-key-replacement/" },
+    ],
+  },
+  "smyrna-de": {
+    city: "Smyrna",
+    zip: "19977",
+    note: "Smyrna uses ZIP code 19977 for the town, rail corridor, and nearby neighborhoods.",
+    relatedLinks: [
+      { label: "automotive locksmith service", href: "/services/automotive-locksmith/" },
+      { label: "residential locksmith service", href: "/services/residential-locksmith/" },
+      { label: "commercial lockout service", href: "/services/commercial-locksmith/" },
+    ],
+  },
+  "viola-de": {
+    city: "Viola",
+    zip: "19979",
+    note: "Viola uses ZIP code 19979 for the small Lake Forest community.",
+    relatedLinks: [
+      { label: "house lockout service", href: "/services/house-lockout/" },
+      { label: "lock repair", href: "/services/lock-repair/" },
+      { label: "emergency lockout service", href: "/services/emergency-lockout/" },
+    ],
+  },
+  "woodside-de": {
+    city: "Woodside",
+    zip: "19980",
+    note: "Woodside uses ZIP code 19980 for the town and the surrounding Dover-area routes.",
+    relatedLinks: [
+      { label: "car lockout service", href: "/services/car-lockout/" },
+      { label: "house lockout service", href: "/services/house-lockout/" },
+      { label: "broken key extraction", href: "/services/broken-key-extraction/" },
+    ],
+  },
+  "wyoming-de": {
+    city: "Wyoming",
+    zip: "19934",
+    note: "Wyoming shares ZIP code 19934 with Camden, which is why the two towns are commonly grouped together.",
+    relatedLinks: [
+      { label: "car key replacement", href: "/services/car-key-replacement/" },
+      { label: "lock change", href: "/services/lock-change/" },
+      { label: "emergency locksmith service", href: "/services/emergency-locksmith/" },
+    ],
+  },
+};
+
+const pathname = Astro.url.pathname.replace(/\/+$/, "/");
+const slug = pathname.split("/").filter(Boolean).pop() ?? "";
+const zipInfo = zipBySlug[slug];
+const isServiceAreaListing = pathname === "/service-areas/";
+const isServiceListing = pathname === "/services/";
+const isBlogListing = pathname === "/blog/";
+const isHomePage = pathname === "/";
+const pageType = Astro.props.type;
+const isArticle = pageType === "article";
+const isServiceAreaPage = !!zipInfo;
+---
+
+{isServiceAreaPage ? (
+  <section aria-labelledby="service-area-links" class="bg-[#F8F8F5] py-12 border-t border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 space-y-6">
+      <div class="rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-xs mb-2">ZIP Codes Served</p>
+        <h2 id="service-area-links" class="text-2xl font-bold text-[#1A1F22] mb-3">{zipInfo.city}, DE ZIP Code</h2>
+        <p class="text-gray-700 leading-relaxed">
+          {zipInfo.note} If you are near the town line or need service outside the core address range, call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> and we will confirm coverage before dispatching.
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-4">
+          Common requests here include <a href={zipInfo.relatedLinks[0].href} class="text-[#A61E22] font-semibold hover:underline">{zipInfo.relatedLinks[0].label}</a>, <a href={zipInfo.relatedLinks[1].href} class="text-[#A61E22] font-semibold hover:underline">{zipInfo.relatedLinks[1].label}</a>, and <a href={zipInfo.relatedLinks[2].href} class="text-[#A61E22] font-semibold hover:underline">{zipInfo.relatedLinks[2].label}</a>, all handled by our mobile team on site.
+        </p>
+      </div>
+    </div>
+  </section>
+) : (
+  <section aria-labelledby="sitewide-internal-links" class="bg-[#F8F8F5] py-12 border-t border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="rounded-2xl border border-gray-200 bg-white p-6 md:p-8 shadow-sm">
+        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-xs mb-2">Helpful Internal Links</p>
+        <h2 id="sitewide-internal-links" class="text-2xl font-bold text-[#1A1F22] mb-3">
+          {isHomePage ? "Explore Services and Service Areas" : isServiceListing ? "Need a Specific Locksmith Service?" : isServiceAreaListing ? "Find the Right Service for Your Town" : isBlogListing || isArticle ? "Related Services and Coverage Areas" : "Helpful Links for Your Visit"}
+        </h2>
+        <p class="text-gray-700 leading-relaxed">
+          {isHomePage ? (
+            <>
+              Start with our <a href="/services/" class="text-[#A61E22] font-semibold hover:underline">full services list</a>, then browse <a href="/service-areas/" class="text-[#A61E22] font-semibold hover:underline">all service areas</a>, check the <a href="/blog/" class="text-[#A61E22] font-semibold hover:underline">blog</a>, or <a href="/contact/" class="text-[#A61E22] font-semibold hover:underline">contact us</a> for a fast mobile response.
+            </>
+          ) : isServiceListing ? (
+            <>
+              If you already know the problem, jump to <a href="/services/automotive-locksmith/" class="text-[#A61E22] font-semibold hover:underline">automotive locksmith services</a>, <a href="/services/residential-locksmith/" class="text-[#A61E22] font-semibold hover:underline">residential locksmith services</a>, <a href="/services/commercial-locksmith/" class="text-[#A61E22] font-semibold hover:underline">commercial locksmith services</a>, or <a href="/services/emergency-locksmith/" class="text-[#A61E22] font-semibold hover:underline">emergency locksmith service</a>. You can also pair the service with a town page like <a href="/service-areas/dover-de/" class="text-[#A61E22] font-semibold hover:underline">Dover</a> or <a href="/service-areas/smyrna-de/" class="text-[#A61E22] font-semibold hover:underline">Smyrna</a>.
+            </>
+          ) : isServiceAreaListing ? (
+            <>
+              Pick a town first, then compare it with the right locksmith solution on our <a href="/services/" class="text-[#A61E22] font-semibold hover:underline">services page</a>. If you want to read more before calling, the <a href="/blog/" class="text-[#A61E22] font-semibold hover:underline">blog</a> has practical lock and key tips for homeowners, drivers, and business owners.
+            </>
+          ) : isBlogListing || isArticle ? (
+            <>
+              Need the service behind the article? Visit <a href="/services/residential-locksmith/" class="text-[#A61E22] font-semibold hover:underline">residential locksmith services</a>, <a href="/services/automotive-locksmith/" class="text-[#A61E22] font-semibold hover:underline">automotive locksmith services</a>, or <a href="/services/commercial-locksmith/" class="text-[#A61E22] font-semibold hover:underline">commercial locksmith services</a>. For local coverage, review <a href="/service-areas/" class="text-[#A61E22] font-semibold hover:underline">our service areas</a> or <a href="/contact/" class="text-[#A61E22] font-semibold hover:underline">reach out directly</a>.
+            </>
+          ) : (
+            <>
+              You can always move between <a href="/services/" class="text-[#A61E22] font-semibold hover:underline">services</a>, <a href="/service-areas/" class="text-[#A61E22] font-semibold hover:underline">service areas</a>, and <a href="/contact/" class="text-[#A61E22] font-semibold hover:underline">contact</a> to find the right next step.
+            </>
+          )}
+        </p>
+        <p class="text-gray-700 leading-relaxed mt-4">
+          Local coverage pages you may want next: <a href="/service-areas/dover-de/" class="text-[#A61E22] font-semibold hover:underline">Dover</a>, <a href="/service-areas/smyrna-de/" class="text-[#A61E22] font-semibold hover:underline">Smyrna</a>, <a href="/service-areas/milford-de/" class="text-[#A61E22] font-semibold hover:underline">Milford</a>, <a href="/service-areas/camden-de/" class="text-[#A61E22] font-semibold hover:underline">Camden</a>, and <a href="/service-areas/" class="text-[#A61E22] font-semibold hover:underline">the full service areas directory</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+)}

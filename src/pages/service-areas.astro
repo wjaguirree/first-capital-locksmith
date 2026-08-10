@@ -13,7 +13,7 @@ const slugify = (city: string) => city.toLowerCase().replaceAll(" ", "-") + "-de
 
 <MainLayout
   title="Locksmith Service Areas in Dover and Kent County, DE"
-  description="1st Capital Locksmith provides fast mobile locksmith services throughout Dover and all of Kent County, Delaware. Automotive, residential, commercial, and emergency locksmith service available in your area now."
+  description="Find the Delaware towns and communities served by 1st Capital Locksmith, plus the local locksmith services available in each area."
 >
 
   <!-- Breadcrumbs -->
@@ -52,10 +52,10 @@ const slugify = (city: string) => city.toLowerCase().replaceAll(" ", "-") + "-de
     <div class="relative max-w-6xl mx-auto px-6 z-10">
       <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-4">Service Areas</p>
       <h1 class="text-4xl md:text-5xl font-bold mb-6 max-w-3xl leading-tight">
-        Mobile Locksmith Service Throughout Kent County, Delaware
+        Locksmith Coverage Map for Kent County, Delaware
       </h1>
       <p class="text-gray-300 text-lg max-w-2xl leading-relaxed mb-8">
-        1st Capital Locksmith serves Dover and every community across Kent County, Delaware. We dispatch quickly and come directly to your location for automotive, residential, commercial, and emergency locksmith services in Dover, Milford, Smyrna, Camden, Harrington, and beyond.
+        This page is a town-by-town directory for our mobile coverage area. Pick your city to see the local locksmith page for that community and the services most often requested there.
       </p>
       <div class="flex flex-wrap gap-4">
         <a
@@ -79,10 +79,10 @@ const slugify = (city: string) => city.toLowerCase().replaceAll(" ", "-") + "-de
     <div class="max-w-6xl mx-auto px-6 text-center">
       <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Where We Work</p>
       <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6">
-        Your Local Locksmith in Dover and Kent County, DE
+        Browse the Delaware Towns We Cover
       </h2>
       <p class="text-gray-700 text-lg max-w-4xl mx-auto leading-relaxed">
-        As a fully mobile locksmith company based in Dover, Delaware, 1st Capital Locksmith proudly serves homeowners, drivers, renters, and business owners throughout Kent County and surrounding communities. No matter where you are in our service area, we come directly to your location with all the tools and equipment needed to handle any lock and key situation on the spot. From emergency car lockouts in Dover to residential rekeying in Smyrna and commercial lock installations in Milford, we are your trusted local locksmith in Delaware.
+        Choose a town below to open its dedicated service-area page. Those location pages explain where we work, what kinds of calls are common in that community, and how our mobile locksmith team handles each request on site.
       </p>
     </div>
   </section>
@@ -103,7 +103,7 @@ const slugify = (city: string) => city.toLowerCase().replaceAll(" ", "-") + "-de
       <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
         {cities.map((city) => (
           <a
-            href={`/service-areas/${slugify(city)}//`}
+            href={`/service-areas/${slugify(city)}/`}
             class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md hover:border-[#A61E22] transition text-center group"
           >
             <div class="w-10 h-10 bg-[#A61E22] rounded-full flex items-center justify-center mx-auto mb-3">
@@ -126,10 +126,10 @@ const slugify = (city: string) => city.toLowerCase().replaceAll(" ", "-") + "-de
       <div class="text-center mb-12">
         <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">What We Offer</p>
         <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">
-          Full-Service Mobile Locksmith Available Throughout Delaware
+            Local Locksmith Services by Town and Service Type
         </h2>
         <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          No matter where you are in Kent County, 1st Capital Locksmith provides a complete range of professional locksmith services for vehicles, homes, and businesses. Click any service below to learn more.
+            Each service card links to a general service page, while the town links above connect you to a location-specific page. That structure makes it easy to find either the service you need or the community you want covered.
         </p>
       </div>
 

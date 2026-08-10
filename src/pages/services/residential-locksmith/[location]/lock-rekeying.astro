@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import { locations } from "../../../../data/locations";
+import { getLocationContentProfile } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
 export function getStaticPaths() {
@@ -13,11 +14,12 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+const profile = getLocationContentProfile(slug);
 ---
 
 <MainLayout
   title={`Lock Rekeying in ${city}, ${state} | Residential & Commercial Rekeying | 1st Capital Locksmith`}
-  description={`Lock rekeying service in ${city}, ${state}. 1st Capital Locksmith rekeys residential and rental property locks throughout ${city} and ${county}, Delaware. Fast, affordable rekeying for new homeowners and landlords. Call (302) 735-0050.`}
+  description={`Lock rekeying service in ${city}, ${state}. 1st Capital Locksmith rekeys ${profile.propertyMix} throughout ${city} and ${county}, Delaware. Fast, affordable rekeying for ${profile.rekeyScenario}. Call (302) 735-0050.`}
 >
 
   <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
@@ -58,7 +60,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Residential Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Lock Rekeying in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            Rekeying changes the internal pin configuration of your locks so that old keys no longer work — without replacing the hardware. 1st Capital Locksmith provides fast, affordable lock rekeying throughout {city} and {county} for new homeowners, landlords, and anyone who needs to control who has access to their property.
+            Rekeying changes lock pin configuration so old keys no longer work without replacing the hardware. In {city}, we handle rekeys for {profile.propertyMix}, especially for {profile.rekeyScenario}.
           </p>
           <ul class="space-y-3">
             {[
@@ -86,7 +88,7 @@ const { city, state, slug, county } = location;
               { title: "More Affordable Than Replacement", desc: "Rekeying costs significantly less than replacing lock hardware — your existing locks stay in place." },
               { title: "Same Security Level", desc: "A rekeyed lock provides the same level of security as a brand-new lock with fresh hardware." },
               { title: "All Locks to One Key", desc: `We can rekey all your locks so they work with a single new key — front door, back door, deadbolt.` },
-              { title: "Mobile Service in " + city, desc: `We come to your home or rental property in ${city} — same-day service available.` },
+              { title: "Mobile Service in " + city, desc: `We come to your property in ${city} with dispatch planning based on ${profile.routeFocus}.` },
             ].map((item) => (
               <div class="flex gap-3 items-start">
                 <span class="w-5 h-5 bg-[#A61E22] rounded-full flex items-center justify-center shrink-0 mt-0.5">
@@ -109,7 +111,7 @@ const { city, state, slug, county } = location;
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div><p class="text-2xl font-bold text-[#A61E22]">Licensed</p><p class="text-gray-300 text-sm mt-1">Professional Locksmith</p></div>
         <div><p class="text-2xl font-bold text-[#A61E22]">Mobile</p><p class="text-gray-300 text-sm mt-1">We Come to {city}</p></div>
-        <div><p class="text-2xl font-bold text-[#A61E22]">Fast</p><p class="text-gray-300 text-sm mt-1">Quick Response in {city}</p></div>
+        <div><p class="text-2xl font-bold text-[#A61E22]">Fast</p><p class="text-gray-300 text-sm mt-1">Quick Response via {profile.routeFocus}</p></div>
         <div><p class="text-2xl font-bold text-[#A61E22]">Upfront</p><p class="text-gray-300 text-sm mt-1">Clear Pricing Every Time</p></div>
       </div>
     </div>
@@ -129,11 +131,11 @@ const { city, state, slug, county } = location;
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Rental Property Rekeying</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Landlords in {city} should rekey between every tenancy — it's one of the most cost-effective ways to protect new tenants and limit liability exposure. We work with property managers and individual landlords across {county} to provide fast, affordable rekeying service between tenant move-outs and move-ins. We can often service multiple units in the same visit.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Landlords in {city} should rekey between every tenancy to protect new tenants and reduce liability. We support {profile.propertyMix} across {county}, with efficient turnover rekeys and multi-unit scheduling where needed.</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Key Loss or Security Concern</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Lost a key? Had a break-up or roommate change? Concerned a key was copied without your knowledge? These are all excellent reasons to rekey your locks in {city}. Rekeying renders all existing keys useless and gives you a clean start with new keys — often for less than $50 per lock. Call us and we can typically respond same-day.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">Lost a key, changed roommates, or unsure who still has access? Those are common {city} triggers for rekeying. Rekeying invalidates old keys immediately and gives you clean key control without replacing all hardware.</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">When Rekeying Isn't Enough</h3>
