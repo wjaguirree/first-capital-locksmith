@@ -1,5 +1,6 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
@@ -424,60 +425,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <!-- Reviews -->
-  <section class="bg-[#F8F8F5] py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
-          What Delaware Customers Say About Our Emergency Service
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Locked myself out of my house at 11pm on a Friday night. I was honestly dreading how long it would take to find someone. Called 1st Capital Locksmith and the technician was at my door in about 25 minutes. Had me back inside quickly and was so calm and professional about the whole thing. Cannot recommend them enough."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Patricia N.</p>
-          <p class="text-gray-500 text-sm">Emergency House Lockout — Dover, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Broke my key off in my car door in a parking lot on a Saturday morning. I had no idea what to do. Called 1st Capital Locksmith and they came to the parking lot, removed the broken key fragment without any damage, and made me a new key right there on the spot. The whole thing took less than 30 minutes. Incredible service."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Marcus T.</p>
-          <p class="text-gray-500 text-sm">Broken Key Extraction — Milford, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Someone tried to break into our business overnight and damaged the front door lock. Called 1st Capital Locksmith first thing in the morning and they were there within an hour. Replaced the damaged lock, secured the door, and gave us solid advice on additional security measures. Very professional and thorough."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Kevin & Sarah M.</p>
-          <p class="text-gray-500 text-sm">Post Break-In Emergency — Smyrna, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I locked my keys in my car with the engine running on a cold morning. Was absolutely panicking. 1st Capital Locksmith stayed on the phone with me, got there fast, and had my car open in just a couple of minutes. No damage at all. They were so calm and reassuring throughout. This is the only locksmith I will ever call."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Donna L.</p>
-          <p class="text-gray-500 text-sm">Emergency Car Lockout — Camden, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Forgot the combination to our home safe and had important documents inside we needed urgently. Called 1st Capital Locksmith and they came out the same day. The technician opened it without any damage to the safe at all. He also reset the combination for us before he left. Exceptional work. Highly recommended."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Franklin B.</p>
-          <p class="text-gray-500 text-sm">Safe Lockout Service — Harrington, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Called after locking myself out and honestly wasn't sure what to expect. The technician arrived quickly, was completely professional, got me back inside fast, and the price was completely fair. Outstanding service and I'll recommend them to everyone."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Renee H.</p>
-          <p class="text-gray-500 text-sm">After-Hours Lockout — Dover, DE</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Reviews />
 
   <!-- Emergency Sub-Services -->
   <section class="bg-[#F8F8F5] py-16">

@@ -1,5 +1,6 @@
-﻿---
+---
 import MainLayout from "../layouts/MainLayout.astro";
+import Reviews from "../components/Reviews.astro";
 
 const cities = [
   "Dover", "Harrington", "Milford", "Bowers", "Camden",
@@ -242,60 +243,7 @@ const slugify = (city: string) => city.toLowerCase().replaceAll(" ", "-") + "-de
   </section>
 
   <!-- Reviews -->
-  <section class="bg-white py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
-          Trusted by Customers Throughout Kent County, Delaware
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
-          <p class="mb-4 text-gray-700">"Fast response and very professional. Got my car unlocked quickly and without damage. Best locksmith in Dover!"</p>
-          <p class="text-sm text-gray-500 mb-1">Michael R. — Car lockout</p>
-          <p class="text-sm text-gray-500">Dover, DE</p>
-          <strong class="text-[#1A1F22]">★★★★★</strong>
-        </div>
-
-        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
-          <p class="mb-4 text-gray-700">"Needed a new key fob programmed on-site. Service was quick, pricing was fair, and the technician was very knowledgeable."</p>
-          <p class="text-sm text-gray-500 mb-1">Samantha T. — Key fob programming</p>
-          <p class="text-sm text-gray-500">Milford, DE</p>
-          <strong class="text-[#1A1F22]">★★★★★</strong>
-        </div>
-
-        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
-          <p class="mb-4 text-gray-700">"Excellent locksmith service. Arrived on time and rekeyed all our locks the same day. Very professional team."</p>
-          <p class="text-sm text-gray-500 mb-1">David H. — Residential rekey</p>
-          <p class="text-sm text-gray-500">Smyrna, DE</p>
-          <strong class="text-[#1A1F22]">★★★★★</strong>
-        </div>
-
-        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
-          <p class="mb-4 text-gray-700">"Replaced the deadbolt on our storefront and helped with a panic bar install. Great work and very fair pricing."</p>
-          <p class="text-sm text-gray-500 mb-1">Emma L. — Commercial locks</p>
-          <p class="text-sm text-gray-500">Camden, DE</p>
-          <strong class="text-[#1A1F22]">★★★★★</strong>
-        </div>
-
-        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
-          <p class="mb-4 text-gray-700">"Locked my keys in the house late at night. They arrived fast and got me back inside without any damage to my door."</p>
-          <p class="text-sm text-gray-500 mb-1">Tyler S. — Home lockout</p>
-          <p class="text-sm text-gray-500">Harrington, DE</p>
-          <strong class="text-[#1A1F22]">★★★★★</strong>
-        </div>
-
-        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
-          <p class="mb-4 text-gray-700">"Great service for our business lock rekey and new access keys after a staff change. Dependable and professional."</p>
-          <p class="text-sm text-gray-500 mb-1">Olivia M. — Business rekey</p>
-          <p class="text-sm text-gray-500">Dover, DE</p>
-          <strong class="text-[#1A1F22]">★★★★★</strong>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Reviews />
 
   <!-- CTA -->
   <section class="bg-[#1A1F22] py-20">

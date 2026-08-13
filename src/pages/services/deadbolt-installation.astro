@@ -1,5 +1,6 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
@@ -526,60 +527,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <!-- Reviews -->
-  <section class="bg-[#F8F8F5] py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
-          What Delaware Customers Say About Our Deadbolt Installation
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"We just moved into our house and wanted quality deadbolts on all three exterior doors. 1st Capital Locksmith came out the next day, installed Grade 1 Schlage deadbolts on every door, and reinforced the strike plates too. The technician explained everything he was doing and why. Great service — we feel so much more secure now."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Karen & Michael T.</p>
-          <p class="text-gray-500 text-sm">Deadbolt Installation — Dover, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I had a cheap builder-grade deadbolt on my front door for years and finally decided to upgrade. The locksmith from 1st Capital told me about the difference in grades, recommended a Schlage Grade 1, and had it installed within the hour. Night and day difference in how solid it feels. Should have done this years ago."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">James F.</p>
-          <p class="text-gray-500 text-sm">Deadbolt Upgrade — Smyrna, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I wanted a keypad deadbolt for my back door so my kids could get in without a key after school. 1st Capital installed it perfectly, programmed two codes, and showed my kids how to use it before they left. Everything worked great from day one. Very professional service and a fair price."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Tonya M.</p>
-          <p class="text-gray-500 text-sm">Keypad Deadbolt Installation — Milford, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"My front door has a large glass window right next to the knob and I was always worried about it. The locksmith explained why I needed a double-cylinder deadbolt for that door and went over the fire safety considerations too. He installed it the same day and it gives me so much more peace of mind now."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Patricia N.</p>
-          <p class="text-gray-500 text-sm">Double-Cylinder Deadbolt — Camden, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Had 1st Capital install a smart deadbolt on my front door. They helped me pick the right model that works with my Alexa setup, installed it, and made sure everything was paired before leaving. Fantastic experience — I can lock and unlock my door from anywhere now. Highly recommend them."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Brian C.</p>
-          <p class="text-gray-500 text-sm">Smart Lock Installation — Harrington, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I own a small rental property and needed new deadbolts installed after a tenant moved out. 1st Capital came out quickly, installed two new deadbolts, and rekeyed them so I have fresh keys for the new tenant. Fast, professional, and reasonably priced. I'll definitely use them again for my other property."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Dale W.</p>
-          <p class="text-gray-500 text-sm">Deadbolt Installation — Wyoming, DE</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Reviews />
 
   <!-- Related Services -->
   <section class="bg-white py-20">

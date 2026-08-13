@@ -1,5 +1,6 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
@@ -523,60 +524,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <!-- Reviews -->
-  <section class="bg-[#F8F8F5] py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
-          What Delaware Customers Say About Our Broken Key Extraction
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"My key snapped off in my front deadbolt on a Sunday evening. I had already tried to get it out myself with tweezers — bad idea. Called 1st Capital and the technician came within an hour, extracted the fragment without any damage to the lock, and cut me a new key right there. Complete lifesaver. Very professional."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Monica S.</p>
-          <p class="text-gray-500 text-sm">Broken Key Extraction — Dover, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Key broke off in my car ignition in a parking lot. I was completely stranded. Called 1st Capital and they came to me. Extracted the key, told me the ignition was fine, and cut me a replacement key on the spot. Got back on the road in under an hour. Excellent service, very reasonable price."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">David T.</p>
-          <p class="text-gray-500 text-sm">Car Ignition Key Extraction — Smyrna, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"My apartment key broke inside the door lock. The technician from 1st Capital was polite, efficient, and had it out in minutes. He also noticed the lock was running stiff and let me know — we ended up having it rekeyed at the same time. Great experience all around."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Ashley R.</p>
-          <p class="text-gray-500 text-sm">Broken Key Extraction — Milford, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I had a broken key stuck in a padlock on my storage unit. I honestly didn't think anyone could extract it without just cutting the lock off. 1st Capital Locksmith got it out cleanly with their tools and the padlock still works perfectly. Impressive work — highly recommend."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Kevin B.</p>
-          <p class="text-gray-500 text-sm">Padlock Key Extraction — Camden, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Key broke in the back door of my house at 7am before work. Called 1st Capital and they were there in 45 minutes. The technician was fast, friendly, and had the broken piece out without any drama. Cut me a new key and I made it to work on time. Couldn't ask for better service."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Patricia N.</p>
-          <p class="text-gray-500 text-sm">Broken Key Extraction — Harrington, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Had a key break in the front door lock at one of my rental properties during a tenant move-in. Called 1st Capital and they came right out, extracted the key, and rekeyed the lock while they were there. Fast, professional, and a fair price. My go-to locksmith for all my properties."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Warren C.</p>
-          <p class="text-gray-500 text-sm">Rental Property Key Extraction — Wyoming, DE</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Reviews />
 
   <!-- Related Services -->
   <section class="bg-white py-20">

@@ -1,5 +1,6 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
@@ -425,60 +426,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <!-- Reviews -->
-  <section class="bg-[#F8F8F5] py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
-          What Delaware Homeowners Say About Us
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I locked myself out of my house at 8pm on a Tuesday with my kids inside waiting for dinner. Called 1st Capital Locksmith and the technician was at my door in under 30 minutes. He was so calm and professional about the whole thing — had me back inside in just a few minutes without any damage. Absolute lifesaver."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Amanda R.</p>
-          <p class="text-gray-500 text-sm">House Lockout — Dover, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Just moved into a new house and wanted all the locks rekeyed before we got settled in. 1st Capital Locksmith came out the same week, rekeyed every exterior door, and gave us new keys on the spot. Fast, friendly, and very reasonably priced. Highly recommend them to anyone moving into a new home in Delaware."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Tyler W.</p>
-          <p class="text-gray-500 text-sm">Lock Rekeying — Smyrna, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Our front door deadbolt was getting harder to turn every week. I kept putting off calling someone but eventually it got stuck completely. 1st Capital Locksmith came out, diagnosed the problem, and replaced the whole lock with a quality deadbolt the same day. Works like a dream now. Wish I had called sooner."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Gloria M.</p>
-          <p class="text-gray-500 text-sm">Deadbolt Replacement — Milford, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I'm a landlord with several rental properties in Kent County and I use 1st Capital Locksmith every time I have a tenant turnover. They rekey the locks between tenants quickly and at a fair price. It gives me peace of mind knowing my properties are secure for the new tenants coming in. Really reliable service."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Harold J.</p>
-          <p class="text-gray-500 text-sm">Rental Property Rekeying — Camden, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Lost my mailbox key and couldn't figure out who to call. Found 1st Capital Locksmith online and they came out the same afternoon. Replaced the mailbox lock in about 15 minutes and gave me two new keys. Simple job but they handled it professionally and didn't make me feel like it was too small to bother with. Great service."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Denise P.</p>
-          <p class="text-gray-500 text-sm">Mailbox Lock Replacement — Harrington, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Had all the exterior locks on our home upgraded to better deadbolts after we had a concerning situation in the neighborhood. The locksmith from 1st Capital was knowledgeable and walked us through our options without any pressure. The new locks feel solid and the installation was clean and neat. Very happy with the work."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Robert & Lisa C.</p>
-          <p class="text-gray-500 text-sm">Deadbolt Upgrade — Dover, DE</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Reviews />
 
   <!-- Residential Sub-Services -->
   <section class="bg-[#F8F8F5] py-16">

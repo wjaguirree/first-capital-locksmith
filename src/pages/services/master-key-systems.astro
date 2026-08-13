@@ -1,5 +1,6 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
@@ -465,45 +466,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <!-- Reviews -->
-  <section class="bg-white py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-14">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Delaware Business Owners</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">What Businesses Say About Our Master Key Systems</h2>
-        <p class="text-gray-600 max-w-xl mx-auto">Delaware business owners trust 1st Capital Locksmith for commercial key control solutions.</p>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[
-          { name: "Dave H.", location: "Dover, DE", review: "Had them design a master key system for our 12-unit office building. The system is exactly what we needed — manager gets in everywhere, staff only get where they belong. Very professional process." },
-          { name: "Patricia N.", location: "Smyrna, DE", review: "We manage an apartment complex and the old key situation was a nightmare. 1st Capital designed a master system that makes tenant turnover and maintenance so much easier. Great work." },
-          { name: "Tom F.", location: "Milford, DE", review: "They rekeyed our whole warehouse into a master system without replacing a single lock. Saved us a lot of money and the system works perfectly. Documentation they provided was thorough." },
-          { name: "Karen A.", location: "Harrington, DE", review: "Professional from start to finish. They assessed our building, designed a hierarchy, and installed everything in one day. We now have proper key control for the first time since we opened." },
-          { name: "James B.", location: "Camden, DE", review: "Used them for our medical office. Sensitive areas are properly restricted, reception and staff have appropriate access, and the master key for management is simple and works everywhere. Highly recommend." },
-          { name: "Denise T.", location: "Felton, DE", review: "The restricted key system was exactly what we needed. No more worrying about employees copying keys. They track everything and re-issue when someone leaves. Very organized and professional." },
-        ].map((r) => (
-          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
-            <div class="flex items-center gap-1 mb-4">
-              {Array(5).fill(0).map(() => (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A61E22]" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-            </div>
-            <p class="text-gray-700 leading-relaxed mb-6 text-sm">"{r.review}"</p>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 bg-[#A61E22] rounded-full flex items-center justify-center text-white font-bold text-sm">
-                {r.name.charAt(0)}
-              </div>
-              <div>
-                <p class="font-semibold text-[#1A1F22] text-sm">{r.name}</p>
-                <p class="text-gray-500 text-xs">{r.location}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+  <Reviews />
 
   <!-- Related Services -->
   <section class="bg-[#F8F8F5] py-16">

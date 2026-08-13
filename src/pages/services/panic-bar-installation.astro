@@ -1,5 +1,6 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
@@ -458,45 +459,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <!-- Reviews -->
-  <section class="bg-white py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-14">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Delaware Business Owners</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-4">What Businesses Say About Our Panic Bar Service</h2>
-        <p class="text-gray-600 max-w-xl mx-auto">Delaware businesses rely on 1st Capital Locksmith for professional exit device installation and service.</p>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[
-          { name: "Frank T.", location: "Dover, DE", review: "Had to get panic bars installed before our business inspection. 1st Capital handled everything — assessed the doors, got the right hardware, and installed it all in one visit. Passed inspection without issues." },
-          { name: "Maria S.", location: "Smyrna, DE", review: "Our back exit panic bar was stiff and not latching correctly. They came out, diagnosed the issue, repaired it on the spot for much less than I expected. Very happy with the service." },
-          { name: "Joel B.", location: "Milford, DE", review: "Installed alarmed exit devices for our retail store's back exits. Really pleased with the quality of hardware and the professional installation. Exactly what we needed for security." },
-          { name: "Angela W.", location: "Harrington, DE", review: "They integrated the panic bar exterior cylinders into our master key system so our manager's key works on all doors including the exits. Very convenient and professionally done." },
-          { name: "Scott N.", location: "Camden, DE", review: "New business buildout, needed panic hardware on three exit doors before certificate of occupancy. They worked fast, used quality hardware, and we sailed through the inspection. Highly recommend." },
-          { name: "Lisa C.", location: "Felton, DE", review: "Our panic bar was failing — the latch wasn't releasing reliably. They came out quickly, identified worn internal components, replaced them, and the bar works perfectly now. Good honest service." },
-        ].map((r) => (
-          <div class="bg-[#F8F8F5] rounded-2xl p-8 border border-gray-200">
-            <div class="flex items-center gap-1 mb-4">
-              {Array(5).fill(0).map(() => (
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#A61E22]" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-            </div>
-            <p class="text-gray-700 leading-relaxed mb-6 text-sm">"{r.review}"</p>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 bg-[#A61E22] rounded-full flex items-center justify-center text-white font-bold text-sm">
-                {r.name.charAt(0)}
-              </div>
-              <div>
-                <p class="font-semibold text-[#1A1F22] text-sm">{r.name}</p>
-                <p class="text-gray-500 text-xs">{r.location}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+  <Reviews />
 
   <!-- Related Services -->
   <section class="bg-[#F8F8F5] py-16">

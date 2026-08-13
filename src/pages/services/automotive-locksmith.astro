@@ -1,5 +1,6 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
@@ -424,60 +425,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <!-- Reviews -->
-  <section class="bg-[#F8F8F5] py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
-          What Delaware Drivers Say About Our Automotive Locksmith Service
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I locked my keys in my car at the Dover Mall parking lot and had no idea what to do. Called 1st Capital Locksmith and the guy showed up in about 20 minutes. He had me back in my car so fast I couldn't believe it. No damage at all. Really professional and super friendly. Saved my whole afternoon."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Jessica M.</p>
-          <p class="text-gray-500 text-sm">Car Lockout — Dover, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Lost my only set of keys to my 2019 Honda Accord. I was dreading the dealership bill but someone recommended 1st Capital Locksmith. They came to my house, cut and programmed a new transponder key on the spot, and it was way cheaper than what the dealer quoted me. Worked perfectly on the first try. Definitely using them again."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Marcus T.</p>
-          <p class="text-gray-500 text-sm">Car Key Replacement — Smyrna, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"My key fob for my truck stopped working completely and I needed a replacement. The locksmith came out to my workplace in Delaware, had the right fob for my Ford F-150, programmed it in about 15 minutes, and I was back to work. I appreciated that he explained exactly what he was doing and gave me a fair price before starting."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Brian W.</p>
-          <p class="text-gray-500 text-sm">Key Fob Programming — Dover, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"My key snapped off right inside the ignition on my way to work. I panicked a little because I had no idea what to do. Called these guys and they were at my location in Milford within 30 minutes. The technician extracted the broken key, repaired the ignition, and cut me a new key all in one visit. Absolutely incredible service."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Danielle R.</p>
-          <p class="text-gray-500 text-sm">Broken Key Extraction & Ignition Repair — Milford, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I needed a spare key made for my wife's car so she'd have a backup. Called 1st Capital Locksmith and they came to the house the same day. The whole thing took maybe 20 minutes and the price was very reasonable. The key works perfectly. Way more convenient than taking the car to the dealer and waiting around all day."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Kevin S.</p>
-          <p class="text-gray-500 text-sm">Duplicate Car Key — Camden, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"My ignition was sticking and my key would barely turn. It got so bad that one morning I couldn't start the car at all. 1st Capital Locksmith came out and diagnosed the problem quickly. Turned out the ignition cylinder needed to be replaced. They did it on the spot and matched it to my existing key. Very knowledgeable and professional."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Patricia L.</p>
-          <p class="text-gray-500 text-sm">Ignition Replacement — Harrington, DE</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Reviews />
 
   <!-- Automotive Sub-Services -->
   <section class="bg-[#F8F8F5] py-16">

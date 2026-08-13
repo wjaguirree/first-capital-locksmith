@@ -1,5 +1,6 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
@@ -511,60 +512,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <!-- Reviews -->
-  <section class="bg-[#F8F8F5] py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
-          What Delaware Customers Say About Our Mailbox Lock Service
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Lost my mailbox key and couldn't figure out who to call. Found 1st Capital Locksmith online, they came the same afternoon and replaced the lock in about 15 minutes. Gave me two new keys on the spot. Simple but they handled it very professionally and didn't make me feel like it was too small a job to bother with."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Denise P.</p>
-          <p class="text-gray-500 text-sm">Mailbox Lock Replacement — Dover, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I manage a 12-unit apartment building with cluster mailboxes. Had two tenants move out without returning their mailbox keys. 1st Capital replaced both locks quickly and efficiently. Great service, fair price. I'll definitely use them for all future tenant turnovers."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Harold J.</p>
-          <p class="text-gray-500 text-sm">Cluster Mailbox Lock — Milford, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Moved into my new house and realized I had no idea how many copies of the mailbox key existed from the previous owners. Called 1st Capital and they came out and replaced the lock the same week. Very quick, very affordable. Nice to have the peace of mind knowing it's a fresh start."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Lauren M.</p>
-          <p class="text-gray-500 text-sm">New Home Mailbox Lock — Smyrna, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"My mailbox lock was completely seized up — couldn't open it at all. The technician from 1st Capital opened it without damaging anything, replaced the lock, and now it opens perfectly. Affordable, fast, and professional. Would recommend for anyone in the area."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Tom G.</p>
-          <p class="text-gray-500 text-sm">Jammed Mailbox Lock — Camden, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"My purse was stolen with my keys inside — including my mailbox key. I was worried about identity theft from my mail. Called 1st Capital and they replaced the mailbox lock the same day. Fast, professional, and reasonably priced. Gave me real peace of mind."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Angela R.</p>
-          <p class="text-gray-500 text-sm">Stolen Key Mailbox Lock — Harrington, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I rent out several properties and 1st Capital handles all my locksmith needs at turnover — door locks and mailbox locks. They're reliable, show up when they say they will, do clean work, and price fairly. Couldn't ask for more from a locksmith service."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Robert K.</p>
-          <p class="text-gray-500 text-sm">Rental Property Mailbox Locks — Wyoming, DE</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Reviews />
 
   <!-- Related Services -->
   <section class="bg-white py-20">

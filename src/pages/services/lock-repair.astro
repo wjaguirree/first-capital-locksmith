@@ -1,5 +1,6 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
@@ -529,60 +530,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <!-- Reviews -->
-  <section class="bg-[#F8F8F5] py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
-          What Delaware Customers Say About Our Lock Repair Service
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"My front deadbolt was getting really stiff over the winter and I kept putting off calling someone. Finally called 1st Capital and the technician came out, cleaned and adjusted the lock, and now it turns perfectly. Quick, clean, and very affordable. Wish I had called sooner instead of fighting with it every day."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Rachel B.</p>
-          <p class="text-gray-500 text-sm">Stiff Lock Repair — Dover, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Broke my key off in the back door lock — classic. Called 1st Capital and they extracted it without damaging the lock at all. While they were there I had them check the front deadbolt too which had been a bit loose. They fixed that on the same visit. Great service, very professional."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Marcus T.</p>
-          <p class="text-gray-500 text-sm">Broken Key Extraction — Smyrna, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Someone tried to break into my garage and damaged the lock in the process. 1st Capital came out the same day, assessed the damage, and recommended replacing rather than repairing since the mechanism had been compromised. They installed a much better lock and reinforced the strike plate. Feel a lot more secure now."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Diane W.</p>
-          <p class="text-gray-500 text-sm">Break-In Damage Repair — Milford, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"The deadbolt on our side door was only going in halfway — had to lift and push the door just right every time to lock it. The locksmith realigned the strike plate and adjusted the hinges in about 20 minutes. Door latches smoothly now. Great work at a fair price."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Gary & Sue M.</p>
-          <p class="text-gray-500 text-sm">Deadbolt Misalignment Repair — Camden, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Our office door lock was spinning without catching — employees couldn't lock up at the end of the day. Called 1st Capital and they came within a couple of hours. Fixed the internal mechanism and had everything working before close of business. Fantastic response time and honest pricing."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Christine H.</p>
-          <p class="text-gray-500 text-sm">Commercial Lock Repair — Dover, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I manage several rental properties and 1st Capital is my go-to for any lock issues between tenants or during a lease. They're reliable, show up when they say they will, price fairly, and do good work. I've recommended them to other landlords in the area and will keep using them."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Frank O.</p>
-          <p class="text-gray-500 text-sm">Rental Property Lock Repair — Harrington, DE</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Reviews />
 
   <!-- Related Services -->
   <section class="bg-white py-20">

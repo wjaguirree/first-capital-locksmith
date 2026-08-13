@@ -1,5 +1,6 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
@@ -422,60 +423,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <!-- Reviews -->
-  <section class="bg-[#F8F8F5] py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
-          What Delaware Business Owners Say About Us
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"We had an employee leave unexpectedly and I was worried about who still had keys to our office. Called 1st Capital Locksmith and they came out the same day and rekeyed every door in our building. Fast, professional, and the price was very fair. I felt a lot better about our security after they left."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Sandra K.</p>
-          <p class="text-gray-500 text-sm">Business Rekeying — Dover, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I manage a small apartment complex and needed a master key system installed so I could access all units without carrying fifteen different keys. These guys set the whole thing up perfectly. Every tenant key works on their unit only, and my master key works on everything. Exactly what I needed."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Raymond P.</p>
-          <p class="text-gray-500 text-sm">Master Key System — Smyrna, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Showed up to open my restaurant one morning and the front door lock had completely failed overnight. I could not get in at all. Called 1st Capital Locksmith and they were there within 30 minutes. Got me in without any damage and replaced the lock on the spot. Saved my whole morning shift. Cannot thank them enough."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Maria C.</p>
-          <p class="text-gray-500 text-sm">Commercial Lockout — Dover, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"We needed panic bars installed on our back exit doors to meet building code requirements for our new office space. 1st Capital Locksmith came out, assessed what we needed, ordered the right hardware, and had everything installed quickly. The inspector approved it without any issues. Great work all around."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">James T.</p>
-          <p class="text-gray-500 text-sm">Panic Bar Installation — Milford, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Someone tried to break into our storefront overnight and damaged the lock on our front door. Called 1st Capital Locksmith first thing in the morning. They repaired the damage, installed a new heavy-duty deadbolt, and recommended some additional security upgrades. Very thorough and professional. Highly recommend."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Carla M.</p>
-          <p class="text-gray-500 text-sm">Storefront Lock Repair — Camden, DE</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"We upgraded all our office locks to high-security Medeco locks after a security review recommended it. 1st Capital Locksmith handled the entire installation and explained everything clearly. The quality of the hardware and the installation work was excellent. Our office security is in a completely different league now."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">David H.</p>
-          <p class="text-gray-500 text-sm">High-Security Lock Upgrade — Harrington, DE</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Reviews />
 
   <!-- Commercial Sub-Services -->
   <section class="bg-[#F8F8F5] py-16">

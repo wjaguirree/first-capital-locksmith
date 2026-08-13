@@ -1,5 +1,6 @@
-﻿---
+---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
@@ -443,60 +444,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
   </section>
 
   <!-- Reviews -->
-  <section class="bg-white py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Customer Reviews</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">
-          What Delaware Drivers Say About Our Ignition Repair Service
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"My key had been getting harder and harder to turn in the ignition for a few months. One morning it got so bad I couldn't start my car for work. Called 1st Capital Locksmith and they came to my house in Dover within half an hour. The technician cleaned and lubricated the cylinder, adjusted something inside, and the key turned like new. Quick, affordable, and didn't try to sell me something I didn't need."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Marcus T.</p>
-          <p class="text-gray-500 text-sm">Ignition Cylinder Repair — Dover, DE</p>
-        </div>
-
-        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"My key snapped off in the ignition while I was trying to start my car. I was panicking — thought I'd need a tow and a whole new ignition. 1st Capital Locksmith came to Milford, removed the broken key fragment with their special tools, checked the cylinder, and it was fine. They cut me a new key on the spot. Whole visit was maybe 40 minutes. Absolutely fantastic service."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Rachel B.</p>
-          <p class="text-gray-500 text-sm">Broken Key Extraction — Milford, DE</p>
-        </div>
-
-        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I had an issue where my key would go in and start the car just fine but wouldn't come back out. I was leaving the car running at the grocery store to avoid getting stuck. Called 1st Capital and they came to Smyrna the same day. They identified the release issue inside the cylinder and repaired it without replacing the whole thing — saved me a lot compared to what the dealer would have charged."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Diana L.</p>
-          <p class="text-gray-500 text-sm">Key Stuck in Ignition Repair — Smyrna, DE</p>
-        </div>
-
-        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"My car would crank but not start and the security light was on. I called 1st Capital Locksmith expecting bad news. The technician came to Camden, tested the transponder chip in my key, and found it had failed. He programmed a new transponder key on-site and the car started right up. Much faster and cheaper than I expected — I thought I'd need the dealer to sort out a security issue."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Greg S.</p>
-          <p class="text-gray-500 text-sm">Transponder Key Ignition Issue — Camden, DE</p>
-        </div>
-
-        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"Very impressed with the professionalism and honesty of this company. I called expecting to need a full ignition replacement — the key was barely turning and I'd been dealing with it for weeks. The technician came to Harrington, took a look, and told me he could repair it rather than replace it. He did the repair in about 30 minutes and charged me a fair price. I'll call them for any locksmith need going forward."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Brenda K.</p>
-          <p class="text-gray-500 text-sm">Ignition Repair — Harrington, DE</p>
-        </div>
-
-        <div class="bg-[#F8F8F5] p-6 rounded-xl border border-gray-200 shadow-sm">
-          <strong class="text-[#A61E22] block mb-3">★★★★★</strong>
-          <p class="text-gray-700 leading-relaxed mb-4">"I had an older pickup truck with a really worn ignition — the key had to be positioned just right and sometimes took three or four attempts to engage. Called 1st Capital Locksmith and they came to Frederica. The technician repaired the cylinder internals and also cut me a fresh key since the original had worn down significantly. Everything works perfectly now. Highly recommend this company."</p>
-          <p class="font-semibold text-[#1A1F22] text-sm">Allen P.</p>
-          <p class="text-gray-500 text-sm">Worn Ignition & Key Repair — Frederica, DE</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Reviews />
 
   <!-- Related Services -->
   <section class="bg-[#F8F8F5] py-16">
