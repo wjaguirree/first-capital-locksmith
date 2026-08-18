@@ -1,6 +1,10 @@
 ﻿---
 import MainLayout from "../../layouts/MainLayout.astro";
 import Reviews from "../../components/Reviews.astro";
+import ServiceAreaDistinctiveBlock from "../../components/ServiceAreaDistinctiveBlock.astro";
+import { getLocationContentProfile } from "../../data/locations";
+
+const profile = getLocationContentProfile("camden-de");
 ---
 
 <MainLayout
@@ -147,6 +151,8 @@ import Reviews from "../../components/Reviews.astro";
             </ul>
           </div>
 
+          <ServiceAreaDistinctiveBlock city="Camden" profile={profile} />
+
           <!-- Service Checklist -->
           <div class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200">
             <h3 class="text-lg font-bold text-[#1A1F22] mb-4">Locksmith Services We Provide in Camden, DE:</h3>
@@ -288,7 +294,7 @@ import Reviews from "../../components/Reviews.astro";
               Best of all, we handle it all on-site. No tow truck needed, no dealership appointment. We come to wherever you are in Camden and take care of it right there.
             </p>
             <div class="mt-4">
-              <a href="/services/automotive-locksmith/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Automotive Locksmith Services in Camden ?</a>
+              <a href="/services/automotive-locksmith/camden-de/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Automotive Locksmith Services in Camden ?</a>
             </div>
           </div>
         </div>

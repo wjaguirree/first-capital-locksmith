@@ -1,6 +1,10 @@
 ﻿---
 import MainLayout from "../../layouts/MainLayout.astro";
 import Reviews from "../../components/Reviews.astro";
+import ServiceAreaDistinctiveBlock from "../../components/ServiceAreaDistinctiveBlock.astro";
+import { getLocationContentProfile } from "../../data/locations";
+
+const profile = getLocationContentProfile("viola-de");
 ---
 
 <MainLayout
@@ -160,6 +164,8 @@ import Reviews from "../../components/Reviews.astro";
             </ul>
           </div>
 
+          <ServiceAreaDistinctiveBlock city="Viola" profile={profile} />
+
           <!-- Service Checklist -->
           <div class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200">
             <h3 class="text-lg font-bold text-[#1A1F22] mb-4">
@@ -306,7 +312,7 @@ import Reviews from "../../components/Reviews.astro";
               Locked out anywhere in or around Viola? Call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> and we'll head your way immediately.
             </p>
             <div class="mt-4">
-              <a href="/services/automotive-locksmith/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Automotive Locksmith Services in Viola ?</a>
+              <a href="/services/automotive-locksmith/viola-de/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Automotive Locksmith Services in Viola ?</a>
             </div>
           </div>
         </div>

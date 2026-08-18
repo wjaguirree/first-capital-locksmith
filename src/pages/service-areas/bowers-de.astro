@@ -1,6 +1,10 @@
 ﻿---
 import MainLayout from "../../layouts/MainLayout.astro";
 import Reviews from "../../components/Reviews.astro";
+import ServiceAreaDistinctiveBlock from "../../components/ServiceAreaDistinctiveBlock.astro";
+import { getLocationContentProfile } from "../../data/locations";
+
+const profile = getLocationContentProfile("bowers-de");
 ---
 
 <MainLayout
@@ -148,6 +152,8 @@ import Reviews from "../../components/Reviews.astro";
             </ul>
           </div>
 
+          <ServiceAreaDistinctiveBlock city="Bowers" profile={profile} />
+
           <!-- Service List -->
           <div class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200">
             <h3 class="text-lg font-bold text-[#1A1F22] mb-4">Locksmith Services We Provide in Bowers, DE:</h3>
@@ -289,7 +295,7 @@ import Reviews from "../../components/Reviews.astro";
               We work on all makes and models including cars, trucks, vans, and SUVs throughout Bowers, DE.
             </p>
             <div class="mt-4">
-              <a href="/services/automotive-locksmith/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Automotive Locksmith Services in Bowers ?</a>
+              <a href="/services/automotive-locksmith/bowers-de/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Automotive Locksmith Services in Bowers ?</a>
             </div>
           </div>
         </div>

@@ -1,6 +1,10 @@
 ﻿---
 import MainLayout from "../../layouts/MainLayout.astro";
 import Reviews from "../../components/Reviews.astro";
+import ServiceAreaDistinctiveBlock from "../../components/ServiceAreaDistinctiveBlock.astro";
+import { getLocationContentProfile } from "../../data/locations";
+
+const profile = getLocationContentProfile("dover-de");
 ---
 
 <MainLayout
@@ -147,6 +151,8 @@ import Reviews from "../../components/Reviews.astro";
             </ul>
           </div>
 
+          <ServiceAreaDistinctiveBlock city="Dover" profile={profile} />
+
           <!-- Service Checklist -->
           <div class="bg-[#F8F8F5] rounded-2xl p-6 border border-gray-200">
             <h3 class="text-lg font-bold text-[#1A1F22] mb-4">Locksmith Services We Provide in Dover, DE:</h3>
@@ -291,7 +297,7 @@ import Reviews from "../../components/Reviews.astro";
               We also regularly assist military personnel stationed at Dover Air Force Base with automotive locksmith needs. Wherever you are in Dover when a car key situation comes up, call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> and we'll be there.
             </p>
             <div class="mt-4">
-              <a href="/services/automotive-locksmith/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Automotive Locksmith Services in Dover ?</a>
+              <a href="/services/automotive-locksmith/dover-de/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Automotive Locksmith Services in Dover ?</a>
             </div>
           </div>
         </div>
@@ -389,7 +395,7 @@ import Reviews from "../../components/Reviews.astro";
             The city stretches across a wide area — from the historic downtown district around The Green and Legislative Hall, through the busy commercial corridors of South DuPont Highway and Forrest Avenue, out to the residential neighborhoods that extend in every direction. With that kind of geographic spread and constant activity, lock and key situations come up regularly for people throughout Dover.
           </p>
           <p class="text-gray-700 leading-relaxed mb-4">
-            1st Capital Locksmith is based in Kent County and serves all of Dover — every neighborhood, every commercial district, every parking lot, and every stretch of road. We're not a call center that dispatches random contractors. When you call us, you get a professional locksmith who knows this area and takes your situation seriously, whether you need a <a href="/services/automotive-locksmith/" class="text-[#A61E22] font-semibold hover:underline">car locksmith</a>, a <a href="/services/residential-locksmith/" class="text-[#A61E22] font-semibold hover:underline">home locksmith</a>, or a <a href="/services/commercial-locksmith/" class="text-[#A61E22] font-semibold hover:underline">commercial locksmith</a>.
+            1st Capital Locksmith is based in Kent County and serves all of Dover — every neighborhood, every commercial district, every parking lot, and every stretch of road. We're not a call center that dispatches random contractors. When you call us, you get a professional locksmith who knows this area and takes your situation seriously, whether you need a <a href="/services/automotive-locksmith/dover-de/" class="text-[#A61E22] font-semibold hover:underline">car locksmith</a>, a <a href="/services/residential-locksmith/" class="text-[#A61E22] font-semibold hover:underline">home locksmith</a>, or a <a href="/services/commercial-locksmith/" class="text-[#A61E22] font-semibold hover:underline">commercial locksmith</a>.
           </p>
           <p class="text-gray-700 leading-relaxed">
             Dover is our home market. Call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> and experience the difference.

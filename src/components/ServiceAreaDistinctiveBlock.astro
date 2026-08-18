@@ -1,0 +1,47 @@
+---
+import type { LocationContentProfile } from "../data/locations";
+
+interface Props {
+  city: string;
+  profile: LocationContentProfile;
+}
+
+const { city, profile } = Astro.props;
+---
+
+<section class="bg-[#F8F8F5] py-16 border-y border-gray-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-4xl">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Local service notes for {city}</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22] mb-6">
+        What Makes Locksmith Calls in {city} Different
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        The local service pattern is shaped by {profile.routeFocus}. That matters when a technician is planning access, replacement hardware, and travel time for a mobile appointment.
+      </p>
+    </div>
+
+    <dl class="grid gap-4 md:grid-cols-2">
+      <div class="bg-white rounded-xl border border-gray-200 p-5">
+        <dt class="font-bold text-[#1A1F22] mb-2">Properties and access</dt>
+        <dd class="text-gray-700 text-sm leading-relaxed">{profile.propertyMix}</dd>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 p-5">
+        <dt class="font-bold text-[#1A1F22] mb-2">Vehicle work</dt>
+        <dd class="text-gray-700 text-sm leading-relaxed">{profile.autoScenario}</dd>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 p-5">
+        <dt class="font-bold text-[#1A1F22] mb-2">Rekey situations</dt>
+        <dd class="text-gray-700 text-sm leading-relaxed">{profile.rekeyScenario}</dd>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 p-5">
+        <dt class="font-bold text-[#1A1F22] mb-2">Urgent calls</dt>
+        <dd class="text-gray-700 text-sm leading-relaxed">{profile.emergencyScenario}</dd>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 p-5 md:col-span-2">
+        <dt class="font-bold text-[#1A1F22] mb-2">Dispatch approach</dt>
+        <dd class="text-gray-700 text-sm leading-relaxed">{profile.dispatchNote}</dd>
+      </div>
+    </dl>
+  </div>
+</section>
