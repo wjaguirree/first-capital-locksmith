@@ -4,8 +4,8 @@ import Reviews from "../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Locksmith FAQ | Common Questions Answered | 1st Capital Locksmith Dover, DE"
-  description="Frequently asked questions about 1st Capital Locksmith in Dover, Delaware. Get answers about our car lockout, house lockout, key replacement, rekeying, commercial locksmith, and emergency services. Call (302) 735-0050."
+  title="Locksmith FAQ | 1st Capital Locksmith Dover, DE"
+  description="Frequently asked questions about locksmith services from 1st Capital Locksmith in Dover, DE. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -36,112 +36,6 @@ import Reviews from "../components/Reviews.astro";
   })}</script>`} />
 
   <!-- Schema: FAQPage -->
-  <Fragment set:html={`<script type="application/ld+json">${JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What areas do you serve?",
-        "acceptedAnswer": { "@type": "Answer", "text": "We serve Dover, Kent County, and surrounding Delaware communities including Milford, Smyrna, Camden, Harrington, Magnolia, Wyoming, and nearby areas. Contact us to confirm coverage in your location." }
-      },
-      {
-        "@type": "Question",
-        "name": "Are you a mobile locksmith?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We are a fully mobile locksmith service. We come directly to your home, vehicle, or business with all the tools and equipment needed to complete the job on-site. There is no shop to visit — we bring the service to you." }
-      },
-      {
-        "@type": "Question",
-        "name": "How fast can you arrive?",
-        "acceptedAnswer": { "@type": "Answer", "text": "We dispatch quickly after receiving your call and aim to arrive as fast as possible. Estimated arrival times depend on your location and current service demand. We will give you an estimated time of arrival when you call." }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does locksmith service cost?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Pricing varies depending on the service type, complexity, and time of day. We always provide upfront quotes before any work begins so there are no surprise charges. Call us at (302) 735-0050 for a quick estimate." }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I request service?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The fastest way to reach us is by calling (302) 735-0050. You can also fill out our contact form and we will follow up as soon as possible." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you unlock my car if I'm locked out?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide car lockout service across Dover and surrounding areas. We use professional non-destructive methods to unlock your vehicle quickly without causing damage." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you replace a lost car key?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide on-site car key replacement including standard keys, transponder keys, and key fobs for many makes and models. We can cut and program a new key at your location." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you program a key fob?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer key fob programming and remote setup at your location. We sync the fob to your vehicle and test it before leaving to ensure everything works properly." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you fix or replace an ignition?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We handle ignition repair for stuck keys and worn cylinders as well as full ignition replacement for failed ignition systems. Our mobile unit arrives equipped to handle ignition issues on-site." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you extract a broken key from a lock or ignition?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer broken key extraction from door locks and ignitions using professional tools designed to remove broken key pieces without damaging the lock or ignition cylinder." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you unlock my house if I'm locked out?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide residential lockout service for homeowners and renters. We use non-destructive entry methods to get you back inside without damaging your door or lock." }
-      },
-      {
-        "@type": "Question",
-        "name": "What is lock rekeying and when should I do it?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Lock rekeying changes the internal pins of your lock so old keys no longer work. It's a cost-effective security option recommended after moving into a new home, losing a key, or ending a relationship with someone who had access to your property." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you install a new deadbolt?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We install deadbolts and other residential lock hardware to improve your home's security. We can recommend the right hardware for your door and ensure a proper fit and installation." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you repair a damaged or jammed lock?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We repair jammed, sticky, and damaged residential locks. Our technicians diagnose the issue and restore smooth lock operation, or recommend a lock replacement if the lock is beyond repair." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you work on commercial properties?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide commercial locksmith services for offices, storefronts, warehouses, and other business properties. Services include office lockouts, lock rekeying, panic bar installation, and master key systems." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you rekey our business after a staff change?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Commercial rekeying is one of the most common services we provide for businesses. After employee turnover or a security concern, rekeying ensures that old keys no longer provide access to your property." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you install panic bars?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We install and replace panic bars and exit hardware for commercial properties. Proper panic bar installation is important for building code compliance and occupant safety." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you set up a master key system for our business?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We design and install master key systems that allow different levels of access for different employees. This is ideal for offices, apartment buildings, and multi-unit commercial properties." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you unlock our office if we are locked out?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We provide office lockout service for offices, storefronts, and other business properties. We respond quickly to minimize disruption to your business operations." }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you work with property managers and landlords?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We regularly work with property managers and landlords to rekey units between tenants, repair locks, and handle lockout calls. We offer reliable and professional service to keep your properties secure." }
-      }
-    ]
-  })}</script>`} />
 
   <!-- Hero -->
   <section
