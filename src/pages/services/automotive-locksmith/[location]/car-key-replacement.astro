@@ -16,8 +16,8 @@ const { city, state, slug, county } = location;
 ---
 
 <MainLayout
-  title={`Car Key Replacement in ${city}, ${state} | Transponder & Smart Keys | 1st Capital Locksmith`}
-  description={`Need a car key replacement in ${city}, ${state}? 1st Capital Locksmith cuts and programs transponder keys, smart keys, and key fobs on-site throughout ${city} and ${county}. Call (302) 735-0050.`}
+  title={`Car Key Replacement in ${city}, ${state} | 1st Capital Locksmith`}
+  description={`Car key replacement in ${city}, ${state}: transponder keys, smart keys & fobs cut on-site. Call (302) 735-0050.`}
 >
 
   <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
@@ -44,10 +44,21 @@ const { city, state, slug, county } = location;
     "@context": "https://schema.org", "@type": "LocalBusiness",
     "@id": "https://1stcapitallocksmithde.com",
     "name": "1st Capital Locksmith", "telephone": "+13027350050",
-    "url": `https://1stcapitallocksmithde.com/services/automotive-locksmith/${slug}/car-key-replacement/`,
+    "url": "https://1stcapitallocksmithde.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" },
     "description": `On-site car key replacement and transponder programming in ${city}, ${state}. 1st Capital Locksmith cuts and programs all key types for all vehicle makes and models throughout ${county}.`,
     "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } },
     "priceRange": "$$"
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": `Car Key Replacement in ${city}, ${state}`,
+    "serviceType": "Car Key Replacement",
+    "provider": { "@type": "LocalBusiness", "name": "1st Capital Locksmith", "telephone": "+13027350050", "url": "https://1stcapitallocksmithde.com" },
+    "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } }
   })} />
 
   <section class="relative min-h-105 flex items-center py-12 md:py-20" style="background-image: url('/images/car-key-replacement-locksmith.jpg'); background-size: cover; background-position: center;">

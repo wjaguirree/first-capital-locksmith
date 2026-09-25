@@ -16,8 +16,8 @@ const { city, state, slug, county } = location;
 ---
 
 <MainLayout
-  title={`Ignition Repair in ${city}, ${state} | Ignition Cylinder Service | 1st Capital Locksmith`}
-  description={`Ignition repair service in ${city}, ${state}. 1st Capital Locksmith diagnoses and repairs stuck, worn, and damaged ignition cylinders for all vehicle makes and models throughout ${city} and ${county}. Call (302) 735-0050.`}
+  title={`Ignition Repair in ${city}, ${state} | 1st Capital Locksmith`}
+  description={`Ignition repair in ${city}, ${state} for stuck, worn, or damaged cylinders, on-site. Call (302) 735-0050.`}
 >
 
   <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
@@ -44,10 +44,21 @@ const { city, state, slug, county } = location;
     "@context": "https://schema.org", "@type": "LocalBusiness",
     "@id": "https://1stcapitallocksmithde.com",
     "name": "1st Capital Locksmith", "telephone": "+13027350050",
-    "url": `https://1stcapitallocksmithde.com/services/automotive-locksmith/${slug}/ignition-repair/`,
+    "url": "https://1stcapitallocksmithde.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" },
     "description": `Ignition cylinder repair in ${city}, ${state}. Diagnosis and repair of stuck, worn, and damaged ignition cylinders for all vehicle makes throughout ${county}, Delaware.`,
     "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } },
     "priceRange": "$$"
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": `Ignition Repair in ${city}, ${state}`,
+    "serviceType": "Ignition Repair",
+    "provider": { "@type": "LocalBusiness", "name": "1st Capital Locksmith", "telephone": "+13027350050", "url": "https://1stcapitallocksmithde.com" },
+    "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } }
   })} />
 
   <section class="relative min-h-105 flex items-center py-12 md:py-20" style="background-image: url('/images/ignition-repair-technician.jpg'); background-size: cover; background-position: center;">

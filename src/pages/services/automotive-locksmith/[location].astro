@@ -19,8 +19,8 @@ const { city, state, slug, county, description } = location;
 ---
 
 <MainLayout
-  title={`Automotive Locksmith in ${city}, ${state} | Car Lockout & Key Replacement | 1st Capital Locksmith`}
-  description={`1st Capital Locksmith provides fast mobile automotive locksmith services in ${city}, ${state}. Car lockouts, car key replacement, transponder key programming, key fob programming, and ignition repair in ${city}, DE.`}
+  title={`Automotive Locksmith in ${city}, ${state} | 1st Capital Locksmith`}
+  description={`Automotive locksmith in ${city}, ${state}: car lockouts, key replacement, fob programming & ignition repair. Fast mobile service. Call (302) 735-0050.`}
 >
 
   <!-- Breadcrumbs -->
@@ -71,8 +71,19 @@ const { city, state, slug, county, description } = location;
     "name": "1st Capital Locksmith",
     "telephone": "+13027350050",
     "url": "https://1stcapitallocksmithde.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" },
     "areaServed": { "@type": "City", "name": city, "containedIn": { "@type": "State", "name": "Delaware" } },
     "serviceType": ["Automotive Locksmith", "Car Lockout", "Car Key Replacement", "Transponder Key Programming", "Key Fob Programming", "Ignition Repair"]
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": `Automotive Locksmith Service in ${city}, ${state}`,
+    "serviceType": "Automotive Locksmith",
+    "provider": { "@type": "LocalBusiness", "name": "1st Capital Locksmith", "telephone": "+13027350050", "url": "https://1stcapitallocksmithde.com" },
+    "areaServed": { "@type": "City", "name": city, "containedIn": { "@type": "State", "name": "Delaware" } }
   })} />
 
   <!-- Hero -->

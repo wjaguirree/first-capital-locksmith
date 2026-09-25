@@ -21,8 +21,8 @@ const profile = getLocationContentProfile(slug);
 ---
 
 <MainLayout
-  title={`Car Lockout Service in ${city}, ${state} | Mobile Car Lockout | 1st Capital Locksmith`}
-  description={`Locked out of your car in ${city}, ${state}? 1st Capital Locksmith provides fast mobile car lockout service across ${profile.routeFocus} in ${city}. Non-destructive entry for all makes and models. Call (302) 735-0050.`}
+  title={`Car Lockout Service in ${city}, ${state} | 1st Capital Locksmith`}
+  description={`Locked out of your car in ${city}, ${state}? Fast, non-destructive mobile entry for all makes. Call (302) 735-0050.`}
 >
 
   <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
@@ -61,10 +61,21 @@ const profile = getLocationContentProfile(slug);
     "@id": "https://1stcapitallocksmithde.com",
     "name": "1st Capital Locksmith",
     "telephone": "+13027350050",
-    "url": `https://1stcapitallocksmithde.com/services/automotive-locksmith/${slug}/car-lockout/`,
+    "url": "https://1stcapitallocksmithde.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" },
     "description": `Mobile car lockout service in ${city}, ${state}. Fast, non-destructive entry for all vehicle makes and models throughout ${city} and ${county}, Delaware.`,
     "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } },
     "priceRange": "$$"
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": `Car Lockout Service in ${city}, ${state}`,
+    "serviceType": "Car Lockout Service",
+    "provider": { "@type": "LocalBusiness", "name": "1st Capital Locksmith", "telephone": "+13027350050", "url": "https://1stcapitallocksmithde.com" },
+    "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } }
   })} />
 
   <section class="relative min-h-105 flex items-center py-12 md:py-20" style="background-image: url('/images/car-lockout-technician.webp'); background-size: cover; background-position: center;">

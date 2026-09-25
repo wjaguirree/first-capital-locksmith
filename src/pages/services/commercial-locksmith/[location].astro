@@ -19,8 +19,8 @@ const { city, state, slug, county, description } = location;
 ---
 
 <MainLayout
-  title={`Commercial Locksmith in ${city}, ${state} | Business Lockout & Master Key Systems | 1st Capital Locksmith`}
-  description={`1st Capital Locksmith provides professional commercial locksmith services in ${city}, ${state}. Business lockouts, commercial lock installation, master key systems, access control, and panic bar installation in ${city}, DE.`}
+  title={`Commercial Locksmith in ${city}, ${state} | 1st Capital Locksmith`}
+  description={`Commercial locksmith in ${city}, ${state}: business lockouts, master key systems & panic bar installation. Fast mobile service. Call (302) 735-0050.`}
 >
 
   <!-- Breadcrumbs -->
@@ -71,8 +71,19 @@ const { city, state, slug, county, description } = location;
     "name": "1st Capital Locksmith",
     "telephone": "+13027350050",
     "url": "https://1stcapitallocksmithde.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" },
     "areaServed": { "@type": "City", "name": city, "containedIn": { "@type": "State", "name": "Delaware" } },
     "serviceType": ["Commercial Locksmith", "Business Lockout", "Master Key Systems", "Access Control", "Panic Bar Installation", "Commercial Lock Rekeying"]
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": `Commercial Locksmith Service in ${city}, ${state}`,
+    "serviceType": "Commercial Locksmith",
+    "provider": { "@type": "LocalBusiness", "name": "1st Capital Locksmith", "telephone": "+13027350050", "url": "https://1stcapitallocksmithde.com" },
+    "areaServed": { "@type": "City", "name": city, "containedIn": { "@type": "State", "name": "Delaware" } }
   })} />
 
   <!-- Hero -->

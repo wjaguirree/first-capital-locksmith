@@ -19,8 +19,8 @@ const { city, state, slug, county, description } = location;
 ---
 
 <MainLayout
-  title={`Residential Locksmith in ${city}, ${state} | House Lockout & Lock Rekeying | 1st Capital Locksmith`}
-  description={`1st Capital Locksmith provides professional residential locksmith services in ${city}, ${state}. House lockouts, lock rekeying, deadbolt installation, lock repair, and mailbox lock replacement in ${city}, DE.`}
+  title={`Residential Locksmith in ${city}, ${state} | 1st Capital Locksmith`}
+  description={`Residential locksmith in ${city}, ${state}: house lockouts, lock rekeying & deadbolt installation. Fast mobile service. Call (302) 735-0050.`}
 >
 
   <!-- Breadcrumbs -->
@@ -71,8 +71,19 @@ const { city, state, slug, county, description } = location;
     "name": "1st Capital Locksmith",
     "telephone": "+13027350050",
     "url": "https://1stcapitallocksmithde.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" },
     "areaServed": { "@type": "City", "name": city, "containedIn": { "@type": "State", "name": "Delaware" } },
     "serviceType": ["Residential Locksmith", "House Lockout", "Lock Rekeying", "Deadbolt Installation", "Lock Repair", "Mailbox Lock Replacement"]
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": `Residential Locksmith Service in ${city}, ${state}`,
+    "serviceType": "Residential Locksmith",
+    "provider": { "@type": "LocalBusiness", "name": "1st Capital Locksmith", "telephone": "+13027350050", "url": "https://1stcapitallocksmithde.com" },
+    "areaServed": { "@type": "City", "name": city, "containedIn": { "@type": "State", "name": "Delaware" } }
   })} />
 
   <!-- Hero -->

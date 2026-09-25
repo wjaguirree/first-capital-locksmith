@@ -16,8 +16,8 @@ const { city, state, slug, county } = location;
 ---
 
 <MainLayout
-  title={`Broken Key Extraction in ${city}, ${state} | Key Stuck in Lock | 1st Capital Locksmith`}
-  description={`Broken key extraction in ${city}, ${state}. Key snapped in lock or ignition? 1st Capital Locksmith removes broken keys from door locks and car ignitions throughout ${city} and ${county}, Delaware. Call (302) 735-0050.`}
+  title={`Broken Key Extraction in ${city}, ${state} | 1st Capital Locksmith`}
+  description={`Key snapped in a lock or ignition in ${city}, ${state}? Fast broken key extraction. Call (302) 735-0050.`}
 >
 
   <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
@@ -44,10 +44,21 @@ const { city, state, slug, county } = location;
     "@context": "https://schema.org", "@type": "LocalBusiness",
     "@id": "https://1stcapitallocksmithde.com",
     "name": "1st Capital Locksmith", "telephone": "+13027350050",
-    "url": `https://1stcapitallocksmithde.com/services/emergency-locksmith/${slug}/broken-key-extraction/`,
+    "url": "https://1stcapitallocksmithde.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" },
     "description": `Broken key extraction in ${city}, ${state}. Professional broken key removal from door locks and car ignitions throughout ${county}, Delaware.`,
     "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } },
     "priceRange": "$$"
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": `Broken Key Extraction in ${city}, ${state}`,
+    "serviceType": "Broken Key Extraction",
+    "provider": { "@type": "LocalBusiness", "name": "1st Capital Locksmith", "telephone": "+13027350050", "url": "https://1stcapitallocksmithde.com" },
+    "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } }
   })} />
 
   <section class="relative min-h-105 flex items-center py-12 md:py-20" style="background-image: url('/images/broken-key-door-extraction.jpg'); background-size: cover; background-position: center;">

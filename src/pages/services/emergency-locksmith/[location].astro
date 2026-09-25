@@ -21,8 +21,8 @@ const profile = getLocationContentProfile(slug);
 ---
 
 <MainLayout
-  title={`Emergency Locksmith in ${city}, ${state} | Fast Response | 1st Capital Locksmith`}
-  description={`1st Capital Locksmith provides emergency locksmith services in ${city}, ${state}. Fast response for ${profile.emergencyScenario} across ${profile.routeFocus} in ${city} — available 6 days a week.`}
+  title={`Emergency Locksmith in ${city}, ${state} | 1st Capital Locksmith`}
+  description={`Emergency locksmith in ${city}, ${state}: fast response for ${profile.emergencyScenario}. Call (302) 735-0050.`}
 >
 
   <!-- Breadcrumbs -->
@@ -73,8 +73,19 @@ const profile = getLocationContentProfile(slug);
     "name": "1st Capital Locksmith",
     "telephone": "+13027350050",
     "url": "https://1stcapitallocksmithde.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" },
     "areaServed": { "@type": "City", "name": city, "containedIn": { "@type": "State", "name": "Delaware" } },
     "serviceType": ["Emergency Locksmith", "Emergency House Lockout", "Emergency Car Lockout", "Emergency Business Lockout", "Broken Key Extraction"]
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": `Emergency Locksmith Service in ${city}, ${state}`,
+    "serviceType": "Emergency Locksmith",
+    "provider": { "@type": "LocalBusiness", "name": "1st Capital Locksmith", "telephone": "+13027350050", "url": "https://1stcapitallocksmithde.com" },
+    "areaServed": { "@type": "City", "name": city, "containedIn": { "@type": "State", "name": "Delaware" } }
   })} />
 
   <!-- Hero -->
