@@ -4,8 +4,8 @@ import Reviews from "../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Dover Locksmith | Mobile Locksmith in Dover, DE | 1st Capital Locksmith"
-  description="Fast mobile locksmith services in Dover, Delaware for car lockouts, house lockouts, key replacement, rekeying, and commercial security upgrades."
+  title="Dover Locksmith | 1st Capital Locksmith"
+  description="Fast mobile locksmith services in Dover, Delaware: car lockouts, house lockouts, key replacement & rekeying. Call (302) 735-0050."
 >
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -17,9 +17,16 @@ import Reviews from "../components/Reviews.astro";
     "areaServed": { "@type": "State", "name": "Delaware" },
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "2089 S Dupont Hwy #2",
       "addressLocality": "Dover",
       "addressRegion": "DE",
+      "postalCode": "19901",
       "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.1212111",
+      "longitude": "-75.5331705"
     },
     "openingHours": "Mo-Su 00:00-23:59",
     "priceRange": "$$",
@@ -27,9 +34,16 @@ import Reviews from "../components/Reviews.astro";
     "sameAs": ["https://1stcapitallocksmithde.com"]
   })} />
   <section
-  class="relative min-h-150 flex items-center text-white"
-  style="background-image: url('/images/hero.webp'); background-size: cover; background-position: center;"
+  class="relative min-h-150 flex items-center text-white overflow-hidden"
 >
+  <img
+    src="/images/hero.webp"
+    alt="1st Capital Locksmith mobile locksmith van in Dover, Delaware"
+    fetchpriority="high"
+    loading="eager"
+    decoding="async"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
   <div class="absolute inset-0 bg-black/70"></div>
 
   <div class="relative max-w-6xl mx-auto px-6 py-12 z-10 w-full grid md:grid-cols-2 gap-12 items-center">
