@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Deadbolt Installation in Delaware | Deadbolt Upgrade & Replacement | 1st Capital Locksmith"
-  description="Professional deadbolt installation in Delaware. 1st Capital Locksmith installs and upgrades deadbolts for homes and businesses throughout Kent County — single-cylinder, double-cylinder, smart lock deadbolts, and high-security Grade 1 deadbolts. Call (302) 735-0050."
+  title="Deadbolt Installation in Delaware | 1st Capital Locksmith"
+  description="Professional deadbolt installation in Delaware for homes and businesses, single & double-cylinder. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,61 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Deadbolt Installation"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does deadbolt installation cost in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The cost of deadbolt installation depends on the type of deadbolt, the number of doors, and whether any door prep work is needed. We provide a clear upfront quote before any work begins. Call (302) 735-0050 for a fast estimate."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the best deadbolt for a front door?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For most residential front doors, an ANSI Grade 1 single-cylinder deadbolt from a reputable brand like Schlage or Kwikset is the best choice. Grade 1 is the highest residential security rating and provides strong resistance against forced entry."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you install a deadbolt on any door?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most standard exterior doors can accommodate a deadbolt. If your door does not already have a deadbolt hole, we can drill and prep the door on-site. We'll inspect your door first and advise on the best option."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between a single and double cylinder deadbolt?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A single-cylinder deadbolt uses a key on the outside and a thumb-turn on the inside — the most common type for exterior doors. A double-cylinder deadbolt requires a key on both sides, which prevents someone from breaking a nearby window and reaching in to unlock the door. Double-cylinder locks require extra care for fire safety since they need a key to exit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you install smart lock deadbolts in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We install keypad deadbolts, Z-Wave smart locks, Bluetooth smart locks, and other electronic deadbolt systems throughout Delaware. Call us and we'll confirm compatibility with your door and your preferred brand."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does deadbolt installation take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A standard deadbolt installation on a prepared door typically takes 20–30 minutes per lock. If the door requires boring (cutting a new hole), it takes a bit longer. We handle the entire job on-site at your property."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Automotive Locksmith in Delaware | Car Lockout & Key Replacement | 1st Capital Locksmith"
-  description="1st Capital Locksmith provides fast mobile automotive locksmith services throughout Delaware. Car lockouts, car key replacement, transponder key programming, key fob programming, and ignition repair throughout Kent County, DE."
+  title="Automotive Locksmith in Delaware | 1st Capital Locksmith"
+  description="Mobile automotive locksmith in Delaware: car lockouts, key replacement, fob programming & ignition repair. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -51,25 +51,13 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": { "@type": "PostalAddress", "addressLocality": "Dover", "addressRegion": "DE", "addressCountry": "US" }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": { "@type": "State", "name": "Delaware" },
     "serviceType": "Automotive Locksmith"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does a car lockout service cost in Delaware?", "acceptedAnswer": { "@type": "Answer", "text": "Car lockout pricing depends on the type of vehicle and your location. We provide clear upfront quotes before any work begins so there are no surprise charges. Call us at (302) 735-0050 for a fast quote." } },
-      { "@type": "Question", "name": "Can you make a car key without the original?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our automotive locksmiths can create a new car key even if you have no original to copy from. We use your vehicle identification number (VIN) and professional key cutting equipment to generate the correct key profile for your vehicle." } },
-      { "@type": "Question", "name": "Is it cheaper to get a car key from a locksmith or a dealership?", "acceptedAnswer": { "@type": "Answer", "text": "In almost every case, a mobile automotive locksmith is significantly less expensive than a dealership. Dealerships charge premium labor rates and require you to arrange a tow if you have no key at all. We come to your location throughout Delaware and typically charge much less for the same service." } },
-      { "@type": "Question", "name": "Can you program a key fob for any car?", "acceptedAnswer": { "@type": "Answer", "text": "We program key fobs for the vast majority of makes and models on the road today. Call us with your vehicle year, make, and model and we will confirm whether we can service your specific vehicle before dispatching." } },
-      { "@type": "Question", "name": "What should I do if my key breaks off in the ignition?", "acceptedAnswer": { "@type": "Answer", "text": "Stop trying to remove it yourself. Attempting to extract a broken key with household tools almost always causes additional damage. Call 1st Capital Locksmith and we will use professional extraction tools to safely remove the broken key fragment without damaging your ignition cylinder." } },
-      { "@type": "Question", "name": "How fast can you respond to a car lockout in Delaware?", "acceptedAnswer": { "@type": "Answer", "text": "We aim to respond as quickly as possible throughout Delaware. Response times vary by location and demand but we prioritize lockout calls and dispatch immediately. Call (302) 735-0050 for the fastest response." } }
-    ]
-  })} />
   <!-- Hero -->
   <section
     class="relative min-h-85 md:min-h-137.5 flex items-center text-white py-10 md:py-20"

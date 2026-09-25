@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Master Key Systems in Delaware | Commercial Master Key Installation | 1st Capital Locksmith"
-  description="Professional master key system design and installation for Delaware businesses. 1st Capital Locksmith creates custom master key hierarchies for offices, warehouses, multi-unit buildings, and commercial facilities across Kent County. Call (302) 735-0050."
+  title="Master Key Systems in Delaware | 1st Capital Locksmith"
+  description="Custom master key system design and installation for Delaware businesses. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,77 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Master Key System Installation"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a master key system?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A master key system is a lock configuration where multiple locks in a building each accept their own individual key, while also accepting a single master key that opens all of them. This allows business owners and managers to carry one key for full access, while employees or tenants only have keys that open specific doors relevant to their role."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you implement a master key system without replacing all my locks?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In many cases, yes. If your existing locks are compatible with master key pinning — which most standard commercial and residential pin tumbler cylinders are — we can rekey them into a master key system without replacing the lock hardware. This significantly reduces the cost of implementation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What types of businesses use master key systems?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Master key systems are used in virtually every type of multi-access commercial property: office buildings, warehouses, retail strips, apartment complexes, hotels, medical facilities, schools, churches, and storage facilities. Any property where different people need access to different areas benefits from a master key hierarchy."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a grand master key?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A grand master key sits above one or more master keys in the hierarchy and opens all locks in the system. In a building with multiple departments or floors, each floor might have its own master key (accessible by floor managers), while the property owner or building manager holds the grand master key that opens every door."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does a master key system cost in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Master key system cost depends on the number of locks, lock brands, whether new cylinders are needed, and the complexity of the key hierarchy. Call (302) 735-0050 for a free on-site assessment and quote tailored to your specific property and access requirements."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you add new locks to an existing master key system?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We can expand existing master key systems by adding new doors or areas that accept the existing master key or an appropriate sub-master key. We document all system configurations to make future expansion straightforward."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What happens if a master key is lost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A lost master key is a serious security event that requires immediate action. We recommend rekeying the entire system when a master key is lost — this invalidates the lost key and issues new keys throughout the hierarchy. We provide expedited rekeying for master key emergencies throughout Delaware."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you serve businesses across all of Kent County, Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We design and install master key systems for commercial properties throughout Kent County including Dover, Smyrna, Milford, Harrington, Camden, Felton, and all surrounding areas. Call (302) 735-0050 for a consultation."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

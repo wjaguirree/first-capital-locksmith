@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Emergency House Lockout Service in Delaware | Locked Out of Home | 1st Capital Locksmith"
-  description="Locked out of your house in Delaware? 1st Capital Locksmith provides fast, damage-free emergency house lockout service across Dover, Smyrna, Milford, and all of Kent County. Available 6 Days a Week — call (302) 735-0050."
+  title="Emergency House Lockout in Delaware | 1st Capital Locksmith"
+  description="Locked out of your house in Delaware? Fast, damage-free emergency lockout service, 6 days a week. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,77 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Emergency House Lockout Service"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How quickly can you get to my house for an emergency lockout?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We typically arrive within 20–30 minutes for most locations across Kent County. We dispatch immediately upon your call and keep you updated on our ETA. Call (302) 735-0050 now and we will head to you right away."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Will you damage my door or lock to get me inside?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. We specialize in non-destructive lock picking and bypass techniques that open your door without damaging the lock, door, or frame. In the vast majority of residential lockouts, your lock is fully operational after we open it."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What types of residential locks can you open?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We open most standard residential lock types including pin tumbler deadbolts, knob locks, lever handle locks, and most keypad overrides. We carry pick sets and bypass tools for the most common residential lock brands including Kwikset, Schlage, Baldwin, and more."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Should I rekey my locks after a house lockout?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "If you lost your key rather than simply locked it inside, we strongly recommend rekeying your locks on the same visit. Rekeying changes the internal pin configuration of the lock so any lost key no longer works. It is a fast, affordable security step that can be done immediately after we get you inside."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you help me if I'm locked out of an apartment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We assist homeowners, renters, and apartment residents throughout Delaware. If you are renting, your landlord may need to be notified, but we can assist you with entry and address any lock concerns. We handle all standard residential door hardware."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What if my key broke off inside my front door lock?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We carry specialized broken key extraction tools to remove key fragments from residential lock cylinders without damaging the internal mechanism. After extraction, the lock typically functions normally and we can cut you a new key on the same visit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is emergency house lockout service available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We are open 6 days a week. Call (302) 735-0050 during business hours and we will dispatch a technician to your location."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you serve my area in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We serve all of Kent County including Dover, Smyrna, Milford, Camden, Harrington, Felton, Frederica, Wyoming, Magnolia, Clayton, and all surrounding communities. Call us and we will confirm your location and dispatch time."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

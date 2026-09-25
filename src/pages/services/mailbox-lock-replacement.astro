@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Mailbox Lock Replacement in Delaware | Lost Mailbox Key | 1st Capital Locksmith"
-  description="Professional mailbox lock replacement throughout Delaware. 1st Capital Locksmith replaces mailbox locks for homes, apartments, and cluster mailbox units across Kent County — on-site service, new keys provided, upfront pricing. Call (302) 735-0050."
+  title="Mailbox Lock Replacement in Delaware | 1st Capital Locksmith"
+  description="Professional mailbox lock replacement in Delaware for homes, apartments & cluster units. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,61 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Mailbox Lock Replacement"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does mailbox lock replacement cost in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Mailbox lock replacement is one of our most affordable services. The cost depends on the type of mailbox and lock. We provide a clear upfront quote before any work begins. Call (302) 735-0050 for a fast estimate."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you replace a cluster mailbox lock in an apartment complex?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We replace individual unit locks in cluster mailbox units (CBUs) for apartment buildings, condominiums, and HOA communities throughout Delaware. We also work with property managers and landlords who need multiple units serviced."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "I lost my mailbox key — do I need to replace the whole mailbox?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. You only need to replace the lock cylinder inside the mailbox door — not the entire mailbox. We replace the lock on-site and provide new keys immediately. It's a quick, affordable service."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you open a mailbox if I don't have the key?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We can open your locked mailbox without a key using non-destructive methods in most cases, then replace the lock and provide you with new keys on the same visit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you replace mailbox locks for landlords and property managers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We regularly work with landlords and property managers throughout Delaware who need mailbox lock replacements at tenant turnover or when a tenant loses their key. We can service multiple units efficiently."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does mailbox lock replacement take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A standard mailbox lock replacement takes approximately 15–20 minutes on-site. We handle the entire job at your property and provide new keys before we leave."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

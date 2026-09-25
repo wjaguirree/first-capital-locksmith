@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Emergency Car Lockout Service in Delaware | Locked Out of Car | 1st Capital Locksmith"
-  description="Keys locked in your car in Delaware? 1st Capital Locksmith provides fast, damage-free emergency car lockout service across Dover, Smyrna, Milford, and all of Kent County. Available 6 Days a Week — call (302) 735-0050."
+  title="Emergency Car Lockout in Delaware | 1st Capital Locksmith"
+  description="Keys locked in your car in Delaware? Fast, damage-free emergency car lockout, 6 days a week. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,77 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Emergency Car Lockout Service"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How fast can you reach me for a car lockout in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For most locations in Kent County, we arrive within 20–30 minutes of your call. We dispatch immediately and will give you an estimated arrival time when you call. Call (302) 735-0050 and we will head your way."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Will you damage my car opening it?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. We use professional automotive entry tools including slim jim tools, long reach equipment, and air wedge systems specifically designed for damage-free vehicle entry. We take great care with your door seals and weather stripping. In virtually all cases your vehicle is fully unaffected after entry."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you open any type of vehicle?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We can open the vast majority of passenger vehicles including sedans, SUVs, trucks, minivans, and most commercial vans. We carry tools suited for a wide range of makes and models. If you have a specialty or older vehicle, mention it when you call and we will confirm compatibility."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What if my key broke inside the car door or ignition?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We handle broken key extraction for both door locks and ignition cylinders. Our technicians carry specialized extraction tools to remove key fragments without damaging the lock or ignition. After extraction, if you need a new key cut, we can often do that on the same visit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you make me a new car key on the spot?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In many cases, yes. We carry key cutting equipment for standard and transponder keys and can cut and program replacement keys for many popular makes and models. Call us to confirm whether we can handle your specific vehicle on-site."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What if there is a child or pet locked in my car?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "If a child or pet is locked in a car — especially in hot weather — call 911 immediately, then call us. Emergency services can respond faster in life-safety situations. We support emergency responders and can follow up for vehicle security after the immediate situation is resolved."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is emergency car lockout available at night and on weekends?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We provide emergency car lockout service throughout Delaware including nights, weekends, and holidays. We are open 6 days a week."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where in Delaware do you provide car lockout service?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We serve all of Kent County and surrounding areas including Dover, Smyrna, Milford, Camden, Harrington, Felton, Wyoming, Frederica, Magnolia, Clayton, and all surrounding communities. Call us wherever you are and we will get there fast."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

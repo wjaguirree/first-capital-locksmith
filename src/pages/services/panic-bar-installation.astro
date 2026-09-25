@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Panic Bar Installation in Delaware | Exit Device Installation | 1st Capital Locksmith"
-  description="Professional panic bar and exit device installation for commercial buildings in Delaware. 1st Capital Locksmith installs, repairs, and replaces push bar exit devices for offices, retail stores, warehouses, and public facilities across Kent County. Call (302) 735-0050."
+  title="Panic Bar Installation in Delaware | 1st Capital Locksmith"
+  description="Professional panic bar and exit device installation for Delaware businesses, code-compliant. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,69 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Panic Bar Installation"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a panic bar and when is it required?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A panic bar (also called a crash bar, push bar, or exit device) is a horizontal bar mounted across an exit door that allows the door to be opened by pushing the bar — no key or handle turn required. Panic bars are required by most building codes on doors serving occupancies of 50 or more people in places of public assembly, educational facilities, and other commercial uses. Building codes vary, so consult with us and your local code authority."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What types of panic bars do you install?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We install all major types of exit devices including rim panic bars (the most common), mortise exit devices, vertical rod exit devices, and surface vertical rod devices. We work with brands including Von Duprin, Corbin Russwin, Sargent, ASSA ABLOY, and Adams Rite."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can panic bars be keyed so the door locks from the outside?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Most panic bar configurations allow key cylinders on the exterior side, so the door can be locked from the outside with a key while still allowing free egress from the inside by pushing the bar. This is the standard configuration for most commercial applications."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can panic bars be integrated into a master key system?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Panic bar exit devices with exterior key cylinders can be keyed to a master key system so that the same master key that opens other doors in the building also works on the exterior cylinder of the panic bar door. We design and install master key systems that include panic bar doors throughout Delaware."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you repair panic bars that are not working properly?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We service and repair panic bars that are stiff, not latching, not releasing, or have failed internal mechanisms. In many cases, a panic bar issue can be resolved by adjustment, lubrication, or replacing internal components — without full unit replacement. We assess and advise before quoting repairs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does panic bar installation take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A standard single-door panic bar installation typically takes 1–2 hours. More complex installations involving multi-point locking, vertical rod devices, or doors that require modification may take longer. We assess the door and frame before quoting installation time and price."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you serve businesses across all of Kent County, Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We install and service panic bars for commercial properties throughout Kent County including Dover, Smyrna, Milford, Harrington, Camden, Felton, and all surrounding areas. Call (302) 735-0050 for a free on-site assessment."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

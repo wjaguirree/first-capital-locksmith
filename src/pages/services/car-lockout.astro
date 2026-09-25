@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Car Lockout Service in Delaware | Locked Keys in Car | 1st Capital Locksmith"
-  description="Locked your keys in your car in Delaware? 1st Capital Locksmith provides fast, mobile car lockout service throughout Kent County. We respond quickly, use non-destructive entry, and serve Dover, Milford, Smyrna, Camden & all surrounding areas. Call (302) 735-0050."
+  title="Car Lockout Service in Delaware | 1st Capital Locksmith"
+  description="Locked your keys in your car in Delaware? Fast, non-destructive mobile car lockout service. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,25 +52,13 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": { "@type": "PostalAddress", "addressLocality": "Dover", "addressRegion": "DE", "addressCountry": "US" }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": { "@type": "State", "name": "Delaware" },
     "serviceType": "Car Lockout Service"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How much does a car lockout service cost in Delaware?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on your vehicle type and location. We give you a clear, upfront quote before we dispatch so there are no surprise charges. Call us at (302) 735-0050 for a fast estimate on your specific situation." } },
-      { "@type": "Question", "name": "Will you damage my car getting it open?", "acceptedAnswer": { "@type": "Answer", "text": "No. Our locksmiths use professional non-destructive entry tools — air wedge systems and long-reach tools — that allow us to open your vehicle without breaking windows, scratching paint, or damaging the door frame or weather stripping." } },
-      { "@type": "Question", "name": "How fast can you respond to a car lockout in Delaware?", "acceptedAnswer": { "@type": "Answer", "text": "We dispatch immediately upon receiving your call and aim to reach your location as quickly as possible. Response time varies by location and demand, but we prioritize lockout calls and move fast. Call (302) 735-0050 for the fastest response." } },
-      { "@type": "Question", "name": "Can you open any car, including newer models with electronic locks?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work on virtually all vehicle makes and models, including newer vehicles with fully electronic locking systems. Our tools and techniques are effective on both traditional mechanical locks and modern electronic systems." } },
-      { "@type": "Question", "name": "Should I call 911 or a locksmith if a child or pet is locked inside my car?", "acceptedAnswer": { "@type": "Answer", "text": "If a child or pet is locked inside the vehicle — especially in warm weather — call 911 first. This is a life-safety emergency that first responders are trained and equipped to handle. Once the immediate emergency is resolved, we are available to assist with vehicle access." } },
-      { "@type": "Question", "name": "Is it faster to call you or wait for roadside assistance?", "acceptedAnswer": { "@type": "Answer", "text": "In most cases, calling a local mobile locksmith is significantly faster than waiting for roadside assistance dispatched through an insurance plan or membership program. We are based locally in Delaware and can often respond much quicker than a national service dispatch." } }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

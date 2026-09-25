@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Commercial Locksmith in Delaware | Business Lockout & Lock Services | 1st Capital Locksmith"
-  description="1st Capital Locksmith provides professional commercial locksmith services throughout Delaware. Business lockouts, commercial rekeying, master key systems, panic bar installation, and high-security locks for offices, retail, and warehouses."
+  title="Commercial Locksmith in Delaware | 1st Capital Locksmith"
+  description="Commercial locksmith in Delaware: business lockouts, rekeying, master key systems & panic bars. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -51,25 +51,13 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": { "@type": "PostalAddress", "addressLocality": "Dover", "addressRegion": "DE", "addressCountry": "US" }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": { "@type": "State", "name": "Delaware" },
     "serviceType": "Commercial Locksmith"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "How quickly can you respond to a commercial lockout in Delaware?", "acceptedAnswer": { "@type": "Answer", "text": "We prioritize commercial lockout calls and dispatch as quickly as possible to your business location. Response times vary based on location and current demand. Call (302) 735-0050 and we'll give you an honest estimate of how long we'll be." } },
-      { "@type": "Question", "name": "How often should a business rekey its locks?", "acceptedAnswer": { "@type": "Answer", "text": "We recommend rekeying any time an employee with key access leaves the company, when keys go missing or unaccounted for, when you move into a new commercial space, or after a security incident. It's one of the most cost-effective security measures available." } },
-      { "@type": "Question", "name": "What is the difference between rekeying and replacing locks?", "acceptedAnswer": { "@type": "Answer", "text": "Rekeying changes the internal pin configuration of your existing lock cylinder so old keys no longer work. Lock replacement installs an entirely new lock. Rekeying is significantly less expensive and is the right choice in most situations." } },
-      { "@type": "Question", "name": "Can you install panic bars on any commercial door?", "acceptedAnswer": { "@type": "Answer", "text": "In most cases, yes. We assess your door type, frame, and existing hardware before recommending the right panic bar or exit device. We handle aluminum storefront doors, hollow metal doors, wood commercial doors, and more." } },
-      { "@type": "Question", "name": "Do you work with property management companies?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We work regularly with property managers throughout Delaware who need rekeying services between tenants, master key systems for multiple units, or regular lock maintenance." } },
-      { "@type": "Question", "name": "Can you make a master key system work with my existing locks?", "acceptedAnswer": { "@type": "Answer", "text": "In many cases we can rekey your existing locks into a master key system without replacing the hardware. This depends on the brand and condition of your current locks. We assess this on-site and give you a clear recommendation before any work begins." } }
-    ]
-  })} />
   <!-- Hero -->
   <section
     class="relative min-h-85 md:min-h-137.5 flex items-center text-white py-10 md:py-20"

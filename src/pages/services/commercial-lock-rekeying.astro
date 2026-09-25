@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Commercial Lock Rekeying in Delaware | Business Rekeying Service | 1st Capital Locksmith"
-  description="Professional commercial lock rekeying throughout Delaware. 1st Capital Locksmith rekeyes office buildings, retail stores, warehouses, and multi-unit commercial properties across Kent County. Fast, affordable, no disruption to business. Call (302) 735-0050."
+  title="Commercial Lock Rekeying in Delaware | 1st Capital Locksmith"
+  description="Professional commercial lock rekeying in Delaware, fast and affordable, no disruption to business. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,61 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Commercial Lock Rekeying"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is commercial lock rekeying?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Commercial lock rekeying is the process of altering the internal pin configuration of an existing lock so that old keys no longer work and new keys operate the lock. The lock hardware itself stays in place — only the internal cylinder pins are changed. This makes rekeying significantly more affordable than full lock replacement while providing the same security benefit of invalidating all previous keys."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does commercial lock rekeying cost in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Commercial rekeying costs vary based on the number of locks, lock brand, and whether master key systems are involved. Rekeying is always substantially less expensive than replacing locks with new hardware. Call (302) 735-0050 for a free estimate based on your specific business needs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does commercial lock rekeying take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A standard commercial door lock can be rekeyed in 10–15 minutes. For larger commercial properties with many locks, we work efficiently to complete the job with minimal disruption to your business operations. We can often schedule after-hours service to avoid any impact on your workday."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Should I rekey or replace my commercial locks?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Rekeying is the right choice when your existing locks are in good working condition and you simply need to invalidate old keys and issue new ones. Lock replacement makes more sense when the lock hardware is damaged, worn out, or you want to upgrade to a higher security grade. We'll assess your locks on-site and give you an honest recommendation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you rekey commercial locks to a master key system?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We can rekey your commercial locks to work within a master key system, where one master key opens all doors while individual employee keys only open specific doors. This is common for offices, warehouses, and multi-unit commercial buildings. We design and implement master key systems throughout Delaware."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you rekey commercial locks after an employee is terminated?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes — and this is one of the most important times to rekey. When an employee who had key access leaves under any circumstances, rekeying your locks immediately ensures they can no longer access your facility. We provide fast, same-day commercial rekeying throughout Delaware for exactly these situations."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section
