@@ -1,0 +1,125 @@
+---
+import { getLocationDetails } from "../data/locationDetails";
+import type { Location } from "../data/locations";
+
+type Variant = "automotive" | "residential" | "commercial" | "emergency";
+
+interface Props {
+  location: Location;
+  variant: Variant;
+}
+
+const { location, variant } = Astro.props;
+const details = getLocationDetails(location.slug);
+const { city } = location;
+
+const headings: Record<Variant, string> = {
+  automotive: `On the Road in ${city}: Local Auto Locksmith Notes`,
+  residential: `Locksmithing ${city} Homes: What We See Locally`,
+  commercial: `What ${city} Businesses Ask Us About`,
+  emergency: `Emergency Locksmith Response in ${city}: What to Expect`,
+};
+
+const eyebrows: Record<Variant, string> = {
+  automotive: `Vehicle locksmith coverage in ${city}, Delaware`,
+  residential: `Home locksmith coverage in ${city}, Delaware`,
+  commercial: `Business locksmith coverage in ${city}, Delaware`,
+  emergency: `Urgent locksmith coverage in ${city}, Delaware`,
+};
+
+// Rotate which paragraphs/FAQs render per variant so same-city pages
+// differ across service categories while each city stays unique.
+const rotations: Record<Variant, number> = {
+  automotive: 0,
+  residential: 1,
+  commercial: 2,
+  emergency: 0,
+};
+const r = rotations[variant];
+
+function rotate<T>(arr: T[], count: number): T[] {
+  if (arr.length <= count) return arr;
+  return Array.from({ length: count }, (_, i) => arr[(i + r) % arr.length]);
+}
+
+const paragraphs = rotate(details.paragraphs, 2);
+const faqs = rotate(details.faqs, 2);
+const bullets = rotate(details.commonCalls, 3);
+---
+
+<section class="bg-[#F8F8F5] py-16 border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-4xl">
+      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">{eyebrows[variant]}</p>
+      <h2 class="text-2xl md:text-3xl font-bold text-[#1A1F22] mb-5">{headings[variant]}</h2>
+      <p class="text-gray-800 leading-relaxed mb-4 font-medium">{details.lead}</p>
+      <p class="text-gray-700 leading-relaxed mb-4">{details.notes[variant]}</p>
+      {paragraphs.map((p) => <p class="text-gray-700 leading-relaxed mb-4">{p}</p>)}
+    </div>
+
+    <div class="mt-8 grid gap-4 md:grid-cols-3">
+      <div class="bg-white rounded-xl border border-gray-200 p-5">
+        <h3 class="text-sm font-bold text-[#1A1F22] uppercase tracking-wide mb-3">Around {city}</h3>
+        <ul class="space-y-2">
+          {details.landmarks.map((item) => (
+            <li class="flex items-center gap-2 text-sm text-gray-700">
+              <span class="w-2 h-2 bg-[#9A9D62] rounded-full shrink-0"></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 p-5">
+        <h3 class="text-sm font-bold text-[#1A1F22] uppercase tracking-wide mb-3">Roads We Run Daily</h3>
+        <ul class="space-y-2">
+          {details.routes.map((item) => (
+            <li class="flex items-center gap-2 text-sm text-gray-700">
+              <span class="w-2 h-2 bg-[#9A9D62] rounded-full shrink-0"></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="bg-white rounded-xl border border-gray-200 p-5">
+        <h3 class="text-sm font-bold text-[#1A1F22] uppercase tracking-wide mb-3">
+          {details.zipCodes.length > 1 ? "ZIP Codes Served" : "ZIP Code Served"}
+        </h3>
+        <ul class="space-y-2">
+          {details.zipCodes.map((zip) => (
+            <li class="flex items-center gap-2 text-sm text-gray-700">
+              <span class="w-2 h-2 bg-[#9A9D62] rounded-full shrink-0"></span>
+              {city}, DE {zip}
+            </li>
+          ))}
+        </ul>
+        {details.zipCodes.length === 0 && (
+          <p class="text-sm text-gray-700">All {city} addresses and surrounding Kent County roads.</p>
+        )}
+      </div>
+    </div>
+
+    <div class="mt-8 bg-white rounded-xl border border-gray-200 p-6">
+      <h3 class="text-base font-bold text-[#1A1F22] mb-3">{city} Calls We Handle Most Often</h3>
+      <ul class="space-y-2 text-sm text-gray-700">
+        {bullets.map((item) => (
+          <li class="flex items-center gap-2">
+            <span class="w-2 h-2 bg-[#A61E22] rounded-full shrink-0"></span>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="mt-8 max-w-4xl">
+      <h3 class="text-xl font-bold text-[#1A1F22] mb-4">{city}, DE Locksmith FAQs</h3>
+      <div class="space-y-4">
+        {faqs.map((faq) => (
+          <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+            <h4 class="font-bold text-[#1A1F22] text-sm mb-1">{faq.q}</h4>
+            <p class="text-gray-700 text-sm leading-relaxed">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,5 +1,6 @@
 ﻿---
 import MainLayout from "../../../layouts/MainLayout.astro";
+import LocationLocalFlavor from "../../../components/LocationLocalFlavor.astro";
 import { locations } from "../../../data/locations";
 import type { Location } from "../../../data/locations";
 
@@ -374,6 +375,8 @@ const { city, state, slug, county, description } = location;
       </div>
     </div>
   </section>
+
+  <LocationLocalFlavor location={location} variant="residential" />
 
   <!-- CTA -->
   <section class="bg-[#0E1B2F] py-16">

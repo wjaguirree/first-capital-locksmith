@@ -1,5 +1,6 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
+import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
 import { locations } from "../../../../data/locations";
 import { getLocationContentProfile } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
@@ -223,6 +224,8 @@ const profile = getLocationContentProfile(slug);
       </div>
     </div>
   </section>
+
+  <LocationLocalFlavor location={location} variant="automotive" />
 
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
