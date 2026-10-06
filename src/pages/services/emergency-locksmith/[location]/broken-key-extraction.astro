@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,63 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `Key snapped off in a lock or ignition in ${city}? Don't try to dig it out with tools that weren't designed for the job — that usually makes it worse. 1st Capital Locksmith removes broken keys from door locks, deadbolts, and car ignitions throughout ${city} and ${county} using professional extraction tools.`,
+  `A broken key in a lock looks worse than it is — if it's extracted correctly. 1st Capital Locksmith removes key fragments from door locks and ignitions across ${city} and ${county} with purpose-built extraction tools, then cuts you a new key on the spot.`,
+  `Tweezers, glue, paperclips — the DIY fixes for a broken key are how cylinders get destroyed. If a key snapped in a lock in ${city}, leave it alone and call 1st Capital Locksmith. We extract fragments cleanly throughout ${city} and ${county}.`,
+  `Half a key in your hand and half in the lock? 1st Capital Locksmith extracts broken key fragments from door locks, padlocks, and ignitions throughout ${city} and ${county} — without damaging the cylinder, and with a replacement key cut on-site.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `A key can snap in a lock cylinder for several reasons: a worn or fatigued key, an icy or frozen lock, a stiff or dry cylinder, or simply the wrong angle of force when turning.`,
+    `Keys break from metal fatigue, frozen locks, dry cylinders, or a hard turn at the wrong angle — and the fragment lodges in the keyway.`,
+    `Worn keys plus stiff cylinders equal snapped keys — the most common lock emergency we see.`,
+    `It usually happens on a lock that was already stiff: one hard turn and the key gives up.`,
+  ],
+  close: [
+    `The fragment gets lodged in the lock profile and prevents normal operation. We use broken key extractor hooks to grip and remove the fragment cleanly. After extraction, we cut you a new key from the original lock profile in ${city}.`,
+    `We hook the fragment with extractor tools made for the job, slide it out cleanly, and cut a fresh key at your ${city} location — all in one visit.`,
+    `Our extractor tools grip the fragment and bring it out without touching the pins. Then we cut your replacement key on-site in ${city}.`,
+    townAnchor(slug, "emergency", "card-1"),
+  ],
+});
+
+const card2 = sp(slug, "card-2", [
+  `An ignition cylinder is longer and often more challenging to extract from than a door lock — the key travels deeper into the ignition and the fragment may be in a turned position. We use ignition-specific extraction tools and techniques to remove the fragment without damaging the ignition cylinder. After extraction, we assess whether the ignition is still functional or requires repair or replacement in ${city}.`,
+  `Ignition extractions are a different game: the keyway is deeper and the fragment often sits rotated. We use ignition-specific tools to work it free without harming the wafers — then assess whether your ignition needs repair or is good to go, right there in ${city}.`,
+  `A key broken in the ignition means a deeper, tighter extraction than a door lock — often with the fragment twisted mid-turn. Our ignition-specific extraction tools handle it without cylinder damage, and we check the ignition's health afterward at your ${city} location.`,
+  `When a key snaps in the ignition, the fragment sits deep and often turned. We extract it with ignition-specific tooling, then give you an honest read on whether the cylinder survived — repair, rekey, or replace as needed, on-site in ${city}.`,
+]);
+
+const card3 = sp(slug, "card-3", [
+  `If your key has broken in a lock in ${city}, resist the temptation to dig at it with tweezers, paperclips, or other improvised tools. These often push the fragment deeper into the cylinder, damage the internal pins, or jam the fragment in a position that makes professional extraction harder. Leave the lock alone and call us — the sooner you call, the better your chances of a clean extraction without lock damage.`,
+  `The urge to fish the fragment out with tweezers is how a ten-minute extraction becomes a cylinder replacement. Improvised tools push fragments deeper, bend pins, and jam everything tighter. If it happened in ${city}, leave the lock alone and call us — fast.`,
+  `What not to do with a broken key in ${city}: poke it with tweezers, glue a stick to it, or spray anything into the keyway. All three make professional extraction harder. Leave it, call us, and the odds of a clean, damage-free extraction stay high.`,
+  `Every improvised extraction attempt raises the difficulty of the professional one. Tweezers push the fragment deeper; glue risks the whole cylinder. If a key broke in a lock at your ${city} property, hands off — call us first.`,
+]);
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `A key that broke in a lock often indicates a worn key, a stiff cylinder, or both.`,
+    `Keys rarely break in healthy locks — a snapped key usually means the cylinder was fighting back.`,
+    `The broken key is often the symptom, not the disease: stiff, dry cylinders break keys.`,
+    `When a key snaps, the lock usually shares the blame.`,
+  ],
+  close: [
+    `After removing the fragment in ${city}, we assess the lock — if the cylinder pins or the lock mechanism were damaged by the broken key or by previous attempts to remove it, we can repair or replace the lock on the same visit. We also cut you a fresh new key so you can immediately return to normal use.`,
+    `After extraction, we assess the cylinder, repair or replace it if it was damaged, and cut your new key — one visit in ${city}, and you're back to normal.`,
+    `We check the cylinder after every extraction, fix or replace what's damaged, and hand you a fresh key before leaving your ${city} location.`,
+    townAnchor(slug, "emergency", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for broken key extraction in ${city}. We come to you — extraction and new key, same visit.`,
+  `Don't dig at it — call (302) 735-0050 and we'll extract the fragment cleanly at your ${city} location.`,
+  `Broken key in a lock anywhere in ${city}? Call now — extraction, cylinder check, and new key in one visit.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +128,7 @@ const { city, state, slug, county } = location;
           <p class="text-white/80 font-semibold uppercase tracking-wide text-sm mb-3">Emergency Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Broken Key Extraction in {city}, {state}</h1>
           <p class="text-white/90 mb-6 leading-relaxed">
-            Key snapped off in a lock or ignition in {city}? Don't try to dig it out with tools that weren't designed for the job — that usually makes it worse. 1st Capital Locksmith removes broken keys from door locks, deadbolts, and car ignitions throughout {city} and {county} using professional extraction tools.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,21 +194,21 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Broken Key in Door Lock</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">A key can snap in a lock cylinder for several reasons: a worn or fatigued key, an icy or frozen lock, a stiff or dry cylinder, or simply the wrong angle of force when turning. The fragment gets lodged in the lock profile and prevents normal operation. We use broken key extractor hooks to grip and remove the fragment cleanly. After extraction, we cut you a new key from the original lock profile in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/broken-key-extraction/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Broken Key Extraction →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Broken Key in Car Ignition</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">An ignition cylinder is longer and often more challenging to extract from than a door lock — the key travels deeper into the ignition and the fragment may be in a turned position. We use ignition-specific extraction tools and techniques to remove the fragment without damaging the ignition cylinder. After extraction, we assess whether the ignition is still functional or requires repair or replacement in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
           <div class="mt-4"><a href={`/services/automotive-locksmith/${slug}/ignition-repair/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Ignition Repair in {city} →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">What NOT to Do</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">If your key has broken in a lock in {city}, resist the temptation to dig at it with tweezers, paperclips, or other improvised tools. These often push the fragment deeper into the cylinder, damage the internal pins, or jam the fragment in a position that makes professional extraction harder. Leave the lock alone and call us — the sooner you call, the better your chances of a clean extraction without lock damage.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Extraction</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">A key that broke in a lock often indicates a worn key, a stiff cylinder, or both. After removing the fragment in {city}, we assess the lock — if the cylinder pins or the lock mechanism were damaged by the broken key or by previous attempts to remove it, we can repair or replace the lock on the same visit. We also cut you a fresh new key so you can immediately return to normal use.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
         </div>
       </div>
     </div>
@@ -208,7 +266,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#A61E22] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Broken Key in {city}, {state}?</h2>
-      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for professional broken key extraction in {city}. Door locks and car ignitions — we come to you throughout {county}, Delaware.</p>
+      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-white text-[#A61E22] px-8 py-4 font-bold text-lg hover:bg-gray-100 transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#A61E22] transition">Get Help Now</a>

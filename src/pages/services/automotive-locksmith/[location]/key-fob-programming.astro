@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,63 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `1st Capital Locksmith programs key fobs on-site throughout ${city} and ${county}. Replacement fobs, spare fobs, and fobs that stopped working — we program them to your vehicle wherever it sits, the same day you call.`,
+  `A dead, lost, or unreliable key fob in ${city} is a same-day fix, not a dealer parts order. 1st Capital Locksmith programs replacement and spare fobs at your location across ${city} and ${county}.`,
+  `Push-to-start proximity keys, remote start fobs, and standard remotes — 1st Capital Locksmith programs them all on-site in ${city}. One visit, no appointment, no dealership markup.`,
+  `When your fob quits in ${city} — buttons dead, range gone, or lost entirely — we come to your vehicle and program a replacement on the spot. Serving all of ${city} and ${county}.`,
+]);
+
+const card1 = sp(slug, "card-1", [
+  `Standard key fobs control your car's locks remotely and often include a panic button and trunk release. When a fob stops working, it can be due to a dead battery, a pairing issue, or internal damage. We diagnose the issue, replace the battery if that's the fix, or program a new fob to your vehicle's system on-site in ${city}.`,
+  `A fob that stopped working might just need a battery — or it might need reprogramming or replacement. We diagnose which at your ${city} location: battery if that's the fix, a freshly programmed fob if it isn't.`,
+  `Dead battery, lost pairing, water damage — standard fobs fail in a handful of ways, and we sort out which one you've got before selling you anything. If you need a new fob programmed in ${city}, that happens on-site the same visit.`,
+  `Standard remote fobs handle your locks, panic button, and trunk release — until they don't. We troubleshoot the failure at your ${city} location and program a replacement when the old one is truly done.`,
+]);
+
+const card2 = compose2(slug, "card-2", {
+  open: [
+    `Smart keys and proximity fobs (used with push-button start vehicles) require advanced OBD programming equipment.`,
+    `Push-button start vehicles use proximity fobs that must be registered to the immobilizer and keyless entry system — that takes real programming equipment, not a self-service shortcut.`,
+    `Proximity smart fobs are the most sophisticated keys on the road, and pairing one to your vehicle requires OBD-level programming tools.`,
+    `If your car starts with a button, its fob is a computer that must be professionally introduced to your vehicle's security system.`,
+  ],
+  close: [
+    `These fobs must be registered to your vehicle's immobilizer and keyless entry system. We program smart fobs for Toyota, Honda, Ford, GM, Chrysler, Nissan, Hyundai, Kia, and most other major brands throughout ${city}.`,
+    `We program smart fobs for Toyota, Honda, Ford, GM, Chrysler, Nissan, Hyundai, Kia, and most other major brands — on-site in ${city}.`,
+    `Our mobile units program smart fobs for all major brands at your ${city} location — no dealer appointment needed.`,
+    townAnchor(slug, "automotive", "card-2"),
+  ],
+});
+
+const card3 = sp(slug, "card-3", [
+  `Many modern vehicles include factory remote start capability built into the key fob. We program remote start fobs on-site in ${city}, including situations where a fob with remote start is being replaced or a second fob is being added to the vehicle. Not all vehicles support remote start — we can advise during your service call.`,
+  `If your vehicle has factory remote start, the fob controls it — and a replacement fob needs programming that includes that feature. We program remote start fobs on-site in ${city}, whether replacing one or adding a second. Not sure if your vehicle supports remote start? Ask when you call.`,
+  `Remote start lives in the fob on most modern vehicles, so a replacement isn't just a cut key — it's a full programming job. We handle remote start fob programming at your ${city} location and can confirm your vehicle's support during the call.`,
+  `Adding or replacing a fob with remote start? We program the complete fob — lock, unlock, panic, trunk, and remote start — at your ${city} location in one visit.`,
+]);
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `If you've lost a key fob or it's been damaged beyond repair, we can source a compatible replacement and program it to your vehicle on-site in ${city}.`,
+    `Lost fob? Damaged fob? We source the correct compatible replacement and program it to your vehicle wherever it sits in ${city}.`,
+    `A fob that's lost or destroyed gets replaced with a compatible unit we source and program at your ${city} location.`,
+    `Whether the fob vanished or took a swim, we replace it with the correct compatible unit for your vehicle.`,
+  ],
+  close: [
+    `We work with all OEM-compatible fob blanks and program them to your car's specifications. In most cases, we can complete lost fob replacement in a single visit.`,
+    `OEM-compatible blanks, programmed to your car's exact specification — most lost-fob replacements in ${city} finish in a single visit.`,
+    `We program OEM-compatible replacements to factory spec, usually in one visit at your ${city} location.`,
+    townAnchor(slug, "automotive", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for on-site key fob programming in ${city}. Same-day service — we come to your vehicle.`,
+  `One call and your fob is programmed at your ${city} location — replacement, spare, or reprogramming. Same-day service available.`,
+  `Skip the dealer parts counter. We program fobs on-site in ${city} — call for pricing with your vehicle's year, make, and model.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +128,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Automotive Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Key Fob Programming in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            1st Capital Locksmith programs and replaces key fobs on-site throughout {city} and {county}. Whether your fob stopped working, was lost, or needs a second fob added, we handle all remote fob types for all major vehicle brands — at your location, not at a dealership.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -137,20 +195,20 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Standard Remote Key Fob</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Standard key fobs control your car's locks remotely and often include a panic button and trunk release. When a fob stops working, it can be due to a dead battery, a pairing issue, or internal damage. We diagnose the issue, replace the battery if that's the fix, or program a new fob to your vehicle's system on-site in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/key-fob-programming/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Key Fob Programming →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Smart Key & Proximity Fob</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Smart keys and proximity fobs (used with push-button start vehicles) require advanced OBD programming equipment. These fobs must be registered to your vehicle's immobilizer and keyless entry system. We program smart fobs for Toyota, Honda, Ford, GM, Chrysler, Nissan, Hyundai, Kia, and most other major brands throughout {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Remote Start Fob Programming</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Many modern vehicles include factory remote start capability built into the key fob. We program remote start fobs on-site in {city}, including situations where a fob with remote start is being replaced or a second fob is being added to the vehicle. Not all vehicles support remote start — we can advise during your service call.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Replacement Fob — Lost or Damaged</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">If you've lost a key fob or it's been damaged beyond repair, we can source a compatible replacement and program it to your vehicle on-site in {city}. We work with all OEM-compatible fob blanks and program them to your car's specifications. In most cases, we can complete lost fob replacement in a single visit.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
           <div class="mt-4"><a href="/services/car-key-replacement/" class="text-[#A61E22] font-semibold hover:underline text-sm">See also: Car Key Replacement in {city} →</a></div>
         </div>
       </div>
@@ -209,7 +267,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need Key Fob Programming in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for on-site key fob programming and replacement in {city}. We come to you — all fob types, all vehicle makes.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

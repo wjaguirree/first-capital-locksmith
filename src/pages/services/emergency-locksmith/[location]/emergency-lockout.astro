@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,55 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `Locked out of your home, car, or business in ${city}? 1st Capital Locksmith responds fast to emergency lockouts throughout ${city} and ${county}. Call us any time — we come to you.`,
+  `Home, car, or business — whatever you're locked out of in ${city}, 1st Capital Locksmith gets you back in. Fast emergency lockout response across ${city} and ${county}, with a real person answering your call.`,
+  `A lockout in ${city} doesn't care what time it is, and neither do we. 1st Capital Locksmith responds to emergency lockouts — residential, automotive, and commercial — throughout ${city} and ${county}.`,
+  `One call ends a lockout in ${city}: 1st Capital Locksmith dispatches a mobile locksmith to your location — home, vehicle, or business — anywhere in ${city} or ${county}. Call (302) 735-0050 now.`,
+]);
+
+const card1 = sp(slug, "card-1", [
+  `Locked out of your home in ${city}? Whether you lost your keys, left them inside, or your lock is malfunctioning, we respond fast. We work on all residential door hardware — knob locks, lever sets, and deadbolts — without damaging your door or frame. After getting you in, we can assess whether your lock needs repair or replacement on the same visit.`,
+  `Whether the keys are inside, gone entirely, or the lock itself failed, we get ${city} homeowners back inside fast — picked or bypassed, not drilled. And if the lock is the reason you're outside, we can repair or replace it on the same visit.`,
+  `A house lockout in ${city} gets a fast, professional response: non-destructive entry on any residential hardware, then an honest look at whether the lock needs attention before we leave.`,
+  `Lost keys, keys inside, failed hardware — all three end the same way at your ${city} home: with us opening the door without damage and making sure the lock is trustworthy before we go.`,
+]);
+
+const card2 = compose2(slug, "card-2", {
+  open: [
+    `Keys locked in your car in ${city}? Keys in the trunk? Engine running with the door locked?`,
+    `Car lockouts in ${city} come in every variety — keys on the seat, keys in the trunk, doors locked with the engine running.`,
+    `However your car locked you out in ${city} — visible keys, trunked keys, or keys lost entirely —`,
+    `From the classic keys-on-the-seat to a fob locked in a push-to-start vehicle, car lockouts in ${city} are daily work for us.`,
+  ],
+  close: [
+    `We respond to automotive lockouts throughout ${city} and ${county} using professional auto entry tools designed for modern vehicles. We work on all makes and models, domestic and import, without causing damage to your vehicle.`,
+    `We respond across ${city} and ${county} with professional automotive entry tools — all makes, all models, no damage to your vehicle.`,
+    `Our mobile units open vehicles throughout ${city} and ${county} with modern, non-destructive tools — domestic and import, keyed and keyless.`,
+    townAnchor(slug, "emergency", "card-2"),
+  ],
+});
+
+const card3 = sp(slug, "card-3", [
+  `Locked out of your office, retail store, or commercial property in ${city}? We handle commercial lockouts on all types of commercial door hardware — cylindrical, mortise, and electronic lock systems. We work efficiently to minimize your business downtime and can address any hardware issues during the same service call.`,
+  `A locked business door in ${city} means lost revenue by the minute. We open commercial properties fast — cylindrical, mortise, and electronic hardware all covered — and we fix any hardware problem that contributed, on the same visit.`,
+  `Commercial lockouts in ${city} get emergency priority from us: fast dispatch, professional non-destructive entry on all commercial hardware, and hardware assessment before we leave.`,
+  `When your ${city} business can't open, neither can your revenue. We respond to commercial lockouts across ${city} with the tools for cylindrical, mortise, and electronic systems — and minimal downtime.`,
+]);
+
+const card4 = sp(slug, "card-4", [
+  `The moment you realize you're locked out in ${city}: stay calm, move to a safe location if needed (especially for vehicle lockouts in traffic), and call (302) 735-0050. Have your location ready. We'll confirm your address, give you an estimated arrival time, and ask for basic verification that you have the right to access the property or vehicle. We will be there as fast as possible.`,
+  `Locked out in ${city}? First: get somewhere safe, especially if you're near traffic. Then call (302) 735-0050 with your exact location. We'll give you a real ETA, verify your right to access when we arrive, and get you in fast.`,
+  `What to do right now: stay calm, stay safe, and call (302) 735-0050. Tell us where in ${city} you are and what you're locked out of. You'll get an honest arrival time — and a technician who verifies access before opening anything.`,
+  `Don't improvise entry — that's how doors and locks get expensive damage. Call (302) 735-0050, give us your ${city} location, and wait somewhere safe. We handle the rest, with quick verification on arrival.`,
+]);
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith now for emergency lockout service in ${city}. Fast response — home, car, and business lockouts throughout ${county}, Delaware.`,
+  `Locked out anywhere in ${city}? Call (302) 735-0050 now — a real dispatcher answers and a mobile locksmith rolls immediately, anywhere in ${county}.`,
+  `Don't stand there locked out in ${city} — call (302) 735-0050 and we'll be on the way. Home, car, or business, anywhere in ${county}.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +120,7 @@ const { city, state, slug, county } = location;
           <p class="text-white/80 font-semibold uppercase tracking-wide text-sm mb-3">Emergency Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Emergency Lockout Service in {city}, {state}</h1>
           <p class="text-white/90 mb-6 leading-relaxed">
-            Locked out of your home, car, or business in {city}? 1st Capital Locksmith responds fast to emergency lockouts throughout {city} and {county}. Call us any time — we come to you.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,22 +186,22 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Emergency House Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Locked out of your home in {city}? Whether you lost your keys, left them inside, or your lock is malfunctioning, we respond fast. We work on all residential door hardware — knob locks, lever sets, and deadbolts — without damaging your door or frame. After getting you in, we can assess whether your lock needs repair or replacement on the same visit.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href={`/services/emergency-locksmith/${slug}/emergency-house-lockout/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Emergency House Lockout in {city} →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Emergency Car Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Keys locked in your car in {city}? Keys in the trunk? Engine running with the door locked? We respond to automotive lockouts throughout {city} and {county} using professional auto entry tools designed for modern vehicles. We work on all makes and models, domestic and import, without causing damage to your vehicle.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
           <div class="mt-4"><a href={`/services/emergency-locksmith/${slug}/emergency-car-lockout/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Emergency Car Lockout in {city} →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Business & Office Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Locked out of your office, retail store, or commercial property in {city}? We handle commercial lockouts on all types of commercial door hardware — cylindrical, mortise, and electronic lock systems. We work efficiently to minimize your business downtime and can address any hardware issues during the same service call.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
           <div class="mt-4"><a href={`/services/commercial-locksmith/${slug}/office-lockout/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Office Lockout in {city} →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">What to Do When Locked Out</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">The moment you realize you're locked out in {city}: stay calm, move to a safe location if needed (especially for vehicle lockouts in traffic), and call <a href="tel:3027350050" class="text-[#A61E22] font-semibold">(302) 735-0050</a>. Have your location ready. We'll confirm your address, give you an estimated arrival time, and ask for basic verification that you have the right to access the property or vehicle. We will be there as fast as possible.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
         </div>
       </div>
     </div>
@@ -209,7 +259,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#A61E22] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Emergency Lockout in {city}, {state}?</h2>
-      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith now for emergency lockout service in {city}. Fast response — home, car, and business lockouts throughout {county}, Delaware.</p>
+      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-white text-[#A61E22] px-8 py-4 font-bold text-lg hover:bg-gray-100 transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#A61E22] transition">Get Help Now</a>

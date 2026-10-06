@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,63 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `Locked out of your house in ${city}? 1st Capital Locksmith responds fast to emergency residential lockouts throughout ${city} and ${county}. We get you back inside without damaging your door or lock hardware. Call us now.`,
+  `Standing on your own porch locked out in ${city}? 1st Capital Locksmith responds to emergency house lockouts across ${city} and ${county} — professional entry, no damage to your door or hardware.`,
+  `A house lockout in ${city} ends fast with one call. 1st Capital Locksmith's mobile locksmiths open homes throughout ${city} and ${county} — picked or bypassed, not drilled.`,
+  `Whether you stepped out without keys or the lock just failed, 1st Capital Locksmith gets ${city} homeowners back inside quickly — non-destructive entry across all of ${city} and ${county}.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `Whether your front door has a knob lock, lever set, deadbolt, or combination of hardware, we can open it non-destructively.`,
+    `Knob locks, levers, deadbolts, combo sets — whatever your ${city} home's door carries, we open it without damage.`,
+    `Every residential lock type on ${city} homes is within our capability — opened professionally, without drilling.`,
+    `From basic knob locks to high-security deadbolts, residential hardware is our daily work across ${city}.`,
+  ],
+  close: [
+    `We carry professional residential entry tools for all common lock brands used on homes throughout ${city} — Schlage, Kwikset, Baldwin, Yale, and others. If the lock is damaged or worn and won't open cleanly, we can drill it as a last resort and install a replacement on the same visit.`,
+    `We carry entry tools for every common residential brand — Schlage, Kwikset, Baldwin, Yale — and if the lock itself has failed, we can replace it on the same visit.`,
+    `Schlage, Kwikset, Baldwin, Yale — we open them all. And if the lockout was caused by a failed lock, replacement happens right there at your ${city} door.`,
+    townAnchor(slug, "emergency", "card-1"),
+  ],
+});
+
+const card2 = sp(slug, "card-2", [
+  `Locked out of your apartment in ${city}? Apartment entry doors use the same residential lock hardware as single-family homes, so the same professional entry techniques apply. If your building manager or landlord is unreachable at the time, we can get you in quickly and provide documentation of the service. Renters should always call the property manager first if immediately available — they may have a spare key.`,
+  `Apartment lockouts in ${city} work like house lockouts — same hardware, same techniques. If your landlord or building manager is reachable, try them first for a spare; if not, we'll get you in and document the service for your records.`,
+  `Renters in ${city} get locked out too, and apartment doors open with the same professional techniques we use on houses. We verify authorization before entry and provide service documentation — useful when your landlord asks questions later.`,
+  `Locked out of a ${city} apartment? Check with your property manager first if you can — then call us. We open apartment doors with the same non-destructive methods as houses, with documentation provided for your landlord.`,
+]);
+
+const card3 = sp(slug, "card-3", [
+  `If your key broke off inside the lock, the door won't open — and attempting to remove the key fragment yourself with improvised tools often makes it worse. We use professional broken key extraction tools to remove the fragment from the lock cylinder cleanly, then either restore the lock to working order or replace it if necessary. We also cut you a new key from the lock on the spot in ${city}.`,
+  `A key snapped in the lock means a two-part problem: the fragment and the door still locked. We handle both — extracting the fragment without cylinder damage, opening the door, and cutting a fresh key, all at your ${city} home in one visit.`,
+  `Broken key in the lock? Don't dig at it — that's how cylinders die. We extract the fragment professionally, open your ${city} door, restore or replace the lock as needed, and cut a new key before we leave.`,
+  `When a broken key is the reason you're locked out in ${city}, we extract the fragment with proper tools, open the door, and leave you with a working lock and a fresh key — same visit.`,
+]);
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `Once we get you back inside, we can rekey your locks on the spot so your missing or lost key no longer works.`,
+    `If lost keys caused the lockout, rekeying before we leave means whoever finds them gets nothing.`,
+    `Getting back in solves today's problem; a quick rekey solves tomorrow's.`,
+    `A lockout caused by lost keys is really two problems — entry, and a key floating around somewhere in ${city}.`,
+  ],
+  close: [
+    `If the lock was damaged or worn before the lockout, we can replace it immediately. If you've recently moved into your ${city} home, we strongly recommend rekeying — previous owners, contractors, or real estate agents may have copies of your current key that you don't know about.`,
+    `We can rekey on the spot, replace worn hardware immediately, and — if you're new to the home — erase every old key that might still be floating around ${city}.`,
+    `Rekeying, hardware replacement, spare keys — whatever the lockout revealed, we fix it in the same visit at your ${city} home.`,
+    townAnchor(slug, "emergency", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith now for emergency house lockout service in ${city}. Fast response throughout ${county}, Delaware.`,
+  `Locked out of your ${city} home? Call (302) 735-0050 — a real person answers and help is on the way anywhere in ${county}.`,
+  `One call gets you back inside your ${city} home — no damage, no drama. Call now.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +128,7 @@ const { city, state, slug, county } = location;
           <p class="text-white/80 font-semibold uppercase tracking-wide text-sm mb-3">Emergency Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Emergency House Lockout in {city}, {state}</h1>
           <p class="text-white/90 mb-6 leading-relaxed">
-            Locked out of your house in {city}? 1st Capital Locksmith responds fast to emergency residential lockouts throughout {city} and {county}. We get you back inside without damaging your door or lock hardware. Call us now.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,21 +194,21 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Residential Door Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Whether your front door has a knob lock, lever set, deadbolt, or combination of hardware, we can open it non-destructively. We carry professional residential entry tools for all common lock brands used on homes throughout {city} — Schlage, Kwikset, Baldwin, Yale, and others. If the lock is damaged or worn and won't open cleanly, we can drill it as a last resort and install a replacement on the same visit.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/emergency-house-lockout/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency House Lockout →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Apartment & Rental Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Locked out of your apartment in {city}? Apartment entry doors use the same residential lock hardware as single-family homes, so the same professional entry techniques apply. If your building manager or landlord is unreachable at the time, we can get you in quickly and provide documentation of the service. Renters should always call the property manager first if immediately available — they may have a spare key.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Broken Key in Lock</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">If your key broke off inside the lock, the door won't open — and attempting to remove the key fragment yourself with improvised tools often makes it worse. We use professional broken key extraction tools to remove the fragment from the lock cylinder cleanly, then either restore the lock to working order or replace it if necessary. We also cut you a new key from the lock on the spot in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
           <div class="mt-4"><a href={`/services/emergency-locksmith/${slug}/broken-key-extraction/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Broken Key Extraction in {city} →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Getting In</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Once we get you back inside, we can rekey your locks on the spot so your missing or lost key no longer works. If the lock was damaged or worn before the lockout, we can replace it immediately. If you've recently moved into your {city} home, we strongly recommend rekeying — previous owners, contractors, or real estate agents may have copies of your current key that you don't know about.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
           <div class="mt-4"><a href={`/services/residential-locksmith/${slug}/lock-rekeying/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Lock Rekeying in {city} →</a></div>
         </div>
       </div>
@@ -209,7 +267,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#A61E22] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Locked Out of Your House in {city}, {state}?</h2>
-      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for fast emergency house lockout service in {city}. We respond throughout {county}, Delaware.</p>
+      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-white text-[#A61E22] px-8 py-4 font-bold text-lg hover:bg-gray-100 transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#A61E22] transition">Get Help Now</a>

@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,71 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `1st Capital Locksmith provides on-site car key replacement throughout ${city} and ${county}. We cut and program transponder keys, smart keys, laser-cut keys, and key fobs directly at your location — no tow to a dealership required.`,
+  `Lost your car keys in ${city}? Skip the dealership. 1st Capital Locksmith cuts and programs replacement keys wherever your vehicle sits — transponder, smart, laser-cut, and fobs — anywhere in ${city} and ${county}.`,
+  `A lost or broken car key in ${city} no longer means a tow and a dealer wait. Our mobile units cut and program replacements on-site across ${city} and ${county} — usually in under an hour.`,
+  `From a single spare to a full lost-key replacement, 1st Capital Locksmith brings the key shop to your ${city} location. Transponder keys, smart keys, laser cuts, and fobs — cut and programmed on-site throughout ${county}.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `Modern vehicle keys contain a transponder chip that must be programmed to match your car's immobilizer system — without it, the key turns but the car won't start.`,
+    `If your car was built after the late 1990s, its key carries a transponder chip that has to be electronically paired to your vehicle.`,
+    `A transponder key is a radio device as much as a piece of metal: the chip inside must be registered to your car's immobilizer or the engine stays dead.`,
+    `The chip inside a transponder key has to match your vehicle's immobilizer — which is why hardware-store copies open the door but never start the engine.`,
+  ],
+  close: [
+    `We cut and program transponder keys on-site in ${city} for all major vehicle makes and model years — most vehicles from 1997 onward require it.`,
+    `Our mobile units carry the programmers and blanks to complete transponder keys at your ${city} location in one visit.`,
+    `We handle the full job — cut and program — on-site in ${city}, for most makes and model years on the road.`,
+    townAnchor(slug, "automotive", "card-1"),
+  ],
+});
+
+const card2 = sp(slug, "card-2", [
+  `Smart keys and proximity keys (push-button start vehicles) require specialized programming equipment that reads and writes to your vehicle's security system. We program smart keys for all major brands including Toyota, Honda, Ford, Nissan, Hyundai, Kia, BMW, Mercedes, Volkswagen, and more throughout ${city}. Same-day service available.`,
+  `Push-button start vehicles use proximity smart keys that must be registered to both the immobilizer and the keyless entry system. We carry the advanced programming equipment these require and program smart keys for Toyota, Honda, Ford, Nissan, Hyundai, Kia, BMW, Mercedes, Volkswagen, and most other brands — on-site in ${city}, same day.`,
+  `Proximity keys and smart fobs are the most advanced keys on the road, and they need OBD-level programming equipment to pair with your vehicle. We bring that equipment to your ${city} location and program smart keys for all major makes, usually in a single visit.`,
+  `If your vehicle starts with a button instead of a key turn, its smart key must be professionally registered to the car. We program proximity keys for all major brands at your ${city} location — no dealer appointment, no multi-day wait.`,
+]);
+
+const card3 = compose2(slug, "card-3", {
+  open: [
+    `Having a spare key is one of the simplest ways to avoid a car lockout situation.`,
+    `The cheapest lockout is the one that never happens — and a spare key is how you get there.`,
+    `One working key is a gamble; two is a plan. Spare keys are cheap insurance.`,
+    `Every ${city} driver with a single key is one bad moment from a lockout or a lost-key emergency.`,
+  ],
+  close: [
+    `We cut duplicate keys on-site in ${city} for standard keys, transponder keys, and high-security laser-cut keys — with programming handled on-site as well. We recommend at least one spare for every vehicle you own.`,
+    `We duplicate standard, transponder, and laser-cut keys at your ${city} location — cut, programmed, and tested before we leave.`,
+    `Our mobile units cut and program duplicates throughout ${city} — standard, transponder, and high-security keys alike.`,
+    townAnchor(slug, "automotive", "card-3"),
+  ],
+});
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `Lost all your car keys? We can create a new working key from scratch using your VIN number and ownership documentation — no existing key required.`,
+    `Even with every key gone, you're not stuck: we originate new keys from your VIN and proof of ownership.`,
+    `A total key loss sounds like a dealership job — it isn't. With your VIN and ownership documents, we create a working key from nothing.`,
+    `When there's no key left to copy, we decode your vehicle's lock and cut a fresh key from scratch.`,
+  ],
+  close: [
+    `We decode your vehicle's lock to cut the key, then program it to your car's immobilizer system. This service is available for all vehicle types throughout ${city} and ${county}.`,
+    `After cutting, we program the new key to your immobilizer on the spot — available for all vehicle types across ${city} and ${county}.`,
+    `The whole origination happens at your ${city} location: decode, cut, program, test. No tow, no dealer, no multi-day wait.`,
+    townAnchor(slug, "automotive", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for on-site car key cutting and programming in ${city}. We come to you — no tow to a dealership needed.`,
+  `One call brings key cutting and programming to your ${city} location — no tow, no dealership, no appointment backlog.`,
+  `Wherever the car is in ${city}, that's where we make the key. Call for upfront pricing and same-day service.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +136,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Automotive Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Car Key Replacement in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            1st Capital Locksmith provides on-site car key replacement throughout {city} and {county}. We cut and program transponder keys, smart keys, laser-cut keys, and key fobs directly at your location — no tow to a dealership required.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -140,20 +206,20 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Transponder Key Replacement</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Modern vehicle keys contain a transponder chip that must be programmed to match your car's immobilizer system. Without correct programming, the key will turn the ignition but the car won't start. We cut and program transponder keys on-site in {city} for all major vehicle makes and model years. Most vehicles from 1997 onward require transponder programming.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/car-key-replacement/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Car Key Replacement →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Smart Key & Proximity Key Replacement</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Smart keys and proximity keys (push-button start vehicles) require specialized programming equipment that reads and writes to your vehicle's security system. We program smart keys for all major brands including Toyota, Honda, Ford, Nissan, Hyundai, Kia, BMW, Mercedes, Volkswagen, and more throughout {city}. Same-day service available.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Duplicate & Spare Key Cutting</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Having a spare key is one of the simplest ways to avoid a car lockout situation. We cut duplicate keys on-site in {city} for standard keys, transponder keys, and high-security laser-cut keys. If your vehicle requires programming, we handle that on-site as well. We recommend having at least one spare for every vehicle you own.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Lost Key Replacement</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Lost all your car keys? We can create a new working key from scratch using your VIN number and ownership documentation — no existing key required. We decode your vehicle's lock to cut the key, then program it to your car's immobilizer system. This service is available for all vehicle types throughout {city} and {county}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
           <div class="mt-4"><a href="/services/car-key-replacement/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lost Car Key Replacement →</a></div>
         </div>
       </div>
@@ -213,7 +279,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need a Car Key Replacement in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for on-site car key cutting and programming in {city}. We come to you — no tow to a dealership needed.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

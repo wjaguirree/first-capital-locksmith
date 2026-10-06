@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,63 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `Locked out of your safe in ${city}? Whether you've forgotten your combination, lost your key, or the locking mechanism has malfunctioned, 1st Capital Locksmith provides professional safe opening service throughout ${city} and ${county}. We work on residential and commercial safes without causing unnecessary damage.`,
+  `A safe you can't open is a problem with your valuables on the inside. 1st Capital Locksmith opens safes throughout ${city} and ${county} — forgotten combinations, lost keys, failed electronics — with non-destructive methods first.`,
+  `Forgotten combination? Dead keypad batteries? Key gone? 1st Capital Locksmith opens residential and commercial safes across ${city} and ${county} — carefully, professionally, and without destroying the safe whenever avoidable.`,
+  `When a safe won't open in ${city}, forcing it destroys the safe and maybe the contents. 1st Capital Locksmith uses professional safe-opening techniques throughout ${city} and ${county} to get you in with the safe intact.`,
+]);
+
+const card1 = sp(slug, "card-1", [
+  `Electronic safes with keypad entry are among the most common safes in homes and offices throughout ${city}. They can lock out from forgotten codes, dead batteries, an electronic malfunction, or too many incorrect entry attempts. We diagnose the cause of the lockout and use the appropriate opening method — often non-destructively. After opening, we can reset the electronic lock to a new code.`,
+  `Keypad safes fail in predictable ways: forgotten codes, dead batteries, lockout mode after repeated wrong entries, or electronic failure. We diagnose which one you're facing at your ${city} location, open the safe — usually non-destructively — and reset the code before we leave.`,
+  `Most home and office safes in ${city} are electronic keypad units, and most lockouts trace to batteries, forgotten codes, or lockout mode. We identify the cause, open it cleanly, and reprogram a fresh code on the spot.`,
+  `An electronic safe lockout in ${city} is usually a battery, a forgotten code, or a malfunction — not a lost cause. We open keypad safes with appropriate non-destructive methods and set a new code when we're done.`,
+]);
+
+const card2 = compose2(slug, "card-2", {
+  open: [
+    `Mechanical dial combination safes are built to higher standards and are more difficult to open without the combination — which is by design.`,
+    `Dial safes resist opening by design — quality mechanical locks don't have a bypass shortcut.`,
+    `A mechanical combination safe without its combination is exactly as secure as it was built to be.`,
+    `Traditional dial safes are the hardest to open professionally — and that's a compliment to the hardware.`,
+  ],
+  close: [
+    `If you've forgotten the combination, we use safe manipulation techniques that take longer but preserve the safe's integrity. We also service Sargent & Greenleaf, La Gard, and other combination locks used on residential and commercial safes in ${city}.`,
+    `Forgotten combinations are handled by manipulation — slower, but the safe survives intact. We service Sargent & Greenleaf, La Gard, and other combination locks throughout ${city}.`,
+    `We manipulate mechanical safes open rather than drilling when possible, preserving the safe. S&G, La Gard, and other quality combination locks are all within our ${city} service scope.`,
+    townAnchor(slug, "emergency", "card-2"),
+  ],
+});
+
+const card3 = sp(slug, "card-3", [
+  `Gun safes present unique challenges because they are built to resist forced entry. We use safe-specific opening techniques that allow us to open your gun safe without destroying the locking bolts or door. Fire safes are similarly built to resist opening — we work carefully to preserve the safe's fire-resistance integrity. We serve homeowners and collectors throughout ${city} and ${county}.`,
+  `Gun safes and fire safes are engineered against exactly what most people try when locked out. We use safe-specific techniques to open them while preserving the locking bolts, the door, and — on fire safes — the fire rating. Serving ${city} and ${county}.`,
+  `A gun safe doing its job is hard to open — and destroying it to get in defeats the purpose. We open gun safes and fire safes across ${city} with techniques that preserve the safe's security and fire protection.`,
+  `For gun owners and collectors in ${city}, a safe lockout needs someone who opens safes without ruining them. We preserve bolts, doors, and fire ratings wherever possible — the safe stays usable after we're in.`,
+]);
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `Once we've opened your safe, we can service the lock — replacing or resetting the combination on mechanical locks, or reprogramming electronic keypad locks.`,
+    `Opening the safe is half the job; leaving you with a working safe is the other half.`,
+    `A successfully opened safe with a broken lock isn't a win. We fix the lock too.`,
+    `After the opening comes the service: the safe should work normally when we leave.`,
+  ],
+  close: [
+    `If the lock mechanism was faulty or damaged, we can replace it with new safe lock hardware. We want your safe to be fully functional after our visit so you can immediately resume using it to protect your valuables in ${city}.`,
+    `Faulty lock mechanisms get replaced with new safe hardware, so your ${city} safe is fully functional — not just open — when we finish.`,
+    `We reset combinations, reprogram keypads, and replace faulty lock hardware, so your safe goes straight back into service protecting your valuables in ${city}.`,
+    townAnchor(slug, "emergency", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for safe lockout service in ${city}. Professional opening — non-destructive whenever possible.`,
+  `Locked out of your safe in ${city}? Call (302) 735-0050 — professional opening with your safe intact.`,
+  `Your valuables shouldn't be hostages. Call now for professional safe opening anywhere in ${city}.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +128,7 @@ const { city, state, slug, county } = location;
           <p class="text-white/80 font-semibold uppercase tracking-wide text-sm mb-3">Emergency Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Safe Lockout Services in {city}, {state}</h1>
           <p class="text-white/90 mb-6 leading-relaxed">
-            Locked out of your safe in {city}? Whether you've forgotten your combination, lost your key, or the locking mechanism has malfunctioned, 1st Capital Locksmith provides professional safe opening service throughout {city} and {county}. We work on residential and commercial safes without causing unnecessary damage.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,20 +194,20 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Electronic Safe Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Electronic safes with keypad entry are among the most common safes in homes and offices throughout {city}. They can lock out from forgotten codes, dead batteries, an electronic malfunction, or too many incorrect entry attempts. We diagnose the cause of the lockout and use the appropriate opening method — often non-destructively. After opening, we can reset the electronic lock to a new code.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/safe-lockout-services/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Safe Lockout Services →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Mechanical & Dial Combination Safe</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Mechanical dial combination safes are built to higher standards and are more difficult to open without the combination — which is by design. If you've forgotten the combination, we use safe manipulation techniques that take longer but preserve the safe's integrity. We also service Sargent & Greenleaf, La Gard, and other combination locks used on residential and commercial safes in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Gun Safe & Fire Safe Opening</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Gun safes present unique challenges because they are built to resist forced entry. We use safe-specific opening techniques that allow us to open your gun safe without destroying the locking bolts or door. Fire safes are similarly built to resist opening — we work carefully to preserve the safe's fire-resistance integrity. We serve homeowners and collectors throughout {city} and {county}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Safe Opening in {city}</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Once we've opened your safe, we can service the lock — replacing or resetting the combination on mechanical locks, or reprogramming electronic keypad locks. If the lock mechanism was faulty or damaged, we can replace it with new safe lock hardware. We want your safe to be fully functional after our visit so you can immediately resume using it to protect your valuables in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
         </div>
       </div>
     </div>
@@ -207,7 +265,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#A61E22] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Locked Out of Your Safe in {city}, {state}?</h2>
-      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for professional safe opening in {city}. Residential and commercial safe lockout service throughout {county}, Delaware.</p>
+      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-white text-[#A61E22] px-8 py-4 font-bold text-lg hover:bg-gray-100 transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#A61E22] transition">Get Help Now</a>

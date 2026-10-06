@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../components/LocationLocalFlavor.astro";
+import { sp, compose, townAnchor } from "../../../data/serviceCopy";
 import { locations } from "../../../data/locations";
 import { getLocationContentProfile } from "../../../data/locations";
 import type { Location } from "../../../data/locations";
@@ -19,6 +20,121 @@ interface Props {
 const { location } = Astro.props;
 const { city, state, slug, county, description } = location;
 const profile = getLocationContentProfile(slug);
+
+const heroP = sp(slug, "hero", [
+  `Locked out in ${city}? Key broken in a lock? We handle ${profile.emergencyScenario} across ${profile.routeFocus}. 1st Capital Locksmith dispatches quickly with ${profile.dispatchNote}.`,
+  `When a lock or key emergency hits in ${city} — a lockout, a broken key, a lock that won't budge — 1st Capital Locksmith answers with fast mobile dispatch across ${profile.routeFocus}. Call (302) 735-0050 and a real person picks up.`,
+  `Emergencies don't schedule themselves, and in ${city} they don't wait either. From ${profile.emergencyScenario}, 1st Capital Locksmith responds with a fully equipped mobile locksmith — dispatched fast, finished on-site.`,
+  `A lockout or broken key in ${city} needs one thing: a locksmith who actually shows up fast. 1st Capital Locksmith covers ${city} with mobile emergency service for ${profile.emergencyScenario} — call (302) 735-0050 now.`,
+]);
+
+const intro1 = sp(slug, "intro-1", [
+  `${city} is ${description}, and the local mix of ${profile.propertyMix} means emergency calls vary throughout the day. Whether you are dealing with a lockout, damaged hardware, or a broken key, we arrive equipped to solve it on-site.`,
+  `In ${city} — ${description} — lock and key emergencies come in every form: home lockouts, vehicle lockouts, broken keys, failed hardware. Our mobile units arrive with the tools and stock to resolve them on the spot.`,
+  `Emergencies in ${city} reflect the area's ${profile.propertyMix} — and 1st Capital Locksmith is set up for all of it. Lockout, broken key, damaged lock: the truck that rolls to your ${city} location is equipped to finish the job there.`,
+  `Whether it's a lockout at a ${city} home, a key snapped in an ignition, or a business door that won't open, 1st Capital Locksmith brings the fix to you — ${city} is ${description}, and we cover all of it.`,
+]);
+
+const intro2 = sp(slug, "intro-2", [
+  `We do not route you through a call center. You talk to a real dispatcher and get real timing based on ${profile.routeFocus}. Your technician arrives prepared to complete the job in one visit.`,
+  `No call centers, no contractor roulette. When you call from ${city}, you speak with someone who knows ${profile.routeFocus} and can give you a real arrival time — then a technician shows up ready to finish the job in one visit.`,
+  `Your call from ${city} reaches a real dispatcher, not an answering service. You get an honest ETA based on ${profile.routeFocus}, and the technician who arrives carries everything needed for same-visit completion.`,
+  `We answer our own phones. That means your ${city} emergency gets a real person, a real ETA, and a technician dispatched with the equipment to resolve it in a single visit — not a callback hours later.`,
+]);
+
+const emHouse1 = compose(slug, "em-house-1", {
+  open: [
+    `Being locked out of your home in ${city} — whether it's your own house, an apartment, or a rental — is one of those situations where you need help fast.`,
+    `A house lockout in ${city} never picks a convenient moment — it's raining, it's late, or the kids are inside.`,
+    `Locked out of your ${city} home? Own house, apartment, rental — it all needs the same thing: someone fast.`,
+    `Few emergencies feel as immediate as standing outside your own ${city} home with no way in.`,
+  ],
+  mid: [
+    `1st Capital Locksmith dispatches a mobile locksmith to your ${city} address quickly after your call. We unlock your door using professional techniques that don't damage your lock hardware.`,
+    `Our mobile locksmiths respond across ${city} and open residential doors using non-destructive techniques — your hardware survives, and so does your door frame.`,
+    `We dispatch directly to your ${city} address and open the door professionally — picked or bypassed, not drilled — so your lock keeps working after we're gone.`,
+    `A technician comes straight to your ${city} home with professional entry tools, opening the door without damage to lock or frame.`,
+  ],
+  close: [
+    townAnchor(slug, "emergency", "em-house-1"),
+    `If the lockout revealed a failing lock, we can repair or replace it in the same visit.`,
+    `And if lost keys are the reason you're outside, we can rekey the locks on the spot so the old keys no longer matter.`,
+  ],
+});
+
+const emHouse2 = sp(slug, "em-house-2", [
+  `We service all residential door hardware — knob locks, lever handles, deadbolts, and combination lock sets on all types of residential doors. We don't drill unless it is absolutely the last resort, protecting your existing hardware so you don't face a replacement cost on top of everything else.`,
+  `Knob locks, levers, deadbolts, combination sets — every common residential lock type is covered, and drilling is our last resort, not our first move. Your existing hardware stays intact and your costs stay down.`,
+  `Our technicians work on all residential door hardware found in ${city} homes — knobs, levers, single and double deadbolts. Drilling happens only when nothing else will, which is rare — protecting your hardware and your wallet.`,
+]);
+
+const emCar1 = compose(slug, "em-car-1", {
+  open: [
+    `Getting locked out of your vehicle anywhere in ${city} is stressful — particularly when you're stranded in a parking lot, on the side of the road, or somewhere you don't feel safe waiting.`,
+    `A car lockout in ${city} is bad enough in your driveway — in a dark lot or on a roadside, it's something worse.`,
+    `Locked keys in the car at a ${city} store, or lost them entirely on a roadside? Either way, you need help now.`,
+    `Vehicle lockouts in ${city} come with an urgency residential calls don't — you're exposed, possibly late, maybe somewhere unsafe.`,
+  ],
+  mid: [
+    `1st Capital Locksmith provides fast emergency car lockout service throughout ${city} and gets you back in your vehicle using non-destructive professional entry techniques.`,
+    `We respond across ${city} with professional automotive entry tools, opening your vehicle without a scratch on the door or glass.`,
+    `Our mobile locksmiths open vehicles throughout ${city} using air wedges and long-reach tools — no bent frames, no torn weatherstripping, no damage.`,
+    `We come to your vehicle wherever it sits in ${city} and open it cleanly — professional tools, non-destructive technique, done in minutes.`,
+  ],
+  close: [
+    townAnchor(slug, "emergency", "em-car-1"),
+    `If a child or pet is locked inside, tell us when you call — those calls get absolute priority.`,
+    `Stay somewhere safe and visible; we'll text or call when the technician is close.`,
+  ],
+});
+
+const emCar2 = sp(slug, "em-car-2", [
+  `We work on all types of vehicles — sedans, trucks, SUVs, minivans, and commercial vehicles. Don't attempt to break in yourself, as DIY attempts routinely cause expensive damage to door frames and lock mechanisms. Call us and we'll have you back inside quickly.`,
+  `Sedans, pickups, SUVs, minivans, and work vehicles are all covered. Skip the coat hanger — DIY entry routinely bends door frames and tears seals, costing far more than a professional opening. Call us instead.`,
+  `Every vehicle type is within our coverage, from compact sedans to commercial trucks. Improvised tools cause real damage to modern vehicles — our professional entry equipment opens them cleanly, quickly, and without repair bills.`,
+]);
+
+const emBiz1 = sp(slug, "em-biz-1", [
+  `When you or your employees are locked out of your ${city} business, every minute counts. 1st Capital Locksmith responds to emergency business lockout calls throughout ${city} with urgency — we understand that being unable to enter your business has direct financial consequences.`,
+  `A ${city} business that can't open on time is bleeding money — customers turned away, staff idle, deliveries missed. We treat business lockouts as the emergencies they are and dispatch immediately.`,
+  `Locked out of your ${city} business before opening? The meter is running on lost revenue. We respond to commercial lockouts across ${city} with emergency priority.`,
+]);
+
+const emBiz2 = sp(slug, "em-biz-2", [
+  `We work with all commercial door hardware and gain entry professionally without damage so your locks remain functional after we leave. Once you're back inside, we can also assess and address any hardware issues that contributed to the lockout if needed.`,
+  `Mortise locks, cylindrical sets, electronic hardware — we open commercial doors without damage, and your hardware stays in service afterward. If a failing lock caused the lockout, we can repair or replace it in the same visit.`,
+  `Commercial hardware of every type is within our coverage, opened non-destructively. And if the lockout traced back to worn or damaged hardware, we fix the root cause before leaving your ${city} business.`,
+]);
+
+const emBroken1 = sp(slug, "em-broken-1", [
+  `A key broken off in a lock — whether it's a door lock at your ${city} home, business, or your car's ignition — is an urgent situation. Do not try to remove it yourself with pliers, tweezers, or other tools. Doing so almost always pushes the broken piece deeper into the cylinder, making extraction more difficult and potentially damaging the lock.`,
+  `Snapped key in a door lock, padlock, or ignition in ${city}? Put the pliers down. Improvised extraction drives the fragment deeper and can ruin the cylinder — turning a quick extraction into a full lock replacement.`,
+  `Keys break at the worst moments, and the instinct to dig the piece out with tweezers makes it worse. If a key broke off in a lock anywhere in ${city}, leave the fragment where it is and call us — extraction is a specialized job.`,
+]);
+
+const emBroken2 = sp(slug, "em-broken-2", [
+  `1st Capital Locksmith uses specialized extraction tools to safely remove broken key fragments from any lock cylinder. After extraction, we can cut a new key on-site and repair or replace the lock cylinder if it was damaged in the process.`,
+  `Our extraction tools are purpose-built for broken key fragments — the piece comes out without further damage to the cylinder. Then we cut you a new key on-site at your ${city} location, same visit.`,
+  `We extract the fragment with professional tools, assess the cylinder for damage, and cut a replacement key on the spot. One call to our ${city} service solves the whole problem.`,
+]);
+
+const postBreakIn1 = sp(slug, "post-breakin-1", [
+  `After a break-in at your ${city} home or business, your door security must be restored immediately. Damaged locks, broken door frames, and compromised entry points need to be addressed the same day — both for your security and for your peace of mind.`,
+  `A break-in leaves your ${city} property exposed — damaged locks, splintered frames, a door that won't secure. That can't wait until next week. We respond to post-break-in calls throughout ${city} with same-day security restoration.`,
+  `The hours after a break-in at your ${city} home or business are when security matters most. Compromised locks and damaged entry points need immediate, professional attention — not a patch job.`,
+]);
+
+const postBreakIn2 = sp(slug, "post-breakin-2", [
+  `1st Capital Locksmith responds to post-break-in calls throughout ${city} and provides emergency lock replacement and door hardware repair on-site. We carry replacement hardware in our mobile vehicles and can restore your door security in a single visit.`,
+  `We arrive at ${city} post-break-in calls with replacement locks and hardware on the truck, restoring your door security in a single visit — and we can upgrade to higher-security hardware while we're there if you want.`,
+  `Our mobile units carry the locks and hardware to secure your ${city} property the same day. Damaged locks replaced, hardware repaired, and security restored in one visit — often stronger than before.`,
+]);
+
+const ctaP = sp(slug, "cta", [
+  `For any lock or key emergency in ${city}, ${state}, call (302) 735-0050 right now. A real person will answer.`,
+  `Whatever the emergency — lockout, broken key, damaged lock — call (302) 735-0050 and a real person answers. We dispatch to anywhere in ${city}, ${state}.`,
+  `Don't wait on an emergency in ${city}, ${state}. Call (302) 735-0050 now — real dispatcher, real ETA, fully equipped technician.`,
+]);
 ---
 
 <MainLayout
@@ -101,7 +217,7 @@ const profile = getLocationContentProfile(slug);
         Emergency Locksmith in {city}, {state} — Fast Response When You Need It Most
       </h1>
       <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
-        Locked out in {city}? Key broken in a lock? We handle {profile.emergencyScenario} across {profile.routeFocus}. 1st Capital Locksmith dispatches quickly with {profile.dispatchNote}.
+        {heroP}
       </p>
       <div class="flex flex-wrap gap-3 md:gap-4">
         <a
@@ -154,10 +270,10 @@ const profile = getLocationContentProfile(slug);
             Fast Emergency Locksmith Service Throughout {city}, {state}
           </h2>
           <p class="text-gray-700 leading-relaxed mb-4">
-            {city} is {description}, and the local mix of {profile.propertyMix} means emergency calls vary throughout the day. Whether you are dealing with a lockout, damaged hardware, or a broken key, we arrive equipped to solve it on-site.
+            {intro1}
           </p>
           <p class="text-gray-700 leading-relaxed mb-4">
-            We do not route you through a call center. You talk to a real dispatcher and get real timing based on {profile.routeFocus}. Your technician arrives prepared to complete the job in one visit.
+            {intro2}
           </p>
           <p class="text-gray-700 leading-relaxed">
             For any lock or key emergency in {city}, {state}, call <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> right now.
@@ -225,10 +341,10 @@ const profile = getLocationContentProfile(slug);
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Emergency House Lockout in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Being locked out of your home in {city} — whether it's your own house, an apartment, or a rental — is one of those situations where you need help fast. 1st Capital Locksmith dispatches a mobile locksmith to your {city} address quickly after your call. We unlock your door using professional techniques that don't damage your lock hardware.
+              {emHouse1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              We service all residential door hardware — knob locks, lever handles, deadbolts, and combination lock sets on all types of residential doors. We don't drill unless it is absolutely the last resort, protecting your existing hardware so you don't face a replacement cost on top of everything else.
+              {emHouse2}
             </p>
             <div class="mt-4">
               <a href={`/services/emergency-locksmith/${slug}/emergency-house-lockout/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency House Lockout Service →</a>
@@ -247,10 +363,10 @@ const profile = getLocationContentProfile(slug);
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Emergency Car Lockout in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Getting locked out of your vehicle anywhere in {city} is stressful — particularly when you're stranded in a parking lot, on the side of the road, or somewhere you don't feel safe waiting. 1st Capital Locksmith provides fast emergency car lockout service throughout {city} and gets you back in your vehicle using non-destructive professional entry techniques.
+              {emCar1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              We work on all types of vehicles — sedans, trucks, SUVs, minivans, and commercial vehicles. Don't attempt to break in yourself, as DIY attempts routinely cause expensive damage to door frames and lock mechanisms. Call us and we'll have you back inside quickly.
+              {emCar2}
             </p>
             <div class="mt-4">
               <a href={`/services/emergency-locksmith/${slug}/emergency-car-lockout/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Car Lockout Service →</a>
@@ -268,10 +384,10 @@ const profile = getLocationContentProfile(slug);
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Emergency Business Lockout in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              When you or your employees are locked out of your {city} business, every minute counts. 1st Capital Locksmith responds to emergency business lockout calls throughout {city} with urgency — we understand that being unable to enter your business has direct financial consequences.
+              {emBiz1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              We work with all commercial door hardware and gain entry professionally without damage so your locks remain functional after we leave. Once you're back inside, we can also assess and address any hardware issues that contributed to the lockout if needed.
+              {emBiz2}
             </p>
             <div class="mt-4">
               <a href={`/services/emergency-locksmith/${slug}/emergency-lockout/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Lockout Service →</a>
@@ -289,10 +405,10 @@ const profile = getLocationContentProfile(slug);
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Broken Key Extraction in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              A key broken off in a lock — whether it's a door lock at your {city} home, business, or your car's ignition — is an urgent situation. Do not try to remove it yourself with pliers, tweezers, or other tools. Doing so almost always pushes the broken piece deeper into the cylinder, making extraction more difficult and potentially damaging the lock.
+              {emBroken1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              1st Capital Locksmith uses specialized extraction tools to safely remove broken key fragments from any lock cylinder. After extraction, we can cut a new key on-site and repair or replace the lock cylinder if it was damaged in the process.
+              {emBroken2}
             </p>
             <div class="mt-4">
               <a href={`/services/emergency-locksmith/${slug}/broken-key-extraction/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Broken Key Extraction in Delaware →</a>
@@ -310,10 +426,10 @@ const profile = getLocationContentProfile(slug);
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Post-Break-In Lock Replacement in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              After a break-in at your {city} home or business, your door security must be restored immediately. Damaged locks, broken door frames, and compromised entry points need to be addressed the same day — both for your security and for your peace of mind.
+              {postBreakIn1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              1st Capital Locksmith responds to post-break-in calls throughout {city} and provides emergency lock replacement and door hardware repair on-site. We carry replacement hardware in our mobile vehicles and can restore your door security in a single visit.
+              {postBreakIn2}
             </p>
             <div class="mt-4">
               <a href="/services/emergency-locksmith/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Locksmith Services in Delaware →</a>
@@ -387,7 +503,7 @@ const profile = getLocationContentProfile(slug);
         Locksmith Emergency in {city}, {state}?
       </h2>
       <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">
-        Don't wait. Call 1st Capital Locksmith right now. A real person will answer and a mobile locksmith will be dispatched to your {city} location immediately.
+        {ctaP}
       </p>
       <a
         href="tel:3027350050"

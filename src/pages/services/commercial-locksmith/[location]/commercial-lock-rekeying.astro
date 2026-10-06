@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,63 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `When an employee leaves, keys go unaccounted for, or a security incident occurs at your business in ${city}, rekeying your commercial locks is the fastest and most cost-effective way to restore access control. 1st Capital Locksmith rekeyes office, retail, and commercial property locks throughout ${city} and ${county}.`,
+  `An unreturned key is a door into your ${city} business you no longer control. 1st Capital Locksmith rekeys commercial locks throughout ${city} and ${county} — old keys dead the same day, hardware untouched, cost a fraction of replacement.`,
+  `Employee departures, lost keys, security incidents — they all end the same way: rekey. 1st Capital Locksmith rekeys offices, storefronts, and commercial properties across ${city} and ${county} in a single scheduled visit.`,
+  `Rekeying is how ${city} businesses take back key control without buying new hardware. 1st Capital Locksmith re-pins commercial locks on-site throughout ${city} and ${county} — fast, affordable, done in one visit.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `When an employee with building access leaves your business — voluntarily or otherwise — rekeying is the responsible next step.`,
+    `A departing employee takes more than their badge: they leave with key access you can't verify is finished.`,
+    `Even a friendly departure leaves open the question of copies. Rekeying settles it.`,
+    `Staff turnover at a ${city} business always raises the same question: who else has keys?`,
+  ],
+  close: [
+    `Even if keys were returned, you cannot verify that copies weren't made. Rekeying your business locks in ${city} ensures that only current authorized staff can access your premises. We can rekey all affected cylinders in a single visit.`,
+    `Returned keys prove nothing about copies. Rekeying your ${city} business locks means only current staff get in — and we handle all affected cylinders in one visit.`,
+    `Rekeying erases the question entirely: old keys stop working, only authorized current staff hold working ones. All affected cylinders at your ${city} business, one visit.`,
+    townAnchor(slug, "commercial", "card-1"),
+  ],
+});
+
+const card2 = sp(slug, "card-2", [
+  `Keys that go missing — whether misplaced by an employee, lost, or stolen — create an access control risk for your business. Unlike residential keys, commercial keys are often duplicated and distributed across multiple staff members. Rekeying restores your security immediately and is far more cost-effective than replacing the hardware across your entire ${city} location.`,
+  `A missing commercial key isn't like a missing house key — it's been duplicated, shared, and passed around. When one goes unaccounted for at your ${city} business, rekeying restores control immediately, at a fraction of the cost of new hardware.`,
+  `Lost, stolen, or simply unreturned — an unaccounted commercial key is an open risk. Rekeying your ${city} business closes it the same day, using your existing hardware.`,
+  `Commercial keys circulate more than residential ones, so a single lost key in ${city} can mean several unknown copies. A rekey invalidates all of them at once — same day, existing hardware, low cost.`,
+]);
+
+const card3 = sp(slug, "card-3", [
+  `Commercial properties in ${city} often have multiple door cylinders across multiple entry points — front door, back door, individual office doors, storage, and more. We can rekey all cylinders in a single scheduled visit and key them to a common key so that one master key works everywhere while individual keys only access designated areas. This is often combined with a master key system setup.`,
+  `Front door, back door, offices, storage — commercial spaces accumulate cylinders fast. We rekey every cylinder at your ${city} property in one visit, and can key them alike or in a master arrangement so access finally makes sense.`,
+  `If your ${city} business runs on a fistful of keys for different doors, we can rekey everything to a sane structure in one visit — one key where you want one, separate keys where you don't.`,
+  `Multi-door ${city} properties are our specialty: we rekey all cylinders in a single visit, keyed alike or master-keyed, so you stop carrying a key ring that belongs in a jail.`,
+]);
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `For most commercial rekeying situations, there's no need to replace your existing hardware — rekeying costs significantly less and achieves the same access control result.`,
+    `Rekeying and replacement achieve the same key control — but rekeying keeps your hardware and your budget intact.`,
+    `New keys without new hardware: that's the value of rekeying over replacement.`,
+    `Why buy new locks when the existing ones just need new pins?`,
+  ],
+  close: [
+    `We recommend lock replacement only if the hardware is damaged, worn, or a security downgrade is evident. We'll assess your locks in ${city} and give you an honest recommendation before proceeding.`,
+    `We only recommend replacement when hardware is damaged, worn, or genuinely inadequate — and we'll assess your ${city} locks honestly before advising either way.`,
+    `If your ${city} hardware is sound, we rekey it. If it's damaged or substandard, we'll say so — and explain why before any work begins.`,
+    townAnchor(slug, "commercial", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for commercial rekeying in ${city}. Same-day response, existing hardware retained.`,
+  `Take back key control today — one call rekeys your ${city} business. Upfront pricing, single visit.`,
+  `Unaccounted keys are an open door. Call now and we'll rekey your ${city} business fast.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +128,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Commercial Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Commercial Lock Rekeying in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            When an employee leaves, keys go unaccounted for, or a security incident occurs at your business in {city}, rekeying your commercial locks is the fastest and most cost-effective way to restore access control. 1st Capital Locksmith rekeyes office, retail, and commercial property locks throughout {city} and {county}.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,20 +194,20 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Employee Departure</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">When an employee with building access leaves your business — voluntarily or otherwise — rekeying is the responsible next step. Even if keys were returned, you cannot verify that copies weren't made. Rekeying your business locks in {city} ensures that only current authorized staff can access your premises. We can rekey all affected cylinders in a single visit.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/commercial-lock-rekeying/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Commercial Lock Rekeying →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Lost or Unaccounted-For Keys</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Keys that go missing — whether misplaced by an employee, lost, or stolen — create an access control risk for your business. Unlike residential keys, commercial keys are often duplicated and distributed across multiple staff members. Rekeying restores your security immediately and is far more cost-effective than replacing the hardware across your entire {city} location.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Multi-Cylinder Rekeying</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Commercial properties in {city} often have multiple door cylinders across multiple entry points — front door, back door, individual office doors, storage, and more. We can rekey all cylinders in a single scheduled visit and key them to a common key so that one master key works everywhere while individual keys only access designated areas. This is often combined with a master key system setup.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Rekeying vs Lock Replacement</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">For most commercial rekeying situations, there's no need to replace your existing hardware — rekeying costs significantly less and achieves the same access control result. We recommend lock replacement only if the hardware is damaged, worn, or a security downgrade is evident. We'll assess your locks in {city} and give you an honest recommendation before proceeding.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
         </div>
       </div>
     </div>
@@ -207,7 +265,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need Commercial Lock Rekeying in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for business lock rekeying in {city}. Fast, affordable service after employee departure or security incidents throughout {county}.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

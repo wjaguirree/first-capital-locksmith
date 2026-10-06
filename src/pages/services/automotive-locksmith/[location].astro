@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../components/LocationLocalFlavor.astro";
+import { sp, compose, townAnchor } from "../../../data/serviceCopy";
 import { locations } from "../../../data/locations";
 import type { Location } from "../../../data/locations";
 
@@ -17,6 +18,133 @@ interface Props {
 
 const { location } = Astro.props;
 const { city, state, slug, county, description } = location;
+
+const heroP = sp(slug, "hero", [
+  `Locked out of your car in ${city}? Lost your car keys? Need a key fob programmed on-site? 1st Capital Locksmith provides fast, professional mobile automotive locksmith services throughout ${city}, Delaware. We come directly to your location — no tow required.`,
+  `Car key trouble in ${city} doesn't have to mean a tow truck and a dealership wait. 1st Capital Locksmith brings the full automotive locksmith workshop to you — lockouts, key replacement, fob programming, and ignition work, all handled on-site anywhere in ${city}, Delaware.`,
+  `Whether your keys are locked inside, your fob stopped responding, or your ignition won't turn, 1st Capital Locksmith dispatches a mobile automotive locksmith directly to your ${city} location. One call, one visit, no dealership markup.`,
+  `From lost transponder keys to vehicles locked tight with the engine running, 1st Capital Locksmith handles every automotive lock and key problem drivers face in ${city}, Delaware — at your location, without a tow, and without dealership pricing.`,
+]);
+
+const intro1 = sp(slug, "intro-1", [
+  `${city} is ${description}, and 1st Capital Locksmith is here to serve drivers throughout ${city} with fast, professional automotive locksmith services. Whether you've locked your keys inside your car, lost your transponder key, or need a key fob programmed on the spot, we come directly to your location anywhere in ${city} — no tow required.`,
+  `Drivers in ${city} — ${description} — call 1st Capital Locksmith for the full range of automotive locksmith work: lockouts, lost keys, transponder programming, fob replacement, and ignition service. Everything is done on-site wherever your vehicle sits in ${city}.`,
+  `As ${description}, ${city} sees steady demand for automotive locksmith help, and 1st Capital Locksmith answers it with fully mobile service. Keys locked inside, keys lost entirely, fobs that quit working — we come to you anywhere in ${city} and finish the job on the spot.`,
+  `1st Capital Locksmith serves ${city} — ${description} — with mobile automotive locksmith service that eliminates the tow truck and the dealership appointment. Lockouts, key cutting, programming, and ignition repair all happen at your ${city} location.`,
+]);
+
+const intro2 = sp(slug, "intro-2", [
+  `Our mobile automotive locksmiths serve ${city} and all of ${county} with the same professional tools and techniques used by dealerships — at a fraction of the cost and with the convenience of on-site service. No appointments, no waiting rooms, no tow trucks.`,
+  `We carry dealership-grade key cutting and programming equipment in our service vehicles, which means ${city} drivers get the same result a dealer would deliver — without the tow, the appointment backlog, or the dealer price tag.`,
+  `Every service vehicle in our fleet carries the key blanks, fobs, cutting machines, and programmers to handle nearly any vehicle on the road. For ${city} drivers that means one visit, on-site, and done — no second trip, no parts order.`,
+  `Because we're fully mobile, ${city} drivers skip the two most expensive parts of a dealership key job: the tow and the markup. We arrive at your location in ${city} or anywhere in ${county} ready to cut, program, and finish the work immediately.`,
+]);
+
+const carLockout1 = compose(slug, "car-lockout-1", {
+  open: [
+    `Getting locked out of your car in ${city} is one of the most common situations we respond to every day.`,
+    `Car lockouts are the single most frequent automotive call we take in ${city}.`,
+    `Few things ruin a day in ${city} faster than watching your car lock with the keys still inside.`,
+    `It happens constantly in ${city} — a door swings shut, the locks engage, and the keys are sitting on the seat.`,
+  ],
+  mid: [
+    `Whether your keys are on the seat, in the ignition, or simply nowhere to be found, 1st Capital Locksmith dispatches a mobile automotive locksmith to your exact location in ${city} fast.`,
+    `Keys on the dashboard, keys in the trunk, keys lost somewhere between the store and the car — wherever the situation finds you in ${city}, we dispatch directly to you.`,
+    `However it happened — keys visible on the seat or missing entirely — our mobile units respond across ${city} with professional entry equipment on board.`,
+    `From keys locked in the trunk to fobs locked inside push-to-start vehicles, our technicians respond anywhere in ${city} with the tools to open it cleanly.`,
+  ],
+  close: [
+    townAnchor(slug, "automotive", "car-lockout-1"),
+    `Most ${city} lockout calls are resolved in minutes once we arrive — you're back behind the wheel without a scratch on the vehicle.`,
+    `We open vehicles without damage, so your door, weatherstripping, and lock mechanism all survive the process intact.`,
+  ],
+});
+
+const carLockout2 = sp(slug, "car-lockout-2", [
+  `We use professional non-destructive entry techniques to unlock your vehicle without damaging your door, window, or lock mechanisms. We work on all vehicle makes and models — sedans, trucks, SUVs, minivans, and commercial vehicles. Call us instead of attempting DIY entry, which can cause expensive damage.`,
+  `Our entry tools — air wedges, long-reach tools, and professional picks — open vehicles without bending door frames or scratching glass. Sedans, work trucks, SUVs, minivans, and commercial vehicles are all within our coverage, and DIY attempts with coat hangers almost always cost more in damage than our service call.`,
+  `Every vehicle type is covered: sedans, pickups, SUVs, minivans, and work vans. We open them with professional non-destructive methods — never the improvised tools that bend door frames, tear weatherstripping, and turn a simple lockout into a body shop bill.`,
+]);
+
+const carKey1 = compose(slug, "car-key-1", {
+  open: [
+    `Lost your car keys in ${city}? Don't pay dealership prices for a replacement.`,
+    `When car keys go missing in ${city}, the dealership is usually the most expensive way out.`,
+    `A lost car key in ${city} used to mean a tow and a multi-day wait at the dealership. It doesn't anymore.`,
+    `Misplaced your only car key somewhere in ${city}? You have a faster option than the dealer.`,
+  ],
+  mid: [
+    `1st Capital Locksmith cuts and programs replacement car keys on-site at your ${city} location — for a fraction of what dealers charge, with no appointment and no tow required.`,
+    `We cut and program replacement keys wherever your vehicle sits in ${city} — typically well below dealership pricing, and always without the tow.`,
+    `Our mobile units cut and program replacements on-site across ${city}, usually in under an hour and almost always for less than the dealer's quote.`,
+    `1st Capital Locksmith produces replacement keys at your ${city} location, cutting and programming them on-site the same day you call.`,
+  ],
+  close: [
+    townAnchor(slug, "automotive", "car-key-1"),
+    `Even with no working key at all, we can originate a new one from your VIN and ownership documents.`,
+    `If you still have one working key, we can also cut and program a spare during the same visit — cheap insurance against the next lockout.`,
+  ],
+});
+
+const carKey2 = sp(slug, "car-key-2", [
+  `We replace all types of car keys including standard cut keys, transponder chip keys, laser cut keys, and high-security keys for virtually all makes and models — Toyota, Honda, Ford, Chevrolet, Dodge, Nissan, Hyundai, Kia, BMW, Mercedes-Benz, Jeep, RAM, and more.`,
+  `Standard edge-cut keys, transponder chip keys, laser-cut sidewinder keys, and high-security keys — we handle all of them for nearly every make on the road, from Toyota, Honda, and Ford to BMW, Mercedes-Benz, Jeep, and RAM.`,
+  `Whatever your vehicle takes — a basic cut key, a chipped transponder key, or a high-security laser cut — we stock the blanks and carry the programmers for domestic and import brands alike, including Chevrolet, Dodge, Nissan, Hyundai, and Kia.`,
+]);
+
+const transponder1 = sp(slug, "transponder-1", [
+  `Most vehicles made after 1995 use transponder keys — keys with an embedded chip that must be programmed to your specific vehicle. A copy cut at a hardware store won't start your car. 1st Capital Locksmith carries professional-grade transponder programming equipment and comes directly to your ${city} location to cut and program your key on the spot.`,
+  `If your vehicle was built after the mid-1990s, its key almost certainly contains a transponder chip that must be electronically paired with your car. A hardware-store copy will open the door but never start the engine. Our mobile locksmiths bring professional programming equipment to your ${city} location and pair the new key on-site.`,
+  `Modern keys are as much electronics as metal. The transponder chip inside must be programmed to your vehicle's immobilizer or the engine simply won't start — which is why a cheap duplicate fails. We carry the programming equipment in our trucks and complete the whole job at your ${city} location.`,
+]);
+
+const transponder2 = sp(slug, "transponder-2", [
+  `We deliver the same service as dealerships at a much lower cost, right to your location in ${city} — without the wait or the tow truck. Call us for a quote on transponder key programming for your specific vehicle.`,
+  `The result matches what a dealership would deliver; the price and the convenience don't. We come to you anywhere in ${city}, and most transponder keys are cut and programmed in a single short visit. Call with your vehicle's year, make, and model for an exact quote.`,
+  `Dealerships typically want the car towed in and the key ordered — we do the whole job where the car sits in ${city}, usually for significantly less. Have your year, make, and model ready when you call and we'll quote it on the phone.`,
+]);
+
+const fob1 = sp(slug, "fob-1", [
+  `When your key fob stops working, gets lost, or needs to be replaced in ${city}, 1st Capital Locksmith programs replacement fobs for all major vehicle brands on-site. We handle push-to-start proximity keys, remote start fobs, and standard key fobs — all programmed to your vehicle the same day.`,
+  `A dead, lost, or unreliable key fob in ${city} is a same-day problem for us — not a parts order. We stock and program proximity keys, push-to-start fobs, remote start units, and standard remotes for all major brands, right where your vehicle is parked.`,
+  `Push-to-start proximity keys, remote-start fobs, and classic button remotes all fail eventually — and when yours does in ${city}, we program a replacement on-site the same day. No dealer appointment, no waiting on a parts department.`,
+]);
+
+const fob2 = sp(slug, "fob-2", [
+  `Skip the dealership markup. Our mobile locksmith comes to your location in ${city}, ${state} and programs your replacement fob at a significantly lower cost with no appointment needed.`,
+  `The dealership's fob pricing includes a healthy markup and usually an appointment days out. Our mobile locksmiths program replacement fobs at your ${city} location — same day, lower cost, no appointment.`,
+  `We program the replacement fob wherever your vehicle sits in ${city}, and the total is typically well under dealer pricing. Water damage, worn buttons, and total loss are all covered — call (302) 735-0050 with your vehicle details.`,
+]);
+
+const ignition1 = sp(slug, "ignition-1", [
+  `A faulty ignition cylinder can leave you stranded in ${city} with a key that won't turn or won't come out. Don't force it — forcing a worn ignition can snap the key off inside, turning a fixable problem into a much more expensive repair. Call 1st Capital Locksmith at the first sign of ignition trouble in ${city}.`,
+  `When an ignition cylinder starts to wear, the first symptoms are a key that sticks, needs jiggling, or refuses to turn. Forcing it is how keys snap off inside — and how a repair becomes a replacement. If your ignition is acting up in ${city}, call us before it fails completely.`,
+  `Ignition cylinders wear gradually, then fail suddenly — often at the worst moment in a ${city} parking lot. If your key is sticking, binding, or not turning smoothly, that's the warning sign. Call before the cylinder seizes or the key breaks off inside it.`,
+]);
+
+const ignition2 = sp(slug, "ignition-2", [
+  `Our mobile automotive locksmiths diagnose and repair ignition cylinder issues on-site in ${city}. If repair isn't possible, we perform full ignition cylinder replacements and re-key the new cylinder to work with your existing key so you don't need all-new keys cut.`,
+  `We diagnose ignition problems where the vehicle sits in ${city} and repair them on-site whenever the cylinder can be saved. When it can't, we replace it and key the new cylinder to match your existing key — one key still runs the whole vehicle.`,
+  `Our technicians handle ignition diagnosis, repair, and full cylinder replacement at your ${city} location. A replacement cylinder gets re-keyed to your current key whenever possible, so your door and ignition stay on the same key.`,
+]);
+
+const brokenKey1 = sp(slug, "broken-key-1", [
+  `A broken key stuck in your car door lock or ignition in ${city} is stressful. Resist the urge to pull it out yourself — DIY attempts almost always push the broken piece deeper and damage the lock cylinder. 1st Capital Locksmith has specialized extraction tools to safely remove broken key fragments without causing additional damage.`,
+  `When a key snaps off in a door lock or ignition in ${city}, the worst move is grabbing pliers. Improvised extraction pushes the fragment deeper and can destroy the cylinder. We carry purpose-built extraction tools that slide the fragment out without further damage.`,
+  `Keys usually break after years of wear, and they pick inconvenient moments — a door lock before work, an ignition after a stop in ${city}. Leave the fragment alone; tweezers and pliers push it deeper. Our extraction tools are made specifically for this job.`,
+]);
+
+const brokenKey2 = sp(slug, "broken-key-2", [
+  `Once the broken key is removed, we can cut and program a new key on-site in ${city}. Call us immediately when a key breaks off inside a lock.`,
+  `After the fragment is out, we cut and program a replacement key at your ${city} location in the same visit — so one call solves the whole problem. Call us as soon as it happens.`,
+  `Extraction is only half the job — you still need a working key. We cut and program the replacement on-site in ${city} immediately after removing the fragment.`,
+]);
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith now for fast, professional automotive locksmith service anywhere in ${city}, Delaware. We come to you — no tow required.`,
+  `One call brings a fully equipped automotive locksmith to your location anywhere in ${city}, Delaware. No tow, no dealership wait, no surprise pricing.`,
+  `Wherever your vehicle is in ${city} — driveway, parking lot, or roadside — we come to it. Call now for upfront pricing and a real arrival time.`,
+]);
 ---
 
 <MainLayout
@@ -99,7 +227,7 @@ const { city, state, slug, county, description } = location;
         Automotive Locksmith in {city}, {state} — Car Lockouts, Key Replacement & More
       </h1>
       <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
-        Locked out of your car in {city}? Lost your car keys? Need a key fob programmed on-site? 1st Capital Locksmith provides fast, professional mobile automotive locksmith services throughout {city}, Delaware. We come directly to your location — no tow required.
+        {heroP}
       </p>
       <div class="flex flex-wrap gap-3 md:gap-4">
         <a
@@ -152,10 +280,10 @@ const { city, state, slug, county, description } = location;
             Professional Automotive Locksmith Services in {city}, {state}
           </h2>
           <p class="text-gray-700 leading-relaxed mb-4">
-            {city} is {description}, and 1st Capital Locksmith is here to serve drivers throughout {city} with fast, professional automotive locksmith services. Whether you've locked your keys inside your car, lost your transponder key, or need a key fob programmed on the spot, we come directly to your location anywhere in {city} — no tow required.
+            {intro1}
           </p>
           <p class="text-gray-700 leading-relaxed mb-4">
-            Our mobile automotive locksmiths serve {city} and all of {county} with the same professional tools and techniques used by dealerships — at a fraction of the cost and with the convenience of on-site service. No appointments, no waiting rooms, no tow trucks.
+            {intro2}
           </p>
           <p class="text-gray-700 leading-relaxed">
             Call us at <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> for immediate automotive locksmith service in {city}, {state}.
@@ -223,10 +351,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Car Lockout Service in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Getting locked out of your car in {city} is one of the most common situations we respond to every day. Whether your keys are on the seat, in the ignition, or simply nowhere to be found, 1st Capital Locksmith dispatches a mobile automotive locksmith to your exact location in {city} fast.
+              {carLockout1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              We use professional non-destructive entry techniques to unlock your vehicle without damaging your door, window, or lock mechanisms. We work on all vehicle makes and models — sedans, trucks, SUVs, minivans, and commercial vehicles. Call us instead of attempting DIY entry, which can cause expensive damage.
+              {carLockout2}
             </p>
             <div class="mt-4">
               <a href={`/services/automotive-locksmith/${slug}/car-lockout/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Car Lockout Service in Delaware →</a>
@@ -244,10 +372,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Car Key Replacement in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Lost your car keys in {city}? Don't pay dealership prices for a replacement. 1st Capital Locksmith cuts and programs replacement car keys on-site at your {city} location — for a fraction of what dealers charge, with no appointment and no tow required.
+              {carKey1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              We replace all types of car keys including standard cut keys, transponder chip keys, laser cut keys, and high-security keys for virtually all makes and models — Toyota, Honda, Ford, Chevrolet, Dodge, Nissan, Hyundai, Kia, BMW, Mercedes-Benz, Jeep, RAM, and more.
+              {carKey2}
             </p>
             <div class="mt-4">
               <a href={`/services/automotive-locksmith/${slug}/car-key-replacement/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Car Key Replacement in Delaware →</a>
@@ -265,10 +393,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Transponder Key Programming in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Most vehicles made after 1995 use transponder keys — keys with an embedded chip that must be programmed to your specific vehicle. A copy cut at a hardware store won't start your car. 1st Capital Locksmith carries professional-grade transponder programming equipment and comes directly to your {city} location to cut and program your key on the spot.
+              {transponder1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              We deliver the same service as dealerships at a much lower cost, right to your location in {city} — without the wait or the tow truck. Call us for a quote on transponder key programming for your specific vehicle.
+              {transponder2}
             </p>
             <div class="mt-4">
               <a href={`/services/automotive-locksmith/${slug}/car-key-replacement/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Transponder Key Programming in Delaware →</a>
@@ -286,10 +414,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Key Fob Programming in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              When your key fob stops working, gets lost, or needs to be replaced in {city}, 1st Capital Locksmith programs replacement fobs for all major vehicle brands on-site. We handle push-to-start proximity keys, remote start fobs, and standard key fobs — all programmed to your vehicle the same day.
+              {fob1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              Skip the dealership markup. Our mobile locksmith comes to your location in {city}, {state} and programs your replacement fob at a significantly lower cost with no appointment needed.
+              {fob2}
             </p>
             <div class="mt-4">
               <a href={`/services/automotive-locksmith/${slug}/key-fob-programming/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Key Fob Programming in Delaware →</a>
@@ -308,10 +436,13 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Ignition Repair & Replacement in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              A faulty ignition cylinder can leave you stranded in {city} with a key that won't turn or won't come out. Don't force it — forcing a worn ignition can snap the key off inside, turning a fixable problem into a much more expensive repair. Call 1st Capital Locksmith at the first sign of ignition trouble in {city}.
+              {ignition1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              Our mobile automotive locksmiths diagnose and repair ignition cylinder issues on-site in {city}. If repair isn't possible, we perform full <a href={`/services/automotive-locksmith/${slug}/ignition-replacement/`} class="text-[#A61E22] hover:underline font-medium">ignition cylinder replacements</a> and re-key the new cylinder to work with your existing key so you don't need all-new keys cut.
+              {ignition2}
+            </p>
+            <p class="text-gray-700 leading-relaxed mt-3 text-sm">
+              When a cylinder can't be saved, we handle full <a href={`/services/automotive-locksmith/${slug}/ignition-replacement/`} class="text-[#A61E22] hover:underline font-medium">ignition cylinder replacement in {city}</a> and re-key it to your existing key.
             </p>
             <div class="mt-4">
               <a href={`/services/automotive-locksmith/${slug}/ignition-repair/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Ignition Repair & Replacement in Delaware →</a>
@@ -329,10 +460,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Broken Key Extraction in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              A broken key stuck in your car door lock or ignition in {city} is stressful. Resist the urge to pull it out yourself — DIY attempts almost always push the broken piece deeper and damage the lock cylinder. 1st Capital Locksmith has specialized extraction tools to safely remove broken key fragments without causing additional damage.
+              {brokenKey1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              Once the broken key is removed, we can cut and program a new key on-site in {city}. Call us immediately when a key breaks off inside a lock.
+              {brokenKey2}
             </p>
             <div class="mt-4">
               <a href={`/services/emergency-locksmith/${slug}/broken-key-extraction/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Broken Key Extraction in Delaware →</a>
@@ -482,7 +613,7 @@ const { city, state, slug, county, description } = location;
         Need an Automotive Locksmith in {city}, {state}?
       </h2>
       <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
-        Call 1st Capital Locksmith now for fast, professional automotive locksmith service anywhere in {city}, Delaware. We come to you — no tow required.
+        {ctaP}
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a

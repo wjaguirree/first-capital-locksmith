@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,55 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `A properly installed deadbolt is one of the most effective ways to improve the security of your home in ${city}. 1st Capital Locksmith installs Grade 1 and Grade 2 deadbolts on residential doors throughout ${city} and ${county} — new installations, upgrades, and replacements.`,
+  `If a door in your ${city} home only has a knob lock, it's relying on the weakest hardware on the house. 1st Capital Locksmith installs Grade 1 and Grade 2 deadbolts throughout ${city} and ${county} — same-day service, hardware on the truck.`,
+  `The deadbolt is the one lock that actually stops a forced entry. 1st Capital Locksmith installs and upgrades deadbolts on ${city} homes — correct backset, reinforced strike, full bolt throw, every time.`,
+  `Better door security for your ${city} home starts with a quality deadbolt, installed correctly. 1st Capital Locksmith handles new installs, upgrades, and replacements throughout ${city} and ${county}.`,
+]);
+
+const card1 = sp(slug, "card-1", [
+  `ANSI Grade 1 deadbolts are the highest residential security rating and are tested to withstand 250,000 cycles and 10 blows of 75 foot-pounds of force. Grade 2 deadbolts offer good security for most residential applications and are tested to 150,000 cycles. We recommend Grade 1 for exterior doors facing the street or in higher-risk areas of ${city}. We'll help you choose the right option during your service call.`,
+  `Grade 1 is the top residential security rating — tested to 250,000 cycles and serious impact resistance. Grade 2 is solid for most homes at 150,000 cycles. For street-facing doors or higher-exposure spots in ${city}, we steer you toward Grade 1; we'll walk through the choice when we're at your door.`,
+  `The ANSI grade tells you what a deadbolt can survive: Grade 1 takes 250,000 cycles and 10 heavy blows; Grade 2 handles 150,000 cycles and typical residential use. Most ${city} homes do well with Grade 2 — exposed doors deserve Grade 1. We'll recommend honestly during your service call.`,
+  `Choosing between Grade 1 and Grade 2 comes down to exposure and budget: Grade 1 for maximum resistance on street-facing ${city} doors, Grade 2 for solid everyday security elsewhere. We stock both and install whichever fits your situation.`,
+]);
+
+const card2 = compose2(slug, "card-2", {
+  open: [
+    `If your door doesn't have a deadbolt, or has only a knob lock without a deadbolt, adding one is the most impactful security upgrade you can make in ${city}.`,
+    `A door with only a knob lock is a door that can be opened with a credit card. Adding a deadbolt changes that completely.`,
+    `The single biggest security upgrade for a ${city} door that lacks one: a properly installed deadbolt.`,
+    `Knob locks latch; deadbolts secure. If any door on your ${city} home is knob-only, that's the door to fix first.`,
+  ],
+  close: [
+    `We measure your door, bore the hole if needed, and install a properly sized deadbolt with the correct backset and throw for your door and frame. We also ensure the strike plate is reinforced with long screws reaching the door frame studs.`,
+    `We measure, bore, and fit the deadbolt correctly — and we anchor the strike plate with 3-inch screws into the frame studs, because the strike is where kick-ins actually fail.`,
+    `Fresh bore or existing prep, we fit the deadbolt with correct backset and full throw, plus a reinforced strike plate screwed into the studs — not just the trim.`,
+    townAnchor(slug, "residential", "card-2"),
+  ],
+});
+
+const card3 = sp(slug, "card-3", [
+  `Replacing an old, low-quality, or worn deadbolt with a new Grade 1 or Grade 2 unit is a straightforward upgrade that significantly improves your door security. We remove the existing deadbolt, install the new one with proper alignment, and can rekey it to match your other locks if needed so you only need one key for your home in ${city}.`,
+  `An old, loose, or builder-grade deadbolt gives a false sense of security. We swap it for a quality Grade 1 or Grade 2 unit, aligned correctly — and we can key it to match the rest of your ${city} home so your key ring doesn't grow.`,
+  `Upgrading a tired deadbolt is quick and high-impact: old unit out, quality unit in, aligned and tested — then keyed to your existing house key where possible, so ${city} homeowners keep one-key simplicity.`,
+  `When a deadbolt wears out or was never good to begin with, replacement with a properly rated unit takes under an hour at your ${city} home — and we'll match it to your existing key so nothing else changes.`,
+]);
+
+const card4 = sp(slug, "card-4", [
+  `Electronic deadbolts with keypads or smart lock capabilities (Z-Wave, Zigbee, Bluetooth, Wi-Fi) offer keyless convenience and remote access control. We install and configure electronic deadbolts from major brands including Schlage, Kwikset, Yale, and Baldwin for homeowners throughout ${city}. We ensure proper fit and function and can also provide backup key access options.`,
+  `Keypad and smart deadbolts — Z-Wave, Zigbee, Bluetooth, Wi-Fi — give you keyless entry, codes for guests, and remote control. We install and configure Schlage, Kwikset, Yale, and Baldwin units throughout ${city}, and we always make sure a physical backup key works too.`,
+  `Smart deadbolts let you ditch the key entirely — codes, apps, and remote access — but only if they're installed and configured correctly. We fit and set up major-brand electronic deadbolts across ${city}, with mechanical key backup included.`,
+  `For keyless convenience at your ${city} home, we install keypad and smart deadbolts from Schlage, Kwikset, Yale, and Baldwin — configured properly, with backup key access so a dead battery never locks you out.`,
+]);
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for deadbolt installation and upgrades in ${city}. Same-day service — hardware on the truck.`,
+  `One call brings quality deadbolts and correct installation to your ${city} home. Call for upfront pricing.`,
+  `Ready to actually secure that door in ${city}? Call now — most installations finish in under an hour.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +120,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Residential Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Deadbolt Installation in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            A properly installed deadbolt is one of the most effective ways to improve the security of your home in {city}. 1st Capital Locksmith installs Grade 1 and Grade 2 deadbolts on residential doors throughout {city} and {county} — new installations, upgrades, and replacements.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,20 +186,20 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Grade 1 vs Grade 2 Deadbolts</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">ANSI Grade 1 deadbolts are the highest residential security rating and are tested to withstand 250,000 cycles and 10 blows of 75 foot-pounds of force. Grade 2 deadbolts offer good security for most residential applications and are tested to 150,000 cycles. We recommend Grade 1 for exterior doors facing the street or in higher-risk areas of {city}. We'll help you choose the right option during your service call.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/deadbolt-installation/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Deadbolt Installation →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">New Deadbolt on an Existing Door</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">If your door doesn't have a deadbolt, or has only a knob lock without a deadbolt, adding one is the most impactful security upgrade you can make in {city}. We measure your door, bore the hole if needed, and install a properly sized deadbolt with the correct backset and throw for your door and frame. We also ensure the strike plate is reinforced with long screws reaching the door frame studs.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Deadbolt Upgrade & Replacement</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Replacing an old, low-quality, or worn deadbolt with a new Grade 1 or Grade 2 unit is a straightforward upgrade that significantly improves your door security. We remove the existing deadbolt, install the new one with proper alignment, and can rekey it to match your other locks if needed so you only need one key for your home in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Smart & Electronic Deadbolts</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Electronic deadbolts with keypads or smart lock capabilities (Z-Wave, Zigbee, Bluetooth, Wi-Fi) offer keyless convenience and remote access control. We install and configure electronic deadbolts from major brands including Schlage, Kwikset, Yale, and Baldwin for homeowners throughout {city}. We ensure proper fit and function and can also provide backup key access options.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
         </div>
       </div>
     </div>
@@ -207,7 +257,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need a Deadbolt Installed in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for professional deadbolt installation in {city}. We come to your home and install Grade 1 or Grade 2 deadbolts correctly and securely.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../components/LocationLocalFlavor.astro";
+import { sp, compose, townAnchor } from "../../../data/serviceCopy";
 import { locations } from "../../../data/locations";
 import type { Location } from "../../../data/locations";
 
@@ -17,6 +18,121 @@ interface Props {
 
 const { location } = Astro.props;
 const { city, state, slug, county, description } = location;
+
+const heroP = sp(slug, "hero", [
+  `Locked out of your business in ${city}? Need a master key system set up? Looking to upgrade your commercial door hardware? 1st Capital Locksmith provides professional commercial locksmith services throughout ${city}, Delaware — we respond quickly and minimize downtime for your business.`,
+  `A lock problem at your ${city} business costs money by the minute. 1st Capital Locksmith provides commercial locksmith service throughout ${city}, Delaware — lockouts, master key systems, rekeying, and exit hardware — with fast response and minimal disruption to your operations.`,
+  `From a pre-open lockout to a full master key rollout, ${city} businesses call 1st Capital Locksmith for commercial locksmith work that's fast, professional, and finished on-site. Serving all of ${city}, Delaware.`,
+  `Commercial security problems don't wait for business hours, and neither do we. 1st Capital Locksmith handles lockouts, rekeys, master key systems, and panic hardware for businesses throughout ${city}, Delaware.`,
+]);
+
+const intro1 = sp(slug, "intro-1", [
+  `${city} is ${description}, and 1st Capital Locksmith provides the commercial locksmith services that ${city} businesses count on to stay secure and operational. A security issue or lockout at your business is more than an inconvenience — it's a liability and a direct cost to your bottom line. We respond with urgency and handle every commercial locksmith job completely on-site.`,
+  `For businesses in ${city} — ${description} — a lock problem is never just a lock problem. It's lost revenue, a security gap, or a code issue waiting for an inspector. 1st Capital Locksmith responds across ${city} with commercial locksmith service that treats your downtime like the emergency it is.`,
+  `${city} businesses operate in ${description}, and they need a locksmith who understands commercial urgency. 1st Capital Locksmith handles lockouts, rekeying, master key systems, and hardware upgrades throughout ${city} — on-site, on schedule, with minimal disruption to your day.`,
+  `1st Capital Locksmith serves the business community of ${city} — ${description} — with commercial locksmith work done the way businesses need it: fast dispatch, on-site completion, and pricing quoted before we touch a lock.`,
+]);
+
+const intro2 = sp(slug, "intro-2", [
+  `From small retail shops and professional offices to multi-unit commercial buildings throughout ${city} and ${county}, we have the tools and experience to handle any commercial lock and key situation efficiently and professionally.`,
+  `Retail storefronts, professional offices, restaurants, and multi-unit commercial buildings across ${city} and ${county} — we service them all, with commercial-grade hardware on the truck and the experience to match.`,
+  `Whether you run a small shop or manage a multi-tenant facility in ${city}, our commercial locksmith coverage spans all of ${county}. We arrive with the hardware and the expertise to finish commercial work in a single visit.`,
+  `Our commercial work in ${city} covers everything from single-door shops to large facilities across ${county}. The common thread: professional hardware, efficient work, and minimal interruption to your business.`,
+]);
+
+const bizLockout1 = compose(slug, "biz-lockout-1", {
+  open: [
+    `Being locked out of your business in ${city} is a situation that needs immediate attention.`,
+    `A business lockout in ${city} means every minute outside is revenue you'll never recover.`,
+    `When your ${city} business can't open on time because of a lock, the clock is running on real losses.`,
+    `Locked out of your ${city} business with customers or staff waiting? That's not a wait-and-see problem.`,
+  ],
+  mid: [
+    `Every minute you're standing outside unable to open is lost revenue and productivity. 1st Capital Locksmith treats commercial lockout calls with the urgency they deserve — we dispatch quickly to your ${city} business location and get you back inside professionally.`,
+    `1st Capital Locksmith treats commercial lockouts as what they are: business emergencies. We dispatch directly to your ${city} location and get the door open professionally, without damage.`,
+    `We answer ${city} business lockouts with emergency-level urgency — a stocked truck dispatched directly to your door, opened without damage, so you're operational again fast.`,
+    `Our commercial lockout response in ${city} is built for speed: quick dispatch, non-destructive entry, and you're back to business.`,
+  ],
+  close: [
+    townAnchor(slug, "commercial", "biz-lockout-1"),
+    `Once you're in, we can address whatever caused the lockout — worn hardware, a failed cylinder, a lost key situation — in the same visit.`,
+    `If the lockout exposed a deeper problem — failing hardware or a key control issue — we can fix that too before we leave.`,
+  ],
+});
+
+const bizLockout2 = sp(slug, "biz-lockout-2", [
+  `We work with all types of commercial door hardware including cylindrical locks, mortise locks, electronic locks, and access control entry systems. We gain entry without damage so your lock hardware remains intact and functional after we leave.`,
+  `Cylindrical locks, mortise hardware, electronic locks, and access control systems — we open all of them without damage, so your door hardware is fully functional when we leave.`,
+  `Commercial hardware is our specialty: mortise locks, cylindrical sets, electronic strikes, and access control entry. Entry is gained non-destructively, and your hardware stays in service.`,
+]);
+
+const masterKey1 = sp(slug, "master-key-1", [
+  `A master key system allows you to control access across your entire ${city} facility with a single master key while still giving employees individual keys that only open the areas they need. This eliminates the need to carry a heavy key ring and gives you full control over who can access what in your building.`,
+  `If your ${city} business runs on a ring of twenty keys and nobody's sure which opens what, a master key system fixes that. One master opens everything for you; change keys open only what each employee needs — full control, no key-ring archaeology.`,
+  `Master key systems give ${city} business owners hierarchy and control: your master key opens every door, managers' keys open their areas, and staff keys open only their own. Access becomes deliberate instead of accidental.`,
+]);
+
+const masterKey2 = sp(slug, "master-key-2", [
+  `1st Capital Locksmith designs and installs master key systems for businesses throughout ${city} — from simple two-level systems to complex grand master key hierarchies for large commercial facilities. We assess your specific needs and design a system that fits your access control requirements precisely.`,
+  `We design and build master key systems for ${city} businesses of every size — a simple two-level setup for a small shop, or a grand master hierarchy for a large facility. Every system is documented so future rekeys and expansions are straightforward.`,
+  `From a small ${city} office needing two access levels to a multi-department facility needing a full hierarchy, we design the system around how your business actually works — then document it so managing it later is easy.`,
+]);
+
+const commRekey1 = compose(slug, "comm-rekey-1", {
+  open: [
+    `When an employee leaves your ${city} business — especially under difficult circumstances — rekeying your commercial locks should be an immediate priority.`,
+    `An employee departure in ${city} — friendly or otherwise — means a key you no longer control is out there.`,
+    `Every key a former employee didn't return is a door into your ${city} business that you can't account for.`,
+    `Staff changes at ${city} businesses quietly create security gaps: keys copied, keys kept, keys lost months ago.`,
+  ],
+  mid: [
+    `Former employees with key access represent a genuine security risk. 1st Capital Locksmith provides fast commercial rekeying services throughout ${city} to eliminate that risk quickly and affordably.`,
+    `Rekeying closes that gap the same day: we re-pin your existing locks so old keys stop working, without the cost of new hardware. We handle commercial rekeys across ${city} fast.`,
+    `1st Capital Locksmith rekeys commercial locks throughout ${city} — old keys dead the moment we finish, new keys in your hand, hardware untouched.`,
+    `We re-pin your existing commercial locks on-site anywhere in ${city}, so unaccounted keys become useless metal the same day you call.`,
+  ],
+  close: [
+    townAnchor(slug, "commercial", "comm-rekey-1"),
+    `We can also take the opportunity to key alike or set up a simple master arrangement while we're there.`,
+    `If key control has been loose for a while, ask about a master key setup while we're on-site — one visit can fix both problems.`,
+  ],
+});
+
+const commRekey2 = sp(slug, "comm-rekey-2", [
+  `Rekeying changes the internal pin configuration of your existing locks so old keys no longer work — without the expense of replacing all your lock hardware. We rekey all types of commercial locks and can service an entire facility in a single visit.`,
+  `Because rekeying reuses your existing hardware, it costs a fraction of replacement — and we can rekey an entire ${city} facility in one visit, keyed alike or in a master arrangement, whatever fits your operation.`,
+  `All commercial lock types are covered, and entire facilities can be done in a single visit. Your hardware stays; only the pins change — which is why rekeying costs so much less than replacing.`,
+]);
+
+const panicBar1 = sp(slug, "panic-bar-1", [
+  `If your ${city} business has commercial exits that require panic bar hardware for code compliance or safety, 1st Capital Locksmith installs and services panic bars and exit devices for commercial facilities throughout ${city}. Panic bars (also called push bars or crash bars) allow quick, single-motion exit from a building in an emergency.`,
+  `Panic bars — the push bars on commercial exit doors — are life-safety equipment with code requirements behind them. 1st Capital Locksmith installs and services exit devices for ${city} businesses, keeping your exits compliant and your occupants safe.`,
+  `Commercial exits in ${city} need hardware that opens with one motion in an emergency — that's what panic bars do, and building codes often require them. We install, repair, and replace exit devices throughout ${city}.`,
+]);
+
+const panicBar2 = sp(slug, "panic-bar-2", [
+  `We install, repair, and replace panic bar hardware on commercial doors of all types, ensuring your exit devices meet applicable fire safety and building code requirements while maintaining proper security control on your doors.`,
+  `From new installations to repairs on sticky or loose existing devices, we work on all commercial door types — and we set exit hardware to meet code requirements without compromising your door's security from the outside.`,
+  `A panic bar must do two jobs: release instantly from inside, stay secure from outside. We install and service exit devices on all commercial door types in ${city} with both requirements in mind.`,
+]);
+
+const hardware1 = sp(slug, "hardware-1", [
+  `Whether your ${city} business needs new commercial-grade door hardware installed, existing locks replaced with higher-security options, or a complete hardware upgrade across your facility, 1st Capital Locksmith handles commercial lock installation of all types.`,
+  `New doors, tired hardware, or a security upgrade across the whole facility — ${city} businesses call 1st Capital Locksmith for commercial lock installation at every scale, from one storefront door to an entire building.`,
+  `Commercial doors work harder than residential ones, and the hardware has to match. We install commercial-grade locks, closers, and related hardware for ${city} businesses — single doors or facility-wide projects.`,
+]);
+
+const hardware2 = sp(slug, "hardware-2", [
+  `We work with quality commercial lock brands and install mortise locks, cylindrical locks, rim locks, and other commercial hardware on wood, metal, and hollow-core doors. All installation work is completed on-site in a single visit whenever possible.`,
+  `Mortise locks, cylindrical sets, rim locks, and more — installed on wood, metal, or hollow-core doors with quality commercial brands. We complete installation work on-site in a single visit whenever possible.`,
+  `Our trucks carry commercial hardware from brands we trust, and we install on wood, metal, and hollow-core doors — mortise, cylindrical, and rim configurations. Most projects finish in one on-site visit.`,
+]);
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith now for fast, professional commercial locksmith service at your ${city} business. We respond quickly and minimize downtime.`,
+  `Lockouts, rekeys, master systems, exit hardware — one call brings a commercial locksmith to your ${city} business with everything needed to finish on-site. Call now.`,
+  `Your ${city} business can't afford to wait on a lock problem. Call 1st Capital Locksmith for fast dispatch and upfront pricing.`,
+]);
 ---
 
 <MainLayout
@@ -99,7 +215,7 @@ const { city, state, slug, county, description } = location;
         Commercial Locksmith in {city}, {state} — Business Lockouts, Master Keys & More
       </h1>
       <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
-        Locked out of your business in {city}? Need a master key system set up? Looking to upgrade your commercial door hardware? 1st Capital Locksmith provides professional commercial locksmith services throughout {city}, Delaware — we respond quickly and minimize downtime for your business.
+        {heroP}
       </p>
       <div class="flex flex-wrap gap-3 md:gap-4">
         <a
@@ -152,10 +268,10 @@ const { city, state, slug, county, description } = location;
             Professional Commercial Locksmith Services in {city}, {state}
           </h2>
           <p class="text-gray-700 leading-relaxed mb-4">
-            {city} is {description}, and 1st Capital Locksmith provides the commercial locksmith services that {city} businesses count on to stay secure and operational. A security issue or lockout at your business is more than an inconvenience — it's a liability and a direct cost to your bottom line. We respond with urgency and handle every commercial locksmith job completely on-site.
+            {intro1}
           </p>
           <p class="text-gray-700 leading-relaxed mb-4">
-            From small retail shops and professional offices to multi-unit commercial buildings throughout {city} and {county}, we have the tools and experience to handle any commercial lock and key situation efficiently and professionally.
+            {intro2}
           </p>
           <p class="text-gray-700 leading-relaxed">
             Call us at <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> for commercial locksmith service in {city}, {state}.
@@ -222,10 +338,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Business Lockout Service in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Being locked out of your business in {city} is a situation that needs immediate attention. Every minute you're standing outside unable to open is lost revenue and productivity. 1st Capital Locksmith treats commercial lockout calls with the urgency they deserve — we dispatch quickly to your {city} business location and get you back inside professionally.
+              {bizLockout1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              We work with all types of commercial door hardware including cylindrical locks, mortise locks, electronic locks, and access control entry systems. We gain entry without damage so your lock hardware remains intact and functional after we leave.
+              {bizLockout2}
             </p>
             <div class="mt-4">
               <a href={`/services/commercial-locksmith/${slug}/office-lockout/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Commercial Lockout Service in Delaware →</a>
@@ -243,10 +359,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Master Key Systems in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              A master key system allows you to control access across your entire {city} facility with a single master key while still giving employees individual keys that only open the areas they need. This eliminates the need to carry a heavy key ring and gives you full control over who can access what in your building.
+              {masterKey1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              1st Capital Locksmith designs and installs master key systems for businesses throughout {city} — from simple two-level systems to complex grand master key hierarchies for large commercial facilities. We assess your specific needs and design a system that fits your access control requirements precisely.
+              {masterKey2}
             </p>
             <div class="mt-4">
               <a href={`/services/commercial-locksmith/${slug}/master-key-systems/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Master Key Systems in Delaware →</a>
@@ -264,10 +380,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Commercial Lock Rekeying in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              When an employee leaves your {city} business — especially under difficult circumstances — rekeying your commercial locks should be an immediate priority. Former employees with key access represent a genuine security risk. 1st Capital Locksmith provides fast commercial rekeying services throughout {city} to eliminate that risk quickly and affordably.
+              {commRekey1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              Rekeying changes the internal pin configuration of your existing locks so old keys no longer work — without the expense of replacing all your lock hardware. We rekey all types of commercial locks and can service an entire facility in a single visit.
+              {commRekey2}
             </p>
             <div class="mt-4">
               <a href={`/services/commercial-locksmith/${slug}/commercial-lock-rekeying/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Commercial Lock Rekeying in Delaware →</a>
@@ -285,10 +401,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Panic Bar & Exit Device Installation in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              If your {city} business has commercial exits that require panic bar hardware for code compliance or safety, 1st Capital Locksmith installs and services panic bars and exit devices for commercial facilities throughout {city}. Panic bars (also called push bars or crash bars) allow quick, single-motion exit from a building in an emergency.
+              {panicBar1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              We install, repair, and replace panic bar hardware on commercial doors of all types, ensuring your exit devices meet applicable fire safety and building code requirements while maintaining proper security control on your doors.
+              {panicBar2}
             </p>
             <div class="mt-4">
               <a href={`/services/commercial-locksmith/${slug}/panic-bar-installation/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Panic Bar Installation in Delaware →</a>
@@ -306,10 +422,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Commercial Lock Installation & Hardware in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Whether your {city} business needs new commercial-grade door hardware installed, existing locks replaced with higher-security options, or a complete hardware upgrade across your facility, 1st Capital Locksmith handles commercial lock installation of all types.
+              {hardware1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              We work with quality commercial lock brands and install mortise locks, cylindrical locks, rim locks, and other commercial hardware on wood, metal, and hollow-core doors. All installation work is completed on-site in a single visit whenever possible.
+              {hardware2}
             </p>
             <div class="mt-4">
               <a href="/services/commercial-locksmith/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Commercial Lock Installation in Delaware →</a>
@@ -383,7 +499,7 @@ const { city, state, slug, county, description } = location;
         Need a Commercial Locksmith in {city}, {state}?
       </h2>
       <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
-        Call 1st Capital Locksmith now for fast, professional commercial locksmith service at your {city} business. We respond quickly and minimize downtime.
+        {ctaP}
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a

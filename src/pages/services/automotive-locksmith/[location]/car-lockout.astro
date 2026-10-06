@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import { getLocationContentProfile } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
@@ -19,6 +20,71 @@ interface Props {
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
 const profile = getLocationContentProfile(slug);
+
+const heroP = sp(slug, "hero", [
+  `1st Capital Locksmith provides fast mobile car lockout service throughout ${city}. We handle ${profile.autoScenario} and dispatch based on ${profile.routeFocus}, using non-destructive entry tools to get you back in safely.`,
+  `Locked out of your car in ${city}? 1st Capital Locksmith comes to you — whether the keys are on the seat, in the trunk, or gone entirely. Our mobile locksmiths cover ${city} with non-destructive entry equipment, so you're back inside without a scratch.`,
+  `A car lockout in ${city} needs a fast answer, not a lecture. 1st Capital Locksmith dispatches mobile locksmiths across ${city} for ${profile.autoScenario} — professional tools, no damage, no judgment.`,
+  `Keys locked in the car somewhere in ${city}? Don't reach for a coat hanger. 1st Capital Locksmith's mobile units cover ${city} and open vehicles cleanly — all makes, all models, right where you're parked.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `Whether your keys are on the seat, in a bag, or simply misplaced, we respond throughout ${city} with professional automotive opening tools to open your door without damage.`,
+    `Keys visible on the seat or lost somewhere between stops — either way, our ${city} response brings professional opening tools to your location.`,
+    `A locked door with keys inside is the classic ${city} call, and our technicians handle it daily with air wedges, long-reach tools, and picks.`,
+    `From keys on the dashboard to a door that auto-locked at the worst moment, we open car doors across ${city} without damage.`,
+  ],
+  close: [
+    `We work on all major brands: Honda, Toyota, Ford, Chevrolet, Dodge, Nissan, Hyundai, Kia, BMW, Mercedes, and more.`,
+    `All major makes are covered — Honda, Toyota, Ford, Chevrolet, Dodge, Nissan, Hyundai, Kia, BMW, Mercedes, and others.`,
+    `Domestic or import, common or rare — if it's on ${city} roads, we can open it.`,
+    townAnchor(slug, "automotive", "card-1"),
+  ],
+});
+
+const card2 = compose2(slug, "card-2", {
+  open: [
+    `Larger vehicles require specialized tools and techniques, and our mobile locksmith units serving ${city} are equipped for them.`,
+    `Trucks and SUVs aren't just bigger cars — longer reaches and different seals demand the right equipment, which our ${city} units carry.`,
+    `Full-size trucks and SUVs need more than a basic slim jim. Our ${city} service vehicles carry the extended-reach tools the job takes.`,
+    `Big vehicles are routine for our ${city} technicians — the tooling for trucks and SUVs rides on every truck.`,
+  ],
+  close: [
+    `Ford F-Series, Chevy Silverado, RAM trucks, full-size SUVs like Suburban and Expedition, minivans, and cargo vans — traditional key-entry and push-button start alike.`,
+    `We handle F-Series, Silverado, RAM, Suburban, Expedition, minivans, and cargo vans — both keyed and push-to-start.`,
+    `From work trucks to family SUVs and cargo vans, keyed or keyless, we open them all in ${city}.`,
+    townAnchor(slug, "automotive", "card-2"),
+  ],
+});
+
+const card3 = sp(slug, "card-3", [
+  `Many vehicles don't have a trunk release accessible from the passenger compartment without the key fob. We can open the vehicle door first and access the trunk release, or in some cases open the trunk directly. If your trunk lock mechanism is damaged or malfunctioning, we can assess that during the same service call in ${city}.`,
+  `Keys locked in the trunk are trickier than a door lockout — many cars hide the trunk release until the cabin is open. We open the vehicle first, then the trunk, or open the trunk directly where the design allows. Damaged trunk lock? We assess that on the same ${city} visit.`,
+  `A trunk lockout in ${city} usually means opening the cabin first, since most trunk releases are disabled without the fob present. We handle the sequence correctly, and if the trunk lock itself is the problem, we'll diagnose it while we're there.`,
+  `When keys end up in the trunk in ${city}, the fix depends on the vehicle: some allow direct trunk opening, others need the cabin opened first. We handle both — and can address a faulty trunk lock in the same visit.`,
+]);
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `When a child or pet is locked inside a hot vehicle, or you're stranded in an unsafe location, call us immediately at (302) 735-0050.`,
+    `A child or pet locked in a vehicle is a drop-everything emergency — call (302) 735-0050 and say so, and we respond accordingly.`,
+    `If your lockout in ${city} involves a child, a pet, or an unsafe location, it's an emergency — call (302) 735-0050 right now.`,
+    `Some lockouts can't wait: kids, pets, heat, or a location that doesn't feel safe. Call (302) 735-0050 immediately.`,
+  ],
+  close: [
+    `We serve all of ${city} and ${county}. Don't attempt DIY entry — improper tools routinely cause expensive damage to door frames and lock mechanisms.`,
+    `We cover all of ${city} and ${county}, and we ask you not to try improvised entry — bent frames and broken glass cost far more than a service call.`,
+    `Throughout ${city} and ${county}, emergency lockouts get priority dispatch. Leave the improvised tools alone — the damage they cause isn't worth it.`,
+    townAnchor(slug, "emergency", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith now for fast, professional car lockout service in ${city}. We come to you — mobile service throughout ${county}.`,
+  `One call and a mobile locksmith is on the way to your ${city} location — anywhere in ${county}. Non-destructive entry, upfront pricing.`,
+  `Wherever you're stuck in ${city}, we come to you. Call now for a real ETA and a clear price before we start.`,
+]);
 ---
 
 <MainLayout
@@ -87,7 +153,7 @@ const profile = getLocationContentProfile(slug);
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Automotive Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Car Lockout Service in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            1st Capital Locksmith provides fast mobile car lockout service throughout {city}. We handle {profile.autoScenario} and dispatch based on {profile.routeFocus}, using non-destructive entry tools to get you back in safely.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -157,20 +223,20 @@ const profile = getLocationContentProfile(slug);
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Car Door Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Whether your keys are on the seat, in a bag, or simply misplaced, we respond throughout {city} with professional automotive opening tools — slim jims, air wedges, long-reach tools — to open your door without damage. We work on all major brands: Honda, Toyota, Ford, Chevrolet, Dodge, Nissan, Hyundai, Kia, BMW, Mercedes, and more.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/car-lockout/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Car Lockout Service →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Truck & SUV Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Larger vehicles require specialized tools and techniques. Our mobile locksmith units serving {city} are equipped for Ford F-Series, Chevy Silverado, RAM trucks, full-size SUVs like Suburban and Expedition, minivans, and cargo vans. We work on both traditional key-entry and modern push-button start vehicles.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Keys Locked in Trunk</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Many vehicles don't have a trunk release accessible from the passenger compartment without the key fob. We can open the vehicle door first and access the trunk release, or in some cases open the trunk directly. If your trunk lock mechanism is damaged or malfunctioning, we can assess that during the same service call in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Emergency Car Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">When a child or pet is locked inside a hot vehicle, or you're stranded in an unsafe location, call us immediately at <a href="tel:3027350050" class="text-[#A61E22] font-semibold">(302) 735-0050</a>. We serve all of {city} and {county}. Don't attempt DIY entry — improper tools routinely cause expensive damage to door frames and lock mechanisms.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
           <div class="mt-4"><a href="/services/emergency-car-lockout/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Car Lockout →</a></div>
         </div>
       </div>
@@ -230,7 +296,7 @@ const profile = getLocationContentProfile(slug);
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Locked Out of Your Car in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith now for fast, professional car lockout service in {city}. We come to you — mobile service throughout {county}.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

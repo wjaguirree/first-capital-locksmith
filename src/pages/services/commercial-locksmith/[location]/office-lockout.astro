@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,63 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `Locked out of your office, store, or business in ${city}? 1st Capital Locksmith provides professional commercial lockout service throughout ${city} and ${county}. We work quickly and professionally — minimizing your downtime and protecting your commercial door hardware.`,
+  `A commercial lockout in ${city} costs you money by the minute. 1st Capital Locksmith opens offices, storefronts, and commercial spaces across ${city} and ${county} — fast, non-destructive, and professional.`,
+  `Staff waiting outside, customers turned away, deliveries missed — a business lockout in ${city} needs an immediate response. 1st Capital Locksmith gets ${city} businesses back inside, without damage to your commercial hardware.`,
+  `When your ${city} business can't open its doors, 1st Capital Locksmith opens them for you. Commercial lockout response throughout ${city} and ${county} — urgent dispatch, professional entry, hardware protected.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `Getting locked out of your office in ${city} can disrupt your entire workday.`,
+    `An office lockout in ${city} stalls everything — staff, clients, the day's schedule.`,
+    `When the office door won't open in ${city}, the workday stops with it.`,
+    `A locked office door first thing in the morning sets the whole day back.`,
+  ],
+  close: [
+    `We respond quickly and work non-destructively on all commercial door hardware — cylindrical lock sets, mortise locks, lever handles, and electronic access control systems. We gain entry without damage so your lock hardware remains intact and functional after we leave.`,
+    `Cylindrical sets, mortise locks, levers, electronic access — we open all of it without damage, so your hardware keeps working after you're back inside.`,
+    `Our non-destructive entry covers all commercial hardware types, and your locks stay in service when we're done.`,
+    townAnchor(slug, "commercial", "card-1"),
+  ],
+});
+
+const card2 = sp(slug, "card-2", [
+  `Retail storefronts in ${city} often use commercial-grade mortise or rim locks on glass or metal-framed doors. These require specialized tools different from residential entry methods. We are familiar with common commercial storefront hardware and can open your store quickly and professionally so you can get back to serving customers.`,
+  `Storefront doors with aluminum frames and mortise or rim locks need commercial-specific entry tools — not residential picks. We know the hardware ${city} storefronts use and open them without cracking glass or damaging frames.`,
+  `Glass and aluminum storefront doors are a different craft from residential entry. We handle the mortise and rim locks common to ${city} retail doors daily — opened fast, no damage, back to business.`,
+  `Retail lockouts in ${city} mean customers waiting. We open commercial storefront hardware — mortise, rim, and aluminum-frame doors — with the right tools, quickly and cleanly.`,
+]);
+
+const card3 = sp(slug, "card-3", [
+  `Warehouses, storage facilities, and commercial garages use heavy-duty padlocks, deadbolts, and commercial door hardware that can be challenging to access when you're locked out. We work on all commercial hardware types in ${city} and can address damaged or malfunctioning locks during the same service call.`,
+  `Heavy-duty padlocks, industrial deadbolts, and commercial overhead doors — warehouse and storage lockouts in ${city} need serious tooling. We handle all of it, and if a lock is damaged or malfunctioning, we address that in the same visit.`,
+  `A locked warehouse or storage unit in ${city} stalls operations entirely. We open heavy-duty commercial hardware — padlocks, deadbolts, industrial doors — and fix any lock problems we find while on-site.`,
+  `Industrial and storage hardware is built tough, which makes lockouts tougher. Our commercial units open padlocks, deadbolts, and facility doors across ${city} — with repair on the same call if the hardware is the problem.`,
+]);
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `An after-hours commercial lockout can have real financial consequences — especially if you have staff waiting outside, deliveries to receive, or time-sensitive operations underway.`,
+    `After-hours lockouts hit harder: no staff with spare keys, no building manager on-site, and operations that can't slip to tomorrow.`,
+    `A lockout at 6 AM before a delivery or at night after everyone left — after-hours commercial calls can't wait.`,
+    `When the lockout happens outside business hours, the pressure doubles.`,
+  ],
+  close: [
+    `Call us at (302) 735-0050 for emergency commercial lockout service throughout ${city}. We can also assess the lock after entry and address any hardware issues on the spot.`,
+    `Call (302) 735-0050 for emergency commercial response across ${city} — and once you're in, we can fix whatever caused the lockout on the spot.`,
+    `We answer emergency commercial calls throughout ${city} at (302) 735-0050 — entry first, then a hardware check so it doesn't happen again next week.`,
+    townAnchor(slug, "commercial", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith now for commercial lockout service in ${city}. We respond fast and minimize your downtime.`,
+  `Every minute locked out is money lost. Call now — a commercial locksmith heads to your ${city} business immediately.`,
+  `Your ${city} business needs to be open, not locked out. Call (302) 735-0050 for fast, professional commercial entry.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +128,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Commercial Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Office Lockout Service in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            Locked out of your office, store, or business in {city}? 1st Capital Locksmith provides professional commercial lockout service throughout {city} and {county}. We work quickly and professionally — minimizing your downtime and protecting your commercial door hardware.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,20 +194,20 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Office & Professional Suite Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Getting locked out of your office in {city} can disrupt your entire workday. We respond quickly and work non-destructively on all commercial door hardware — cylindrical lock sets, mortise locks, lever handles, and electronic access control systems. We gain entry without damage so your lock hardware remains intact and functional after we leave.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/office-lockout/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Office Lockout Service →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Retail & Storefront Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Retail storefronts in {city} often use commercial-grade mortise or rim locks on glass or metal-framed doors. These require specialized tools different from residential entry methods. We are familiar with common commercial storefront hardware and can open your store quickly and professionally so you can get back to serving customers.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Warehouse & Storage Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Warehouses, storage facilities, and commercial garages use heavy-duty padlocks, deadbolts, and commercial door hardware that can be challenging to access when you're locked out. We work on all commercial hardware types in {city} and can address damaged or malfunctioning locks during the same service call.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After-Hours Emergency Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">An after-hours commercial lockout can have real financial consequences — especially if you have staff waiting outside, deliveries to receive, or time-sensitive operations underway. Call us at <a href="tel:3027350050" class="text-[#A61E22] font-semibold">(302) 735-0050</a> for emergency commercial lockout service throughout {city}. We can also assess the lock after entry and address any hardware issues on the spot.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
           <div class="mt-4"><a href="/services/emergency-lockout/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Lockout Service →</a></div>
         </div>
       </div>
@@ -208,7 +266,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Locked Out of Your Business in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for fast commercial lockout service in {city}. We come to your business — professional, non-destructive entry for all commercial door hardware.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,55 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `A lock that sticks, won't fully engage, or feels loose is more than an inconvenience — it's a security concern. 1st Capital Locksmith provides on-site lock repair throughout ${city} and ${county} for all types of residential door locks.`,
+  `A lock that needs a jiggle, a shove, or three tries is a lock that's failing. 1st Capital Locksmith repairs residential door locks on-site across ${city} and ${county} — before the failure becomes a lockout.`,
+  `Sticky cylinders, loose handles, deadbolts that won't fully throw — these are warnings, and in ${city} we fix them at your home. 1st Capital Locksmith repairs all residential lock types throughout ${county}.`,
+  `Don't wait for a worn lock to leave you locked out in ${city}. 1st Capital Locksmith diagnoses and repairs residential locks on-site — most problems fixed in a single visit, no hardware shipping required.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `A lock that won't turn, a deadbolt that won't fully extend, or a latch that gets stuck is usually repairable without replacing the entire hardware set.`,
+    `Most sticking, jamming, and grinding locks don't need replacement — they need diagnosis.`,
+    `A lock that's fighting you is telling you something specific, and it's usually fixable.`,
+    `Keys that stick and bolts that bind have causes — and most of those causes are repairable.`,
+  ],
+  close: [
+    `Common causes include worn internal components, debris inside the cylinder, misalignment between the bolt and strike plate, or a door frame that has settled over time. We diagnose and address the root cause on-site in ${city}.`,
+    `Worn internals, cylinder debris, bolt-to-strike misalignment, settled frames — we find the actual cause and fix it on-site in ${city}.`,
+    `We trace the problem to its source — wear, debris, alignment, or frame settlement — and fix it at your ${city} home, usually in one visit.`,
+    townAnchor(slug, "residential", "card-1"),
+  ],
+});
+
+const card2 = sp(slug, "card-2", [
+  `A wobbly door handle or a strike plate with stripped screws is a security weakness — these are common in older homes throughout ${city}. We tighten loose hardware, fill stripped screw holes with epoxy or wood filler, and ensure strike plates are properly anchored to the door frame studs. We also install reinforced strike plates where the existing hardware is inadequate.`,
+  `Loose handles and wobbly strike plates are more than annoyances — they're weak points a forced entry exploits. In ${city}'s older homes especially, we tighten hardware, repair stripped screw holes, and anchor strikes into the studs, not just the trim.`,
+  `That handle that's been loose for months is a security gap. We tighten and re-anchor hardware throughout ${city} — stripped holes filled, strike plates reinforced and screwed into frame studs, and upgraded strikes installed where the originals fall short.`,
+  `Wobbly hardware usually means stripped screws or a strike plate anchored to nothing but door trim. We fix both at ${city} homes — and we install reinforced strikes where the factory hardware was never adequate.`,
+]);
+
+const card3 = sp(slug, "card-3", [
+  `A key that breaks off inside a residential door lock is a common issue — especially with older, worn keys on brass cylinders. We use specialized extraction tools to remove the broken fragment cleanly without damaging the lock cylinder. After extraction, we can cut a new key and assess whether the cylinder should be repaired, rekeyed, or replaced.`,
+  `Years of use wear keys thin, and brass cylinders grip them on the way out — that's how keys snap in door locks. We extract the fragment with dedicated tools, cut a fresh key, and assess the cylinder's condition, all at your ${city} home.`,
+  `A broken key in your ${city} home's door lock calls for extraction tools, not tweezers. We remove the fragment without harming the cylinder, then cut your new key and evaluate whether the lock needs repair, rekeying, or nothing at all.`,
+  `When a key breaks off in a residential lock, the fragment has to come out without further damage — that's what our extraction tools do. We follow with a fresh key cut on-site in ${city} and an honest read on the cylinder's health.`,
+]);
+
+const card4 = sp(slug, "card-4", [
+  `Some locks are too worn, corroded, or structurally compromised to repair cost-effectively. If your lock has cracked housing, a severely damaged cylinder, or is simply too low-quality to be worth repairing, we'll recommend a lock change instead. We only recommend replacement when it genuinely makes more sense than repair for your situation in ${city}.`,
+  `We'll tell you when a lock isn't worth repairing — cracked housings, destroyed cylinders, and bargain hardware all qualify. In those cases we recommend a lock change, but only when replacement genuinely beats repair for your ${city} home.`,
+  `Repair-first is our default, but some locks are past the point of sensible repair. Cracked, corroded, or bottom-grade hardware gets an honest replacement recommendation — nothing more, nothing less, at your ${city} home.`,
+  `Not every lock deserves saving. When repair costs approach replacement costs — or the hardware was never good — we say so and handle the lock change on the same visit in ${city}.`,
+]);
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for on-site lock repair in ${city}. We come to your home — most repairs done in one visit.`,
+  `A failing lock won't fix itself. Call now and we'll repair it at your ${city} home — honest assessment, same-day service.`,
+  `Sticky lock? Loose handle? Call 1st Capital Locksmith and we'll fix it at your ${city} home before it becomes a lockout.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +120,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Residential Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Lock Repair in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            A lock that sticks, won't fully engage, or feels loose is more than an inconvenience — it's a security concern. 1st Capital Locksmith provides on-site lock repair throughout {city} and {county} for all types of residential door locks.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,21 +186,22 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Stuck or Jammed Lock</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">A lock that won't turn, a deadbolt that won't fully extend, or a latch that gets stuck is usually repairable without replacing the entire hardware set. Common causes include worn internal components, debris inside the cylinder, misalignment between the bolt and strike plate, or a door frame that has settled over time. We diagnose and address the root cause on-site in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/lock-repair/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lock Repair →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Loose Handle & Strike Plate</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">A wobbly door handle or a strike plate with stripped screws is a security weakness — these are common in older homes throughout {city}. We tighten loose hardware, fill stripped screw holes with epoxy or wood filler, and ensure strike plates are properly anchored to the door frame studs. We also install reinforced strike plates where the existing hardware is inadequate.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Broken Key Extraction</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">A key that breaks off inside a residential door lock is a common issue — especially with older, worn keys on brass cylinders. We use specialized extraction tools to remove the broken fragment cleanly without damaging the lock cylinder. After extraction, we can cut a new key and assess whether the cylinder should be repaired, rekeyed, or replaced.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
           <div class="mt-4"><a href="/services/broken-key-extraction/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Broken Key Extraction →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">When Repair Becomes Replacement</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Some locks are too worn, corroded, or structurally compromised to repair cost-effectively. If your lock has cracked housing, a severely damaged cylinder, or is simply too low-quality to be worth repairing, we'll recommend a <a href="/services/lock-change/" class="text-[#A61E22] font-semibold">lock change</a> instead. We only recommend replacement when it genuinely makes more sense than repair for your situation in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
+          <div class="mt-4"><a href={`/services/residential-locksmith/${slug}/lock-change/`} class="text-[#A61E22] font-semibold hover:underline text-sm">See Lock Change in {city} →</a></div>
         </div>
       </div>
     </div>
@@ -208,7 +259,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need Lock Repair in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for on-site lock repair in {city}. We diagnose and repair stuck, jammed, and damaged locks — same-day service available.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

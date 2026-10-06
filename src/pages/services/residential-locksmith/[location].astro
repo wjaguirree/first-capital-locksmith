@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../components/LocationLocalFlavor.astro";
+import { sp, compose, townAnchor } from "../../../data/serviceCopy";
 import { locations } from "../../../data/locations";
 import type { Location } from "../../../data/locations";
 
@@ -17,6 +18,137 @@ interface Props {
 
 const { location } = Astro.props;
 const { city, state, slug, county, description } = location;
+
+const heroP = sp(slug, "hero", [
+  `Locked out of your house in ${city}? Need your locks rekeyed after moving in? Looking to upgrade your deadbolts? 1st Capital Locksmith provides professional residential locksmith services throughout ${city}, Delaware — we come directly to your home.`,
+  `From a midnight house lockout to a full set of rekeyed locks after a move, 1st Capital Locksmith brings complete residential locksmith service to homes throughout ${city}, Delaware. One call, one visit, everything handled at your door.`,
+  `Your ${city} home's locks are its first line of defense. 1st Capital Locksmith handles house lockouts, rekeying, deadbolt upgrades, and lock repairs throughout ${city}, Delaware — all on-site, all in a single visit.`,
+  `Whether you're standing on your own porch locked out in ${city} or settling into a new place that needs fresh keys, 1st Capital Locksmith comes to your home fully equipped to handle it — anywhere in ${city}, Delaware.`,
+]);
+
+const intro1 = sp(slug, "intro-1", [
+  `${city} is ${description}, and 1st Capital Locksmith provides complete residential locksmith services to homeowners and renters throughout ${city}. Whether you're locked out of your home, moving into a new place and need the locks rekeyed, or want to upgrade your deadbolts for better security, we come directly to your ${city} home fully equipped to handle the job on-site in a single visit.`,
+  `Home lock and key problems in ${city} — ${description} — range from urgent lockouts to long-overdue security upgrades. 1st Capital Locksmith handles all of them at your ${city} home, with fully stocked service vehicles that let us finish the work in one visit.`,
+  `For homeowners and renters in ${city}, 1st Capital Locksmith is the single call for everything residential: lockouts, rekeying after a move, deadbolt installation, and lock repair. We come directly to your ${city} address and complete the work on the spot.`,
+  `1st Capital Locksmith serves ${city} — ${description} — with mobile residential locksmith service built around one principle: we come to your home, and we finish the job the same visit. Lockouts, rekeys, deadbolts, and repairs across all of ${city}.`,
+]);
+
+const intro2 = sp(slug, "intro-2", [
+  `From single-family homes to apartments and rental properties, we handle all types of residential lock and key situations in ${city} and throughout ${county}. Landlords and property managers rely on us for efficient, affordable rekeying between tenants.`,
+  `Single-family homes, apartments, condos, and rental properties across ${city} and ${county} all fall within our coverage. Local landlords and property managers call us for fast turnover rekeying between tenants — often with multiple units handled in one trip.`,
+  `We work on every kind of ${city} residence — detached homes, apartments, townhomes, and rentals throughout ${county}. If you manage rental units here, our turnover rekeying service keeps your properties secure between tenants without tying up your schedule.`,
+  `Every housing type in ${city} and greater ${county} is covered: older homes with original hardware, new construction needing its first rekey, and rental properties cycling through tenants. Landlords use us for efficient, same-visit rekeying between occupants.`,
+]);
+
+const houseLockout1 = compose(slug, "house-lockout-1", {
+  open: [
+    `Getting locked out of your home in ${city} is frustrating, but it doesn't have to ruin your day.`,
+    `A house lockout in ${city} always seems to happen at the worst time — groceries in hand, kids in tow, or weather rolling in.`,
+    `Stepped out for the mail and heard the door click behind you? It happens in ${city} every week.`,
+    `Being locked out of your own ${city} home is equal parts embarrassing and urgent — and it's one of our most common calls.`,
+  ],
+  mid: [
+    `Whether you've left your keys inside, lost them, or had a lock malfunction that's preventing entry, we'll have a mobile locksmith at your door quickly.`,
+    `Keys inside, keys lost, or a lock that simply stopped cooperating — whatever the cause, a mobile locksmith comes directly to your ${city} address.`,
+    `Whether the keys are on the kitchen table or the deadbolt just failed, our technicians respond across ${city} with the tools to get you back inside.`,
+    `Lost keys, locked doors, malfunctioning hardware — we respond to all of it throughout ${city}, usually with a technician already nearby.`,
+  ],
+  close: [
+    townAnchor(slug, "residential", "house-lockout-1"),
+    `Most ${city} house lockouts are resolved without any damage to your lock or door — you'll be back inside in minutes.`,
+    `We open doors professionally, without drilling unless there's truly no alternative — your existing lock usually survives intact.`,
+  ],
+});
+
+const houseLockout2 = sp(slug, "house-lockout-2", [
+  `We use professional techniques to unlock your door without damaging your lock hardware, so you don't face a costly replacement on top of a stressful situation. We service all types of door locks — knob locks, lever handles, deadbolts, and more.`,
+  `Our non-destructive entry methods protect your existing hardware — knob locks, lever handles, deadbolts, and combination sets all included. You get back inside without a replacement bill stacked on top of the lockout.`,
+  `Every common residential lock type is covered — knob locks, levers, single and double deadbolts. We pick and bypass rather than drill whenever possible, which keeps your hardware working and your costs down.`,
+]);
+
+const rekey1 = sp(slug, "rekey-1", [
+  `Rekeying is one of the most important — and most overlooked — security steps for homeowners in ${city}. When you move into a new home, rekey. When a tenant moves out, rekey. When keys are lost or unaccounted for, rekey. Rekeying changes the internal pins of your existing lock so old keys no longer work, without the cost of full lock replacement.`,
+  `Every ${city} home changes hands with a history of keys you'll never account for — previous owners, their contractors, their relatives. Rekeying resets all of that: we change the internal pins so only your new keys work, without replacing the hardware itself.`,
+  `If you can't name everyone who holds a key to your ${city} home, it's time to rekey. The process reconfigures your existing locks to a fresh key — old keys stop working immediately, and the hardware stays right where it is.`,
+  `Rekeying gives you a brand-new key profile on your existing locks — every old key, copy, and spare stops working the moment we finish. For ${city} homeowners, it's the fastest, cheapest way to take full control of who can open your doors.`,
+]);
+
+const rekey2 = sp(slug, "rekey-2", [
+  `1st Capital Locksmith rekeyes all types of residential locks throughout ${city} on-site in a single visit. We can also rekey multiple locks to all operate on one key, eliminating the need for a different key for every door in your home.`,
+  `We rekey every residential lock type on-site throughout ${city}, usually in a single visit — and we can pin all your doors to one key, so the jumble of mismatched keys on your ring shrinks to one.`,
+  `Most ${city} rekey jobs take about an hour: every exterior door re-pinned, keyed alike if you want, with fresh keys cut on the spot. One visit, one key, full control.`,
+  `Our technicians rekey on-site anywhere in ${city} and can consolidate your whole house onto a single key where hardware allows. No parts orders, no return trips.`,
+]);
+
+const deadbolt1 = compose(slug, "deadbolt-1", {
+  open: [
+    `A properly installed deadbolt is one of the most effective security upgrades for any home in ${city}.`,
+    `If a door in your ${city} home only has a knob lock, it's relying on the weakest link in residential security.`,
+    `Not all deadbolts are equal — and a cheap one installed wrong is barely better than none. ${city} homes deserve better.`,
+    `The deadbolt is the hardest-working piece of security hardware on your ${city} home — if it's there, and if it's installed correctly.`,
+  ],
+  mid: [
+    `If your doors don't have deadbolts, or if your existing deadbolts are outdated or low-quality, 1st Capital Locksmith installs Grade 1 and Grade 2 residential deadbolts at your ${city} home — the same day you call.`,
+    `We install Grade 1 and Grade 2 deadbolts at ${city} homes daily — fresh installations on doors that never had one, and upgrades replacing builder-grade hardware with real security.`,
+    `1st Capital Locksmith installs quality Grade 1 and Grade 2 deadbolts throughout ${city}, whether that means drilling a fresh installation or upgrading a worn-out unit.`,
+    `From fresh installs to replacements of flimsy existing hardware, we fit Grade 1 and Grade 2 deadbolts at ${city} homes the same day you call.`,
+  ],
+  close: [
+    townAnchor(slug, "residential", "deadbolt-1"),
+    `Every deadbolt we install is keyed to match your existing key where possible — no extra keys on your ring.`,
+    `We carry the hardware on the truck, so installation happens the same day — no waiting on a parts order.`,
+  ],
+});
+
+const deadbolt2 = sp(slug, "deadbolt-2", [
+  `We carry quality hardware from trusted manufacturers and install each deadbolt correctly so it provides the full security rating it's designed for. We also upgrade existing deadbolts to higher-security options when you're ready for better protection.`,
+  `A deadbolt only delivers its rated security when it's installed correctly — proper bolt throw, reinforced strike, solid frame engagement. That's how we install every one, with hardware from manufacturers we trust.`,
+  `Correct installation matters as much as the hardware itself. We set every deadbolt with a reinforced strike plate and full bolt throw, and we can upgrade you to high-security, pick-resistant options when you're ready.`,
+]);
+
+const lockRepair1 = sp(slug, "lock-repair-1", [
+  `Locks wear out over time. If your door lock sticks, feels loose, turns too hard, or simply won't work properly, don't wait until it fails completely and leaves you locked out in ${city}. 1st Capital Locksmith diagnoses and repairs worn or damaged door locks on-site.`,
+  `A lock that sticks, grinds, or needs a jiggle to open is telling you something — and it usually fails at the worst possible moment. If a lock in your ${city} home is misbehaving, we diagnose and repair it on-site before it becomes a lockout.`,
+  `Sticky cylinders, loose handles, keys that only turn on the third try — these are warnings, not quirks. ${city} homeowners call us to repair worn locks before they fail outright, and we fix most of them on the spot.`,
+]);
+
+const lockRepair2 = sp(slug, "lock-repair-2", [
+  `When a lock is beyond repair — due to age, damage, or a break-in attempt — we replace it on the same visit using quality hardware. We carry a selection of residential lock hardware in our mobile vehicles so there's no need to order parts and schedule a second appointment.`,
+  `If the lock can't be saved — age, internal damage, or a break-in attempt — we replace it from the hardware stock on our truck in the same visit. No parts order, no second appointment, no waiting with a compromised door.`,
+  `Some locks are past saving, and we'll tell you honestly when that's the case. Our service vehicles carry replacement hardware, so repair-or-replace both happen in one visit to your ${city} home.`,
+]);
+
+const mailbox1 = compose(slug, "mailbox-1", {
+  open: [
+    `A broken or compromised mailbox lock in ${city} is a mail security issue that should be addressed promptly.`,
+    `Mail theft starts with a mailbox anyone can open — and a worn or broken lock is exactly that.`,
+    `Your mailbox holds checks, cards, and documents worth stealing. A failed lock in ${city} leaves all of it exposed.`,
+    `Mailbox locks wear out quietly — until the key stops turning or the door swings open on its own.`,
+  ],
+  mid: [
+    `1st Capital Locksmith replaces mailbox locks for homeowners and property managers throughout ${city} quickly and affordably.`,
+    `We replace mailbox locks across ${city} for homeowners, landlords, and property managers — a quick, inexpensive fix for a real security gap.`,
+    `For ${city} residents and property managers alike, we swap out worn, broken, or keyless mailbox locks in a single short visit.`,
+    `Our technicians replace mailbox locks throughout ${city} — individual boxes, cluster units, and apartment systems all included.`,
+  ],
+  close: [
+    townAnchor(slug, "residential", "mailbox-1"),
+    `The whole job usually takes minutes, and you leave with fresh keys in hand.`,
+    `If the mailbox key was lost, a replacement lock is the only way to be sure whoever found it can't help themselves.`,
+  ],
+});
+
+const mailbox2 = sp(slug, "mailbox-2", [
+  `Whether your mailbox lock has worn out, the key was lost, or the lock was damaged, we can replace it on the same visit. We handle standard USPS-style cluster mailboxes, individual residential mailboxes, and apartment complex mailbox systems.`,
+  `Worn cylinders, lost keys, vandalism damage — we replace the lock on the same visit. Standard USPS-style cluster boxes, individual residential mailboxes, and apartment complex systems are all covered.`,
+  `We service individual curbside boxes, USPS cluster units, and apartment mailbox banks. Whatever the reason — lost key, worn cylinder, damage — the replacement happens in one visit.`,
+]);
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith now for fast, professional residential locksmith service at your ${city} home. We come to you — same-day service available.`,
+  `One call brings a fully equipped residential locksmith to your ${city} home — lockouts, rekeys, deadbolts, and repairs, all done on-site. Call now.`,
+  `Whatever your ${city} home needs — entry, new keys, better hardware — we bring the solution to your door. Call for upfront pricing and same-day service.`,
+]);
 ---
 
 <MainLayout
@@ -99,7 +231,7 @@ const { city, state, slug, county, description } = location;
         Residential Locksmith in {city}, {state} — House Lockouts, Rekeying & More
       </h1>
       <p class="text-gray-300 text-sm md:text-lg max-w-2xl leading-relaxed mb-5 md:mb-8">
-        Locked out of your house in {city}? Need your locks rekeyed after moving in? Looking to upgrade your deadbolts? 1st Capital Locksmith provides professional residential locksmith services throughout {city}, Delaware — we come directly to your home.
+        {heroP}
       </p>
       <div class="flex flex-wrap gap-3 md:gap-4">
         <a
@@ -152,10 +284,10 @@ const { city, state, slug, county, description } = location;
             Professional Residential Locksmith Services in {city}, {state}
           </h2>
           <p class="text-gray-700 leading-relaxed mb-4">
-            {city} is {description}, and 1st Capital Locksmith provides complete residential locksmith services to homeowners and renters throughout {city}. Whether you're locked out of your home, moving into a new place and need the locks rekeyed, or want to upgrade your deadbolts for better security, we come directly to your {city} home fully equipped to handle the job on-site in a single visit.
+            {intro1}
           </p>
           <p class="text-gray-700 leading-relaxed mb-4">
-            From single-family homes to apartments and rental properties, we handle all types of residential lock and key situations in {city} and throughout {county}. Landlords and property managers rely on us for efficient, affordable rekeying between tenants.
+            {intro2}
           </p>
           <p class="text-gray-700 leading-relaxed">
             Call us at <a href="tel:3027350050" class="text-[#A61E22] font-semibold hover:underline">(302) 735-0050</a> for residential locksmith service in {city}, {state}.
@@ -223,10 +355,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">House Lockout Service in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Getting locked out of your home in {city} is frustrating, but 1st Capital Locksmith responds quickly to house lockout calls throughout {city}. Whether you've left your keys inside, lost them, or had a lock malfunction that's preventing entry, we'll have a mobile locksmith at your door quickly.
+              {houseLockout1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              We use professional techniques to unlock your door without damaging your lock hardware, so you don't face a costly replacement on top of a stressful situation. We service all types of door locks — knob locks, lever handles, deadbolts, and more.
+              {houseLockout2}
             </p>
             <div class="mt-4">
               <a href={`/services/residential-locksmith/${slug}/house-lockout/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about House Lockout Service in Delaware →</a>
@@ -244,10 +376,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Lock Rekeying in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Rekeying is one of the most important — and most overlooked — security steps for homeowners in {city}. When you move into a new home, rekey. When a tenant moves out, rekey. When keys are lost or unaccounted for, rekey. Rekeying changes the internal pins of your existing lock so old keys no longer work, without the cost of full lock replacement.
+              {rekey1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              1st Capital Locksmith rekeyes all types of residential locks throughout {city} on-site in a single visit. We can also rekey multiple locks to all operate on one key, eliminating the need for a different key for every door in your home.
+              {rekey2}
             </p>
             <div class="mt-4">
               <a href={`/services/residential-locksmith/${slug}/lock-rekeying/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lock Rekeying in Delaware →</a>
@@ -265,10 +397,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Deadbolt Installation in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              A properly installed deadbolt is one of the most effective security upgrades for any home in {city}. If your doors don't have deadbolts, or if your existing deadbolts are outdated or low-quality, 1st Capital Locksmith installs Grade 1 and Grade 2 residential deadbolts at your {city} home — the same day you call.
+              {deadbolt1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              We carry quality hardware from trusted manufacturers and install each deadbolt correctly so it provides the full security rating it's designed for. We also upgrade existing deadbolts to higher-security options when you're ready for better protection.
+              {deadbolt2}
             </p>
             <div class="mt-4">
               <a href={`/services/residential-locksmith/${slug}/deadbolt-installation/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Deadbolt Installation in Delaware →</a>
@@ -287,10 +419,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Lock Repair & Replacement in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              Locks wear out over time. If your door lock sticks, feels loose, turns too hard, or simply won't work properly, don't wait until it fails completely and leaves you locked out in {city}. 1st Capital Locksmith diagnoses and repairs worn or damaged door locks on-site.
+              {lockRepair1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              When a lock is beyond repair — due to age, damage, or a break-in attempt — we replace it on the same visit using quality hardware. We carry a selection of residential lock hardware in our mobile vehicles so there's no need to order parts and schedule a second appointment.
+              {lockRepair2}
             </p>
             <div class="mt-4">
               <a href={`/services/residential-locksmith/${slug}/lock-repair/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lock Repair & Replacement in Delaware →</a>
@@ -308,10 +440,10 @@ const { city, state, slug, county, description } = location;
           <div>
             <h3 class="text-xl font-bold text-[#1A1F22] mb-3">Mailbox Lock Replacement in {city}, {state}</h3>
             <p class="text-gray-700 leading-relaxed mb-3">
-              A broken or compromised mailbox lock in {city} is a mail security issue that should be addressed promptly. 1st Capital Locksmith replaces mailbox locks for homeowners and property managers throughout {city} quickly and affordably.
+              {mailbox1}
             </p>
             <p class="text-gray-700 leading-relaxed">
-              Whether your mailbox lock has worn out, the key was lost, or the lock was damaged, we can replace it on the same visit. We handle standard USPS-style cluster mailboxes, individual residential mailboxes, and apartment complex mailbox systems.
+              {mailbox2}
             </p>
             <div class="mt-4">
               <a href={`/services/residential-locksmith/${slug}/mailbox-lock-replacement/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Mailbox Lock Replacement in Delaware →</a>
@@ -385,7 +517,7 @@ const { city, state, slug, county, description } = location;
         Need a Residential Locksmith in {city}, {state}?
       </h2>
       <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
-        Call 1st Capital Locksmith now for fast, professional residential locksmith service at your {city} home. We come to you — same-day service available.
+        {ctaP}
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a

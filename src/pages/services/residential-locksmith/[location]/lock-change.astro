@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,55 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `When rekeying isn't enough — because your locks are worn, damaged, low-quality, or you want a full hardware upgrade — 1st Capital Locksmith provides full lock change service throughout ${city} and ${county}. We supply and install quality replacement hardware on all door types.`,
+  `Sometimes a lock is past saving — worn out, damaged, or cheap to begin with. 1st Capital Locksmith changes locks throughout ${city} and ${county}, supplying and installing quality hardware on any door type in a single visit.`,
+  `A lock change is the full reset: old hardware out, quality new hardware in, new keys in hand. 1st Capital Locksmith handles lock changes across ${city} and ${county} — same day, all door types.`,
+  `Whether your ${city} home's locks are failing, outdated, or just not worth rekeying, 1st Capital Locksmith replaces them with quality hardware from brands we trust — installed correctly, keyed your way.`,
+]);
+
+const card1 = sp(slug, "card-1", [
+  `A full lock change involves removing the existing lock hardware and installing a new set in the same bore holes. This is the right call when your existing hardware is worn, damaged, or simply outdated. We supply quality residential lock sets from Schlage, Kwikset, and other reputable brands and install them correctly on your doors in ${city}. New hardware comes with new keys.`,
+  `Old hardware out, new hardware in — using the existing bore holes, so no door surgery. When your ${city} home's locks are worn or outdated, we install quality sets from Schlage, Kwikset, and similar brands, with fresh keys included.`,
+  `Lock replacement reuses your door's existing prep, so it's cleaner than most people expect. We supply and fit quality residential hardware at ${city} homes — reputable brands, correct installation, new keys handed over before we leave.`,
+  `When the existing locks aren't worth rekeying, a full change makes sense. We remove the old sets and install quality hardware from trusted brands at your ${city} home — correct fit, smooth operation, new keys.`,
+]);
+
+const card2 = compose2(slug, "card-2", {
+  open: [
+    `Many homes in ${city} come with builder-grade lock hardware that provides minimal security.`,
+    `Builder-grade locks are designed to meet a price point, not a security standard — and much of ${city}'s housing carries them.`,
+    `The locks that came with the house are usually the cheapest ones available. That's as true in ${city} as anywhere.`,
+    `If your ${city} home still has its original builder hardware, your security is lower than you think.`,
+  ],
+  close: [
+    `Upgrading to Grade 1 deadbolts and properly fitted lock sets significantly raises the barrier to forced entry. We assess your current hardware, recommend appropriate upgrades, and install them with reinforced strike plates and proper door prep to maximize security.`,
+    `We assess what you have, recommend what you actually need — Grade 1 deadbolts, properly fitted sets — and install with reinforced strikes and correct prep.`,
+    `An upgrade to rated deadbolts and quality lock sets, installed with reinforced strike plates and proper prep, transforms your door security in one visit.`,
+    townAnchor(slug, "residential", "card-2"),
+  ],
+});
+
+const card3 = sp(slug, "card-3", [
+  `A break-in that involved forced door entry typically damages or compromises the lock hardware. Even if the lock still functions, it may be weakened or the cylinder may have been manipulated. We respond to post-break-in calls throughout ${city} and replace damaged hardware immediately, restoring your door security in a single visit.`,
+  `After a break-in, locks that 'still work' may be weakened or manipulated in ways you can't see. We respond to post-break-in calls across ${city} and replace compromised hardware the same day — so tonight's door is stronger than the one that failed.`,
+  `Forced entry damages hardware even when the damage isn't obvious. If your ${city} home has been broken into, we replace the compromised locks immediately and can upgrade security while we're there.`,
+  `Post-break-in lock replacement isn't just repair — it's the moment to come back stronger. We replace damaged hardware at ${city} homes in a single visit, with upgrade options if you want them.`,
+]);
+
+const card4 = sp(slug, "card-4", [
+  `If your hardware is in good condition, rekeying is typically faster and more cost-effective than a full lock change. We help you understand the right option for your situation in ${city} — there's no need to pay for new hardware when rekeying accomplishes the same security goal at lower cost. We only recommend replacement when it's genuinely the better choice.`,
+  `Here's the honest math: healthy hardware gets rekeyed, failing hardware gets replaced. We assess your ${city} home's locks and tell you which situation you're in — we don't sell new hardware when a rekey does the job.`,
+  `Rekeying and lock changing solve the same security problem at different price points. If your ${city} home's hardware is sound, we'll tell you to rekey. If it's worn or damaged, replacement is worth it. We recommend based on condition, not ticket size.`,
+  `A full lock change costs more than a rekey — and is unnecessary when the hardware is healthy. At your ${city} home, we assess first and recommend honestly: rekey when possible, replace when it matters.`,
+]);
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for a full lock change in ${city}. Quality hardware, correct installation, one visit.`,
+  `Old locks out, quality locks in — one visit to your ${city} home. Call for upfront pricing and same-day service.`,
+  `Ready for hardware that actually protects your ${city} home? Call now — we supply and install in a single visit.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +120,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Residential Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Lock Change in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            When rekeying isn't enough — because your locks are worn, damaged, low-quality, or you want a full hardware upgrade — 1st Capital Locksmith provides full lock change service throughout {city} and {county}. We supply and install quality replacement hardware on all door types.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,20 +186,21 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Full Lock Replacement</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">A full lock change involves removing the existing lock hardware and installing a new set in the same bore holes. This is the right call when your existing hardware is worn, damaged, or simply outdated. We supply quality residential lock sets from Schlage, Kwikset, and other reputable brands and install them correctly on your doors in {city}. New hardware comes with new keys.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/lock-change/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lock Change Service →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Security Upgrade</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Many homes in {city} come with builder-grade lock hardware that provides minimal security. Upgrading to Grade 1 deadbolts and properly fitted lock sets significantly raises the barrier to forced entry. We assess your current hardware, recommend appropriate upgrades, and install them with reinforced strike plates and proper door prep to maximize security.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After a Break-In</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">A break-in that involved forced door entry typically damages or compromises the lock hardware. Even if the lock still functions, it may be weakened or the cylinder may have been manipulated. We respond to post-break-in calls throughout {city} and replace damaged hardware immediately, restoring your door security in a single visit.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Lock Change vs Rekeying</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">If your hardware is in good condition, <a href="/services/lock-rekeying/" class="text-[#A61E22] font-semibold">rekeying</a> is typically faster and more cost-effective than a full lock change. We help you understand the right option for your situation in {city} — there's no need to pay for new hardware when rekeying accomplishes the same security goal at lower cost. We only recommend replacement when it's genuinely the better choice.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
+          <div class="mt-4"><a href={`/services/residential-locksmith/${slug}/lock-rekeying/`} class="text-[#A61E22] font-semibold hover:underline text-sm">See Lock Rekeying in {city} →</a></div>
         </div>
       </div>
     </div>
@@ -207,7 +258,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need a Lock Change in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for full lock replacement in {city}. We supply and install quality hardware — same-day service available throughout {county}.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

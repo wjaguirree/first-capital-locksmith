@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,63 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `1st Capital Locksmith replaces mailbox locks for residential homeowners, apartment tenants, and landlords throughout ${city} and ${county}. Whether your mailbox lock is worn, damaged, lost its key, or was vandalized, we provide fast, professional on-site replacement.`,
+  `A mailbox lock that won't turn, lost its key, or got vandalized leaves your mail — and your identity — exposed. 1st Capital Locksmith replaces mailbox locks on-site throughout ${city} and ${county}, keys included.`,
+  `Mailbox locks are small, cheap, and critical. 1st Capital Locksmith replaces them for homeowners, tenants, and landlords across ${city} and ${county} — usually in a single short visit.`,
+  `Lost mailbox key? Worn-out box lock? 1st Capital Locksmith replaces mailbox locks at your ${city} location with USPS-compatible hardware — new keys cut on the spot.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `Standard residential mailbox locks use a cam-style lock mechanism that can wear out, corrode, or be damaged over time.`,
+    `Mailbox cam locks live outdoors, and ${city} weather wears them down — corrosion, grit, and tired springs are the usual failures.`,
+    `The cam lock on a residential mailbox is simple hardware with a hard life: weather, wear, and occasional vandalism.`,
+    `Most residential mailboxes use a cam-style lock that eventually corrodes, wears, or loses its key.`,
+  ],
+  close: [
+    `If you've lost your mailbox key, the lock is stiff and unreliable, or the lock was damaged, we can replace it with a new USPS-compatible lock on-site in ${city}. We cut new keys as part of the replacement service.`,
+    `Lost key, stiff lock, or visible damage — we swap in a USPS-compatible replacement at your ${city} address and cut the new keys on the spot.`,
+    `We replace it on-site in ${city} with USPS-compatible hardware, new keys included — a quick visit that ends the mail security worry.`,
+    townAnchor(slug, "residential", "card-1"),
+  ],
+});
+
+const card2 = sp(slug, "card-2", [
+  `Apartment cluster mailboxes (CBUs — centralized box units) use individual tenant locks inside a common unit. When a tenant lock needs replacement — due to key loss, move-out, or damage — we can replace the individual unit lock on-site. For landlords and property managers in ${city}, we can service multiple units in a single visit when needed.`,
+  `Cluster box units (CBUs) give each tenant an individual cam lock inside a shared cabinet. When one needs replacing — lost key, move-out, damage — we swap the individual lock on-site. ${city} landlords and property managers: we can do several units in one trip.`,
+  `Apartment and condo cluster boxes need individual tenant locks replaced as residents turn over. We handle single replacements and multi-unit service calls across ${city} — one visit can cover the whole bank.`,
+  `For ${city}'s apartment and townhome communities, we replace individual CBU tenant locks on-site — key loss, tenant change, or damage — with multi-unit visits available for property managers.`,
+]);
+
+const card3 = sp(slug, "card-3", [
+  `Lost your only mailbox key? We can either replace the lock (which is usually the most straightforward solution) or in some cases pick the lock and then cut a duplicate key. We assess which approach makes more sense for your specific mailbox type and condition in ${city}.`,
+  `When the only mailbox key is gone, replacement is usually the cleanest fix — but on some boxes we can pick the lock open and cut a duplicate instead. We'll tell you which makes sense for your ${city} mailbox when we see it.`,
+  `A lost mailbox key has two solutions: replace the lock outright, or pick it and duplicate. Which one fits depends on your box type and its condition — we assess on-site in ${city} and do whichever is smarter.`,
+  `No mailbox key at all? Replacement is the usual answer, though some locks can be picked and keyed instead. Either way, it's resolved in one visit to your ${city} address.`,
+]);
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `Property managers and landlords in ${city} often need mailbox locks replaced between tenancies — especially if a tenant didn't return keys or the lock was damaged during the tenancy.`,
+    `Tenant turnover means mailbox lock turnover — unreturned keys and worn locks come with the territory for ${city} landlords.`,
+    `Every tenant change is a mailbox security moment: keys not returned, locks worn out. ${city} property managers call us for exactly this.`,
+    `For ${city} landlords, mailbox locks are a recurring turnover task — and an easy one to outsource.`,
+  ],
+  close: [
+    `We work efficiently with property management clients and can service multiple units in a single trip. Call us to discuss your property's mailbox needs in ${county}.`,
+    `We handle multi-unit mailbox work in a single trip — call us about your ${county} properties and we'll schedule it efficiently.`,
+    `One visit can cover every unit that needs it — we schedule multi-unit mailbox service across ${county}.`,
+    townAnchor(slug, "residential", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for mailbox lock replacement in ${city}. On-site service, new keys included.`,
+  `Mail security fixed in one short visit to your ${city} address. Call now — new lock, new keys, done.`,
+  `Don't leave your mail unprotected in ${city}. Call for fast, affordable mailbox lock replacement.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +128,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Residential Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Mailbox Lock Replacement in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            1st Capital Locksmith replaces mailbox locks for residential homeowners, apartment tenants, and landlords throughout {city} and {county}. Whether your mailbox lock is worn, damaged, lost its key, or was vandalized, we provide fast, professional on-site replacement.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,20 +194,20 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Residential Mailbox Lock</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Standard residential mailbox locks use a cam-style lock mechanism that can wear out, corrode, or be damaged over time. If you've lost your mailbox key, the lock is stiff and unreliable, or the lock was damaged, we can replace it with a new USPS-compatible lock on-site in {city}. We cut new keys as part of the replacement service.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/mailbox-lock-replacement/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Mailbox Lock Replacement →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Apartment Cluster Mailbox</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Apartment cluster mailboxes (CBUs — centralized box units) use individual tenant locks inside a common unit. When a tenant lock needs replacement — due to key loss, move-out, or damage — we can replace the individual unit lock on-site. For landlords and property managers in {city}, we can service multiple units in a single visit when needed.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Lost Mailbox Key</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Lost your only mailbox key? We can either replace the lock (which is usually the most straightforward solution) or in some cases pick the lock and then cut a duplicate key. We assess which approach makes more sense for your specific mailbox type and condition in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Landlord Mailbox Service</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Property managers and landlords in {city} often need mailbox locks replaced between tenancies — especially if a tenant didn't return keys or the lock was damaged during the tenancy. We work efficiently with property management clients and can service multiple units in a single trip. Call us to discuss your property's mailbox needs in {county}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
         </div>
       </div>
     </div>
@@ -207,7 +265,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need Mailbox Lock Replacement in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for on-site mailbox lock replacement in {city}. Fast service for homeowners, renters, and landlords throughout {county}.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,55 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `1st Capital Locksmith provides mobile ignition repair throughout ${city} and ${county}. We diagnose and repair stuck, stiff, worn, and damaged ignition cylinders on-site — for all vehicle makes and models, without the need for a tow.`,
+  `A key that won't turn — or won't come out — is an ignition problem, and in ${city} it's one we fix at your location. 1st Capital Locksmith repairs stuck, worn, and damaged ignition cylinders on-site throughout ${county}.`,
+  `Ignition trouble strands you where you sit. 1st Capital Locksmith's mobile technicians diagnose and repair ignition cylinders wherever your vehicle is in ${city} — all makes and models, no tow required.`,
+  `When your ignition sticks, binds, or stops turning in ${city}, don't force it. Our mobile locksmiths repair ignition cylinders on-site across ${city} and ${county} — usually saving the cylinder and always saving you the tow.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `A key that won't turn in the ignition is one of the most common automotive locksmith calls we receive in ${city}.`,
+    `The top ignition call in ${city}: a key that suddenly refuses to turn, or turns only after a fight.`,
+    `Stuck, stiff, or grinding ignition keys are daily calls for our ${city} technicians.`,
+    `When an ignition stops cooperating in ${city}, the cause is usually mechanical wear — and usually repairable.`,
+  ],
+  close: [
+    `The cause is often worn tumblers inside the cylinder, a bent key, debris inside the cylinder, or the steering column lock engaging. We diagnose the root cause and repair the cylinder on-site whenever possible, without requiring replacement.`,
+    `Worn tumblers, a bent key, cylinder debris, or an engaged steering lock — we diagnose the actual cause and repair on-site whenever the cylinder can be saved.`,
+    `We trace the problem — tumblers, key wear, debris, or steering lock — and fix the cylinder where it sits, avoiding replacement whenever repair works.`,
+    townAnchor(slug, "automotive", "card-1"),
+  ],
+});
+
+const card2 = sp(slug, "card-2", [
+  `A key broken off inside the ignition is a stressful situation — and attempting to remove it with tweezers, glue, or improvised tools almost always makes it worse. We use dedicated extraction tools to safely remove the broken fragment without damaging the cylinder internals. After extraction, we can cut a new key and assess the cylinder for damage.`,
+  `When a key snaps off in the ignition, tweezers and glue are the enemy — they push the fragment deeper and can destroy the wafers. Our extraction tools are purpose-built to slide the fragment out cleanly. Once it's out, we cut a new key and check the cylinder for damage, all on-site in ${city}.`,
+  `A broken key in the ignition looks catastrophic but usually isn't — if the fragment comes out the right way. We use dedicated extraction tools that protect the cylinder internals, then cut your replacement key on the spot anywhere in ${city}.`,
+  `Keys break in ignitions after years of wear, and the DIY extraction attempt is usually what turns a small job into a cylinder replacement. We extract fragments with professional tools, assess the cylinder, and cut a new key — one visit, anywhere in ${city}.`,
+]);
+
+const card3 = sp(slug, "card-3", [
+  `If your ignition cylinder is in good mechanical condition but you need it to work with a different key — for example after a key is lost — we can rekey the cylinder's internal tumblers to match a new key. This is a more cost-effective option than full ignition replacement. We perform ignition rekeying on-site throughout ${city} for most vehicle makes and models.`,
+  `When the cylinder is mechanically sound but the key situation has changed — a lost key, a security concern — rekeying the ignition is cheaper than replacing it. We re-pin the tumblers to a new key on-site in ${city}, for most makes and models.`,
+  `Lost a key but the ignition itself is fine? Rekeying the cylinder to a new key costs less than replacement and restores your security. We do it at your ${city} location for most vehicles.`,
+  `Ignition rekeying solves the 'lost key, healthy cylinder' situation without the cost of a new cylinder. Our technicians re-pin the tumblers to match a fresh key, on-site throughout ${city}.`,
+]);
+
+const card4 = sp(slug, "card-4", [
+  `Some ignition cylinders are too worn, cracked, or damaged to repair — in those cases, replacement is the correct solution. We assess the cylinder honestly and only recommend replacement when repair is not a viable option. When replacement is needed, we handle the ignition replacement and new key programming on the same visit in ${city}.`,
+  `We'll tell you honestly when a cylinder is past saving — cracks, severe corrosion, or damage from forced entry mean replacement is the right call. When that happens, we replace the cylinder and program the new key in the same ${city} visit.`,
+  `Repair first, replace only when necessary — that's our approach in ${city}. Cylinders that are cracked or damaged beyond repair get replaced on-site, with the new key cut and programmed before we leave.`,
+  `Not every cylinder can be repaired, and we won't pretend otherwise. If yours is too far gone, we handle the full replacement and key programming on-site in ${city} during the same visit.`,
+]);
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for mobile ignition diagnosis and repair in ${city}. We come to you — no tow needed.`,
+  `Ignition trouble in ${city}? One call brings a mobile locksmith to your vehicle — diagnosis, repair, and keys handled on-site.`,
+  `Don't force a sticking key. Call now and we'll repair the ignition where your car sits in ${city}.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +120,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Automotive Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Ignition Repair in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            1st Capital Locksmith provides mobile ignition repair throughout {city} and {county}. We diagnose and repair stuck, stiff, worn, and damaged ignition cylinders on-site — for all vehicle makes and models, without the need for a tow.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -137,21 +187,22 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Stuck or Stiff Ignition Repair</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">A key that won't turn in the ignition is one of the most common automotive locksmith calls we receive in {city}. The cause is often worn tumblers inside the cylinder, a bent key, debris inside the cylinder, or the steering column lock engaging. We diagnose the root cause and repair the cylinder on-site whenever possible, without requiring replacement.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/ignition-repair/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Ignition Repair →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Broken Key Extraction from Ignition</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">A key broken off inside the ignition is a stressful situation — and attempting to remove it with tweezers, glue, or improvised tools almost always makes it worse. We use dedicated extraction tools to safely remove the broken fragment without damaging the cylinder internals. After extraction, we can cut a new key and assess the cylinder for damage.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
           <div class="mt-4"><a href="/services/broken-key-extraction/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Broken Key Extraction →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Ignition Rekeying</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">If your ignition cylinder is in good mechanical condition but you need it to work with a different key — for example after a key is lost — we can rekey the cylinder's internal tumblers to match a new key. This is a more cost-effective option than full ignition replacement. We perform ignition rekeying on-site throughout {city} for most vehicle makes and models.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">When Repair Becomes Replacement</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Some ignition cylinders are too worn, cracked, or damaged to repair — in those cases, replacement is the correct solution. We assess the cylinder honestly and only recommend replacement when repair is not a viable option. When replacement is needed, we handle the <a href="/services/ignition-replacement/" class="text-[#A61E22] font-semibold">ignition replacement</a> and new key programming on the same visit in {city}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
+          <div class="mt-4"><a href={`/services/automotive-locksmith/${slug}/ignition-replacement/`} class="text-[#A61E22] font-semibold hover:underline text-sm">See Ignition Replacement in {city} →</a></div>
         </div>
       </div>
     </div>

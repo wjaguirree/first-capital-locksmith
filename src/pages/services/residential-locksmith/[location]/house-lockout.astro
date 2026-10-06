@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,71 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `Locked out of your home in ${city}? 1st Capital Locksmith responds throughout ${city} and ${county} to get you back inside quickly and without damage to your door hardware. We serve homeowners, renters, and landlords across all neighborhoods in ${city}.`,
+  `Standing outside your own ${city} home with no way in? 1st Capital Locksmith gets you back inside fast — non-destructive entry, all residential lock types, anywhere in ${city} and ${county}.`,
+  `A house lockout in ${city} ends with one call. 1st Capital Locksmith's mobile locksmiths open homes across ${city} and ${county} without damaging your locks — homeowners, renters, and landlords all served.`,
+  `Whether the keys are inside, lost, or the lock just failed, 1st Capital Locksmith responds to house lockouts across ${city} with professional, damage-free entry — every neighborhood in ${city} covered.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `We service all residential door hardware — knob locks, lever handles, single and double-cylinder deadbolts, and combination sets on front, back, and side doors.`,
+    `Front door, back door, side door — knob lock, lever, or deadbolt — we open all of it across ${city}.`,
+    `Every residential door type in ${city} homes is within our coverage: knobs, levers, single and double deadbolts, combo sets.`,
+    `Whatever hardware your ${city} home's doors carry, we have the tools and technique to open it.`,
+  ],
+  close: [
+    `Our approach is non-destructive: we use professional picking and bypass tools to open your lock without drilling. In ${city}, we serve both homeowners and renters in houses, townhomes, and condominiums.`,
+    `Picking and bypassing first, drilling last — that's how we protect your hardware. Homeowners and renters across ${city}, in houses, townhomes, and condos alike.`,
+    `We open rather than destroy: professional picks and bypass tools keep your lock intact. Houses, townhomes, and condos throughout ${city} are all covered.`,
+    townAnchor(slug, "residential", "card-1"),
+  ],
+});
+
+const card2 = compose2(slug, "card-2", {
+  open: [
+    `Apartment lockouts are one of the most common residential locksmith calls in ${city}.`,
+    `Apartment and rental lockouts make up a big share of our ${city} residential calls.`,
+    `Renters get locked out just like owners — and in ${city}, apartment lockouts are an everyday call for us.`,
+    `Apartment doors with automatic locking latches catch ${city} renters constantly.`,
+  ],
+  close: [
+    `We work quickly and professionally, and we always verify that the person requesting entry is the authorized tenant before proceeding. If you're a landlord in ${city} responding to a tenant lockout, we can assist you as well.`,
+    `We verify authorization before opening — protecting tenants and landlords alike. ${city} landlords: we can assist with tenant lockouts while protecting your hardware.`,
+    `Authorization is verified before we open anything — that's protection for you and your landlord. Landlords in ${city} can also call us directly for tenant lockouts.`,
+    townAnchor(slug, "residential", "card-2"),
+  ],
+});
+
+const card3 = sp(slug, "card-3", [
+  `The door connecting your garage to your home is often overlooked — until you're locked out of it. Garage entry doors frequently have different hardware than front doors, including privacy locks or passage knobs that can be accidentally locked. We handle all garage entry door lockouts in ${city} using the same non-destructive approach as for all our lockout services.`,
+  `Garage-to-house doors catch people out all the time in ${city} — they often carry privacy knobs or passage hardware that locks with a bump. We open them with the same non-destructive methods we use on front doors.`,
+  `That door between the garage and the house isn't built like your front door, and it locks differently too — usually when you least expect it. We handle garage entry lockouts across ${city} without damage.`,
+  `Locked the door from the garage by accident? It happens constantly in ${city}. These doors often have privacy or passage hardware rather than deadbolts, and we open them cleanly.`,
+]);
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `When weather, a child's safety, or time-sensitive circumstances make your lockout urgent, call us immediately at (302) 735-0050.`,
+    `If a child is inside, weather is bearing down, or anything about the situation feels urgent — call (302) 735-0050 now.`,
+    `Some ${city} lockouts can't wait: kids inside, dangerous cold, medication needed. Call (302) 735-0050 immediately.`,
+    `A lockout becomes an emergency when kids, weather, or health are involved. Call (302) 735-0050 and tell us it's urgent.`,
+  ],
+  close: [
+    `We prioritize emergency calls throughout ${city} and ${county}. After gaining entry, we can also rekey your locks or cut a spare key so you're not in this situation again.`,
+    `Emergency calls get priority across ${city} and ${county} — and once you're inside, we can rekey or cut a spare so it doesn't happen twice.`,
+    `Throughout ${city} and ${county}, urgent lockouts jump the queue. Once you're back in, ask about a spare key or rekey to prevent the next one.`,
+    townAnchor(slug, "emergency", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith now for fast, damage-free house lockout service in ${city}. We come to you — anywhere in ${county}.`,
+  `One call and a mobile locksmith heads to your ${city} home. Non-destructive entry, upfront pricing, same-visit solution.`,
+  `Locked out in ${city}? Call now — a real person answers, and a technician comes to your door with everything needed.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +136,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Residential Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">House Lockout Service in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            Locked out of your home in {city}? 1st Capital Locksmith responds throughout {city} and {county} to get you back inside quickly and without damage to your door hardware. We serve homeowners, renters, and landlords across all neighborhoods in {city}.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,20 +202,20 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Residential Door Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">We service all residential door hardware — knob locks, lever handles, single and double-cylinder deadbolts, and combination knob-deadbolt sets on front, back, and side doors. Our approach is non-destructive: we use professional picking and bypass tools to open your lock without drilling. In {city}, we serve both homeowners and renters in houses, townhomes, and condominiums.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/house-lockout/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about House Lockout Service →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Apartment & Rental Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Apartment lockouts are one of the most common residential locksmith calls in {city}. We work quickly and professionally, and we always verify that the person requesting entry is the authorized tenant before proceeding. If you're a landlord in {city} responding to a tenant lockout, we can assist you as well — with a focus on protecting both the hardware and the tenant relationship.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Garage Entry Door Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">The door connecting your garage to your home is often overlooked — until you're locked out of it. Garage entry doors frequently have different hardware than front doors, including privacy locks or passage knobs that can be accidentally locked. We handle all garage entry door lockouts in {city} using the same non-destructive approach as for all our lockout services.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Emergency House Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">When weather, a child's safety, or time-sensitive circumstances make your lockout urgent, call us immediately at <a href="tel:3027350050" class="text-[#A61E22] font-semibold">(302) 735-0050</a>. We prioritize emergency calls throughout {city} and {county}. After gaining entry, we can also rekey your locks or cut a spare key so you're not in this situation again.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
           <div class="mt-4"><a href="/services/emergency-house-lockout/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency House Lockout →</a></div>
         </div>
       </div>
@@ -208,7 +274,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Locked Out of Your House in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith now for fast, professional house lockout service in {city}. We come to you — non-destructive entry, all lock types.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import { getLocationContentProfile } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
@@ -16,6 +17,55 @@ interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
 const profile = getLocationContentProfile(slug);
+
+const heroP = sp(slug, "hero", [
+  `Rekeying changes lock pin configuration so old keys no longer work without replacing the hardware. In ${city}, we handle rekeys for ${profile.propertyMix}, especially for ${profile.rekeyScenario}.`,
+  `Rekeying re-pins your existing locks so old keys stop working — no new hardware needed. Across ${city}, we rekey ${profile.propertyMix}, with most calls involving ${profile.rekeyScenario}.`,
+  `When keys are out of your control in ${city} — lost, copied, or held by someone who shouldn't have them — rekeying resets everything without replacing a single lock. We handle it for ${profile.propertyMix}.`,
+  `A rekey gives your ${city} home a fresh set of keys on its existing locks. We handle rekeys for ${profile.propertyMix} throughout ${city}, typically finished in about an hour.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `Moving into a new home in ${city} — whether it's a new build or a resale — means you don't know how many copies of the existing keys are out there.`,
+    `Every ${city} home purchase comes with a key history you'll never fully know: previous owners, contractors, agents, neighbors.`,
+    `Closing on a ${city} home means inheriting every key the previous owners ever handed out.`,
+    `New house, unknown keys — that's the situation every ${city} buyer walks into at closing.`,
+  ],
+  close: [
+    `Previous owners, contractors, real estate agents, and neighbors may all have copies. Rekeying immediately after closing is the single most important security step a new homeowner can take. We can rekey every lock in your home in a single visit.`,
+    `Rekeying right after closing is the highest-value security step there is — every old copy dies at once. We rekey the whole house in one visit.`,
+    `A closing-day rekey erases the entire history of that home's keys. One visit, every exterior door, one new key.`,
+    townAnchor(slug, "residential", "card-1"),
+  ],
+});
+
+const card2 = sp(slug, "card-2", [
+  `Landlords in ${city} should rekey between every tenancy to protect new tenants and reduce liability. We support ${profile.propertyMix} across ${county}, with efficient turnover rekeys and multi-unit scheduling where needed.`,
+  `Between-tenant rekeying protects your new renters and limits your liability — and it should happen at every turnover. We work with ${city} landlords across ${county}, handling efficient turnover rekeys and multi-unit scheduling.`,
+  `For ${city} landlords, a turnover rekey is cheap protection for tenants and owners alike. We handle ${profile.propertyMix} across ${county} and can schedule multiple units efficiently.`,
+  `Each tenancy should start with fresh keys — that's the standard we help ${city} landlords maintain. Turnover rekeys across ${county}, with multi-unit scheduling available.`,
+]);
+
+const card3 = sp(slug, "card-3", [
+  `Lost a key, changed roommates, or unsure who still has access? Those are common ${city} triggers for rekeying. Rekeying invalidates old keys immediately and gives you clean key control without replacing all hardware.`,
+  `A lost key, a departed roommate, a spare you can't account for — all common reasons ${city} homeowners call us to rekey. Old keys stop working the moment we finish, and your hardware stays put.`,
+  `When you're not sure who can open your ${city} home, rekeying settles the question permanently. Every old key is invalidated; only the fresh keys we hand you will work.`,
+  `Whether a key went missing or a living situation changed, rekeying gives ${city} homeowners immediate key control — without the cost of new hardware.`,
+]);
+
+const card4 = sp(slug, "card-4", [
+  `Some situations call for a full lock change rather than rekeying — for example, if your existing locks are worn, damaged, low-quality, or have been physically compromised. We assess your hardware honestly and tell you whether rekeying is the right call or if a deadbolt installation or full replacement would serve you better.`,
+  `Rekeying works on healthy hardware. If your locks are worn, damaged, or cheap builder-grade units, we'll tell you straight — sometimes a lock change or a deadbolt upgrade is the better investment for your ${city} home.`,
+  `Not every lock deserves a rekey. Worn, damaged, or compromised hardware should be replaced outright, and we're honest about which situation you're in when we assess your ${city} home's locks.`,
+  `If your locks are healthy, rekey them; if they're worn or damaged, replace them. We assess honestly at your ${city} home and recommend whichever actually serves your security.`,
+]);
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for fast, affordable lock rekeying in ${city}. Same-day service throughout ${county}.`,
+  `One visit rekeys your whole ${city} home — old keys dead, fresh keys in hand. Call for same-day service in ${county}.`,
+  `Ready for clean key control in ${city}? Call now — most rekeys take about an hour, start to finish.`,
+]);
 ---
 
 <MainLayout
@@ -72,7 +122,7 @@ const profile = getLocationContentProfile(slug);
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Residential Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Lock Rekeying in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            Rekeying changes lock pin configuration so old keys no longer work without replacing the hardware. In {city}, we handle rekeys for {profile.propertyMix}, especially for {profile.rekeyScenario}.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -138,20 +188,20 @@ const profile = getLocationContentProfile(slug);
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">New Homeowner Rekeying</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Moving into a new home in {city} — whether it's a new build or a resale — means you don't know how many copies of the existing keys are out there. Previous owners, contractors, real estate agents, and neighbors may all have copies. Rekeying immediately after closing is the single most important security step a new homeowner can take. We can rekey every lock in your home in a single visit.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/lock-rekeying/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Lock Rekeying →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Rental Property Rekeying</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Landlords in {city} should rekey between every tenancy to protect new tenants and reduce liability. We support {profile.propertyMix} across {county}, with efficient turnover rekeys and multi-unit scheduling where needed.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After Key Loss or Security Concern</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Lost a key, changed roommates, or unsure who still has access? Those are common {city} triggers for rekeying. Rekeying invalidates old keys immediately and gives you clean key control without replacing all hardware.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">When Rekeying Isn't Enough</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Some situations call for a full <a href="/services/lock-change/" class="text-[#A61E22] font-semibold">lock change</a> rather than rekeying — for example, if your existing locks are worn, damaged, low-quality, or have been physically compromised. We assess your hardware honestly and tell you whether rekeying is the right call or if a <a href="/services/deadbolt-installation/" class="text-[#A61E22] font-semibold">deadbolt installation</a> or full replacement would serve you better.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
         </div>
       </div>
     </div>
@@ -209,7 +259,7 @@ const profile = getLocationContentProfile(slug);
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need Lock Rekeying in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for fast, affordable lock rekeying in {city}. We come to your home — same-day service available.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

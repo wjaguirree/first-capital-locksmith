@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,63 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `Keys locked in your car in ${city}? Keys in the trunk? Engine running with the doors locked? 1st Capital Locksmith responds fast to automotive lockouts throughout ${city} and ${county}. We use professional auto entry tools — no damage to your vehicle.`,
+  `A car lockout in ${city} — keys on the seat, in the trunk, or the engine running — needs a fast, damage-free response. 1st Capital Locksmith's mobile locksmiths cover all of ${city} and ${county} with professional automotive entry tools.`,
+  `Locked out of your vehicle anywhere in ${city}? 1st Capital Locksmith responds fast with professional auto entry equipment — no bent door frames, no scratched glass, no damaged seals. Serving all of ${city} and ${county}.`,
+  `When your car locks you out in ${city}, don't improvise. 1st Capital Locksmith opens vehicles throughout ${city} and ${county} with the tools and technique the job actually requires — fast and damage-free.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `The most common automotive lockout — keys sitting inside the car while the doors are locked.`,
+    `Keys on the seat, doors locked — the classic lockout, and our most frequent ${city} call.`,
+    `It takes half a second: door swings shut, locks engage, keys still inside. It happens across ${city} daily.`,
+    `You can see the keys through the window, and that makes it worse. It's the most common call we take.`,
+  ],
+  close: [
+    `We use professional automotive entry tools (air wedges, long reach tools, and slim jims designed for modern vehicle door construction) to gain entry without damage. We work on cars, trucks, SUVs, and vans throughout ${city} — all makes, all models, domestic and import.`,
+    `Air wedges, long-reach tools, and picks designed for modern doors open the vehicle without damage — cars, trucks, SUVs, and vans of every make throughout ${city}.`,
+    `Our entry tools are built for modern vehicle construction — no bent frames, no torn seals. All makes and models across ${city}, domestic and import.`,
+    townAnchor(slug, "emergency", "card-1"),
+  ],
+});
+
+const card2 = sp(slug, "card-2", [
+  `Keys accidentally left in the trunk when it closed are a common lockout scenario. Depending on your vehicle, we may be able to access the trunk release from inside the cabin, or we may need to enter through the door first. Either way, we have the tools and techniques to handle trunk lockouts across all vehicle types in ${city} without causing damage.`,
+  `Trunk lockouts in ${city} are a two-step job on most vehicles: open the cabin first, then the trunk release — since many cars disable the trunk button without the fob nearby. We handle the sequence correctly, on any vehicle type, without damage.`,
+  `Keys that ended up in the trunk need more than a door tool — many vehicles lock out the trunk release without the fob present. We open the cabin, then the trunk, across all vehicle types in ${city}, cleanly.`,
+  `Loading groceries, the trunk lid drops, and your keys are in there with them. We open trunk lockouts throughout ${city} — cabin first where required, trunk directly where possible, no damage either way.`,
+]);
+
+const card3 = sp(slug, "card-3", [
+  `A running engine lockout is more urgent — especially in warm weather with children or pets inside, or in situations where the vehicle is in a hazardous location. Call us immediately at (302) 735-0050. If there is an immediate safety emergency, call 911 first. We respond throughout ${city} as quickly as possible.`,
+  `Engine running and doors locked raises the stakes — fuel burning, and if kids or pets are inside, it's genuinely dangerous in warm weather. Call (302) 735-0050 immediately; if there's a safety emergency, call 911 first. We prioritize these calls across ${city}.`,
+  `When the engine's running and you're locked out in ${city}, speed matters — especially with children or pets inside in the heat. Call us at (302) 735-0050 right away (911 first if anyone is in danger), and we treat it as top priority.`,
+  `A running-engine lockout with a child or pet inside is the most urgent call we take. Call 911 first if there's danger, then us at (302) 735-0050 — we respond across ${city} as fast as physically possible.`,
+]);
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `After getting you back into your car in ${city}, we can also address any related automotive key issues — key duplication, key fob programming, or ignition service.`,
+    `Once you're back inside, it's worth asking how the lockout happened — and whether a spare key would have prevented it.`,
+    `The lockout is solved; the underlying key situation might not be. We can deal with both in one visit.`,
+    `Getting back in is step one. Making sure it doesn't happen again is step two.`,
+  ],
+  close: [
+    `If you're worried about your existing keys being lost or compromised, we can discuss replacement options on the spot. We also provide car key replacement and transponder key service throughout ${county}.`,
+    `We cut spare keys and program fobs on the spot — and if your keys are truly lost, full replacement happens on-site anywhere in ${county}.`,
+    `We can cut a spare on the spot, replace a questionable key, or program a new fob — all at your ${city} location, same visit.`,
+    townAnchor(slug, "emergency", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith now for emergency car lockout service in ${city}. Fast response throughout ${county}, Delaware.`,
+  `Locked out of your car in ${city}? Call (302) 735-0050 — a real person answers and a mobile locksmith is dispatched immediately.`,
+  `One call ends the lockout. We come to your vehicle anywhere in ${city} — call now for a real ETA.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +128,7 @@ const { city, state, slug, county } = location;
           <p class="text-white/80 font-semibold uppercase tracking-wide text-sm mb-3">Emergency Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Emergency Car Lockout in {city}, {state}</h1>
           <p class="text-white/90 mb-6 leading-relaxed">
-            Keys locked in your car in {city}? Keys in the trunk? Engine running with the doors locked? 1st Capital Locksmith responds fast to automotive lockouts throughout {city} and {county}. We use professional auto entry tools — no damage to your vehicle.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,20 +194,20 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Keys Locked Inside the Car</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">The most common automotive lockout — keys sitting inside the car while the doors are locked. We use professional automotive entry tools (air wedges, long reach tools, and slim jims designed for modern vehicle door construction) to gain entry without damage. We work on cars, trucks, SUVs, and vans throughout {city} — all makes, all models, domestic and import.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/emergency-car-lockout/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Emergency Car Lockout →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Keys in the Trunk</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Keys accidentally left in the trunk when it closed are a common lockout scenario. Depending on your vehicle, we may be able to access the trunk release from inside the cabin, or we may need to enter through the door first. Either way, we have the tools and techniques to handle trunk lockouts across all vehicle types in {city} without causing damage.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Engine Running with Doors Locked</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">A running engine lockout is more urgent — especially in warm weather with children or pets inside, or in situations where the vehicle is in a hazardous location. Call us immediately at <a href="tel:3027350050" class="text-[#A61E22] font-semibold">(302) 735-0050</a>. If there is an immediate safety emergency, call 911 first. We respond throughout {city} as quickly as possible.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">After the Lockout</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">After getting you back into your car in {city}, we can also address any related automotive key issues — key duplication, key fob programming, or ignition service. If you're worried about your existing keys being lost or compromised, we can discuss replacement options on the spot. We also provide car key replacement and transponder key service throughout {county}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
           <div class="mt-4"><a href={`/services/automotive-locksmith/${slug}/car-key-replacement/`} class="text-[#A61E22] font-semibold hover:underline text-sm">Car Key Replacement in {city} →</a></div>
         </div>
       </div>
@@ -208,7 +266,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#A61E22] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Keys Locked in Your Car in {city}, {state}?</h2>
-      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for fast emergency car lockout service in {city}. We respond throughout {county}, Delaware — all makes and models.</p>
+      <p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-white text-[#A61E22] px-8 py-4 font-bold text-lg hover:bg-gray-100 transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#A61E22] transition">Get Help Now</a>

@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,63 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `1st Capital Locksmith provides full ignition cylinder replacement throughout ${city} and ${county}. When a cylinder is too worn, cracked, or damaged to repair, we replace it on-site and key it to your existing key — no dealership, no tow.`,
+  `When an ignition cylinder in ${city} is past saving, replacement done right matters. 1st Capital Locksmith replaces cylinders on-site throughout ${city} and ${county} — matched to your existing key, with new keys cut and programmed on the spot.`,
+  `A failed ignition cylinder doesn't have to mean a dealership visit. 1st Capital Locksmith replaces ignition cylinders wherever your vehicle sits in ${city} — all makes and models, done in one mobile visit.`,
+  `Cracked, seized, or broken-into — when the cylinder has to go, 1st Capital Locksmith replaces it at your ${city} location and hands you keys that work before we leave. Serving all of ${county}.`,
+]);
+
+const card1 = sp(slug, "card-1", [
+  `Not every ignition problem can be repaired. A cylinder that is cracked, severely corroded, has a broken wafer or housing, or sustained damage from a forced entry or break-in attempt often requires full replacement. We assess the cylinder honestly and give you a clear recommendation — we only suggest replacement when it's genuinely the right call. We always attempt ignition repair first.`,
+  `We repair ignitions whenever the cylinder can be saved — but cracks, severe corrosion, broken wafers, and break-in damage cross the line into replacement territory. You'll get an honest assessment from us in ${city}, and we'll never push a replacement that a repair would fix.`,
+  `Some cylinders are simply done: cracked housings, broken wafers, corrosion, or damage from a theft attempt. Our rule in ${city} is repair first, replace second — and when replacement is the answer, we tell you exactly why.`,
+  `An honest diagnosis comes first: if your ignition can be repaired, that's what we recommend. When it can't — cracked, corroded, or damaged by forced entry — we explain why replacement is the right call before any work starts.`,
+]);
+
+const card2 = sp(slug, "card-2", [
+  `Every ignition cylinder replacement includes cutting a new key to match the new cylinder. For modern vehicles with transponder or smart key systems, we program the new key to the vehicle's immobilizer on-site in ${city}. You leave with a fully functional key that works in both your door locks and ignition — no dealership visit needed.`,
+  `A new cylinder needs keys to match — we cut them on the spot, and for transponder or smart key vehicles we program them to the immobilizer at your ${city} location. One visit covers cylinder, keys, and programming.`,
+  `Replacement includes fresh keys cut for the new cylinder, plus immobilizer programming for chipped and smart key vehicles — all done where your car sits in ${city}. Where possible, we key the new cylinder to your existing key instead.`,
+  `We cut and program keys for the new cylinder on-site in ${city}, so you drive away with everything working — doors and ignition on one key whenever the hardware allows.`,
+]);
+
+const card3 = compose2(slug, "card-3", {
+  open: [
+    `Theft attempts and break-ins frequently damage the ignition cylinder — sometimes beyond repair.`,
+    `A thief's screwdriver does more damage in seconds than years of normal use.`,
+    `Forced entry destroys ignitions — cracked housings and mangled wafers are the usual result.`,
+    `After an attempted theft, the ignition is often the worst casualty.`,
+  ],
+  close: [
+    `If your vehicle's ignition was damaged during an attempted theft or forced entry in ${city}, we can replace the cylinder and restore proper function on-site. We work alongside insurance claims and provide documentation if needed.`,
+    `We replace theft-damaged ignitions on-site in ${city}, and we document the work for your insurance claim if you're filing one.`,
+    `If this happened to your vehicle in ${city}, we replace the cylinder on-site and provide any documentation your insurer asks for.`,
+    townAnchor(slug, "automotive", "card-3"),
+  ],
+});
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `We carry ignition cylinder stock and have access to replacement parts for a wide range of domestic and import vehicle makes and model years.`,
+    `Our parts access covers a wide range of domestic and import ignitions across model years.`,
+    `Common cylinders ride on our trucks; less common ones we source quickly.`,
+    `Domestic or import, common or uncommon — ignition parts for most vehicles are either on the truck or a quick source away.`,
+  ],
+  close: [
+    `If we don't have the part on our mobile unit, we can typically source it quickly for ${city} area vehicles. Call us to discuss your specific vehicle and we'll give you an honest assessment and timeline.`,
+    `If your cylinder isn't on the truck, we source it fast for ${city} vehicles — call with your year, make, and model for a straight answer on timing and price.`,
+    `For ${city} drivers, a quick call with your vehicle details gets you an honest parts-and-timeline answer before we roll.`,
+    townAnchor(slug, "automotive", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for on-site ignition cylinder replacement in ${city}. We come to you — no tow, no dealership wait.`,
+  `One call brings ignition replacement to your ${city} location — cylinder, keys, and programming handled in a single visit.`,
+  `Wherever the vehicle sits in ${city}, that's where we replace the ignition. Call for upfront pricing and a real timeline.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +128,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Automotive Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Ignition Replacement in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            When ignition repair isn't enough, 1st Capital Locksmith provides full ignition cylinder replacement on-site throughout {city} and {county}. We replace ignition cylinders for all vehicle makes and models, cut new keys, and program transponders — all at your location.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,20 +194,21 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">When Replacement Is Needed</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Not every ignition problem can be repaired. A cylinder that is cracked, severely corroded, has a broken wafer or housing, or sustained damage from a forced entry or break-in attempt often requires full replacement. We assess the cylinder honestly and give you a clear recommendation — we only suggest replacement when it's genuinely the right call. We always attempt <a href="/services/ignition-repair/" class="text-[#A61E22] font-semibold">ignition repair</a> first.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
+          <div class="mt-4"><a href={`/services/automotive-locksmith/${slug}/ignition-repair/`} class="text-[#A61E22] font-semibold hover:underline text-sm">We try ignition repair first — learn more →</a></div>
           <div class="mt-4"><a href="/services/ignition-replacement/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Ignition Replacement →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Replacement with New Key Cutting</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Every ignition cylinder replacement includes cutting a new key to match the new cylinder. For modern vehicles with transponder or smart key systems, we program the new key to the vehicle's immobilizer on-site in {city}. You leave with a fully functional key that works in both your door locks and ignition — no dealership visit needed.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Post-Break-In Ignition Replacement</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Theft attempts and break-ins frequently damage the ignition cylinder — sometimes beyond repair. If your vehicle's ignition was damaged during an attempted theft or forced entry in {city}, we can replace the cylinder and restore proper function on-site. We work alongside insurance claims and provide documentation if needed.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">All Vehicle Makes & Models</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">We carry ignition cylinder stock and have access to replacement parts for a wide range of domestic and import vehicle makes and model years. If we don't have the part on our mobile unit, we can typically source it quickly for {city} area vehicles. Call us to discuss your specific vehicle and we'll give you an honest assessment and timeline.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
         </div>
       </div>
     </div>
@@ -207,7 +266,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need an Ignition Replacement in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for on-site ignition cylinder replacement in {city}. We replace the cylinder and cut your new key — no tow required.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

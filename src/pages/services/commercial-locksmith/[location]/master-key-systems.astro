@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,55 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `A well-designed master key system gives your business in ${city} precisely layered access control — each employee accesses only what they need, while management holds a master key that opens everything. 1st Capital Locksmith designs, installs, and services custom master key systems for businesses throughout ${city} and ${county}.`,
+  `One key for you, specific keys for everyone else — that's what a master key system delivers. 1st Capital Locksmith designs and installs master key systems for ${city} businesses, from simple two-level setups to grand master hierarchies across ${county}.`,
+  `Tired of a key ring that needs its own manager? A master key system replaces key chaos with deliberate access control. 1st Capital Locksmith builds custom systems for ${city} businesses — designed, installed, and documented.`,
+  `Access control without electronics: a master key system lets your ${city} business decide exactly who opens what. 1st Capital Locksmith designs and installs them throughout ${city} and ${county}.`,
+]);
+
+const card1 = sp(slug, "card-1", [
+  `Designing a master key system starts with mapping your access control requirements: which areas need to be accessible to all staff, which to management only, and which are restricted to specific roles. We work with you to understand your ${city} business's layout and create a key hierarchy that gives the right people the right access — nothing more, nothing less. We handle both the planning and the installation.`,
+  `Good master key design starts with questions, not hardware: who needs the front door, who needs the stockroom, who needs everything? We map your ${city} business's access requirements first, then build the hierarchy to match — planning and installation both handled by us.`,
+  `A master key system designed wrong is worse than none — keys that cross over, access nobody intended. We design around your ${city} operation's actual structure, then install the system so every key opens exactly what it should.`,
+  `Before any cylinder gets pinned, we map how your ${city} business actually uses its doors. The resulting hierarchy gives each role exactly its needed access — nothing extra — and we install the whole system ourselves.`,
+]);
+
+const card2 = sp(slug, "card-2", [
+  `A complete master key system can have multiple layers: individual change keys (for specific locks), sub-master keys (for a zone or department), master keys (for the building), and a grand master key (for multiple buildings or the entire organization). We build each level of hierarchy precisely so that access control is maintained across your ${city} property, no matter how complex the structure.`,
+  `Change keys for individual doors, sub-masters for departments, masters for buildings, grand masters for the whole organization — the hierarchy scales as far as your ${city} operation needs. We build each level precisely so no key ever opens more than intended.`,
+  `Multi-level keying is where master key systems earn their keep: staff keys open one door, supervisors open their zone, management opens the building, ownership opens everything. We engineer each level for ${city} properties of any complexity.`,
+  `From a simple two-level system to a grand master hierarchy spanning multiple ${city} buildings, we design and pin each level so access stays exactly where you assigned it.`,
+]);
+
+const card3 = compose2(slug, "card-3", {
+  open: [
+    `As your business in ${city} grows, your master key system needs to grow with it.`,
+    `New office, new door, new employee tier — growing ${city} businesses outgrow their key systems.`,
+    `A master key system isn't a one-time project; it expands as your ${city} business does.`,
+    `Businesses add doors, departments, and buildings — and the key system has to keep up.`,
+  ],
+  close: [
+    `We can add new cylinders, new key levels, or additional sub-master zones to an existing system — as long as the original system has remaining key change combinations available. We analyze your current system and advise you on the best expansion path for your property in ${county}.`,
+    `We expand existing systems with new cylinders, levels, and zones wherever the keying schedule allows — and we'll analyze your current ${county} setup to chart the best path.`,
+    `We add cylinders, sub-masters, and zones to existing systems when the keying schedule permits, and we'll tell you honestly when a system is maxed out and needs a different approach.`,
+    townAnchor(slug, "commercial", "card-3"),
+  ],
+});
+
+const card4 = sp(slug, "card-4", [
+  `Standard commercial keys can be duplicated at hardware stores, which is a serious concern for high-security master key systems. Restricted key cylinders use proprietary keyways and patented key profiles that cannot be legally duplicated without authorization. We can install restricted key systems in ${city} that give you genuine key control — no unauthorized duplication, ever.`,
+  `A master key system built on standard keyways has a hole in it: anyone can copy a key at a hardware store. Restricted keyways close that hole — patented profiles that can only be cut with authorization. We install restricted key systems for ${city} businesses that want real key control.`,
+  `'Do Not Duplicate' stamped on a standard key is a request, not a restriction. True key control means patented, restricted keyways that locksmiths won't cut without authorization. We install them across ${city}.`,
+  `If key control actually matters to your ${city} business, restricted cylinders are the answer: proprietary keyways, patented blanks, and duplication only with your authorization. We design and install them end to end.`,
+]);
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith to design a master key system for your ${city} business. Consultation and upfront pricing included.`,
+  `One call starts the design of a master key system built around your ${city} business. Call for a consultation.`,
+  `Ready to retire the giant key ring? Call now — we'll design a system for your ${city} property that just makes sense.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +120,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Commercial Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Master Key Systems in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            A well-designed master key system gives your business in {city} precisely layered access control — each employee accesses only what they need, while management holds a master key that opens everything. 1st Capital Locksmith designs, installs, and services custom master key systems for businesses throughout {city} and {county}.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,20 +186,20 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">New Master Key System Design</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Designing a master key system starts with mapping your access control requirements: which areas need to be accessible to all staff, which to management only, and which are restricted to specific roles. We work with you to understand your {city} business's layout and create a key hierarchy that gives the right people the right access — nothing more, nothing less. We handle both the planning and the installation.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/master-key-systems/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Master Key Systems →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Grand Master & Sub-Master Levels</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">A complete master key system can have multiple layers: individual change keys (for specific locks), sub-master keys (for a zone or department), master keys (for the building), and a grand master key (for multiple buildings or the entire organization). We build each level of hierarchy precisely so that access control is maintained across your {city} property, no matter how complex the structure.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Expanding an Existing System</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">As your business in {city} grows, your master key system needs to grow with it. We can add new cylinders, new key levels, or additional sub-master zones to an existing system — as long as the original system has remaining key change combinations available. We analyze your current system and advise you on the best expansion path for your property in {county}.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Restricted Key Control</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Standard commercial keys can be duplicated at hardware stores, which is a serious concern for high-security master key systems. Restricted key cylinders use proprietary keyways and patented key profiles that cannot be legally duplicated without authorization. We can install restricted key systems in {city} that give you genuine key control — no unauthorized duplication, ever.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
         </div>
       </div>
     </div>
@@ -207,7 +257,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Master Key System for Your Business in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith to discuss a custom master key system for your {city} business. We design, install, and maintain commercial key systems throughout {county}, Delaware.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>

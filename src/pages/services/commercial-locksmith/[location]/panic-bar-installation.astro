@@ -1,6 +1,7 @@
 ﻿---
 import MainLayout from "../../../../layouts/MainLayout.astro";
 import LocationLocalFlavor from "../../../../components/LocationLocalFlavor.astro";
+import { sp, compose2, townAnchor } from "../../../../data/serviceCopy";
 import { locations } from "../../../../data/locations";
 import type { Location } from "../../../../data/locations";
 
@@ -14,6 +15,63 @@ export function getStaticPaths() {
 interface Props { location: Location; }
 const { location } = Astro.props;
 const { city, state, slug, county } = location;
+
+const heroP = sp(slug, "hero", [
+  `Panic bars (also called crash bars or exit devices) are required by code on many commercial egress doors — and provide critical life-safety egress for building occupants in an emergency. 1st Capital Locksmith installs, replaces, and services commercial panic bar hardware throughout ${city} and ${county}.`,
+  `Exit doors in commercial buildings need hardware that opens with one push — and code requires it. 1st Capital Locksmith installs, repairs, and replaces panic bars and exit devices for ${city} businesses throughout ${county}.`,
+  `A panic bar does two jobs: instant egress from inside, controlled entry from outside. 1st Capital Locksmith installs and services code-compliant exit devices throughout ${city} and ${county} — done right, on-site.`,
+  `Whether your ${city} building needs a new exit device, a code-compliance fix, or a repair on hardware that sticks, 1st Capital Locksmith handles panic bar work across ${city} and ${county}.`,
+]);
+
+const card1 = compose2(slug, "card-1", {
+  open: [
+    `If your commercial building in ${city} has egress doors that don't yet have panic bar hardware, we can install code-compliant exit devices that allow single-motion egress from inside while maintaining controlled entry from outside.`,
+    `Egress doors without exit devices are a code problem and a safety problem. We install compliant panic hardware on ${city} commercial doors.`,
+    `A commercial exit door that requires a key or a knob turn to exit is a life-safety violation waiting for an inspector.`,
+    `New exit device installations in ${city} start with the right hardware for the door — and end with single-motion egress that passes inspection.`,
+  ],
+  close: [
+    `We assess your door configuration, recommend appropriate hardware, and complete the installation cleanly. Proper installation is critical — a poorly mounted exit device can fail when it's needed most.`,
+    `We assess the door, recommend the hardware, and install it correctly — because an improperly mounted exit device can fail in the moment it matters most.`,
+    `Correct mounting is everything with exit hardware. We assess, recommend, and install cleanly so the device works every single time it's pushed.`,
+    townAnchor(slug, "commercial", "card-1"),
+  ],
+});
+
+const card2 = sp(slug, "card-2", [
+  `Rim-type exit devices mount on the surface of the door and are the most common type for commercial applications in ${city}. Mortise exit devices integrate into a mortise pocket in the door edge and offer a cleaner appearance with potentially higher security. We help you select the right type for your specific door and security requirements, and install it correctly.`,
+  `Rim devices surface-mount to the door and cover most ${city} commercial applications; mortise devices integrate into the door edge for a cleaner look and higher security. We'll recommend the right type for your door and install it correctly.`,
+  `The rim-versus-mortise choice depends on your door construction and security needs. Most ${city} commercial doors take rim devices; mortise devices suit doors built for them. We help you choose and install either correctly.`,
+  `Surface-mounted rim devices and integrated mortise devices both do the job — the right choice depends on your door. We spec and install both types across ${city} commercial properties.`,
+]);
+
+const card3 = sp(slug, "card-3", [
+  `For secondary exit doors in retail environments, warehouses, or office buildings in ${city}, an exit device equipped with an audible alarm helps prevent unauthorized use without sacrificing code-required egress capability. The alarm sounds when the door is pushed open, deterring employees and customers from using fire exit doors as a convenience exit.`,
+  `Fire exits that double as shortcut doors are a security leak. Alarmed exit devices solve it for ${city} businesses — the bar still opens instantly for a real emergency, but an audible alarm sounds whenever it's used casually.`,
+  `If staff or customers use your emergency exits as convenience doors, an alarmed exit device is the fix. It keeps the egress code-compliant while sounding off when the door opens — a strong deterrent for ${city} retail and warehouse doors.`,
+  `Alarmed panic bars keep emergency exits available for emergencies and off-limits for everything else — the alarm sounds on use. We install them for retail, warehouse, and office buildings throughout ${city}.`,
+]);
+
+const card4 = compose2(slug, "card-4", {
+  open: [
+    `Existing panic bar hardware can wear out, become difficult to operate, or fail to latch properly over time. Worn or malfunctioning exit devices are both a safety risk and a security risk.`,
+    `A panic bar that sticks, rattles, or won't latch is failing at both of its jobs — safe egress and secure entry.`,
+    `Exit devices wear like any hardware: springs weaken, latches drag, alignment drifts. A malfunctioning bar is a safety and security problem at once.`,
+    `When a panic bar stops latching or becomes hard to push, it's not just annoying — it's a code and safety issue.`,
+  ],
+  close: [
+    `We inspect, adjust, and repair existing panic bar hardware in ${city} — and if repair is not practical, we supply and install a suitable replacement that matches your door configuration.`,
+    `We inspect and repair exit devices across ${city} first; when a device is past repair, we supply and install the correct replacement for your door.`,
+    `Adjustment and repair come first at your ${city} location. If the device is done, we replace it with hardware matched to your door — same visit whenever stock allows.`,
+    townAnchor(slug, "commercial", "card-4"),
+  ],
+});
+
+const ctaP = sp(slug, "cta", [
+  `Call 1st Capital Locksmith for panic bar installation and service in ${city}. Code-compliant hardware, professionally installed.`,
+  `Code-compliant exit hardware, installed correctly at your ${city} business. Call for an assessment and upfront pricing.`,
+  `Exit doors that pass inspection and work every time — call now for panic bar service in ${city}.`,
+]);
 ---
 
 <MainLayout
@@ -70,7 +128,7 @@ const { city, state, slug, county } = location;
           <p class="text-[#9A9D62] font-semibold uppercase tracking-wide text-sm mb-3">Commercial Locksmith · {city}, {state}</p>
           <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Panic Bar Installation in {city}, {state}</h1>
           <p class="text-gray-300 mb-6 leading-relaxed">
-            Panic bars (also called crash bars or exit devices) are required by code on many commercial egress doors — and provide critical life-safety egress for building occupants in an emergency. 1st Capital Locksmith installs, replaces, and services commercial panic bar hardware throughout {city} and {county}.
+            {heroP}
           </p>
           <ul class="space-y-3">
             {[
@@ -136,20 +194,20 @@ const { city, state, slug, county } = location;
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">New Panic Bar Installation</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">If your commercial building in {city} has egress doors that don't yet have panic bar hardware, we can install code-compliant exit devices that allow single-motion egress from inside while maintaining controlled entry from outside. We assess your door configuration, recommend appropriate hardware, and complete the installation cleanly. Proper installation is critical — a poorly mounted exit device can fail when it's needed most.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card1}</p>
           <div class="mt-4"><a href="/services/panic-bar-installation/" class="text-[#A61E22] font-semibold hover:underline text-sm">Learn more about Panic Bar Installation →</a></div>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Rim vs Mortise Exit Devices</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Rim-type exit devices mount on the surface of the door and are the most common type for commercial applications in {city}. Mortise exit devices integrate into a mortise pocket in the door edge and offer a cleaner appearance with potentially higher security. We help you select the right type for your specific door and security requirements, and install it correctly.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card2}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Panic Bar with Door Alarm</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">For secondary exit doors in retail environments, warehouses, or office buildings in {city}, an exit device equipped with an audible alarm helps prevent unauthorized use without sacrificing code-required egress capability. The alarm sounds when the door is pushed open, deterring employees and customers from using fire exit doors as a convenience exit.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card3}</p>
         </div>
         <div class="bg-white rounded-2xl p-7 border border-gray-200">
           <h3 class="text-lg font-bold text-[#1A1F22] mb-3">Panic Bar Repair & Replacement</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Existing panic bar hardware can wear out, become difficult to operate, or fail to latch properly over time. Worn or malfunctioning exit devices are both a safety risk and a security risk. We inspect, adjust, and repair existing panic bar hardware in {city} — and if repair is not practical, we supply and install a suitable replacement that matches your door configuration.</p>
+          <p class="text-gray-600 text-sm leading-relaxed">{card4}</p>
         </div>
       </div>
     </div>
@@ -207,7 +265,7 @@ const { city, state, slug, county } = location;
   <section class="bg-[#0E1B2F] py-16">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need Panic Bar Installation in {city}, {state}?</h2>
-      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">Call 1st Capital Locksmith for professional panic bar and exit device installation in {city}. Code-compliant installation for commercial properties throughout {county}, Delaware.</p>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-8">{ctaP}</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:3027350050" class="inline-flex items-center rounded-full bg-[#A61E22] px-8 py-4 text-white font-bold text-lg hover:bg-[#8C181B] transition">Call (302) 735-0050</a>
         <a href="/contact/" class="inline-flex items-center rounded-full border border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-[#1A1F22] transition">Get a Free Quote</a>
