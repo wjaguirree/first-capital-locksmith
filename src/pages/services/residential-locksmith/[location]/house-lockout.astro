@@ -16,8 +16,8 @@ const { city, state, slug, county } = location;
 ---
 
 <MainLayout
-  title={`House Lockout Service in ${city}, ${state} | Mobile Home Lockout | 1st Capital Locksmith`}
-  description={`Locked out of your house in ${city}, ${state}? 1st Capital Locksmith provides fast mobile house lockout service throughout ${city} and ${county}, Delaware. Non-destructive entry for all door types. Call (302) 735-0050.`}
+  title={`House Lockout Service in ${city}, ${state} | 1st Capital Locksmith`}
+  description={`Locked out of your house in ${city}, ${state}? Fast, non-destructive mobile entry. Call (302) 735-0050.`}
 >
 
   <nav aria-label="Breadcrumb" class="bg-white border-b border-gray-200">
@@ -44,10 +44,21 @@ const { city, state, slug, county } = location;
     "@context": "https://schema.org", "@type": "LocalBusiness",
     "@id": "https://1stcapitallocksmithde.com",
     "name": "1st Capital Locksmith", "telephone": "+13027350050",
-    "url": `https://1stcapitallocksmithde.com/services/residential-locksmith/${slug}/house-lockout/`,
+    "url": "https://1stcapitallocksmithde.com",
+    "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" },
     "description": `House lockout service in ${city}, ${state}. Fast, non-destructive residential lockout service for homes, apartments, and rental properties throughout ${county}, Delaware.`,
     "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } },
     "priceRange": "$$"
+  })} />
+
+  <!-- Schema: Service -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org", "@type": "Service",
+    "name": `House Lockout Service in ${city}, ${state}`,
+    "serviceType": "House Lockout Service",
+    "provider": { "@type": "LocalBusiness", "name": "1st Capital Locksmith", "telephone": "+13027350050", "url": "https://1stcapitallocksmithde.com" },
+    "areaServed": { "@type": "City", "name": city, "containedInPlace": { "@type": "State", "name": "Delaware" } }
   })} />
 
   <section class="relative min-h-105 flex items-center py-12 md:py-20" style="background-image: url('/images/house-lockout-technician.jpg'); background-size: cover; background-position: center;">

@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Safe Lockout Services in Delaware | Safe Opening | 1st Capital Locksmith"
-  description="Professional safe opening and safe lockout services throughout Delaware. 1st Capital Locksmith opens residential and commercial safes using non-destructive techniques — combination recovery, electronic lock override, and dial safe opening across Kent County. Call (302) 735-0050."
+  title="Safe Lockout Services in Delaware | 1st Capital Locksmith"
+  description="Professional safe opening in Delaware using non-destructive techniques for homes and businesses. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,77 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Safe Lockout Services"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Can you open a safe without the combination?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Our safe technicians use dial manipulation, lock bypass techniques, and specialized safe opening methods to open combination safes without the combination. The approach depends on the safe brand, model, and lock type. We always attempt non-destructive entry first."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Will opening the safe damage it?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We use non-destructive safe opening techniques whenever possible. Methods such as dial manipulation and electronic override leave the safe fully functional and undamaged. Drilling is a last resort used only when non-destructive methods are not viable for the specific safe, and we discuss this with you beforehand."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What types of safes can you open?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We open a wide range of safe types including: combination dial safes, electronic keypad safes, biometric safes, gun safes, fireproof document safes, floor safes, wall safes, deposit safes, and hotel in-room safes. Call us to discuss your specific brand and model."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you recover or change the combination after opening?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. After opening, we can reset the combination to a new code of your choice, service the lock mechanism, or replace a failed electronic lock with a new keypad unit. We restore full function to the safe before we leave whenever possible."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "My electronic keypad safe is dead or flashing — can you help?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. A dead battery is the most common cause of electronic safe lockouts. Try holding a fresh 9V battery against the external terminals and entering your code while maintaining contact. If this does not work, we have electronic override methods for many popular keypad safe brands."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does it cost to open a safe in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Safe opening costs depend on the safe type, brand, lock mechanism, and the method required to open it. We provide an honest quote before any work begins. Call (302) 735-0050 for an estimate based on your specific safe."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you need to take the safe with you to open it?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. We open safes on-site at your location — bolted to the floor, embedded in a wall, or freestanding. There is no need to transport your safe."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you serve all of Kent County, Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We provide safe lockout services for residential and commercial clients throughout all of Kent County including Dover, Smyrna, Milford, Camden, Harrington, Felton, and all surrounding areas."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

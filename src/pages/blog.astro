@@ -3,6 +3,19 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 const posts = [
   {
+    slug: "garage-door-security-smyrna-de",
+    title: "How to Secure a Garage Door: A Smyrna, DE Homeowner's 5-Point Check",
+    excerpt: "Five checks to secure a garage door in Smyrna, DE: entry door, emergency release, opener code type, remotes, and side door. Run them in about 15 minutes.",
+    category: "Residential Locksmith",
+    date: "October 2, 2026",
+    readTime: "12 min read",
+    image: "/images/garage-entry-door-smyrna-de.webp",
+    internalLinks: [
+      { label: "Locksmith Services in Smyrna, DE", href: "/service-areas/smyrna-de" },
+      { label: "Deadbolt Installation", href: "/services/deadbolt-installation" },
+    ],
+  },
+  {
     slug: "what-to-do-when-locked-out-of-car",
     title: "What to Do When You're Locked Out of Your Car in Dover, DE",
     excerpt: "Getting locked out of your car is stressful, especially if it happens at night or in an unfamiliar area. Here's exactly what to do if you find yourself locked out in Dover or anywhere in Kent County, Delaware.",
@@ -119,6 +132,19 @@ const posts = [
       { label: "Locksmith Service Areas in Kent County", href: "/service-areas" },
     ],
   },
+  {
+    slug: "new-home-smyrna-de-locksmith-checklist",
+    title: "New Home in Smyrna, DE? Your Move-In Locksmith Checklist",
+    excerpt: "Smyrna, DE has 49 active new-construction communities right now. Here's the locksmith checklist every new homeowner should run through before move-in day.",
+    category: "Residential Locksmith",
+    date: "September 24, 2026",
+    readTime: "7 min read",
+    image: "/images/sprinter-van-smyrna-de.jpg",
+    internalLinks: [
+      { label: "Locksmith Services in Smyrna, DE", href: "/service-areas/smyrna-de" },
+      { label: "Residential Locksmith Services", href: "/services/residential-locksmith" },
+    ],
+  },
 ];
 
 const categoryColors: Record<string, string> = {
@@ -131,8 +157,8 @@ const categoryColors: Record<string, string> = {
 ---
 
 <MainLayout
-  title="Locksmith Blog | Tips & Advice from 1st Capital Locksmith in Dover, DE"
-  description="Read the 1st Capital Locksmith blog for expert locksmith tips, home security advice, automotive key guides, and more from your trusted local locksmith in Dover, Delaware."
+  title="Locksmith Blog | 1st Capital Locksmith Dover, DE"
+  description="Locksmith tips, home security advice, and automotive key guides from 1st Capital Locksmith in Dover, Delaware."
 >
 
   <!-- Breadcrumbs -->
@@ -165,7 +191,7 @@ const categoryColors: Record<string, string> = {
   <!-- Hero -->
   <section
     class="relative min-h-100 flex items-center text-white py-16"
-    style="background-image: url('/images/hero.png'); background-size: cover; background-position: center;"
+    style="background-image: url('/images/hero.webp'); background-size: cover; background-position: center;"
   >
     <div class="absolute inset-0 bg-black/70"></div>
     <div class="relative max-w-6xl mx-auto px-6 z-10">

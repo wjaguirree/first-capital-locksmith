@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Broken Key Extraction in Delaware | Key Stuck in Lock or Ignition | 1st Capital Locksmith"
-  description="Professional broken key extraction throughout Delaware. 1st Capital Locksmith removes broken keys from door locks, deadbolts, ignitions, and padlocks across Kent County — on-site, fast, and without damaging your lock. Call (302) 735-0050."
+  title="Broken Key Extraction in Delaware | 1st Capital Locksmith"
+  description="Professional broken key extraction throughout Delaware, on-site, without damaging your lock. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,61 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Broken Key Extraction"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Can a broken key be removed from a lock without damaging it?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In most cases, yes. Professional locksmiths use specialized extraction tools designed to grip and remove key fragments cleanly from the cylinder without harming the internal pins or the lock body. Attempting DIY extraction with improvised tools is the most common cause of additional damage."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does broken key extraction cost in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The cost depends on the type of lock, how deeply the key fragment is lodged, and whether a replacement key is needed. We provide a clear upfront quote before any work begins. Call (302) 735-0050 for a fast estimate."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you extract a broken key from a car ignition?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Broken key extraction from car ignitions is one of the most common automotive locksmith services we provide. Car ignitions require specialized extraction tools, and if the ignition cylinder was damaged during the break, we can assess whether the ignition needs repair or replacement on the same visit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What should I do if my key breaks in a lock?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Stop turning the key immediately if you feel it break, and do not try to pull it out with your fingers, tweezers, or a bobby pin — this almost always pushes the fragment deeper or damages the pins. Call a professional locksmith right away. The sooner we get there, the easier the extraction usually is."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you make a replacement key after extracting the broken one?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Our mobile locksmiths carry key cutting equipment and can cut a new key on-site immediately after the extraction in most cases. For transponder car keys or high-security keys, call us first to confirm compatibility."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why do keys break inside locks?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Keys break for several reasons: a worn, bent, or duplicated-too-many-times key that has weakened metal; a stiff or jammed lock that resists the key's turning force; forcing a key that doesn't quite fit; or simply metal fatigue from years of use. After extraction we'll assess whether the lock itself contributed to the break so you can prevent a repeat."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Emergency Locksmith in Delaware | Lockout Service | 1st Capital Locksmith"
-  description="1st Capital Locksmith provides emergency locksmith services throughout Delaware. Fast response for home lockouts, car lockouts, broken key extraction, safe lockouts, and after-hours urgent locksmith help across Kent County, DE."
+  title="Emergency Locksmith in Delaware | 1st Capital Locksmith"
+  description="Emergency locksmith in Delaware: home & car lockouts, broken key extraction, safe lockouts. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -51,25 +51,13 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": { "@type": "PostalAddress", "addressLocality": "Dover", "addressRegion": "DE", "addressCountry": "US" }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": { "@type": "State", "name": "Delaware" },
     "serviceType": "Emergency Locksmith"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Are you really available 24 hours a day in Delaware?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We answer calls and dispatch technicians 6 days a week. When you call (302) 735-0050, a real person will answer and get help on the way." } },
-      { "@type": "Question", "name": "How quickly can you respond to an emergency lockout in Delaware?", "acceptedAnswer": { "@type": "Answer", "text": "Response times vary based on your location and current demand, but we prioritize emergency calls and dispatch as fast as possible. Call us at (302) 735-0050 and we'll give you an honest estimate of how long we'll be." } },
-      { "@type": "Question", "name": "Will you damage my door or lock getting me back inside?", "acceptedAnswer": { "@type": "Answer", "text": "Our locksmiths are trained in professional non-destructive entry techniques. In the vast majority of lockout situations we can gain entry without any damage to your door, frame, or lock hardware. Destructive entry is only used as a last resort when no other option is available." } },
-      { "@type": "Question", "name": "Do you charge extra for after-hours or overnight emergency calls?", "acceptedAnswer": { "@type": "Answer", "text": "We provide upfront, transparent pricing before any work begins. We believe in honest pricing regardless of the time of day — call us at (302) 735-0050 and we'll give you a clear quote before we start." } },
-      { "@type": "Question", "name": "Can you extract a broken key and make a new one on the same visit?", "acceptedAnswer": { "@type": "Answer", "text": "In most cases, yes. Our mobile locksmiths carry key cutting equipment and extraction tools, so we can remove the broken fragment and cut you a new key on the spot. Call us to confirm based on your specific key type." } },
-      { "@type": "Question", "name": "What should I do while waiting for an emergency locksmith?", "acceptedAnswer": { "@type": "Answer", "text": "Stay in a safe, well-lit location if possible. Do not attempt to force the lock or door yourself — this almost always causes expensive damage and can make the locksmith's job harder. If you feel unsafe, stay on the phone with us or call 911." } }
-    ]
-  })} />
   <!-- Hero -->
   <section
     class="relative min-h-85 md:min-h-137.5 flex items-center text-white py-10 md:py-20"

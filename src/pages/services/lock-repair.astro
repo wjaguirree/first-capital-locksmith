@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Lock Repair in Delaware | Fix Stiff, Broken & Damaged Locks | 1st Capital Locksmith"
-  description="Professional lock repair service throughout Delaware. 1st Capital Locksmith fixes stiff, broken, jammed, and damaged locks for homes and businesses across Kent County. Fast on-site service with upfront pricing. Call (302) 735-0050."
+  title="Lock Repair in Delaware | 1st Capital Locksmith"
+  description="Professional lock repair in Delaware for stiff, broken, or damaged locks, on-site with upfront pricing. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,61 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Lock Repair"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does lock repair cost in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Lock repair cost depends on the type of lock, the nature of the problem, and whether any parts are needed. In many cases lock repair is significantly less expensive than full replacement. We provide a clear upfront quote before any work begins. Call (302) 735-0050 for a fast estimate."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can a stiff or hard-to-turn lock be repaired without replacing it?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In most cases, yes. A stiff lock is usually caused by internal wear, a misaligned door, or a dried-out mechanism that needs lubrication and adjustment. Our locksmiths diagnose the root cause and repair it on-site whenever possible, saving you the cost of a full replacement."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Should I repair or replace a broken lock?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It depends on the extent of the damage and the quality of the existing hardware. Many locks can be repaired quickly and affordably. If the lock is severely damaged, very old, or low-quality, replacement is often the smarter long-term choice. We'll give you an honest assessment and let you decide."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you repair a lock that was damaged in a break-in attempt?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We assess locks damaged by forced entry, attempted picking, or drilling. In many cases parts of the lock can be repaired, though a lock that has been compromised in a break-in attempt is often best replaced entirely for your security. We'll advise you honestly on the right call."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you repair commercial locks and office locks in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We repair commercial door locks, office locks, storefront locks, mortise locks, and other commercial hardware throughout Delaware. We can work around your business hours to minimize disruption."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How quickly can you respond to a lock repair call in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We dispatch as quickly as possible to lock repair calls throughout Delaware. For urgent situations where a lock is failing or a door cannot be secured, call (302) 735-0050 and we'll prioritize your call."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

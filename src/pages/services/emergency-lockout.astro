@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Emergency Lockout Service in Delaware | Lockout Help | 1st Capital Locksmith"
-  description="emergency lockout service in Delaware. Locked out of your home, car, or office? 1st Capital Locksmith responds fast across Dover, Smyrna, Milford, and all of Kent County. Call (302) 735-0050 now."
+  title="Emergency Lockout Service in Delaware | 1st Capital Locksmith"
+  description="Locked out of your home, car, or office in Delaware? We respond fast, 6 days a week. Call (302) 735-0050 now."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,77 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Emergency Lockout Service"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How fast can you respond to an emergency lockout in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We aim to reach most locations in Kent County within 20–30 minutes of your call. Response times vary slightly depending on your exact location and traffic conditions, but we dispatch immediately and keep you updated on our ETA. Call (302) 735-0050 and we will be on our way."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you respond to lockouts 24 hours a day?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We are open 6 days a week. Call (302) 735-0050 during business hours and a technician will be dispatched to your location."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Will you damage my lock or door to get me inside?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Our technicians are trained in non-destructive entry techniques designed to open locks without damaging them. In most residential and automotive lockouts, we use lock picks and specialized tools that leave the lock fully functional after entry. Destructive methods are a last resort and discussed with you beforehand."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What types of lockouts do you handle?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We handle all lockout types: home lockouts, car lockouts, office lockouts, storage unit lockouts, and more. We also carry replacement locks in our van if needed and can rekey or replace a lock on the same visit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does emergency lockout service cost in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Pricing depends on the type of lockout, time of day, and what services are needed. We provide upfront pricing before any work begins — no surprise fees. Call (302) 735-0050 for an immediate quote based on your specific situation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need to prove I own the property or vehicle?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For security purposes, our technicians may ask for identification or proof of residence or vehicle ownership before completing service. This protects you and the property. Please have your ID and any vehicle registration or property documents available if possible."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you rekey my locks after a lockout?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. If your lockout was caused by a lost key or you have security concerns, we can rekey your locks immediately following the lockout service on the same visit. This invalidates any lost keys and gives you new keys without replacing the hardware."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you serve all of Kent County, Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We serve all of Kent County including Dover, Smyrna, Milford, Camden, Harrington, Felton, Frederica, Wyoming, Clayton, Magnolia, and surrounding communities. Call us wherever you are and we will get to you as fast as possible."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

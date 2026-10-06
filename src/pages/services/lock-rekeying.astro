@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Lock Rekeying in Delaware | Mobile Rekey Service | 1st Capital Locksmith"
-  description="Need your locks rekeyed in Delaware? 1st Capital Locksmith provides professional mobile lock rekeying throughout Kent County. We rekey deadbolts, knob locks & more on-site — old keys won't work, new keys provided. Serving Dover, Milford, Smyrna & surrounding areas. Call (302) 735-0050."
+  title="Lock Rekeying in Delaware | 1st Capital Locksmith"
+  description="Mobile lock rekeying in Delaware: deadbolts, knob locks & more, old keys stop working, new keys provided. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,25 +52,13 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": { "@type": "PostalAddress", "addressLocality": "Dover", "addressRegion": "DE", "addressCountry": "US" }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": { "@type": "State", "name": "Delaware" },
     "serviceType": "Lock Rekeying"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "What is the difference between rekeying and replacing a lock?", "acceptedAnswer": { "@type": "Answer", "text": "Rekeying changes the internal pin configuration of an existing lock cylinder so that only a new key works — the lock hardware stays in place. Lock replacement involves removing the entire lock and installing brand-new hardware. Rekeying is significantly less expensive and achieves the same security result when the lock hardware is in good condition." } },
-      { "@type": "Question", "name": "Will my old keys definitely not work after rekeying?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — 100%. When a lock is rekeyed, the internal pins are physically replaced with a new set configured to a different key cut pattern. The old key's profile no longer matches the new pin heights, so it cannot operate the lock. Every old key, including any copies that were made, is immediately and permanently deactivated." } },
-      { "@type": "Question", "name": "Can you rekey my locks if I don't have a working key?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. If you don't have a working key, we first need to pick or bypass the lock to open it, and then rekey the cylinder. This adds a small amount of time to the service but is a very common scenario — particularly after a lockout, a lost key situation, or when someone moves into a home where no working key was provided." } },
-      { "@type": "Question", "name": "Can you rekey my locks so they all use one key?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — this is called 'keyed alike' service. We rekey every lock in your home to the same pin configuration so one key operates all of them. This works even if your existing locks are different brands or models." } },
-      { "@type": "Question", "name": "How many locks can you rekey in one visit?", "acceptedAnswer": { "@type": "Answer", "text": "We can rekey as many locks as you need in a single visit. Most homes have two to four exterior lock cylinders, which we can complete in well under an hour. Larger properties or rental units with more entry points take a bit longer but are still typically handled in one efficient visit." } },
-      { "@type": "Question", "name": "What brands of locks can you rekey?", "acceptedAnswer": { "@type": "Answer", "text": "We rekey all major residential lock brands including Kwikset, Schlage, Defiant, Baldwin, Yale, and others. If you have a high-security lock such as Medeco, Mul-T-Lock, or Abloy, these can also be rekeyed — call us and we will confirm based on the specific model." } }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Lock Change in Delaware | Lock Replacement Service | 1st Capital Locksmith"
-  description="Professional lock change and lock replacement service throughout Delaware. 1st Capital Locksmith replaces door locks for homes and businesses across Kent County — all lock types, on-site service, upfront pricing. Call (302) 735-0050."
+  title="Lock Change in Delaware | 1st Capital Locksmith"
+  description="Professional lock change and replacement in Delaware for homes and businesses, upfront pricing. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,61 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Lock Change"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much does a lock change cost in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The cost of a lock change depends on the type of lock, the brand of replacement hardware, and the number of doors. We provide a clear upfront quote before any work begins. Call (302) 735-0050 for a fast estimate specific to your situation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between a lock change and rekeying?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Rekeying changes the internal pin configuration of your existing lock so old keys stop working — it's faster and less expensive, and the hardware stays in place. A lock change replaces the entire lock with new hardware. Lock change is the right choice when the existing lock is damaged, worn out, low quality, or when you want to upgrade to a different type or brand."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "When should I change my locks instead of rekeying them?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Change your locks when: the existing hardware is damaged or worn; you want to upgrade to a higher security grade; you want a different lock type (e.g., adding a deadbolt or switching to a keypad); after a break-in where the lock was compromised; or when the lock is simply too old and a rekey won't restore reliable performance."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you change my locks the same day I call?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In most cases, yes. Our mobile locksmiths carry common replacement hardware on their vehicles and can perform lock changes throughout Delaware often on the same day. Call (302) 735-0050 and we'll let you know our availability."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you change locks for rental properties and landlords in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We regularly work with landlords and property managers throughout Delaware who need lock changes between tenants, after a lease dispute, or when a tenant fails to return keys. We can service multiple properties and offer efficient scheduling for portfolio landlords."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you change the locks on my business in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. We change commercial door locks for offices, retail spaces, warehouses, and other business properties throughout Delaware. We carry commercial-grade hardware and can schedule service around your business hours to minimize disruption."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section

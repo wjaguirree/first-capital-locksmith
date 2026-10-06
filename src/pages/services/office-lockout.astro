@@ -4,8 +4,8 @@ import Reviews from "../../components/Reviews.astro";
 ---
 
 <MainLayout
-  title="Office Lockout Service in Delaware | Locked Out of Office | 1st Capital Locksmith"
-  description="Locked out of your office or commercial property in Delaware? 1st Capital Locksmith provides fast professional office lockout service across Dover, Smyrna, Milford, and all of Kent County. Available 6 Days a Week — call (302) 735-0050."
+  title="Office Lockout Service in Delaware | 1st Capital Locksmith"
+  description="Locked out of your office in Delaware? Fast professional lockout service, 6 days a week. Call (302) 735-0050."
 >
 
   <!-- Breadcrumbs -->
@@ -52,12 +52,8 @@ import Reviews from "../../components/Reviews.astro";
       "@type": "LocalBusiness",
       "name": "1st Capital Locksmith",
       "telephone": "+13027350050",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dover",
-        "addressRegion": "DE",
-        "addressCountry": "US"
-      }
+      "address": { "@type": "PostalAddress", "streetAddress": "2089 S Dupont Hwy #2", "addressLocality": "Dover", "addressRegion": "DE", "postalCode": "19901", "addressCountry": "US" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "39.1212111", "longitude": "-75.5331705" }
     },
     "areaServed": {
       "@type": "State",
@@ -66,69 +62,6 @@ import Reviews from "../../components/Reviews.astro";
     "serviceType": "Office Lockout Service"
   })} />
 
-  <!-- Schema: FAQ -->
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How fast can you respond to an office lockout in Delaware?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We treat commercial lockouts as a high priority and aim to reach most Kent County locations within 20–30 minutes. We dispatch immediately upon your call. Call (302) 735-0050 and we will head to your office right away."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you handle commercial door hardware — not just standard locks?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We handle all commercial door hardware including cylindrical locksets, mortise locks, rim cylinders, electronic access control keypads, and panic bar hardware. We are familiar with commercial-grade locks from Schlage, Corbin Russwin, BEST, Medeco, Yale, and other major manufacturers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you open an office without damaging the door?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In most cases, yes. We use professional lock picking and bypass techniques designed for commercial lock hardware. Non-destructive entry is our first approach — we only use destructive methods when all professional alternatives have been exhausted, and always with your consent and knowledge beforehand."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What if an employee was terminated and we need the locks changed?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We handle this frequently. After gaining access to your property, we can rekey or replace all affected locks on the same visit to ensure terminated employees can no longer enter. This is one of the most important security steps following a termination where keys were not returned."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are you available for after-hours office lockouts?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We are open 6 days a week. Call (302) 735-0050 during business hours to reach us for office lockout service throughout Delaware."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you help if we're locked out of a specific room inside the office?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Interior office lockouts — server rooms, private offices, storage rooms, or file cabinets — are a common service call. We handle interior office doors including standard cylindrical locks, mortise locks, and keyed interior knob and lever sets."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you serve offices and businesses across all of Kent County?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. We provide office lockout service for businesses throughout all of Kent County including Dover, Smyrna, Milford, Harrington, Camden, Felton, and surrounding areas. Call (302) 735-0050 for immediate dispatch."
-        }
-      }
-    ]
-  })} />
 
   <!-- Hero -->
   <section
