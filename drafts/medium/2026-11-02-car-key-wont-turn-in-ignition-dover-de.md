@@ -63,7 +63,7 @@ When something sticks, people reach for a can of spray lubricant. I get it, it's
 
 Sometimes the key turns perfectly and the engine still does nothing. That's a different story. Most newer keys hide a small chip that tells the car it's allowed to start. If the car doesn't recognize the chip, it simply won't run, no matter how nicely the blade turns.
 
-Engine immobilizers like this are a real security feature. The National Institute of Justice's CrimeSolutions program [rates them as effective at cutting vehicle theft](https://crimesolutions.ojp.gov/ratedprograms/engine-immobilizers-australia). The flip side is that a worn or unprogrammed key can leave you stuck even when everything looks fine. If you want the plain-English version of how that chip works, our write-up on the [difference between a transponder key and a key fob](https://1stcapitallocksmithde.com/blog/transponder-key-vs-key-fob-whats-the-difference/) covers it.
+Engine immobilizers like this are a real security feature that helps deter car theft. The flip side is that a worn or unprogrammed key can leave you stuck even when everything looks fine. If you want the plain-English version of how that chip works, our write-up on the [difference between a transponder key and a key fob](https://1stcapitallocksmithde.com/blog/transponder-key-vs-key-fob-whats-the-difference/) covers it.
 
 One more thing to rule out is the battery. A weak battery can pass for an ignition failure, especially with push-button starts. Dim dash lights give it away. Try a jump before you blame the lock.
 
