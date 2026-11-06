@@ -9,6 +9,9 @@ ai_detector_score2_human: 78.1
 ai_detector_score3_human: 77.1
 ai_detector_final_human: 78.1
 ai_detector_note: "Best version is pass 2 (78.1), saved here. Pass mark 85. Not ready to publish. Baseline text was not kept."
+hero_image: knowledge/generations/final_car-key-wont-turn-medium-hero.webp
+hero_image_size: 1600x893
+hero_image_alt: "1st Capital Locksmith mobile service van parked outside a home in a Delaware neighborhood as a technician walks toward a car"
 word_count: about 1010
 ---
 
