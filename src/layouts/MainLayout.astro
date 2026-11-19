@@ -74,19 +74,23 @@ const ogImage = new URL(image, Astro.site);
   gtag('config', 'G-929CEQ148Q');
 </script>
 
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
+<!-- Microsoft Clarity: loads on first scroll so it doesn't run during page load -->
+<script is:inline>
+  window.addEventListener("scroll", function loadClarity() {
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "xw7ofpgkkn");
+  }, { once: true, passive: true });
 </script>
   </head>
 
   <body class="bg-[#EDEBE7] text-gray-900">
     <Header />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <ServiceAreaZipCodes type={type} articleSection={articleSection} />
     <Footer />
 
@@ -265,7 +269,6 @@ const ogImage = new URL(image, Astro.site);
     <a
       href="tel:3027350050"
       class="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-center gap-2 bg-[#A61E22] text-white font-bold text-lg py-4 shadow-lg md:hidden"
-      aria-label="Call 1st Capital Locksmith"
     >
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
         <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>

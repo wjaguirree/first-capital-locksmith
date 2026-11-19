@@ -86,7 +86,7 @@ import Reviews from "../components/Reviews.astro";
         <input type="checkbox" name="botcheck" style="display:none" />
         <div>
           <label class="block text-sm font-semibold mb-2">What Do You Need?</label>
-          <select name="service" class="w-full bg-gray-800/50 text-white px-4 py-3 rounded border border-gray-600 focus:outline-none focus:border-[#9A9D62]" required>
+          <select name="service" aria-label="Service needed" class="w-full bg-gray-800/50 text-white px-4 py-3 rounded border border-gray-600 focus:outline-none focus:border-[#9A9D62]" required>
             <option>Choose a service</option>
             <optgroup label="Automotive Services">
               <option>Automotive Locksmith</option>
@@ -247,7 +247,7 @@ import Reviews from "../components/Reviews.astro";
   <section class="bg-[#EDEBE7] py-16">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-10">
-        <p class="text-sm uppercase tracking-[0.3em] text-[#9A9D62] mb-4">Serving Dover and nearby towns</p>
+        <p class="text-sm uppercase tracking-[0.3em] text-[#636638] mb-4">Serving Dover and nearby towns</p>
         <h2 class="text-3xl md:text-4xl font-bold text-[#1A1F22]">Service Areas We Cover in Delaware</h2>
         <p class="mx-auto max-w-3xl text-gray-700 leading-relaxed mt-4">
           1st Capital Locksmith brings fast, mobile locksmith service directly to your neighborhood. We are proud to support homes, vehicles, and businesses across Dover, Kent, and Southern Delaware.
@@ -301,7 +301,7 @@ import Reviews from "../components/Reviews.astro";
   <div class="max-w-6xl mx-auto px-6">
 
     <div class="text-center mb-12">
-      <p class="text-[#9A9D62] font-semibold uppercase tracking-wide">
+      <p class="text-[#636638] font-semibold uppercase tracking-wide">
         Why Choose Us
       </p>
 
@@ -402,7 +402,7 @@ import Reviews from "../components/Reviews.astro";
             </div>
             <div>
               <label class="block text-sm font-semibold text-white mb-2">Service Type</label>
-              <select name="service" class="w-full bg-gray-800/50 text-white px-4 py-3 rounded border border-gray-700 focus:outline-none focus:border-[#9A9D62]" required>
+              <select name="service" aria-label="Service needed" class="w-full bg-gray-800/50 text-white px-4 py-3 rounded border border-gray-700 focus:outline-none focus:border-[#9A9D62]" required>
                 <option>Select a service</option>
                 <optgroup label="Automotive Services">
                   <option>Automotive Locksmith</option>
